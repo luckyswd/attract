@@ -17,9 +17,9 @@ jobs:
         shell: bash
 
       - name: Commit & Push changes
-        uses: actions-js/push@main
+        uses: actions-js/push@maser
         with:
-          github_token: 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
+          github_token: ${{ secrets.GIT_TOKEN }}
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
