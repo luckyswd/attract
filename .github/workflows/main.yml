@@ -16,11 +16,8 @@ jobs:
 #          ./deploy.sh
 #        shell: bash
 
-      - name: npm install
-        run: npm install
-
-      - name: build
-        run: gulp build
+      - name: npm install && build
+        run: cd wp-app/wp-content/themes/attract/ && npm install && gulp build
 
       - name: 📦 Get LFTP
         run: sudo apt install lftp
