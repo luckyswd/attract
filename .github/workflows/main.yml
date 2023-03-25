@@ -10,18 +10,24 @@ jobs:
       - name: 📩 Get latest code
         uses: actions/checkout@v3
 
-      - name: Run script file
-        run: |
-          chmod +x ./deploy.sh
-          ./deploy.sh
-        shell: bash
+#      - name: Run script file
+#        run: |
+#          chmod +x ./deploy.sh
+#          ./deploy.sh
+#        shell: bash
+
+      - name: npm install
+        run: npm install
+
+      - name: build
+        run: gulp build
 
       - name: 📦 Get LFTP
         run: sudo apt install lftp
       - name: 🛠️ Configure LFTP
         run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
       - name: 🔑 Load Secrets
-        run: echo "machine luckyswd@attract.company login luckyswd@attract.company password NNCNUQU&xn3xm0kZiN&aQG5P" > ~/.netrc
+        run: echo "machine luckyswd@attract.company login luckyswd@attract.company password ${{ secrets.ftp_password }}" > ~/.netrc
       - name: test folder
         run: cd wp-app && pwd
       - name: 📁 Upload Folder
