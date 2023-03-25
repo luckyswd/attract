@@ -24,16 +24,17 @@ jobs:
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        env:
-          FTP_SERVER: serwer2390849.home.pl
-          FTP_USERNAME: ${{ secrets.FTP_HOSTNAME_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: wp-app
-          REMOTE_DIR: public
+#        env:
+#          FTP_SERVER: serwer2390849.home.pl
+#          FTP_USERNAME: ${{ secrets.FTP_HOSTNAME_USERNAME }}
+#          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+#          LOCAL_DIR: wp-app
+#          REMOTE_DIR: public
+#          ARGS: --delete
+        with:
+          server: serwer2390849.home.pl
+          username: luckyswd@attract.company
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./wp-app/
+          server-dir: "./public/"
           ARGS: --delete
-#        with:
-#          server: serwer2390849.home.pl
-#          username: luckyswd@attract.company
-#          password: ${{ secrets.FTP_PASSWORD }}
-#          local-dir: ./wp-app/
-#          server-dir: "./public/"
