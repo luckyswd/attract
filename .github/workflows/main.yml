@@ -16,10 +16,14 @@ jobs:
           ./deploy.sh
         shell: bash
 
-#      - name: Commit & Push changes
-#        uses: actions-js/push@master
-#        with:
-#          github_token: ${{ secrets.GIT_TOKEN }}
+      - name: 📦 Get LFTP
+        run: sudo apt install lftp
+      - name: 🛠️ Configure LFTP
+        run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
+      - name: 🔑 Load Secrets
+        run: echo "machine luckyswd@attract.company login luckyswd@attract.company password NNCNUQU&xn3xm0kZiN&aQG5P" > ~/.netrc
+      - name: 📁 Upload Folder
+        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /" luckyswd@attract.company
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
