@@ -2,4 +2,4 @@
 #rm -rf node_modules
 #rm -rf dist
 
-cd wp-app/wp-content/themes/attract/ && mkdir "test"
+cd wp-app/wp-content/themes/attract/ && rm -rf dist
