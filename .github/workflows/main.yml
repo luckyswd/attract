@@ -22,6 +22,8 @@ jobs:
         run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
       - name: 🔑 Load Secrets
         run: echo "machine luckyswd@attract.company login luckyswd@attract.company password NNCNUQU&xn3xm0kZiN&aQG5P" > ~/.netrc
+      - name: test folder
+        run: pwd
       - name: 📁 Upload Folder
         run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/" luckyswd@attract.company
 
