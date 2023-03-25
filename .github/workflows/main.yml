@@ -16,10 +16,10 @@ jobs:
           ./deploy.sh
         shell: bash
 
-#      - name: Commit & Push changes
-#        uses: actions-js/push@master
-#        with:
-#          github_token: ${{ secrets.GIT_TOKEN }}
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GIT_TOKEN }}
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
