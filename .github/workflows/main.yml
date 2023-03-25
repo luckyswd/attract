@@ -23,7 +23,7 @@ jobs:
 #        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/wp-content/themes/attract/dist/" ${{ secrets.FTP_HOSTNAME_USERNAME }}
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
           FTP_SERVER: serwer2390849.home.pl
           FTP_USERNAME: ${{ secrets.FTP_HOSTNAME_USERNAME }}
