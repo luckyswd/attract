@@ -21,12 +21,6 @@ jobs:
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
 
-      - name: Commit report
-        run: |
-          git 
-
-          git push
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
