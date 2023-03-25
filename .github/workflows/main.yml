@@ -21,4 +21,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./wp-app/
           server-dir: "./public/"
-#          ARGS: --delete
