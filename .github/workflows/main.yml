@@ -25,10 +25,10 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v0.1.8
         with:
-          host: ${{ secrets.FTP_HOSTNAME_USERNAME }}
+          host: serwer2390849.home.pl
           username: ${{ secrets.FTP_HOSTNAME_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          script: ls -la
+          script: test
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
