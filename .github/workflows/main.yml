@@ -19,7 +19,6 @@ jobs:
       - name: npm install && build
         run: cd wp-app/wp-content/themes/attract/ && npm install && gulp build
 
-
 #      - name: 📦 Get LFTP
 #        run: sudo apt install lftp
 #      - name: 🛠️ Configure LFTP
@@ -29,24 +28,6 @@ jobs:
 #      - name: 📁 Upload Folder
 #        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/wp-content/themes/attract/dist/" ${{ secrets.FTP_HOSTNAME_USERNAME }}
 
-      - name: 'ftp-delete-action'
-        author: 'test'
-        description: 'test'
-        inputs:
-          host:
-            description: ${{ secrets.FTP_HOSTNAME_USERNAME }}
-            required: true
-          user:
-            description: ${{ secrets.FTP_HOSTNAME_USERNAME }}
-            required: true
-          password:
-            description: ${{ secrets.FTP_PASSWORD }}
-            required: true
-          remoteDirectories:
-            description: dist
-            required: false
-            default: ''
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
@@ -55,3 +36,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./wp-app/
           server-dir: "./public/"
+          dangerous-clean-slate: true
