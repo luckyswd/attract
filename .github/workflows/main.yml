@@ -22,8 +22,16 @@ jobs:
 #      - name: 📁 Upload Folder
 #        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/wp-content/themes/attract/dist/" ${{ secrets.FTP_HOSTNAME_USERNAME }}
 
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.FTP_HOSTNAME_USERNAME }}
+          username: ${{ secrets.FTP_HOSTNAME_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          script: test
+
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@2.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
         env:
           FTP_SERVER: serwer2390849.home.pl
           FTP_USERNAME: ${{ secrets.FTP_HOSTNAME_USERNAME }}
