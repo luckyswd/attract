@@ -1,4 +1,9 @@
 header {
+  height: 187px;
+  @include _1280 {
+    height: 166px;
+  }
+
   .container {
     position: fixed;
     z-index: 50;
@@ -8,6 +13,7 @@ header {
     left: 50%;
     transform: translate(-50%);
   }
+
   .header__desktop {
     display: flex;
     justify-content: space-between;
@@ -61,7 +67,6 @@ header {
   }
 
 
-
   .header__mobile {
     padding-top: 20px;
     max-height: 0;
@@ -86,7 +91,7 @@ header {
 
 
     &:hover {
-      color:$c-blue;
+      color: $c-blue;
     }
   }
 
