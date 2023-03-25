@@ -25,7 +25,7 @@ jobs:
       - name: test folder
         run: cd wp-app && pwd
       - name: 📁 Upload Folder
-        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/" luckyswd@attract.company
+        run: lftp -e "mirror --parallel=100 -R /public/ ./wp-app/wp-content/themes/attract/dist/" luckyswd@attract.company
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
