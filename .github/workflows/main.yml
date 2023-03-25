@@ -9,12 +9,12 @@ jobs:
     steps:
       - name: 📩 Get latest code
         uses: actions/checkout@v3
-
-      - name: Run script file
-        run: |
-          chmod +x ./deploy.sh
-          ./deploy.sh
-        shell: bash
+#
+#      - name: Run script file
+#        run: |
+#          chmod +x ./deploy.sh
+#          ./deploy.sh
+#        shell: bash
 
       - name: 📦 Get LFTP
         run: sudo apt install lftp
@@ -23,7 +23,7 @@ jobs:
       - name: 🔑 Load Secrets
         run: echo "machine luckyswd@attract.company login luckyswd@attract.company password NNCNUQU&xn3xm0kZiN&aQG5P" > ~/.netrc
       - name: test folder
-        run: pwd
+        run: cd wp-app && pwd
       - name: 📁 Upload Folder
         run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/" luckyswd@attract.company
 
