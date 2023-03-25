@@ -1,0 +1,96 @@
+.effective-marketing {
+  padding: 100px 0;
+  .effective-marketing__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+ .effective-marketing__main {
+   width: 60%;
+ }
+  .effective-marketing__socials {
+    display: flex;
+    gap: 10px;
+  }
+  .effective-marketing__social {
+    transition: $transition-anchor-btn;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .effective-marketing__headline {
+    padding-top: 130px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 100px;
+    letter-spacing: -0.06em;
+
+    span {
+      color: $c-blue;
+    }
+  }
+
+  .effective-marketing__description {
+    padding-top: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: -1.5px;
+  }
+
+  .effective-marketing__tags {
+    padding-top: 40px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .effective-marketing__tag {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+
+    span {
+      color: $c-blue;
+    }
+  }
+
+  .effective-marketing__footer {
+    display: flex;
+    padding: 10px 10px 10px 55px;
+    background-color: $c-blue;
+    margin: 75px auto 0;
+    border-radius: 300px;
+    color: $c-white;
+    width: 100%;
+    max-width: 700px;
+    align-items: center;
+    gap: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .effective-marketing__btn {
+    padding: 30px 100px;
+    background-color: $c-white;
+    color: $c-blue;
+    border-radius: 300px;
+    cursor: pointer;
+    border: 1px solid $c-white;
+    transition: $transition-anchor-btn;
+
+    &:hover {
+      background-color: $c-blue;
+      color: $c-white;
+
+    }
+  }
+
+}
