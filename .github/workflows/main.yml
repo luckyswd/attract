@@ -13,27 +13,11 @@ jobs:
       - name: npm install && build
         run: cd wp-app/wp-content/themes/attract/ && npm install && gulp build
 
-#      - name: 📦 Get LFTP
-#        run: sudo apt install lftp
-#      - name: 🛠️ Configure LFTP
-#        run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
-#      - name: 🔑 Load Secrets
-#        run: echo "machine ${{ secrets.FTP_HOSTNAME_USERNAME }} login ${{ secrets.FTP_HOSTNAME_USERNAME }} password ${{ secrets.FTP_PASSWORD }}" > ~/.netrc
-#      - name: 📁 Upload Folder
-#        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/wp-content/themes/attract/dist/" ${{ secrets.FTP_HOSTNAME_USERNAME }}
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
-#        env:
-#          FTP_SERVER: serwer2390849.home.pl
-#          FTP_USERNAME: ${{ secrets.FTP_HOSTNAME_USERNAME }}
-#          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-#          LOCAL_DIR: wp-app
-#          REMOTE_DIR: public
-#          ARGS: --delete
         with:
           server: serwer2390849.home.pl
-          username: luckyswd@attract.company
+          username: ${{ secrets.FTP_HOSTNAME_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./wp-app/
           server-dir: "./public/"
