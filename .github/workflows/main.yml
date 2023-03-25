@@ -10,11 +10,11 @@ jobs:
       - name: 📩 Get latest code
         uses: actions/checkout@v3
 
-#      - name: Run script file
-#        run: |
-#          chmod +x ./deploy.sh
-#          ./deploy.sh
-#        shell: bash
+      - name: Run script file
+        run: |
+          chmod +x ./deploy.sh
+          ./deploy.sh
+        shell: bash
 
 #      - name: Commit & Push changes
 #        uses: actions-js/push@master
