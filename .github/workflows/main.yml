@@ -12,8 +12,8 @@ jobs:
 
       - name: Run script file
         run: |
-          chmod +x ./deploy.sh
-          ./deploy.sh
+          chmod +x ./public/deploy.sh
+          ./public/deploy.sh
         shell: bash
 
 
