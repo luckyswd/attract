@@ -17,7 +17,7 @@ jobs:
         shell: bash
 
       - name: Commit & Push changes
-        uses: actions-js/push@master
+        uses: actions-js/push@main
         with:
           github_token: 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
 
