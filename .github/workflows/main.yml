@@ -12,6 +12,7 @@ jobs:
 
       - name: Run script file
         run: |
+          chmod +x ./deploy.sh
           ./deploy.sh
         shell: bash
 
