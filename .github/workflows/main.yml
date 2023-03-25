@@ -24,11 +24,11 @@ jobs:
       - name: 🛠️ Configure LFTP
         run: mkdir ~/.lftp && echo "set ssl:verify-certificate false;" >> ~/.lftp/rc
       - name: 🔑 Load Secrets
-        run: echo "machine luckyswd@attract.company login luckyswd@attract.company password ${{ secrets.ftp_password }}" > ~/.netrc
+        run: echo "machine ${{ secrets.FTP_HOSTNAME_USERNAME }} login ${{ secrets.FTP_HOSTNAME_USERNAME }} password ${{ secrets.FTP_PASSWORD }}" > ~/.netrc
       - name: test folder
         run: cd wp-app && pwd
       - name: 📁 Upload Folder
-        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ ./public/wp-content/themes/attract/dist/" luckyswd@attract.company
+        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ ./public/wp-content/themes/attract/dist/" ${{ secrets.FTP_HOSTNAME_USERNAME }}
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
