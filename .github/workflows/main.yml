@@ -23,7 +23,7 @@ jobs:
       - name: 🔑 Load Secrets
         run: echo "machine luckyswd@attract.company login luckyswd@attract.company password NNCNUQU&xn3xm0kZiN&aQG5P" > ~/.netrc
       - name: 📁 Upload Folder
-        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /" luckyswd@attract.company
+        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/" luckyswd@attract.company
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
