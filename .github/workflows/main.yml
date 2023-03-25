@@ -19,15 +19,6 @@ jobs:
       - name: npm install && build
         run: cd wp-app/wp-content/themes/attract/ && npm install && gulp build
 
-      - name: rsync deployments
-        uses: burnett01/rsync-deployments@5.2.1
-        with:
-          switches: -avzr --delete
-          path: /wp-app/wp-content/themes/attract/dist/
-          remote_path: /public/wp-content/themes/attract/dist/
-          remote_host: ${{ secrets.FTP_HOSTNAME_USERNAME }}
-          remote_user: ${{ secrets.FTP_HOSTNAME_USERNAME }}
-          remote_key: ${{ secrets.FTP_PASSWORD }}
 
 #      - name: 📦 Get LFTP
 #        run: sudo apt install lftp
@@ -37,6 +28,24 @@ jobs:
 #        run: echo "machine ${{ secrets.FTP_HOSTNAME_USERNAME }} login ${{ secrets.FTP_HOSTNAME_USERNAME }} password ${{ secrets.FTP_PASSWORD }}" > ~/.netrc
 #      - name: 📁 Upload Folder
 #        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/wp-content/themes/attract/dist/" ${{ secrets.FTP_HOSTNAME_USERNAME }}
+
+      - name: 'ftp-delete-action'
+        author: 'test'
+        description: 'test'
+        inputs:
+          host:
+            description: ${{ secrets.FTP_HOSTNAME_USERNAME }}
+            required: true
+          user:
+            description: ${{ secrets.FTP_HOSTNAME_USERNAME }}
+            required: true
+          password:
+            description: ${{ secrets.FTP_PASSWORD }}
+            required: true
+          remoteDirectories:
+            description: dist
+            required: false
+            default: ''
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
