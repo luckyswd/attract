@@ -9,12 +9,12 @@ jobs:
     steps:
       - name: 📩 Get latest code
         uses: actions/checkout@v3
-#
-#      - name: Run script file
-#        run: |
-#          chmod +x ./deploy.sh
-#          ./deploy.sh
-#        shell: bash
+
+      - name: Run script file
+        run: |
+          chmod +x ./deploy.sh
+          ./deploy.sh
+        shell: bash
 
       - name: 📦 Get LFTP
         run: sudo apt install lftp
@@ -25,7 +25,7 @@ jobs:
       - name: test folder
         run: cd wp-app && pwd
       - name: 📁 Upload Folder
-        run: lftp -e "mirror --parallel=100 -R /public/ ./wp-app/wp-content/themes/attract/dist/" luckyswd@attract.company
+        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ ./public/wp-content/themes/attract/dist/" luckyswd@attract.company
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
