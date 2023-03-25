@@ -28,13 +28,13 @@ jobs:
       - name: test folder
         run: cd wp-app && pwd
       - name: 📁 Upload Folder
-        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ ./public/wp-content/themes/attract/dist/" ${{ secrets.FTP_HOSTNAME_USERNAME }}
+        run: lftp -e "mirror --parallel=100 -R ./wp-app/wp-content/themes/attract/dist/ /public/wp-content/themes/attract/dist/" ${{ secrets.FTP_HOSTNAME_USERNAME }}
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: serwer2390849.home.pl
           username: luckyswd@attract.company
-          password: ${{ secrets.ftp_password }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./wp-app/
           server-dir: "./public/"
