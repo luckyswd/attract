@@ -1,8 +1,7 @@
+cd wp-app/wp-content/themes/attract/
 ls -la
+npm i && gulp build
 
-cd wp-app/wp-content/themes/attract/ && npm i && gulp build
-
-pwd
 ls -la
 
 #git config --global user.email "luckyswd@gmail.com"
