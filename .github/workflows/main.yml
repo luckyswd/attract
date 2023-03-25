@@ -1,0 +1,20 @@
+name: 🚀 Deploy website
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📩 Get latest code
+        uses: actions/checkout@v2
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: serwer2390849.home.pl
+          username: luckyswd@attract.company
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./wp-app/
+          server-dir: "./public/"
