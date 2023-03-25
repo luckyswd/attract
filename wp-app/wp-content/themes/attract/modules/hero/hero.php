@@ -49,5 +49,5 @@ $information = get_field('information');
         </div>
     </section>
 <?php else: ?>
-    <h2 style="font-family: 'Mark', sans-serif;">О компании модуль</h2>
+    <h2 style="font-family: 'Mark', sans-serif;">Главный модуль</h2>
 <?php endif; ?>
