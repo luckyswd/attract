@@ -19,7 +19,7 @@ jobs:
       - name: Commit & Push changes
         uses: actions-js/push@main
         with:
-          github_token: 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
+          github_token: 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
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
