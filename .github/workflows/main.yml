@@ -12,10 +12,9 @@ jobs:
 
       - name: Run script file
         run: |
-          chmod +x ./public/deploy.sh
-          ./public/deploy.sh
+          chmod +x ./deploy.sh
+          ./deploy.sh
         shell: bash
-
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
