@@ -15,6 +15,6 @@ jobs:
         with:
           server: serwer2390849.home.pl
           username: luckyswd@attract.company
-          password: ${{ secrets.ftp_password }}
+          password: ${{ attract.ftp_password }}
           local-dir: ./wp-app/
           server-dir: "./public/"
