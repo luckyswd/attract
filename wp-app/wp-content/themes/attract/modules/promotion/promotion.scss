@@ -1,0 +1,33 @@
+.promotion {
+  padding: 100px 0;
+  .promotion__headline {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 90px;
+    text-align: center;
+    letter-spacing: -0.06em;
+
+    span {
+      color: $c-blue;
+    }
+  }
+
+  .promotion__button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 30px;
+    text-align: center;
+    background: $c-blue;
+    border: 1px solid $c-blue;
+    border-radius: 300px;
+    color: $c-white;
+    margin: 72px auto 0;
+    transition: $transition-anchor-btn;
+
+    &:hover {
+      background-color: $c-white;
+      color: $c-blue;
+    }
+  }
+}
