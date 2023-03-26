@@ -28,7 +28,7 @@ function register_styles_scripts(): void
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.css', ' ', $fileName);
-        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.2', 'screen');
+        wp_register_style(trim($fileName . '?test=123'),get_template_directory_uri() . $filePath, array(), '1.2', 'screen');
         wp_enqueue_style(trim($fileName));
     }
 
