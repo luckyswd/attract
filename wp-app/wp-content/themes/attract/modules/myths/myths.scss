@@ -1,0 +1,94 @@
+.myths {
+  .myths__headline {
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: -0.06em;
+    width: 90%;
+  }
+
+  .myths__myths {
+    padding-top: 120px;
+  }
+
+  .myths__myth {
+    padding: 45px 0;
+    border-top: 1.5px solid $c-light-blue-line;
+  }
+
+  .myths__myth-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .myths__myth-number {
+    padding: 5px 20px;
+    border: 1px solid $c-blue;
+    border-radius: 300px;
+    color: $c-blue;
+    white-space: nowrap;
+  }
+
+  .myths__myth-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .myths__myth-header-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .myths__myth-icon {
+    display: flex;
+  }
+
+  .myths__myth-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s cubic-bezier(0, 1, 0, 1);
+  }
+
+  .myths__myth-icon {
+    transition: $transition-btn;
+
+  }
+
+  .open-js {
+
+    .myths__myth-body {
+      max-height: 2000px;
+      transition: max-height 0.7s ease-in-out;
+    }
+
+    .myths__myth-icon {
+      transform: rotate(45deg);
+
+      circle {
+        fill: #7990E2;
+      }
+    }
+  }
+
+  .myths__myth-body {
+    display: flex;
+    padding-top: 35px;
+    gap: 35px;
+  }
+
+  .myths__myth-image {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .myths__myth-description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+  }
+}

@@ -9,3 +9,4 @@
 
 /**** MODULES ****/
 //=include ../../modules/our-cases/our-cases.js
+//=include ../../modules/myths/myths.js
