@@ -44,7 +44,7 @@ function scripts() {
   )
     .pipe(include())
     .on('error', console.log)
-    .pipe(concat(`build${number}.js`))
+    .pipe(concat(`build.js`))
     .pipe(minify({noSource: true}))
     .pipe(gulp.dest('dist/js'))
 }
