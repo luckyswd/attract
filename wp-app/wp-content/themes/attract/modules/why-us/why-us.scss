@@ -1,0 +1,122 @@
+.why-us {
+  padding: 100px 0;
+  .why-us__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .why-us__headline {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: -0.06em;
+  }
+
+  .why-us__photos {
+    display: flex;
+  }
+
+  .why-us__photo {
+    margin-left: -30px;
+
+    img {
+      border-radius: 100%;
+      border: 1px solid $c-blue;
+    }
+  }
+
+  .why-us__description {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+    padding-top: 75px;
+    width: 55%;
+
+    span {
+      color: $c-blue;
+    }
+  }
+
+  .why-us__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding-top: 75px;
+  }
+
+  .why-us__card {
+    background: $c-white;
+    border: 1px solid $c-blue;
+    border-radius: 20px;
+    padding: 40px;
+    min-height: 287px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .why-us__card-number {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 44px;
+    letter-spacing: -0.06em;
+    color: $c-blue;
+  }
+
+  .why-us__card-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .why-us__info-card {
+    background: $c-blue;
+    border: 1px solid $c-blue;
+    border-radius: 20px;
+    padding: 40px;
+    color: $c-white;
+  }
+
+  .why-us__info-card-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .why-us__info-card-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    padding-top: 25px;
+  }
+
+  .why-us__info-card-button {
+    background: $c-white;
+    border-radius: 300px;
+    padding: 25px;
+    display: block;
+    text-align: center;
+    margin-top: 75px;
+    color: $c-blue;
+    border: 1px solid $c-white;
+    transition: $transition-anchor-btn;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+
+    &:hover {
+      background-color: $c-blue;
+      color: $c-white;
+    }
+  }
+}
