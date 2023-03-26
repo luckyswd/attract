@@ -8,4 +8,4 @@
 
 
 /**** MODULES ****/
-//=include ../../modules/about-company/about-company.js
+//=include ../../modules/our-cases/our-cases.js

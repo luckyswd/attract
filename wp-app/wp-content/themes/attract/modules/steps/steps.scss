@@ -1,0 +1,56 @@
+.steps {
+  padding: 100px 0;
+
+  .steps__headline {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 90px;
+    text-align: center;
+    letter-spacing: -0.06em;
+  }
+
+  .steps__description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    padding-top: 50px;
+
+    span {
+      color: $c-blue;
+    }
+  }
+
+  .steps__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding-top: 50px;
+  }
+
+  .steps__card-icon {
+    width: 100%;
+    max-width: 80px;
+  }
+
+  .steps__card-subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $c-blue;
+    padding-top: 35px;
+  }
+
+  .steps__card-description {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+    padding-top: 12px;
+  }
+}
