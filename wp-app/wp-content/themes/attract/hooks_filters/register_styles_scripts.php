@@ -54,6 +54,7 @@ function getHasFile(
     string $path,
 ): string {
     $fullPath = sprintf('%s/dist/%s', __DIR__, $path);
+    var_dump(hash_file('md5', $fullPath));
 
     return hash_file('md5', $fullPath);
 }
