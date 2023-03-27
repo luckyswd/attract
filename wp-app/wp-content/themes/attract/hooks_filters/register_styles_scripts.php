@@ -53,8 +53,7 @@ add_action('admin_enqueue_scripts', 'admin_register_styles_scripts');
 function getHasFile(
     string $path,
 ): string {
-    $fullPath = sprintf('%s/dist/%s', __DIR__, $path);
-    var_dump(hash_file('md5', $fullPath));
+    $fullPath = sprintf('%s/dist/%s', get_template_directory(), $path);
 
     return hash_file('md5', $fullPath);
 }
