@@ -28,7 +28,7 @@ function register_styles_scripts(): void
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.css', ' ', $fileName);
-        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), getRandomVersion(), 'screen');
+        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), getHasFile('css/style.min.css'), 'screen');
         wp_enqueue_style(trim($fileName));
     }
 
@@ -37,7 +37,7 @@ function register_styles_scripts(): void
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.js', ' ', $fileName);
-        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), getRandomVersion(), true);
+        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), getHasFile('js/build-min.js'), true);
     }
 }
 
@@ -50,7 +50,11 @@ function admin_register_styles_scripts()
 
 add_action('admin_enqueue_scripts', 'admin_register_styles_scripts');
 
-function getRandomVersion(): string
+function getHasFile(
+    string $path,
+): string
 {
-    return sprintf('1.%s.%s', rand(1, 99), rand(1, 99));
+    $fullPath = sprintf('%s/dist/%s', __DIR__, $path);
+
+    return  hash_file('md5', $fullPath);
 }
