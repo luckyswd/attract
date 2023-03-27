@@ -1,38 +1,78 @@
 @font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope/Manrope-Medium.ttf');
+  font-family: 'Onest';
+  src: url('../fonts/Onest/Onest-Medium.ttf');
   src: local('Roboto Medium'), local('Roboto-Medium'),
-  url('../fonts/Manrope/Manrope-Medium.ttf') format('truetype');
+  url('../fonts/Onest/Onest-Medium.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope/Manrope-Light.ttf');
+  font-family: 'Onest';
+  src: url('../fonts/Onest/Onest-Light.ttf');
   src: local('Roboto Light'), local('Roboto-Light'),
-  url('../fonts/Manrope/Manrope-Light.ttf') format('truetype');
+  url('../fonts/Onest/Onest-Light.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope/Manrope-Bold.ttf');
+  font-family: 'Onest';
+  src: url('../fonts/Onest/Onest-Bold.ttf');
   src: local('Roboto Bold'), local('Roboto-Bold'),
-  url('../fonts/Manrope/Manrope-Bold.ttf') format('truetype');
+  url('../fonts/Onest/Onest-Bold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope/Manrope-SemiBold.ttf');
+  font-family: 'Onest';
+  src: url('../fonts/Onest/Onest-Regular.ttf');
   src: local('Roboto SemiBold'), local('Roboto-SemiBold'),
-  url('../fonts/Manrope/Manrope-SemiBold.ttf') format('truetype');
+  url('../fonts/Onest/Onest-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CodeNext-Trial';
+  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-Regular.ttf');
+  src: local('Roboto SemiBold'), local('Roboto-SemiBold'),
+  url('../fonts/CodeNext-Trial/CodeNext-Trial-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CodeNext-Trial';
+  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-Bold.ttf');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+  url('../fonts/CodeNext-Trial/CodeNext-Trial-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CodeNext-Trial';
+  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-Light.ttf');
+  src: local('Roboto Light'), local('Roboto-Light'),
+  url('../fonts/CodeNext-Trial/CodeNext-Trial-Light.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CodeNext-Trial';
+  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-SemiBold.ttf');
+  src: local('Roboto SemiBold'), local('Roboto-SemiBold'),
+  url('../fonts/CodeNext-Trial/CodeNext-Trial-SemiBold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
