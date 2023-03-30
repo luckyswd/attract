@@ -1,5 +1,9 @@
 .our-cases {
   padding: 100px 0;
+
+  @include _992 {
+    padding: 50px 0;
+  }
   .swiper {
     width: 100%;
     height: 100%;
@@ -13,8 +17,13 @@
     justify-content: space-between;
     color: $c-white;
     border-radius: 20px;
-    height: 100%;
     min-height: 650px;
+    height: auto;
+
+    @include _1440 {
+      min-height: 100%;
+      gap: 40px;
+    }
 
     span {
       font-weight: 800;
@@ -28,26 +37,43 @@
     object-fit: cover;
   }
 
-  h2 {
-    font-style: normal;
+  .our-cases__headline {
+    font-family: 'CodeNext-Trial';
     font-weight: 600;
     font-size: 80px;
     line-height: 90px;
     letter-spacing: -0.06em;
     text-align: center;
+
+    @include _1280 {
+      font-size: 60px;
+      line-height: 50px;
+    }
+
+    @include _680 {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   .our-cases__cards-swiper {
     padding-top: 75px;
+    @include _992 {
+      padding-top: 35px;
+    }
   }
 
   .our-cases__card-name {
-    font-style: normal;
     font-weight: 500;
-    font-size: 56px;
-    line-height: 44px;
+    font-size: 30px;
+    line-height: 35px;
     letter-spacing: -0.06em;
     padding-top: 13px;
+
+    @include _1280 {
+      font-size: 30px;
+      line-height: 30px;
+    }
 
   }
 

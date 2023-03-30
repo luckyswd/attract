@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 1700px;
+    max-width: 1780px;
     margin: 0 auto;
     padding: 0 40px;
     width: 100%;
@@ -23,4 +23,8 @@ body {
     min-height: 100vh;
     font-weight: 400;
     font-size: 16px;
+}
+
+h2 {
+    font-family: 'CodeNext-Trial';
 }

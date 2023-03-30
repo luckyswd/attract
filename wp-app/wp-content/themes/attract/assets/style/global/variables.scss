@@ -33,7 +33,11 @@ $transition: all .3s ease-in-out;
         @content;
     }
 }
-
+@mixin _680 {
+    @media (max-width: 680px) {
+        @content;
+    }
+}
 
 @mixin _480 {
     @media (max-width: 480px) {

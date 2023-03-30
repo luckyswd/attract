@@ -1,18 +1,32 @@
 .effective-marketing {
   padding: 100px 0;
+  @include _992 {
+    padding: 50px 0;
+  }
   .effective-marketing__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
+    @include _680 {
+      flex-direction: column;
+    }
   }
- .effective-marketing__main {
-   width: 60%;
- }
+
+  .effective-marketing__main {
+    width: 60%;
+
+    @include _680 {
+      width: 100%;
+    }
+  }
+
   .effective-marketing__socials {
     display: flex;
     gap: 10px;
   }
+
   .effective-marketing__social {
     transition: $transition-anchor-btn;
 
@@ -20,13 +34,31 @@
       transform: scale(1.2);
     }
   }
+
   .effective-marketing__headline {
+    font-family: 'CodeNext-Trial';
     padding-top: 130px;
-    font-style: normal;
     font-weight: 600;
     font-size: 100px;
     line-height: 100px;
     letter-spacing: -0.06em;
+
+
+    @include _1280 {
+      font-size: 70px;
+      line-height: 60px;
+      padding-top: 30px;
+    }
+
+    @include _992 {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    @include _680 {
+      font-size: 36px;
+      line-height: 36px;
+    }
 
     span {
       color: $c-blue;
@@ -34,12 +66,17 @@
   }
 
   .effective-marketing__description {
+    font-family: 'Onest';
     padding-top: 30px;
-    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 46px;
     letter-spacing: -1.5px;
+    @include _1280 {
+      font-size: 20px;
+      line-height: 25px;
+
+    }
   }
 
   .effective-marketing__tags {
@@ -47,10 +84,14 @@
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
+
+    @include _680 {
+      padding-top: 20px;
+    }
   }
 
   .effective-marketing__tag {
-    font-style: normal;
+    font-family: 'Onest';
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
@@ -58,8 +99,24 @@
     span {
       color: $c-blue;
     }
+
+    @include _992 {
+      font-size: 14px;
+    }
+  }
+  .effective-marketing__side {
+    @include _680 {
+      display: none;
+    }
   }
 
+  .effective-marketing__side-mobile {
+    display: none;
+    padding-top: 40px;
+    @include _680 {
+      display: block;
+    }
+  }
   .effective-marketing__footer {
     display: flex;
     padding: 10px 10px 10px 55px;
@@ -71,10 +128,33 @@
     max-width: 700px;
     align-items: center;
     gap: 30px;
-    font-style: normal;
+    font-family: 'Onest';
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
+    @include _1280 {
+      display: none;
+    }
+  }
+  .effective-marketing__information {
+    @include _680 {
+      text-align: center;
+    }
+  }
+  .effective-marketing__footer.mobile {
+    display: none;
+
+    @include _1280 {
+      display: flex;
+
+    }
+    @include _680 {
+      border-radius: 60px;
+      flex-direction: column;
+      padding: 20px 30px;
+      margin: 45px auto 0;
+
+    }
   }
 
   .effective-marketing__btn {
@@ -90,6 +170,10 @@
       background-color: $c-blue;
       color: $c-white;
 
+    }
+
+    @include _680 {
+      padding: 20px 50px;
     }
   }
 

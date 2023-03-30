@@ -1,15 +1,36 @@
 .information {
   padding: 100px 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+
+  @include _992 {
+    padding: 50px 0;
+  }
   .information__headline {
-    font-style: normal;
-    font-weight: 700;
+    font-family: "Onest";
+    font-weight: 900;
     font-size: 80px;
     line-height: 90px;
     letter-spacing: -0.06em;
     width: 60%;
     padding-bottom: 45px;
+    @include _1440 {
+      width: 100%;
+    }
 
+    @include _992 {
+      text-align: center;
+      font-size: 70px;
+      line-height: 60px;
+    }
+
+    @include _680 {
+      font-size: 36px;
+      line-height: 36px;
+      padding-bottom: 20px;
+
+    }
     span {
       color: $c-blue;
     }
@@ -21,7 +42,16 @@
     font-size: 36px;
     line-height: 46px;
     letter-spacing: -1.5px;
+    @include _992 {
+      text-align: center;
+      font-size: 30px;
+      line-height: 25px;
+    }
 
+    @include _680 {
+      font-size: 20px;
+      line-height: 25px;
+    }
     span {
       color: $c-blue;
     }
@@ -31,7 +61,23 @@
     padding-top: 140px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px
+    gap: 40px;
+
+    @include _1440 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include _992 {
+      padding-top: 75px;
+      gap: 20px;
+
+    }
+
+    @include _680 {
+      grid-template-columns: repeat(1, 1fr);
+      padding-top: 30px;
+
+    }
   }
 
   .information__card {
@@ -43,24 +89,36 @@
     flex-direction: column;
     justify-content: space-between;
     background: $c-white;
+
+    @include _992 {
+      min-height: 190px;
+    }
   }
 
-  .information__card:first-child {
-    background:none;
-  }
   .information__card-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
+    font-family: 'Onest';
+    font-weight: 900;
+    font-size: 40px;
     line-height: 44px;
     letter-spacing: -0.06em;
+
+    @include _992 {
+      font-size: 28px;
+      line-height: 22px;
+    }
   }
 
   .information__card-subtitle {
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 36px;
+
+    @include _992 {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
   }
 
   .information__background-image {

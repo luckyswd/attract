@@ -13,6 +13,7 @@ $socials = get_field('socials');
 $description = get_field('description');
 $tags = get_field('tags');
 $side_image = get_field('side_image');
+$side_image_mobile = get_field('side_image_mobile');
 $button = get_field('button');
 $information = get_field('information');
 ?>
@@ -43,7 +44,11 @@ $information = get_field('information');
                             <?= $description ?>
                         </p>
                     <?php endif; ?>
-
+                    <div class="effective-marketing__side-mobile">
+                        <?php if (!empty($side_image_mobile)) : ?>
+                            <img loading="lazy" src="<?= $side_image_mobile['url'] ?>" alt="Картинка">
+                        <?php endif; ?>
+                    </div>
                     <?php if (!empty($tags)) : ?>
                         <div class="effective-marketing__tags">
                             <?php foreach ($tags as $tag) : ?>
@@ -75,7 +80,22 @@ $information = get_field('information');
                     <?php if (!empty($side_image)) : ?>
                         <img loading="lazy" src="<?= $side_image['url'] ?>" alt="Картинка">
                     <?php endif; ?>
+
                 </div>
+
+            </div>
+            <div class="effective-marketing__footer mobile">
+                <?php if (!empty($information)) : ?>
+                    <div class="effective-marketing__information">
+                        <?= $information ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (!empty($button)) : ?>
+                    <div class="effective-marketing__btn">
+                        <?= $button['title'] ?? '' ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
         </div>

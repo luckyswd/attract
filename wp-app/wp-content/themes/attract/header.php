@@ -25,8 +25,10 @@ $buttons = get_field('anchor_buttons', 'option');
                 <?php endif; ?>
 
                 <div class="header__burger">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="40" viewBox="0 0 32 32">
-                        <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="25" viewBox="0 0 52 25" fill="none">
+                        <path d="M9.36157 2.80713H48.6003" stroke="#1744D0" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M3.35889 12.2397L48.6003 12.2397" stroke="#1744D0" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M3.35889 21.6724L48.6003 21.6724" stroke="#1744D0" stroke-width="5" stroke-linecap="round"/>
                     </svg>
                 </div>
 
