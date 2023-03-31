@@ -46,8 +46,7 @@
     }
   }
   .hero-photo:first-child {
-    padding-right: 40px;
-    margin-right: 0;
+    margin-right: 40px;
 
     @include _680 {
       padding-right: 0;
