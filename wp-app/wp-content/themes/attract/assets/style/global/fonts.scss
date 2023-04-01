@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Onest';
-  src: url('../fonts/Onest/Onest-Medium.ttf');
+  src: url('../fonts/Onest/Onest-Medium.woff');
   src: local('Roboto Medium'), local('Roboto-Medium'),
-  url('../fonts/Onest/Onest-Medium.ttf') format('truetype');
+  url('../fonts/Onest/Onest-Medium.woff') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,9 +10,9 @@
 
 @font-face {
   font-family: 'Onest';
-  src: url('../fonts/Onest/Onest-Light.ttf');
+  src: url('../fonts/Onest/Onest-Light.woff');
   src: local('Roboto Light'), local('Roboto-Light'),
-  url('../fonts/Onest/Onest-Light.ttf') format('truetype');
+  url('../fonts/Onest/Onest-Light.woff') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -20,9 +20,9 @@
 
 @font-face {
   font-family: 'Onest';
-  src: url('../fonts/Onest/Onest-Bold.ttf');
+  src: url('../fonts/Onest/Onest-Bold.woff');
   src: local('Roboto Bold'), local('Roboto-Bold'),
-  url('../fonts/Onest/Onest-Bold.ttf') format('truetype');
+  url('../fonts/Onest/Onest-Bold.woff') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -30,9 +30,9 @@
 
 @font-face {
   font-family: 'Onest';
-  src: url('../fonts/Onest/Onest-Regular.ttf');
+  src: url('../fonts/Onest/Onest-Regular.woff');
   src: local('Roboto SemiBold'), local('Roboto-SemiBold'),
-  url('../fonts/Onest/Onest-Regular.ttf') format('truetype');
+  url('../fonts/Onest/Onest-Regular.woff') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
