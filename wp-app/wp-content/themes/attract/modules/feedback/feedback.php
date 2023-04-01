@@ -40,7 +40,7 @@ $cards = get_field('cards');
 
                             <?php if (!empty($card['image'])) : ?>
                                 <div class="feedback__image">
-                                    <img loading="lazy" src="<?= $card['image']['url'] ?>" alt="Картинка">
+                                    <?= getPictureImage($card['image']) ?>
                                 </div>
                             <?php endif; ?>
                         </div>

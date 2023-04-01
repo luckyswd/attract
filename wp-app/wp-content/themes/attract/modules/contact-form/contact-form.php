@@ -25,18 +25,13 @@ $form = get_field('form');
 
                 <?php if (!empty($icon)) : ?>
                     <div class="contact-form__icon">
-                        <img loading="lazy" src="<?= $icon['url'] ?>" alt="Иконка">
+                        <?= getPictureImage($icon) ?>
                     </div>
                 <?php endif; ?>
-
-
             </div>
             <?php if (!empty($form)) : ?>
-
                 <?= $form ?>
-
             <?php endif; ?>
-
         </div>
     </section>
 <?php else: ?>

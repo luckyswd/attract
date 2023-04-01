@@ -34,7 +34,7 @@ $side_image = get_field('side_image');
                 <div class="follow-us__side">
                     <?php if (!empty($side_image)) : ?>
                         <div class="follow-us__image">
-                            <img loading="lazy" src="<?= $side_image['url'] ?>" alt="Картинка">
+                            <?= getPictureImage($side_image) ?>
                         </div>
                     <?php endif; ?>
                 </div>

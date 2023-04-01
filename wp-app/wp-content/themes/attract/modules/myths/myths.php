@@ -49,7 +49,7 @@ $myths = get_field('myths');
                             <div class="myths__myth-body">
                                 <?php if (!empty($myth['image'])) : ?>
                                     <div class="myths__myth-image">
-                                        <img loading="lazy" src="<?= $myth['image']['url'] ?>" alt="Картинка">
+                                        <?= getPictureImage($myth['image']) ?>
                                     </div>
                                 <?php endif; ?>
 

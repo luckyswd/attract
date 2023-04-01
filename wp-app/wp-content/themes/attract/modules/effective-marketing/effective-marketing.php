@@ -28,7 +28,7 @@ $information = get_field('information');
                             <?php foreach ($socials as $social) : ?>
                                 <?php if (!empty($social)) : ?>
                                     <a href="<?= $social['url'] ?>" class="effective-marketing__social">
-                                        <img loading="lazy" src="<?= $social['icon']['url'] ?>" alt="Иконка">
+                                        <?= getPictureImage( $social['icon']) ?>
                                     </a>
                                 <?php endif; ?>
                             <?php endforeach; ?>
@@ -46,7 +46,7 @@ $information = get_field('information');
                     <?php endif; ?>
                     <div class="effective-marketing__side-mobile">
                         <?php if (!empty($side_image_mobile)) : ?>
-                            <img loading="lazy" src="<?= $side_image_mobile['url'] ?>" alt="Картинка">
+                            <?= getPictureImage($side_image_mobile) ?>
                         <?php endif; ?>
                     </div>
                     <?php if (!empty($tags)) : ?>
@@ -78,7 +78,7 @@ $information = get_field('information');
 
                 <div class="effective-marketing__side">
                     <?php if (!empty($side_image)) : ?>
-                        <img loading="lazy" src="<?= $side_image['url'] ?>" alt="Картинка">
+                        <?= getPictureImage($side_image) ?>
                     <?php endif; ?>
 
                 </div>

@@ -26,7 +26,7 @@ $information = get_field('information');
                 <div class="hero-photos">
                     <?php foreach ($photos as $photo) : ?>
                         <div class="hero-photo">
-                            <img src="<?= $photo['photo']['url'] ?>" alt="Фото">
+                            <?= getPictureImage($photo['photo']) ?>
                         </div>
                     <?php endforeach; ?>
                 </div>

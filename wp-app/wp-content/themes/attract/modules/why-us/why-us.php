@@ -29,7 +29,7 @@ $info_card = get_field('info_card');
                     <div class="why-us__photos-desktop">
                         <?php foreach ($photos as $photo) : ?>
                             <div class="why-us__photo">
-                                <img loading="lazy" src="<?= $photo['photo']['url'] ?>" alt="Фото">
+                                <?= getPictureImage($photo['photo']) ?>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -46,7 +46,7 @@ $info_card = get_field('info_card');
                 <div class="why-us__photos-mobile">
                     <?php foreach ($photos as $photo) : ?>
                         <div class="why-us__photo">
-                            <img loading="lazy" src="<?= $photo['photo']['url'] ?>" alt="Фото">
+                            <?= getPictureImage($photo['photo']) ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -56,9 +56,9 @@ $info_card = get_field('info_card');
                 <div class="why-us__cards">
                     <?php foreach ($cards as $key => $card) : ?>
                         <div class="why-us__card">
-                                <div class="why-us__card-number">
-                                    <?= $key + 1 ?>
-                                </div>
+                            <div class="why-us__card-number">
+                                <?= $key + 1 ?>
+                            </div>
                             <?php if (!empty($card['description'])) : ?>
                                 <div class="why-us__card-description">
                                     <?= $card['description'] ?>

@@ -5,7 +5,7 @@ include 'hooks_filters/webp_upload.php';
 include 'hooks_filters/after_setup_theme.php';
 include 'hooks_filters/reset_default_css_js.php';
 
-require_once 'helpers/Helpers.php';
+require_once 'helpers/helpers.php';
 require_once 'ajax/Ajax.php';
 $ajax = new Ajax();
 $ajax->register();

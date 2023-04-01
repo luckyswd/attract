@@ -34,7 +34,7 @@ $cards = get_field('cards');
                         <div class="steps__card">
                             <?php if ($card['icon']) : ?>
                                 <div class="steps__card-icon">
-                                    <img loading="lazy" src="<?= $card['icon']['url'] ?>" alt="Иконка">
+                                    <?= getPictureImage($card['icon']) ?>
                                 </div>
                             <?php endif; ?>
 
