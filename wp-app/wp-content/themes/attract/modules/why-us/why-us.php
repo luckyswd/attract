@@ -26,7 +26,7 @@ $info_card = get_field('info_card');
                 <?php endif; ?>
 
                 <?php if (!empty($photos)) : ?>
-                    <div class="why-us__photos">
+                    <div class="why-us__photos-desktop">
                         <?php foreach ($photos as $photo) : ?>
                             <div class="why-us__photo">
                                 <img loading="lazy" src="<?= $photo['photo']['url'] ?>" alt="Фото">
@@ -40,6 +40,16 @@ $info_card = get_field('info_card');
                 <p class="why-us__description">
                     <?= $description ?>
                 </p>
+            <?php endif; ?>
+
+            <?php if (!empty($photos)) : ?>
+                <div class="why-us__photos-mobile">
+                    <?php foreach ($photos as $photo) : ?>
+                        <div class="why-us__photo">
+                            <img loading="lazy" src="<?= $photo['photo']['url'] ?>" alt="Фото">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             <?php endif; ?>
 
             <?php if (!empty($cards)) : ?>
