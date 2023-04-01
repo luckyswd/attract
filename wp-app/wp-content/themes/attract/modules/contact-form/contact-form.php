@@ -14,7 +14,7 @@ $form = get_field('form');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="contact-form">
+    <section class="contact-form" id="contact-form">
         <div class="container">
             <div class="contact-form__header">
                 <?php if (!empty($headline)) : ?>

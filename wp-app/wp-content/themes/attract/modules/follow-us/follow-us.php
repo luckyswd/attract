@@ -14,7 +14,7 @@ $side_image = get_field('side_image');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="follow-us distance">
+    <section class="follow-us distance" id="follow-us">
         <div class="container">
             <div class="follow-us__content">
                 <div class="follow-us__main">

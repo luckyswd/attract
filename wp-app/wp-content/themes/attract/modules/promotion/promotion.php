@@ -13,7 +13,7 @@ $button = get_field('button');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="promotion distance">
+    <section class="promotion distance" id="promotion">
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="promotion__headline">
