@@ -19,7 +19,7 @@ $information = get_field('information');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="effective-marketing">
+    <section class="effective-marketing distance">
         <div class="container">
             <div class="effective-marketing__content">
                 <div class="effective-marketing__main">

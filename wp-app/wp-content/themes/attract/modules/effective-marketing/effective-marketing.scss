@@ -1,8 +1,4 @@
 .effective-marketing {
-  padding: 100px 0;
-  @include _992 {
-    padding: 50px 0;
-  }
   .effective-marketing__content {
     display: flex;
     justify-content: space-between;

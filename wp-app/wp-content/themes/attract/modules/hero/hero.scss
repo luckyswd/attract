@@ -1,8 +1,4 @@
 .hero {
-  padding: 190px 0 100px;
-  @include _992 {
-    padding: 190px 0 50px;
-  }
   h1 {
     font-family: 'CodeNext-Trial';
     font-weight: 600;
@@ -25,7 +21,7 @@
   .hero-photos {
     display: flex;
     justify-content: center;
-    padding: 75px 120px 100px 0;
+    padding: 75px 120px 75px 0;
 
     @include _680 {
       flex-direction: column;
@@ -53,8 +49,11 @@
       margin-bottom: 0;
     }
   }
-  .hero-photo:last-child {
-    padding-bottom: 120px;
+  @include _680 {
+    .hero-photo:last-child {
+      padding-bottom: 120px;
+    }
+
   }
 
   .hero-photo img {

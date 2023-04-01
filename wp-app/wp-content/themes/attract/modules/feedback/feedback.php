@@ -13,7 +13,7 @@ $cards = get_field('cards');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="feedback">
+    <section class="feedback distance">
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="feedback__headline">

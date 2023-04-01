@@ -13,7 +13,7 @@ $cards = get_field('cards');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="our-cases">
+    <section class="our-cases distance">
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="our-cases__headline">

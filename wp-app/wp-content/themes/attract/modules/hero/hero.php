@@ -15,7 +15,7 @@ $information = get_field('information');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="hero">
+    <section class="hero distance">
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h1>

@@ -16,7 +16,7 @@ $info_card = get_field('info_card');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="why-us">
+    <section class="why-us distance">
         <div class="container">
             <div class="why-us__header">
                 <?php if (!empty($headline)) : ?>

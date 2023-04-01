@@ -14,7 +14,7 @@ $cards = get_field('cards');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="steps">
+    <section class="steps distance">
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="steps__headline">

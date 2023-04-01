@@ -1,12 +1,8 @@
 .information {
-  padding: 100px 0;
   position: relative;
   background-repeat: no-repeat;
   background-position-y: bottom;
 
-  @include _992 {
-    padding: 50px 0;
-  }
   .information__headline {
     font-family: "Onest";
     font-weight: 900;
