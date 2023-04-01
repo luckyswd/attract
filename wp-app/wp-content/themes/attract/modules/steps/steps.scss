@@ -7,6 +7,21 @@
     line-height: 90px;
     text-align: center;
     letter-spacing: -0.06em;
+
+    @include _1280 {
+      font-size: 70px;
+      line-height: 70px;
+    }
+
+    @include _680 {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    @include _375 {
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
 
   .steps__description {
@@ -21,6 +36,16 @@
     span {
       color: $c-blue;
     }
+
+    @include _992 {
+      font-size: 20px;
+      line-height: 25px;
+      padding-top: 30px;
+    }
+
+    @include _680 {
+      padding-top: 20px;
+    }
   }
 
   .steps__cards {
@@ -28,11 +53,32 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     padding-top: 50px;
+
+    @include _1440 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include _992 {
+      padding-top: 40px;
+
+    }
+    @include _680 {
+      padding-top: 20px;
+    }
+
+    @include _480 {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .steps__card-icon {
     width: 100%;
     max-width: 80px;
+    max-height: 80px;
+
+    img {
+      max-height: 80px;
+    }
   }
 
   .steps__card-subtitle {
@@ -42,6 +88,9 @@
     line-height: 140%;
     color: $c-blue;
     padding-top: 35px;
+    @include _480 {
+      padding-top: 12px;
+    }
   }
 
   .steps__card-description {
@@ -51,5 +100,10 @@
     line-height: 36px;
     letter-spacing: -1.5px;
     padding-top: 12px;
+
+    @include _1440 {
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 }
