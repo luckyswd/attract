@@ -26,7 +26,7 @@ $information = get_field('information');
                 <div class="hero-photos">
                     <?php foreach ($photos as $photo) : ?>
                         <div class="hero-photo">
-                            <?= getPictureImage($photo['photo']) ?>
+                            <?= getPictureImage($photo['photo'], 350, 350) ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
