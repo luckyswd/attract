@@ -33,27 +33,7 @@
   }
 
   .our-cases__headline {
-    font-family: 'CodeNext-Trial';
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: -0.06em;
     text-align: center;
-
-    @include _1280 {
-      font-size: 70px;
-      line-height: 70px;
-    }
-
-    @include _680 {
-      font-size: 50px;
-      line-height: 50px;
-    }
-
-    @include _375 {
-      font-size: 40px;
-      line-height: 40px;
-    }
   }
 
   .our-cases__cards-swiper {

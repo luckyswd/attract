@@ -4,6 +4,15 @@
     gap: 30px;
     justify-content: space-between;
     align-items: center;
+
+    @include _992 {
+      flex-direction: column;
+      gap: 70px;
+    }
+
+    @include _480 {
+      gap: 40px;
+    }
   }
 
   .follow-us__main, .follow-us__side {
@@ -11,10 +20,9 @@
   }
 
   .follow-us__headline {
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: -0.06em;
+    @include _992 {
+      text-align: center;
+    }
   }
 
   .follow-us__button {
@@ -36,6 +44,16 @@
     &:hover {
       background-color: $c-white;
       color: $c-blue;
+    }
+
+    @include _992 {
+      margin:30px auto 0;
+    }
+
+    @include _480 {
+      max-width: 230px;
+      margin:30px auto 0;
+      font-size: 14px;
     }
   }
 }
