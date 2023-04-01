@@ -18,9 +18,9 @@ $information = get_field('information');
     <section class="hero distance">
         <div class="container">
             <?php if (!empty($headline)) : ?>
-                <h1>
+                <h2>
                     <?= $headline ?>
-                </h1>
+                </h2>
             <?php endif; ?>
             <?php if (!empty($photos)) : ?>
                 <div class="hero-photos">
@@ -44,8 +44,6 @@ $information = get_field('information');
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
-
-
         </div>
     </section>
 <?php else: ?>

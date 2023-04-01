@@ -67,3 +67,4 @@ $buttons = get_field('anchor_buttons', 'option');
 
 </header>
 <main id="main" class="main" data-page-id="<?= get_queried_object_id() ?>">
+<h1 class="visually-hidden">Attract</h1>
