@@ -23,7 +23,6 @@ $buttons = get_field('anchor_buttons', 'option');
                         <img loading="lazy" src="<?= $logo['url'] ?>" alt="image">
                     </div>
                 <?php endif; ?>
-
                 <div class="header__burger">
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="25" viewBox="0 0 52 25" fill="none">
                         <path d="M9.36157 2.80713H48.6003" stroke="#1744D0" stroke-width="5" stroke-linecap="round"/>
@@ -31,7 +30,6 @@ $buttons = get_field('anchor_buttons', 'option');
                         <path d="M3.35889 21.6724L48.6003 21.6724" stroke="#1744D0" stroke-width="5" stroke-linecap="round"/>
                     </svg>
                 </div>
-
                 <?php if (!empty($buttons)) : ?>
                     <div class="header__buttons">
                         <?php foreach ($buttons as $button) : ?>
@@ -44,7 +42,6 @@ $buttons = get_field('anchor_buttons', 'option');
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
-
             </div>
             <div class="header__mobile">
                 <?php if (!empty($buttons)) : ?>
@@ -55,16 +52,12 @@ $buttons = get_field('anchor_buttons', 'option');
                                     <?= $button['button']['title'] ?? '' ?>
                                 </a>
                             <?php endif; ?>
-
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
             </div>
         </div>
-
     </div>
-
-
 </header>
 <main id="main" class="main" data-page-id="<?= get_queried_object_id() ?>">
 <h1 class="visually-hidden">Attract</h1>
