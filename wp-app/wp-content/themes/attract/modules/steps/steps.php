@@ -34,7 +34,7 @@ $cards = get_field('cards');
                         <div class="steps__card">
                             <?php if ($card['icon']) : ?>
                                 <div class="steps__card-icon">
-                                    <?= getPictureImage($card['icon']) ?>
+                                    <?= getPictureImage($card['icon'], 80, 80) ?>
                                 </div>
                             <?php endif; ?>
 
