@@ -28,7 +28,7 @@ $information = get_field('information');
                             <?php foreach ($socials as $social) : ?>
                                 <?php if (!empty($social)) : ?>
                                     <a href="<?= $social['url'] ?>" class="effective-marketing__social">
-                                        <?= getPictureImage( $social['icon']) ?>
+                                        <?= getPictureImage( $social['icon'], 64, 64) ?>
                                     </a>
                                 <?php endif; ?>
                             <?php endforeach; ?>
