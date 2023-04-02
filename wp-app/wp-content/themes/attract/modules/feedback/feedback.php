@@ -13,7 +13,9 @@ $cards = get_field('cards');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="feedback distance" id="feedback">
+    <section class="feedback distance">
+        <?php anchorHelper('feedback');?>
+
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="feedback__headline">

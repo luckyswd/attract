@@ -14,6 +14,8 @@ $myths = get_field('myths');
 
 <?php if (!is_admin()) : ?>
     <section class="myths distance" id="myths">
+        <?php anchorHelper('myths');?>
+
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="myths__headline">

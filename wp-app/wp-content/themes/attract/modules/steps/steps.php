@@ -15,6 +15,8 @@ $cards = get_field('cards');
 
 <?php if (!is_admin()) : ?>
     <section class="steps distance" id="steps">
+        <?php anchorHelper('steps');?>
+
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="steps__headline">

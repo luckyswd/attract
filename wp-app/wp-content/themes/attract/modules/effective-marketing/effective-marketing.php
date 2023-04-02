@@ -19,7 +19,9 @@ $information = get_field('information');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="effective-marketing distance" id="effective-marketing">
+    <section class="effective-marketing distance">
+        <?php anchorHelper('effective-marketing');?>
+
         <div class="container">
             <div class="effective-marketing__content">
                 <div class="effective-marketing__main">

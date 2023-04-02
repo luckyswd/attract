@@ -68,3 +68,12 @@ h2 {
   padding: 0;
   border: 0;
 }
+
+.anchor-helper {
+  position: absolute;
+  top: -180px;
+
+  @include _992 {
+    top: -150px;
+  }
+}

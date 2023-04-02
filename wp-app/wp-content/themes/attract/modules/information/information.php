@@ -16,7 +16,9 @@ $background_image = get_field('background_image');
 
 <?php if (!is_admin()) : ?>
 <section class="information distance" style="background-image: url('<?=  $background_image['url'] ?>')" id="information">
-        <div class="container">
+    <?php anchorHelper('information');?>
+
+    <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="information__headline">
                     <?= $headline ?>

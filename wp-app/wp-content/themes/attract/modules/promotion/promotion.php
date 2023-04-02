@@ -14,6 +14,8 @@ $button = get_field('button');
 
 <?php if (!is_admin()) : ?>
     <section class="promotion distance" id="promotion">
+        <?php anchorHelper('promotion');?>
+
         <div class="container">
             <?php if (!empty($headline)) : ?>
                 <h2 class="promotion__headline">

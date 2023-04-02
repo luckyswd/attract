@@ -14,7 +14,8 @@ $form = get_field('form');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="contact-form distance" id="contact-form">
+    <section class="contact-form distance">
+        <?php anchorHelper('why-us');?>
         <div class="container">
             <div class="contact-form__wrapper">
                 <div class="contact-form__header">
