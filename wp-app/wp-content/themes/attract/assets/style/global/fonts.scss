@@ -1,15 +1,5 @@
 @font-face {
   font-family: 'Onest';
-  src: url('../fonts/Onest/Onest-Medium.woff');
-  src: local('Roboto Medium'), local('Roboto-Medium'),
-  url('../fonts/Onest/Onest-Medium.woff') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Onest';
   src: url('../fonts/Onest/Onest-Light.woff');
   src: local('Roboto Light'), local('Roboto-Light'),
   url('../fonts/Onest/Onest-Light.woff') format('truetype');
@@ -20,56 +10,34 @@
 
 @font-face {
   font-family: 'Onest';
-  src: url('../fonts/Onest/Onest-Bold.woff');
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-  url('../fonts/Onest/Onest-Bold.woff') format('truetype');
-  font-weight: 800;
+  src: url('../fonts/Onest/Onest-Regular.woff');
+  src: local('Roboto Regular'), local('Roboto-Regular'),
+  url('../fonts/Onest/Onest-Regular.woff') format('truetype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Onest';
-  src: url('../fonts/Onest/Onest-Regular.woff');
-  src: local('Roboto SemiBold'), local('Roboto-SemiBold'),
-  url('../fonts/Onest/Onest-Regular.woff') format('truetype');
+  src: url('../fonts/Onest/Onest-Medium.woff');
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+  url('../fonts/Onest/Onest-Medium.woff') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/Onest/Onest-Bold.woff');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+  url('../fonts/Onest/Onest-Bold.woff') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-
-
-
-//@font-face {
-//  font-family: 'CodeNext-Trial';
-//  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-Regular.woff');
-//  src: local('Roboto SemiBold'), local('Roboto-SemiBold'),
-//  url('../fonts/CodeNext-Trial/CodeNext-Trial-Regular.woff') format('truetype');
-//  font-weight: 700;
-//  font-style: normal;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: 'CodeNext-Trial';
-//  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-Bold.woff');
-//  src: local('Roboto Bold'), local('Roboto-Bold'),
-//  url('../fonts/CodeNext-Trial/CodeNext-Trial-Bold.woff') format('truetype');
-//  font-weight: 700;
-//  font-style: normal;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: 'CodeNext-Trial';
-//  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-Light.woff');
-//  src: local('Roboto Light'), local('Roboto-Light'),
-//  url('../fonts/CodeNext-Trial/CodeNext-Trial-Light.woff') format('truetype');
-//  font-weight: 700;
-//  font-style: normal;
-//  font-display: swap;
-//}
 
 @font-face {
   font-family: 'CodeNext-Trial';
