@@ -1,19 +1,31 @@
 .myths {
   .myths__headline {
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: -0.06em;
     width: 90%;
+
+    @include _768 {
+      width: 100%;
+    }
   }
 
   .myths__myths {
-    padding-top: 120px;
+    padding-top: 100px;
+
+    @include _992 {
+      padding-top: 75px;
+    }
+
+    @include _680 {
+      padding-top: 35px;
+    }
   }
 
   .myths__myth {
     padding: 45px 0;
     border-top: 1.5px solid $c-light-blue-line;
+
+    @include  _992 {
+      padding: 20px 0;
+    }
   }
 
   .myths__myth-header {
@@ -32,16 +44,27 @@
   }
 
   .myths__myth-title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 36px;
     line-height: 36px;
     letter-spacing: -1.5px;
+
+    @include _992 {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 400;
+    }
   }
 
   .myths__myth-header-wrapper {
     display: flex;
     align-items: center;
     gap: 25px;
+
+    @include _680 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   .myths__myth-icon {
@@ -51,7 +74,7 @@
   .myths__myth-body {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.7s cubic-bezier(0, 1, 0, 1);
+    transition: max-height 0.7s cubic-bezier(0, 1, 0, 1), padding-top 0.7s;
   }
 
   .myths__myth-icon {
@@ -62,6 +85,7 @@
   .open-js {
 
     .myths__myth-body {
+      padding-top: 30px;
       max-height: 2000px;
       transition: max-height 0.7s ease-in-out;
     }
@@ -77,18 +101,37 @@
 
   .myths__myth-body {
     display: flex;
-    padding-top: 35px;
     gap: 35px;
   }
 
   .myths__myth-image {
-    width: 100%;
-    max-width: 240px;
+    width: 20%;
+
+    @include _1280 {
+      width: 30%;
+    }
+    @include _680 {
+      display: none;
+    }
   }
 
   .myths__myth-description {
+    width: 80%;
     font-weight: 400;
     font-size: 20px;
     line-height: 140%;
+
+    @include _1280 {
+      width: 70%;
+    }
+
+    @include _992 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include _680 {
+      width: 100%;
+    }
   }
 }

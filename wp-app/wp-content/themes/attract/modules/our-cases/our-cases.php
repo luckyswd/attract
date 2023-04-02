@@ -76,7 +76,6 @@ $cards = get_field('cards');
                         <?php endforeach; ?>
                     </div>
                 </div>
-
             <?php endif; ?>
 
         </div>

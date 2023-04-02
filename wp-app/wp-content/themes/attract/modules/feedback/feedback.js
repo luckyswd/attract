@@ -1,21 +1,30 @@
-new Swiper(".our-cases__cards-swiper", {
+new Swiper(".feedback__swiper", {
     breakpoints: {
         320: {
             slidesPerView: 1,
-            spaceBetween: 5,
+            spaceBetween: 15,
             grabCursor: true,
             centeredSlides: true,
             loop: true,
             autoplay: {
                 delay: 2000,
             },
-
-
         },
-        680: {
+
+        480: {
             slidesPerView: 2,
+            spaceBetween: 20,
+            grabCursor: true,
             centeredSlides: true,
-            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+            },
+        },
+        768: {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 20,
             grabCursor: true,
             loop: true,
             autoplay: {
@@ -24,10 +33,10 @@ new Swiper(".our-cases__cards-swiper", {
         },
 
 
-        1441: {
+        992: {
             slidesPerView: 4,
             centeredSlides: true,
-            spaceBetween: 30,
+            spaceBetween: 40,
             grabCursor: true,
             loop: true,
             autoplay: {

@@ -1,11 +1,16 @@
 .feedback {
 
   .feedback__headline {
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 90px;
     text-align: center;
-    letter-spacing: -0.06em;
+    padding-bottom: 80px;
+
+    @include _992 {
+      padding-bottom: 60px;
+    }
+
+    @include _680 {
+      padding-bottom: 40px;
+    }
   }
 
   .feedback__cards {
@@ -28,5 +33,21 @@
 
   .feedback__image {
     padding-top: 15px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
