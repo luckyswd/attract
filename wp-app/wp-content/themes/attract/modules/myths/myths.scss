@@ -9,6 +9,7 @@
 
   .myths__myths {
     padding-top: 100px;
+    cursor: pointer;
 
     @include _992 {
       padding-top: 75px;

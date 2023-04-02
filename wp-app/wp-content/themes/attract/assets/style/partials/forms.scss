@@ -1,0 +1,27 @@
+.wpcf7-not-valid-tip {
+  display: none!important;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  display: none;
+}
+
+
+input[type=text], input[type=tel], input[type=email], input[type=number] {
+  background: $c-light-blue-line;
+  border-radius: 300px;
+  padding: 25px 40px;
+  line-height: 140%;
+  font-size: 20px;
+  width: 100%;
+  direction: unset;
+  outline: unset;
+  border: none;
+  &::placeholder {
+    color: $c-blue2;
+  }
+
+  &.wpcf7-not-valid {
+    background: $light-red;
+  }
+}

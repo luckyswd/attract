@@ -1,19 +1,45 @@
 .contact-form {
-  padding: 80px 100px;
-  background-color: $c-blue;
+  .contact-form__wrapper {
+    background-color: $c-blue;
+    padding: 40px 50px;
+    border-radius: 10px;
+
+    @include _680 {
+      padding: 40px 20px;
+    }
+
+  }
   .contact-form__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  .contact-form__form-activities, .contact-form__form-goals, .contact-form__form-budet, .contact-form__form-tools{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
   .contact-form__headline {
+    font-family: 'Onest';
+    font-weight: 500;
     width: 80%;
-    font-weight: 800;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: -0.06em;
     color: $c-white;
+
+    @include _1280 {
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    @include _768 {
+      width: 100%;
+    }
+
+    @include _480 {
+      font-size: 30px;
+      line-height: 35px;
+    }
   }
 
   .contact-form__form {
@@ -22,14 +48,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 
-    input {
-      background: $c-light-blue-line;
-      border-radius: 300px;
-      padding: 25px 40px;
-      width: 100%;
-      border: none;
-    }
-
     p {
       color: $c-white;
       font-weight: 400;
@@ -37,6 +55,71 @@
       line-height: 140%;
       padding-bottom: 20px;
     }
+
+    @include _992 {
+      grid-template-columns: repeat(1, 1fr);
+      padding-top: 30px;
+      gap: 20px;
+
+      p {
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .contact-form__icon {
+    @include _768 {
+      display: none;
+    }
+  }
+  .contact-form__footer {
+    display: flex;
+    padding-top: 100px;
+    gap: 40px;
+
+    input {
+      background: $c-white;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      color: $c-blue;
+      width: 100%;
+      border-radius: 300px;
+      padding: 25px 40px;
+      border: none;
+      cursor: pointer;
+
+    }
+
+    .contact-form__form-send {
+      width: 100%;
+      cursor: pointer;
+
+    }
+
+    .wpcf7-spinner {
+      display: none;
+    }
+
+    @include _992 {
+      flex-direction: column;
+      padding-top: 30px;
+      gap: 15px;
+    }
   }
 
+  .contact-form__form-send {
+    color: $c-white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.06em;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include _992 {
+      justify-content: center;
+    }
+  }
 }

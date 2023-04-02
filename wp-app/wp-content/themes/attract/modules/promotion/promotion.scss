@@ -1,10 +1,6 @@
 .promotion {
   .promotion__headline {
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 90px;
     text-align: center;
-    letter-spacing: -0.06em;
 
     span {
       color: $c-blue;
@@ -21,12 +17,24 @@
     border: 1px solid $c-blue;
     border-radius: 300px;
     color: $c-white;
-    margin: 72px auto 0;
+    margin: 70px auto 0;
     transition: $transition-anchor-btn;
+    font-size: 20px;
+    line-height: 25px;
 
     &:hover {
       background-color: $c-white;
       color: $c-blue;
     }
+
+    @include _992 {
+      margin: 50px auto 0;
+    }
+    @include _680 {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 20px auto 0;
+    }
+
   }
 }
