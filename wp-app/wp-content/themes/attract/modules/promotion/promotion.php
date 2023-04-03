@@ -13,7 +13,7 @@ $button = get_field('button');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="promotion distance" id="promotion">
+    <section class="promotion distance">
         <?php anchorHelper('promotion');?>
 
         <div class="container">

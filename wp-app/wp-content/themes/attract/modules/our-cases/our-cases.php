@@ -13,7 +13,7 @@ $cards = get_field('cards');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="our-cases distance" id="our-cases">
+    <section class="our-cases distance">
         <?php anchorHelper('our-cases');?>
 
         <div class="container">

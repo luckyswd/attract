@@ -14,7 +14,7 @@ $cards = get_field('cards');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="steps distance" id="steps">
+    <section class="steps distance">
         <?php anchorHelper('steps');?>
 
         <div class="container">

@@ -15,7 +15,7 @@ $background_image = get_field('background_image');
 ?>
 
 <?php if (!is_admin()) : ?>
-<section class="information distance" style="background-image: url('<?=  $background_image['url'] ?>')" id="information">
+<section class="information distance" style="background-image: url('<?=  $background_image['url'] ?>')">
     <?php anchorHelper('information');?>
 
     <div class="container">

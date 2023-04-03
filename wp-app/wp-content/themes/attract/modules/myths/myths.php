@@ -13,7 +13,7 @@ $myths = get_field('myths');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="myths distance" id="myths">
+    <section class="myths distance">
         <?php anchorHelper('myths');?>
 
         <div class="container">
