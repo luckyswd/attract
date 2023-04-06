@@ -113,6 +113,7 @@ Use `wpmeteor-frontend-adjust-wpmeteor` filter in the following way:
 
 == Changelog ==
 
+3.2.0 - migration to external wp-meteor javascript library, support for shadow root inserted scripts added to address [Issue](https://wordpress.org/support/topic/wp-meteor-breaking-js-code-from-heyflow-form/)
 3.1.9 - migration to esbuild to produce smaller footprint javascript, upgrade of wp-notice library to fix CSRF perfmanently
 3.1.8 - jQuery mock improved
 3.1.7 - [Issue](https://wordpress.org/support/topic/error-php-29/) addressed

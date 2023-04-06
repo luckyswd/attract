@@ -1,0 +1,122 @@
+.team {
+  h2 {
+    text-align: center;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  .team-wrapper-mobile {
+    display: none;
+
+    @include _680 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 31px;
+
+      img {
+        height: 265px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    @include _480 {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+
+      img {
+        height: 300px;
+      }
+    }
+  }
+
+  .team-wrapper-desktop {
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+
+    @include _992 {
+      margin-top: 52px;
+    }
+
+    @include _680 {
+      display: none;
+    }
+  }
+
+  .team-col-1 {
+    margin-top: 130px;
+
+    @include _992 {
+      margin-top: 58px;
+    }
+
+    @include _768 {
+      margin-top: 55px;
+    }
+  }
+
+  .team-col-2 {
+    margin-top: 40px;
+
+    @include _992 {
+      margin-top: 20px;
+    }
+
+    @include _768 {
+      margin-top: 8px;
+    }
+  }
+
+  .team-col-4 {
+    margin-top: 100px;
+
+    @include _992 {
+      margin-top: 51px;
+    }
+
+    @include _768 {
+      margin-top: 35px;
+    }
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .team-item {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-weight: 700;
+    }
+
+    .position {
+      font-weight: 400;
+      margin-bottom: 15px;
+
+      @include _992 {
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+
+      @include _992 {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}

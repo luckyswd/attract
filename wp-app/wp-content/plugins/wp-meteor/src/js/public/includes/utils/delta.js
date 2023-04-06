@@ -1,3 +1,2 @@
-const initialTime = new Date();
-export default () => (new Date() - initialTime) / 1000;
-
+export default () => Math.round(performance.now()) / 1e3;
+//# sourceMappingURL=delta.js.map
