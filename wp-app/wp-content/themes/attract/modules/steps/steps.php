@@ -25,7 +25,7 @@ $cards = get_field('cards');
             <?php endif; ?>
 
             <?php if (!empty($description)) : ?>
-                <p class="steps__description">
+                <p class="steps__description subtitle-main">
                     <?= $description ?>
                 </p>
             <?php endif; ?>
@@ -47,7 +47,7 @@ $cards = get_field('cards');
                             <?php endif; ?>
 
                             <?php if ($card['description']) : ?>
-                                <div class="steps__card-description">
+                                <div class="steps__card-description subtitle-main">
                                     <?= $card['description'] ?>
                                 </div>
                             <?php endif; ?>

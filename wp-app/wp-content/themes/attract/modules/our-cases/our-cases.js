@@ -25,7 +25,7 @@ new Swiper(".our-cases__cards-swiper", {
 
 
         1441: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             centeredSlides: true,
             spaceBetween: 30,
             grabCursor: true,

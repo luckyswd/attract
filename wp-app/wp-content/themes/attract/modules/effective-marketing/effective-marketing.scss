@@ -18,61 +18,15 @@
     }
   }
 
-  .effective-marketing__socials {
-    display: flex;
-    gap: 10px;
-  }
-
-  .effective-marketing__social {
-    transition: $transition-anchor-btn;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
 
   .effective-marketing__headline {
-    font-family: 'CodeNext-Trial', sans-serif;;
-    padding-top: 130px;
-    font-weight: 600;
-    font-size: 100px;
-    line-height: 100px;
-    letter-spacing: -0.06em;
-
-
-    @include _1280 {
-      font-size: 70px;
-      line-height: 60px;
-      padding-top: 30px;
-    }
-
-    @include _992 {
-      font-size: 50px;
-      line-height: 50px;
-    }
-
-    @include _680 {
-      font-size: 36px;
-      line-height: 36px;
-    }
-
     span {
       color: $c-blue;
     }
   }
 
   .effective-marketing__description {
-    font-family: 'Onest';
     padding-top: 30px;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 46px;
-    letter-spacing: -1.5px;
-    @include _1280 {
-      font-size: 20px;
-      line-height: 25px;
-
-    }
   }
 
   .effective-marketing__tags {

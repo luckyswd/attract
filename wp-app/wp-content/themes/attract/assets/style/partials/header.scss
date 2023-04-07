@@ -11,12 +11,14 @@ header {
   border-bottom: 1px solid $c-light-blue;
 
   .container {
-    padding: 50px 0;
+    padding: 30px 0;
     max-width: 1780px;;
   }
+
   .header__wrapper {
 
   }
+
   .header__desktop {
     display: flex;
     justify-content: space-between;
@@ -83,7 +85,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 15px;
   }
 
   .header__button-mobile {
@@ -112,6 +114,34 @@ header {
 
     .container {
       box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+  }
+
+  .header__socials {
+    display: flex;
+    gap: 10px;
+    @include _680 {
+      display: none;
+    }
+  }
+
+  .header__social {
+    max-width: 50px;
+    max-height: 50px;
+    transition: $transition-anchor-btn;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+
+  .header__socials.mobile {
+    display: none;
+    @include _680 {
+      justify-content: center;
+      padding: 20px 40px 0;
+      display: flex !important;
     }
   }
 }

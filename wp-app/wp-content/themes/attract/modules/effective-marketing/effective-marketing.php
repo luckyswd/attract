@@ -9,7 +9,6 @@ Mode: preview
 
 <?php
 $headline = get_field('headline');
-$socials = get_field('socials');
 $description = get_field('description');
 $tags = get_field('tags');
 $side_image = get_field('side_image');
@@ -20,29 +19,17 @@ $information = get_field('information');
 
 <?php if (!is_admin()) : ?>
     <section class="effective-marketing distance">
-        <?php anchorHelper('effective-marketing');?>
-
+        <?php anchorHelper('effective-marketing'); ?>
         <div class="container">
             <div class="effective-marketing__content">
                 <div class="effective-marketing__main">
-                    <?php if (!empty($socials)) : ?>
-                        <div class="effective-marketing__socials">
-                            <?php foreach ($socials as $social) : ?>
-                                <?php if (!empty($social)) : ?>
-                                    <a href="<?= $social['url'] ?>" class="effective-marketing__social">
-                                        <?= getPictureImage( $social['icon'], 64, 64) ?>
-                                    </a>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
                     <?php if (!empty($headline)) : ?>
                         <h2 class="effective-marketing__headline">
                             <?= $headline ?>
                         </h2>
                     <?php endif; ?>
                     <?php if (!empty($description)) : ?>
-                        <p class="effective-marketing__description">
+                        <p class="effective-marketing__description subtitle-main">
                             <?= $description ?>
                         </p>
                     <?php endif; ?>

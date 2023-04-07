@@ -2,7 +2,7 @@
   .contact-form__wrapper {
     background-color: $c-blue;
     padding: 40px 50px;
-    border-radius: 10px;
+    border-radius: 70px;
 
     @include _680 {
       padding: 40px 20px;
@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
 
   .contact-form__form-activities, .contact-form__form-goals, .contact-form__form-budet, .contact-form__form-tools{
@@ -26,40 +27,35 @@
     font-weight: 500;
     width: 80%;
     color: $c-white;
+    font-size: 40px;
+    line-height: 45px;
 
-    @include _1280 {
-      font-size: 40px;
-      line-height: 45px;
-    }
-
-    @include _768 {
-      width: 100%;
-    }
-
-    @include _480 {
+    @include _992 {
       font-size: 30px;
       line-height: 35px;
+    }
+    @include _768 {
+      width: 100%;
     }
   }
 
   .contact-form__form {
-    padding-top: 80px;
+    padding-top: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 20px;
 
     p {
       color: $c-white;
       font-weight: 400;
       font-size: 20px;
       line-height: 140%;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
     }
 
     @include _992 {
       grid-template-columns: repeat(1, 1fr);
       padding-top: 30px;
-      gap: 20px;
 
       p {
         padding-bottom: 10px;
@@ -67,13 +63,14 @@
     }
   }
   .contact-form__icon {
+    max-width: 100px;
     @include _768 {
       display: none;
     }
   }
   .contact-form__footer {
     display: flex;
-    padding-top: 100px;
+    padding-top: 40px;
     gap: 40px;
 
     input {
@@ -84,7 +81,7 @@
       color: $c-blue;
       width: 100%;
       border-radius: 300px;
-      padding: 25px 40px;
+      padding: 15px 25px;
       border: none;
       cursor: pointer;
 
@@ -103,7 +100,7 @@
     @include _992 {
       flex-direction: column;
       padding-top: 30px;
-      gap: 15px;
+      gap: 30px;
     }
   }
 

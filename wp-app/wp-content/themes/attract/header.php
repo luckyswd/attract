@@ -13,6 +13,8 @@
 <?php
 $logo = get_field('logo', 'option');
 $buttons = get_field('anchor_buttons', 'option');
+$socials = get_field('socials', 'option');
+
 ?>
 <header id="header">
     <div class="container">
@@ -21,6 +23,17 @@ $buttons = get_field('anchor_buttons', 'option');
                 <div class="header__logo">
                     <?= getPictureImage($logo) ?>
                 </div>
+                <?php if (!empty($socials)) : ?>
+                    <div class="header__socials">
+                        <?php foreach ($socials as $social) : ?>
+                            <?php if (!empty($social)) : ?>
+                                <a href="<?= $social['link'] ?>" class="header__social">
+                                    <?= getPictureImage($social['icon'], 64, 64) ?>
+                                </a>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
                 <div class="header__burger">
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="25" viewBox="0 0 52 25" fill="none">
                         <path d="M9.36157 2.80713H48.6003" stroke="#1744D0" stroke-width="5" stroke-linecap="round"/>
@@ -30,6 +43,7 @@ $buttons = get_field('anchor_buttons', 'option');
                               stroke-linecap="round"/>
                     </svg>
                 </div>
+
                 <?php if (!empty($buttons)) : ?>
                     <div class="header__buttons">
                         <?php foreach ($buttons as $button) : ?>
@@ -43,7 +57,19 @@ $buttons = get_field('anchor_buttons', 'option');
                     </div>
                 <?php endif; ?>
             </div>
+
             <div class="header__mobile">
+                <?php if (!empty($socials)) : ?>
+                    <div class="header__socials mobile">
+                        <?php foreach ($socials as $social) : ?>
+                            <?php if (!empty($social)) : ?>
+                                <a href="<?= $social['link'] ?>" class="header__social">
+                                    <?= getPictureImage($social['icon'], 64, 64) ?>
+                                </a>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
                 <?php if (!empty($buttons)) : ?>
                     <div class="header__buttons-mobile">
                         <?php foreach ($buttons as $button) : ?>
@@ -55,6 +81,7 @@ $buttons = get_field('anchor_buttons', 'option');
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
+
             </div>
         </div>
     </div>

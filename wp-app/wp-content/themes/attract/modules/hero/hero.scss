@@ -1,23 +1,8 @@
 .hero {
-  margin-top: 150px;
+  margin-top: 100px;
 
   h2 {
-    font-family: 'CodeNext-Trial', sans-serif;;
-    font-weight: 600;
-    font-size: 100px;
-    line-height: 90px;
-    text-align: center;
-    letter-spacing: -0.06em;
-
-    @include _1280 {
-      font-size: 60px;
-      line-height: 50px;
-    }
-
-    @include _680 {
-      font-size: 36px;
-      line-height: 36px;
-    }
+   text-align: center;
   }
 
   .hero-photos {
@@ -36,7 +21,7 @@
   .hero-photo {
     margin-right: -120px;
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
 
     @include _680 {
       margin-right: 0;

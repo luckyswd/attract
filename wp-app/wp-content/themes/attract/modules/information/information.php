@@ -26,7 +26,7 @@ $background_image = get_field('background_image');
             <?php endif; ?>
 
             <?php if (!empty($subheadline)) : ?>
-                <p class="information__subheadline">
+                <p class="information__subheadline subtitle-main">
                     <?= $subheadline ?>
                 </p>
             <?php endif; ?>
@@ -41,7 +41,7 @@ $background_image = get_field('background_image');
                             <?php endif; ?>
 
                             <?php if (!empty($card['subtitle'])) : ?>
-                                <div class="information__card-subtitle">
+                                <div class="information__card-subtitle subtitle-main">
                                     <?= $card['subtitle'] ?>
                                 </div>
                             <?php endif; ?>

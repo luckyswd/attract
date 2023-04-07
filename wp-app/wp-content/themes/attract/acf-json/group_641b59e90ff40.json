@@ -4,8 +4,9 @@
     "fields": [
         {
             "key": "field_641b59e92696d",
-            "label": "Header",
+            "label": "Шапка",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -20,8 +21,9 @@
         },
         {
             "key": "field_641b5a272696e",
-            "label": "Logo",
+            "label": "Лого",
             "name": "logo",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -44,8 +46,9 @@
         },
         {
             "key": "field_641b5a332696f",
-            "label": "Anchor buttons",
+            "label": "Якорные ссылки",
             "name": "anchor_buttons",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -67,6 +70,7 @@
                     "key": "field_641b5a6526972",
                     "label": "Button",
                     "name": "button",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -78,6 +82,74 @@
                     },
                     "return_format": "array",
                     "parent_repeater": "field_641b5a332696f"
+                }
+            ]
+        },
+        {
+            "key": "field_642fa3274e6aa",
+            "label": "Социальные сети",
+            "name": "socials",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_642fa34b4e6ab",
+                    "label": "Иконка",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_642fa3274e6aa"
+                },
+                {
+                    "key": "field_642fa35e4e6ac",
+                    "label": "Ссылка",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_642fa3274e6aa"
                 }
             ]
         }
@@ -100,5 +172,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679514252
+    "modified": 1680843641
 }

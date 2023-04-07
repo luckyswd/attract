@@ -5,12 +5,7 @@
   }
 
   .steps__description {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 46px;
     text-align: center;
-    letter-spacing: -1.5px;
     padding-top: 50px;
 
     span {
@@ -18,8 +13,6 @@
     }
 
     @include _992 {
-      font-size: 20px;
-      line-height: 25px;
       padding-top: 30px;
     }
 
@@ -74,11 +67,7 @@
   }
 
   .steps__card-description {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 36px;
-    letter-spacing: -1.5px;
+
     padding-top: 12px;
 
     @include _1440 {

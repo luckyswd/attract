@@ -38,7 +38,7 @@ $info_card = get_field('info_card');
             </div>
 
             <?php if (!empty($description)) : ?>
-                <p class="why-us__description">
+                <p class="why-us__description subtitle-main">
                     <?= $description ?>
                 </p>
             <?php endif; ?>

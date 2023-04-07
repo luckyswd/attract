@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  max-width: 1780px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
   width: 100%;
@@ -28,33 +28,33 @@ body {
 h2 {
   font-family: 'CodeNext-Trial', sans-serif;;
   font-weight: 600;
-  font-size: 80px;
-  line-height: 90px;
+  font-size: 60px;
+  line-height: 60px;
   letter-spacing: -0.06em;
 
   @include _1280 {
-    font-size: 70px;
-    line-height: 70px;
-  }
-
-  @include _680 {
     font-size: 50px;
     line-height: 50px;
   }
 
-  @include _375 {
+  @include _680 {
     font-size: 40px;
     line-height: 40px;
+  }
+
+  @include _375 {
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
 .distance {
-  padding: 90px 0;
+  padding: 50px 0;
   @include _992 {
-    padding: 50px 0;
+    padding: 30px 0;
   }
   @include _680 {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 }
 
@@ -75,5 +75,26 @@ h2 {
 
   @include _992 {
     top: -150px;
+  }
+}
+
+.subtitle-main {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: -1.5px;
+  @include _992 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include _680 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include _375 {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
