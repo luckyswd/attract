@@ -94,14 +94,14 @@
       color: $c-blue;
       width: 100%;
       border-radius: 300px;
-      padding: 25px 40px;
       border: none;
       cursor: pointer;
+      padding: 20px 32px;
+      max-height: 76px;
 
-      //@include _992 {
-      //  height: 64px;
-      //  border-radius: unset;
-      //}
+      @include _992 {
+        height: 64px;
+      }
     }
 
     .contact-form__form-send {
