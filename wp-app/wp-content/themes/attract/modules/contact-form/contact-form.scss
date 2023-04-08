@@ -96,7 +96,15 @@
       border-radius: 300px;
       border: none;
       cursor: pointer;
-      min-height: 54px;
+      padding: 20px 32px;
+      max-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include _992 {
+        padding: 15px 40px;
+      }
     }
 
     .contact-form__form-send {
