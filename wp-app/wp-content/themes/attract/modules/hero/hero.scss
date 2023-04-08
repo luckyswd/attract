@@ -19,6 +19,10 @@
 
   .swiper-hero {
     overflow: hidden;
+
+    .swiper-wrapper {
+      align-items: center;
+    }
   }
 
   .hero-photo {
