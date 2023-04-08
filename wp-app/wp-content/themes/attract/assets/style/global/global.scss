@@ -8,6 +8,10 @@ body {
   font-weight: 400;
 }
 
+section {
+  position: relative;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -75,7 +79,7 @@ h2 {
 
 .anchor-helper {
   position: absolute;
-  top: -180px;
+  top: -100px;
 
   @include _992 {
     top: -150px;
