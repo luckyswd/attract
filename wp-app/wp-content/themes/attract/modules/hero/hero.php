@@ -56,7 +56,7 @@ $slides = get_field('slides');
                         $information = $slide['information'];
                         ?>
                         <div class="swiper-slide">
-                            <div class="effective-marketing distance">
+                            <div class="effective-marketing">
                                 <div class="effective-marketing__content">
                                     <div class="effective-marketing__main">
                                         <?php if (!empty($headline)) : ?>
