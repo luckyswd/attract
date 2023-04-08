@@ -6,6 +6,7 @@
             "key": "field_64202a493966d",
             "label": "Заголовок",
             "name": "headline",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_64202a623966e",
             "label": "Карточки",
             "name": "cards",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -43,10 +45,11 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_64202aa13966f",
-                    "label": "Клиент",
-                    "name": "client",
-                    "type": "text",
+                    "key": "field_6431c11044582",
+                    "label": "Видео",
+                    "name": "video",
+                    "aria-label": "",
+                    "type": "url",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -56,55 +59,7 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_64202a623966e"
-                },
-                {
-                    "key": "field_64202ab439670",
-                    "label": "Деятельность",
-                    "name": "activity",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_64202a623966e"
-                },
-                {
-                    "key": "field_64202ad239671",
-                    "label": "Картинка",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
                     "parent_repeater": "field_64202a623966e"
                 }
             ]
@@ -128,5 +83,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679830087
+    "modified": 1680983302
 }

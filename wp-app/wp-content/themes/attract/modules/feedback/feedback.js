@@ -32,16 +32,5 @@ new Swiper(".feedback__swiper", {
             },
         },
 
-
-        992: {
-            slidesPerView: 4,
-            centeredSlides: true,
-            spaceBetween: 40,
-            grabCursor: true,
-            loop: true,
-            autoplay: {
-                delay: 2000,
-            },
-        },
     },
 });

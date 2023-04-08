@@ -27,13 +27,6 @@
     text-align: center;
   }
 
-  .feedback__client {
-    font-weight: 800;
-  }
-
-  .feedback__image {
-    padding-top: 15px;
-  }
 
   .swiper {
     width: 100%;
@@ -49,5 +42,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .feedback__btn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  svg {
+    width: 62px;
+    height: 62px;
   }
 }

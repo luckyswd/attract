@@ -6,7 +6,9 @@ class Modal {
     init() {
         this.openModal('promotion__button')
         this.openModal('header__social-modal')
-        this.closeModal('header__social-modal')
+        this.closeModal('.overlay-modal')
+        this.closeModal('.modal-window__close')
+        this.openModalVideo()
     }
 
     openModal(calssName) {
@@ -16,43 +18,48 @@ class Modal {
             const modalWindow = document.querySelector('.modal-window');
             const overlayModal = document.querySelector('.overlay-modal')
             const html = document.querySelector('html')
-
             openBtn.addEventListener('click', () => {
-                if (modalWindow.classList.contains('open-js')) {
-                    modalWindow.classList.remove('open-js')
-                    overlayModal.classList.remove('open-js')
-                    html.style.overflow = 'auto'
-                } else {
                     modalWindow.classList.add('open-js')
                     overlayModal.classList.add('open-js')
                     html.style.overflow = 'hidden'
-
-                }
             })
         }
     }
 
-    closeModal() {
-        const closeBtn = document.querySelector('.modal-window__close')
-        if (closeBtn) {
-            const modalWindow = document.querySelector('.modal-window');
+    closeModal(className) {
+        const closeModal = document.querySelector(className)
+        const html = document.querySelector('html')
+        const modalWindowVideo = document.querySelector('.modal-window-video');
+        const iframeVideo = modalWindowVideo.querySelector('iframe')
+
+        closeModal.addEventListener('click', () => {
+            const openModals = document.querySelectorAll('.open-js')
+            iframeVideo.src = '';
+            closeModal.classList.remove('open-js')
+            openModals.forEach((openModal) => {
+                openModal.classList.remove('open-js')
+                html.style.overflow = 'auto'
+            })
+        })
+    }
+
+    openModalVideo() {
+        const feedbackCards = document.querySelectorAll('.feedback__card')
+        if (feedbackCards) {
             const overlayModal = document.querySelector('.overlay-modal')
             const html = document.querySelector('html')
-
-            closeBtn.addEventListener('click', () => {
-                if (modalWindow.classList.contains('open-js')) {
-                    modalWindow.classList.remove('open-js')
-                    overlayModal.classList.remove('open-js')
-                    html.style.overflow = 'auto'
-                } else {
-                    modalWindow.classList.add('open-js')
+            const modalWindowVideo = document.querySelector('.modal-window-video');
+            const iframeVideo = modalWindowVideo.querySelector('iframe')
+            feedbackCards.forEach((feedbackCard) => {
+                feedbackCard.addEventListener('click', () => {
+                    iframeVideo.src = 'https://www.youtube.com/embed/' + feedbackCard.getAttribute('id')
+                    modalWindowVideo.classList.add('open-js')
                     overlayModal.classList.add('open-js')
                     html.style.overflow = 'hidden'
-                }
+                })
             })
         }
     }
-
 }
 
 new Modal();

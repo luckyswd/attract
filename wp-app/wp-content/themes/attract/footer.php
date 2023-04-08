@@ -15,6 +15,7 @@
     </div>
     <?=
     include get_template_directory() . '/components/modal-window.php';
+    include get_template_directory() . '/components/modal-window-video.php';
     ?>
     <div class="overlay-modal"></div>
 

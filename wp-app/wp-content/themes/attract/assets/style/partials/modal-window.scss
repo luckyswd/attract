@@ -79,6 +79,10 @@
   .btn {
     width: 100%;
     margin-top: 10px;
+    &:hover {
+      background: $c-white;
+      color: $c-blue;
+    }
   }
 }
 
