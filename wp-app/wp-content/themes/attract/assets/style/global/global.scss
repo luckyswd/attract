@@ -37,6 +37,10 @@ h2 {
     line-height: 50px;
   }
 
+  @include _992 {
+    letter-spacing: 0;
+  }
+
   @include _680 {
     font-size: 40px;
     line-height: 40px;
