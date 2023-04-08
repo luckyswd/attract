@@ -38,9 +38,9 @@ $information = get_field('information');
                     <?php endif; ?>
 
                     <?php if (!empty($button)) : ?>
-                        <div class="hero-btn">
+                        <a href="<?= $button['url'] ?>" class="hero-btn">
                             <?= $button['title'] ?? '' ?>
-                        </div>
+                        </a>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
