@@ -11,3 +11,4 @@
 //=include ../../modules/our-cases/our-cases.js
 //=include ../../modules/myths/myths.js
 //=include ../../modules/feedback/feedback.js
+//=include ../../modules/hero/hero.js
