@@ -57,7 +57,7 @@ $information = get_field('information');
                         <?php endif; ?>
 
                         <?php if (!empty($button)) : ?>
-                            <a href="<?= $button['url'] ?>" class="effective-marketing__btn">
+                            <a href="<?= $button['url'] ?>" class="effective-marketing__btn btn">
                                 <?= $button['title'] ?? '' ?>
                             </a>
                         <?php endif; ?>
@@ -81,7 +81,7 @@ $information = get_field('information');
                 <?php endif; ?>
 
                 <?php if (!empty($button)) : ?>
-                    <div class="effective-marketing__btn">
+                    <div class="effective-marketing__btn btn">
                         <?= $button['title'] ?? '' ?>
                     </div>
                 <?php endif; ?>

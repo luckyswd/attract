@@ -48,11 +48,10 @@ $socials = get_field('socials', 'option');
                     <div class="header__buttons">
                         <?php foreach ($buttons as $button) : ?>
                             <?php if (!empty($button)) : ?>
-                                <a href="<?= $button['button']['url'] ?? '#' ?>" class="header__button">
+                                <a href="<?= $button['button']['url'] ?? '#' ?>" class="header__button btn">
                                     <?= $button['button']['title'] ?? '' ?>
                                 </a>
                             <?php endif; ?>
-
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>

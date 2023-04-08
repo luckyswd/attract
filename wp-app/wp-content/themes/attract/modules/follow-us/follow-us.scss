@@ -27,19 +27,15 @@
 
   .follow-us__button {
     display: block;
-    padding: 25px;
     width: 100%;
     max-width: 330px;
     text-align: center;
     background: $c-blue;
-    border-radius: 300px;
     color: $c-white;
     margin-top: 50px;
-    border: 1px solid $c-blue;
+    border-color: $c-blue;
     transition: $transition-anchor-btn;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 140%;
 
     &:hover {
       background-color: $c-white;
@@ -47,13 +43,12 @@
     }
 
     @include _992 {
-      margin:30px auto 0;
+      margin: 30px auto 0;
     }
 
     @include _480 {
       max-width: 230px;
-      margin:30px auto 0;
-      font-size: 14px;
+      margin: 30px auto 0;
     }
   }
 }

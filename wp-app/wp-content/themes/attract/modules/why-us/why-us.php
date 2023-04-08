@@ -84,7 +84,7 @@ $info_card = get_field('info_card');
                             <?php endif; ?>
 
                             <?php if (!empty($info_card['button'])) : ?>
-                                <a href="<?= $info_card['button']['url'] ?? '#' ?>" class="why-us__info-card-button">
+                                <a href="<?= $info_card['button']['url'] ?? '#' ?>" class="why-us__info-card-button btn">
                                     <?= $info_card['button']['title'] ?? '' ?>
                                 </a>
                             <?php endif; ?>

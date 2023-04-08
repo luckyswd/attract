@@ -152,25 +152,17 @@
 
   .why-us__info-card-button {
     background: $c-white;
-    border-radius: 300px;
-    padding: 25px;
     display: block;
     text-align: center;
     margin-top: 75px;
     color: $c-blue;
-    border: 1px solid $c-white;
+    border-color: $c-white;
     transition: $transition-anchor-btn;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 140%;
 
     &:hover {
       background-color: $c-blue;
       color: $c-white;
-    }
-
-    @include _480 {
-      font-size: 14px;
     }
   }
 }

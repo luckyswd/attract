@@ -36,19 +36,13 @@ header {
   }
 
   .header__button {
-    padding: 20px 32px;
     color: $c-light-blue;
-    border: 1px solid $c-light-blue;
-    border-radius: 300px;
-    transition: $transition-anchor-btn;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
+    border-color: $c-light-blue;
     width: max-content;
 
     &:hover {
       background-color: $c-blue;
-      border: 1px solid $c-blue;
+      border-color: $c-blue;
       color: $c-white;
     }
   }
