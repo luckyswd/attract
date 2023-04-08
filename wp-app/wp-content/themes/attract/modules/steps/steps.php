@@ -47,7 +47,7 @@ $cards = get_field('cards');
                             <?php endif; ?>
 
                             <?php if ($card['description']) : ?>
-                                <div class="steps__card-description subtitle-main">
+                                <div class="steps__card-description">
                                     <?= $card['description'] ?>
                                 </div>
                             <?php endif; ?>

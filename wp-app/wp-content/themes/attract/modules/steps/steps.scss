@@ -21,6 +21,13 @@
     }
   }
 
+  .steps__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .steps__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -67,12 +74,13 @@
   }
 
   .steps__card-description {
-
     padding-top: 12px;
+    font-size: 18px;
+    line-height: 28px;
 
     @include _1440 {
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 }
