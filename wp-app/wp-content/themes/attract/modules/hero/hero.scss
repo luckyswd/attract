@@ -155,6 +155,10 @@
     }
   }
   .effective-marketing__side {
+    img {
+      max-height: 641px;
+    }
+
     @include _680 {
       display: none;
     }
