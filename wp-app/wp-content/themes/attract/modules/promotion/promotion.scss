@@ -11,16 +11,11 @@
     display: block;
     width: 100%;
     max-width: 300px;
-    padding: 30px;
     text-align: center;
     background: $c-blue;
-    border: 1px solid $c-blue;
-    border-radius: 300px;
+    border-color: $c-blue;
     color: $c-white;
     margin: 70px auto 0;
-    transition: $transition-anchor-btn;
-    font-size: 20px;
-    line-height: 25px;
 
     &:hover {
       background-color: $c-white;
@@ -31,10 +26,8 @@
       margin: 50px auto 0;
     }
     @include _680 {
-      font-size: 14px;
       line-height: 18px;
       margin: 20px auto 0;
     }
-
   }
 }

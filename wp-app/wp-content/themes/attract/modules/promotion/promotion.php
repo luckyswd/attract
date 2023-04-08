@@ -24,7 +24,7 @@ $button = get_field('button');
             <?php endif; ?>
 
             <?php if (!empty($button)) : ?>
-                <a href="<?= $button['url'] ?>" class="promotion__button">
+                <a href="<?= $button['url'] ?>" class="promotion__button btn">
                     <?= $button['title'] ?>
                 </a>
             <?php endif; ?>
