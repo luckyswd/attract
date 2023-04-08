@@ -62,8 +62,9 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
+
     @include _680 {
-      border-radius: 60px;
+      border-radius: 10px;
       flex-direction: column;
       padding: 20px 30px;
     }

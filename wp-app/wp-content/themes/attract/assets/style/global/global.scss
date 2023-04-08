@@ -30,7 +30,6 @@ h2 {
   font-weight: 600;
   font-size: 60px;
   line-height: 60px;
-  letter-spacing: -0.06em;
 
   @include _1280 {
     font-size: 50px;
@@ -82,7 +81,7 @@ h2 {
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;
-  letter-spacing: -1.5px;
+
   @include _992 {
     font-size: 20px;
     line-height: 24px;
