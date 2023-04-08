@@ -69,6 +69,10 @@
 
   .myths__myth-icon {
     display: flex;
+
+    @include _992 {
+      width: 50px;
+    }
   }
 
   .myths__myth-body {
