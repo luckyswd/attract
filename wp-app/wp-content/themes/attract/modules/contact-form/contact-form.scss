@@ -45,6 +45,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
     p {
       color: $c-white;
       font-weight: 400;
