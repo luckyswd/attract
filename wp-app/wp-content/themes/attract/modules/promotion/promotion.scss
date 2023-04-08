@@ -2,6 +2,11 @@
   .promotion__headline {
     text-align: center;
 
+    @include _992 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
     span {
       color: $c-blue;
     }
