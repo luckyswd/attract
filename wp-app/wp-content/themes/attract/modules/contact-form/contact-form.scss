@@ -88,21 +88,21 @@
     padding-top: 40px;
     gap: 40px;
 
-    .btn {
-      background: $c-white;
-      font-weight: 500;
-      color: $c-blue;
-      width: 100%;
-      border-radius: 300px;
-      border: none;
-      cursor: pointer;
-      padding: 20px 32px;
-      max-height: 76px;
-
-      @include _992 {
-        height: 64px;
-      }
-    }
+    //.btn {
+    //  background: $c-white;
+    //  font-weight: 500;
+    //  color: $c-blue;
+    //  width: 100%;
+    //  border-radius: 300px;
+    //  border: none;
+    //  cursor: pointer;
+    //  padding: 20px 32px;
+    //  max-height: 76px;
+    //
+    //  @include _992 {
+    //    height: 64px;
+    //  }
+    //}
 
     .contact-form__form-send {
       width: 100%;
