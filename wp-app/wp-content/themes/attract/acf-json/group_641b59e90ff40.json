@@ -152,6 +152,38 @@
                     "parent_repeater": "field_642fa3274e6aa"
                 }
             ]
+        },
+        {
+            "key": "field_64301827a262f",
+            "label": "Модальная форма",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64301845a2630",
+            "label": "Форма",
+            "name": "form",
+            "aria-label": "",
+            "type": "acf_cf7",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -172,5 +204,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680843641
+    "modified": 1680873558
 }

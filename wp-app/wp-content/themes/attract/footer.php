@@ -1,6 +1,8 @@
 </main>
 
 <footer id="footer" class="footer">
+    <?php
+    ?>
     <div class="container">
         <div class="footer-wrapper">
             <div class="privacy-policy-info">
@@ -11,6 +13,11 @@
             <p class="footer-company"> © <?= date("Y"); ?> Attract Company </p>
         </div>
     </div>
+    <?=
+    include get_template_directory() . '/components/modal-window.php';
+    ?>
+    <div class="overlay-modal"></div>
+
 </footer>
 
 <?php wp_footer(); ?>
