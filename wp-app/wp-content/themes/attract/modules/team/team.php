@@ -20,6 +20,7 @@ $col4 = array_slice($blocks, 8, 2);
 
 <?php if (!is_admin()) : ?>
     <section class="team distance">
+        <?php anchorHelper('team');?>
         <div class="container">
             <h2 class="steps__headline">
                 <?= $headline ?? '' ?>
