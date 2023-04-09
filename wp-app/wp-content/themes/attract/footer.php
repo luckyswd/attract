@@ -13,7 +13,7 @@
             <p class="footer-company"> © <?= date("Y"); ?> Attract Company </p>
         </div>
     </div>
-    <?=
+    <?
     include get_template_directory() . '/components/modal-window.php';
     include get_template_directory() . '/components/modal-window-video.php';
     ?>
