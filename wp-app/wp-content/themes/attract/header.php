@@ -69,7 +69,6 @@ $socials = get_field('socials', 'option');
                     <div class="header__socials mobile">
                         <?php
                         $last_key = end($socials);
-                        var_dump($last_key);
                         ?>
                         <?php foreach ($socials as $key => $social) : ?>
                             <?php if (!empty($social)) : ?>
