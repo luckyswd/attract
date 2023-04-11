@@ -67,15 +67,18 @@ $socials = get_field('socials', 'option');
             <div class="header__mobile">
                 <?php if (!empty($socials)) : ?>
                     <div class="header__socials mobile">
-                        <?php
-                        $last_key = end($socials);
-                        var_dump($last_key);
-                        ?>
-                        <?php foreach ($socials as $key => $social) : ?>
+                        <?php foreach ($socials as $social) : ?>
                             <?php if (!empty($social)) : ?>
-                                <a href="<?= $social['link'] ?>" class="header__social">
-                                    <?= getPictureImage($social['icon'], 64, 64) ?>
-                                </a>
+                                <?php if ($social !== end($socials)) : ?>
+                                    <a href="<?= $social['link'] ?>" class="header__social">
+                                        <?= getPictureImage($social['icon'], 64, 64) ?>
+                                    </a>
+                                <?php else: ?>
+                                    <div class="header__social header__social-mobile-modal">
+                                        <?= getPictureImage($social['icon'], 64, 64) ?>
+                                    </div>
+                                <?php endif; ?>
+
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
