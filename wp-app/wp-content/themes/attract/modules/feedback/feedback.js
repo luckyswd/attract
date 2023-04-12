@@ -16,6 +16,7 @@ new Swiper(".feedback__swiper", {
     },
 
     grabCursor: true,
+    loop: true,
     autoplay: {
         delay: 4000,
     },
