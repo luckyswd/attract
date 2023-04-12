@@ -77,6 +77,9 @@
     }
   }
   .hero-information {
+    font-size: 15px;
+    line-height: 19px;
+
     @include _680 {
       text-align: center;
     }
@@ -183,6 +186,9 @@
     }
   }
   .effective-marketing__information {
+    font-size: 15px;
+    line-height: 19px;
+
     @include _680 {
       text-align: center;
     }
