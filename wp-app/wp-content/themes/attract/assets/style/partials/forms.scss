@@ -9,13 +9,13 @@
 input[type=text], input[type=tel], input[type=email], input[type=number], textarea {
   background: $c-light-blue-line;
   border-radius: 300px;
-  padding: 15px 25px;
+  padding: 17px 28px;
   width: 100%;
   direction: unset;
   outline: unset;
   border: none;
   font-size: 15px;
-  line-height: 140%;
+  line-height: 19px;
 
   &::placeholder {
     color: $c-blue2;

@@ -58,8 +58,8 @@
     p {
       color: $c-white;
       font-weight: 400;
-      font-size: 20px;
-      line-height: 28px;
+      font-size: 15px;
+      line-height: 19px;
       padding-bottom: 10px;
 
       @include _992 {
@@ -95,6 +95,7 @@
       border: none;
       cursor: pointer;
       max-height: 76px;
+      padding: 17px 28px;
 
       @include _992 {
         height: 64px;
