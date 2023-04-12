@@ -151,18 +151,9 @@
   }
 
   .why-us__info-card-button {
-    background: $c-white;
     display: block;
     text-align: center;
     margin-top: 75px;
-    color: $c-blue;
-    border-color: $c-white;
-    transition: $transition-anchor-btn;
     font-weight: 700;
-
-    &:hover {
-      background-color: $c-blue;
-      color: $c-white;
-    }
   }
 }

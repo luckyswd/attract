@@ -30,17 +30,8 @@
     width: 100%;
     max-width: 330px;
     text-align: center;
-    background: $c-blue;
-    color: $c-white;
     margin-top: 50px;
-    border-color: $c-blue;
-    transition: $transition-anchor-btn;
     font-weight: 700;
-
-    &:hover {
-      background-color: $c-white;
-      color: $c-blue;
-    }
 
     @include _992 {
       margin: 30px auto 0;

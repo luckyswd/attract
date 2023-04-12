@@ -27,7 +27,7 @@ $side_image = get_field('side_image');
                     <?php endif; ?>
 
                     <?php if (!empty($button)) : ?>
-                        <a href="<?= $button['url'] ?? '#' ?>" class="follow-us__button btn">
+                        <a href="<?= $button['url'] ?? '#' ?>" class="follow-us__button btn blue">
                             <?= $button['title'] ?? '' ?>
                         </a>
                     <?php endif; ?>

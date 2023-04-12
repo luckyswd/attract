@@ -60,6 +60,7 @@ $socials = get_field('socials', 'option');
                                 </a>
                             <?php endif; ?>
                         <?php endforeach; ?>
+                        <div class="selector-mark"></div>
                     </div>
                 <?php endif; ?>
             </div>

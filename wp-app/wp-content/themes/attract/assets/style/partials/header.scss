@@ -29,6 +29,8 @@ header {
 
   .header__buttons {
     display: flex;
+    position: relative;
+    gap: 5px;
 
     @include _1280 {
       display: none;
@@ -37,12 +39,25 @@ header {
 
   .header__button {
     color: $c-light-blue;
-    border-color: $c-light-blue;
     width: max-content;
+    font-size: 15px;
+    line-height: 19px;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+    min-width: 160px;
+    text-align: center;
 
     &:hover {
-      background-color: $c-blue;
-      border-color: $c-blue;
+      background-color: transparent;
+      border-color: transparent;
+      color: $c-light-blue;
+      box-shadow: 0 0 6px 0 rgba(23, 68, 208, 1);
+    }
+
+    &.active {
       color: $c-white;
     }
   }
@@ -139,4 +154,20 @@ header {
       display: flex !important;
     }
   }
+}
+
+.selector-mark {
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  width: 0;
+  height: 51px;
+  border-radius: 300px;
+  background: linear-gradient(
+                  60deg,
+                  $c-blue 0%,
+                  blue 100%
+  );
+  z-index: 1;
+  transition: $transition;
 }

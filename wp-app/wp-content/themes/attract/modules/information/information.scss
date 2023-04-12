@@ -59,7 +59,7 @@
 
   .information__card {
     padding: 45px;
-    border: 1px solid $c-blue;
+    box-shadow: 0 0 6px 0 rgba(23, 68, 208, 1);
     border-radius: 20px;
     min-height: 380px;
     display: flex;
@@ -82,10 +82,6 @@
       font-size: 28px;
       line-height: 22px;
     }
-  }
-
-  .information__card-subtitle {
-
   }
 
   .information__background-image {

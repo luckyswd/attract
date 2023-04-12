@@ -83,14 +83,6 @@
   }
   .hero-btn {
     padding: 30px 100px;
-    background-color: $c-white;
-    color: $c-blue;
-    border-color: $c-white;
-
-    &:hover {
-      background-color: $c-blue;
-      color: $c-white;
-    }
 
     @include _992 {
       padding: 15px 40px;
@@ -212,14 +204,6 @@
 
   .effective-marketing__btn {
     padding: 30px 100px;
-    background-color: $c-white;
-    color: $c-blue;
-    border-color: $c-white;
-
-    &:hover {
-      background-color: $c-blue;
-      color: $c-white;
-    }
 
     @include _992 {
       padding: 15px 40px;
