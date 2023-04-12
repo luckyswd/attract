@@ -47,7 +47,8 @@
     padding-top: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    row-gap: 16px;
+    column-gap: 54px;
 
     div {
       display: flex;
