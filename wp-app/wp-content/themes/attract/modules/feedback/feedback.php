@@ -32,7 +32,11 @@ $cards = get_field('cards');
                                 <div class="feedback__card" id="<?= extractIdFromLink($card['video']) ?>">
                                         <div class="feedback__image" >
                                             <picture>
-                                                <img loading="lazy" src=" <?= getYoutubePreview(extractIdFromLink($card['video'])) ?>" alt="Видео">
+                                                <?php if (!empty($card['preview_image'])) :?>
+                                                    <img loading="lazy" src=" <?= $card['preview_image']['url'] ?>" alt="Видео">
+                                                <?php else: ?>
+                                                    <img loading="lazy" src=" <?= getYoutubePreview(extractIdFromLink($card['video'])) ?>" alt="Видео">
+                                                <?php endif;?>
                                             </picture>
                                             <div class="feedback__btn-play">
                                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" viewBox="0 0 32 32">

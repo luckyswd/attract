@@ -6,6 +6,7 @@ class Modal {
     init() {
         this.openModal('promotion__button')
         this.openModal('header__social-modal')
+        this.openModal('header__social-mobile-modal')
         this.closeModal('.overlay-modal')
         this.closeModal('.modal-window__close')
         this.openModalVideo()
