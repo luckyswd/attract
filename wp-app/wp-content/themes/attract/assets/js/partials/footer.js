@@ -53,7 +53,6 @@ class Modal {
             const iframeVideo = modalWindowVideo.querySelector('iframe')
             feedbackCards.forEach((feedbackCard) => {
                 feedbackCard.addEventListener('click', () => {
-                    console.log('qwe')
                     iframeVideo.src = 'https://www.youtube.com/embed/' + feedbackCard.getAttribute('id')
                     modalWindowVideo.classList.add('open-js')
                     overlayModal.classList.add('open-js')
