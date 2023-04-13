@@ -55,6 +55,10 @@
   }
 
   .feedback__image img {
-    max-height: 140px;
+    max-height: 240px;
+
+    @include _680 {
+      max-height: 140px;
+    }
   }
 }
