@@ -6,15 +6,12 @@
 
   .steps__description {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
 
     span {
       color: $c-blue;
     }
 
-    @include _992 {
-      padding-top: 30px;
-    }
 
     @include _680 {
       padding-top: 20px;
@@ -32,7 +29,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    padding-top: 50px;
+    padding-top: 80px;
 
     @include _1440 {
       grid-template-columns: repeat(2, 1fr);

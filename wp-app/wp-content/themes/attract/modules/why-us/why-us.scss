@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    align-items: center;
 
     @include _992 {
       justify-content: center;
@@ -40,6 +41,7 @@
 
   .why-us__description {
     padding-top: 40px;
+    font-weight: 600;
     width: 55%;
 
     span {
@@ -61,11 +63,10 @@
   .why-us__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding-top: 75px;
+    gap: 30px;
+    padding-top: 60px;
 
     @include _992 {
-      padding-top: 65px;
       gap: 20px
     }
 
@@ -79,7 +80,7 @@
     background: $c-white;
     box-shadow: 0 0 6px 0 rgba(23, 68, 208, 1);
     border-radius: 20px;
-    padding: 40px;
+    padding: 30px;
     min-height: 287px;
     display: flex;
     flex-direction: column;
@@ -101,7 +102,7 @@
   .why-us__card-number {
     font-style: normal;
     font-weight: 700;
-    font-size: 56px;
+    font-size: 40px;
     line-height: 44px;
     color: $c-blue;
     padding-bottom: 20px;
@@ -110,12 +111,8 @@
   .why-us__card-description {
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 140%;
-
-    @include _480 {
-      font-size: 14px;
-    }
   }
 
   .why-us__info-card {
@@ -129,8 +126,8 @@
   .why-us__info-card-title {
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 26px;
+    line-height: 26px;
 
     @include _680 {
       font-size: 20px;
@@ -141,7 +138,7 @@
   .why-us__info-card-description {
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 140%;
     padding-top: 25px;
 
@@ -153,7 +150,7 @@
   .why-us__info-card-button {
     display: block;
     text-align: center;
-    margin-top: 75px;
+    margin-top: 50px;
     font-weight: 700;
   }
 }

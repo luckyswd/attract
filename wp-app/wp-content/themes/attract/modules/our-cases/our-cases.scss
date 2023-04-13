@@ -14,6 +14,8 @@
     color: $c-white;
     border-radius: 20px;
     height: auto;
+    min-height: 470px;
+
 
     @include _1440 {
       min-height: 100%;
@@ -22,6 +24,14 @@
 
     span {
       font-weight: 800;
+    }
+
+    @include _992 {
+      min-height: 390px;
+    }
+
+    @include _480 {
+      min-height: 350px;
     }
   }
 
@@ -62,5 +72,14 @@
     span {
       font-weight: 800;
     }
+  }
+
+  .our-cases__card-header, .our-cases__card-footer {
+    font-size: 14px;
+    line-height: 140%
+  }
+
+  .our-cases__card-footer {
+    line-height: 200%;
   }
 }

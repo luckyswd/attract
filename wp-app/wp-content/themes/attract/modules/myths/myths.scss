@@ -8,11 +8,11 @@
   }
 
   .myths__myths {
-    padding-top: 100px;
+    padding-top: 75px;
     cursor: pointer;
 
     @include _992 {
-      padding-top: 75px;
+      padding-top: 55px;
     }
 
     @include _680 {
@@ -21,7 +21,7 @@
   }
 
   .myths__myth {
-    padding: 45px 0;
+    padding: 32px 0;
     border-top: 1.5px solid $c-light-blue-line;
 
     @include  _992 {
@@ -42,12 +42,14 @@
     border-radius: 300px;
     color: $c-blue;
     white-space: nowrap;
+    font-size: 14px;
+    line-height: 140%;
   }
 
   .myths__myth-title {
     font-weight: 500;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 26px;
+    line-height: 26px;
 
     @include _992 {
       font-size: 20px;
@@ -122,16 +124,11 @@
   .myths__myth-description {
     width: 80%;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 140%;
 
     @include _1280 {
       width: 70%;
-    }
-
-    @include _992 {
-      font-size: 14px;
-      line-height: 18px;
     }
 
     @include _680 {

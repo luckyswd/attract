@@ -6,12 +6,12 @@ new Swiper(".our-cases__cards-swiper", {
         },
         680: {
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 25,
         },
 
         1441: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 25,
         },
     },
     centeredSlides: true,

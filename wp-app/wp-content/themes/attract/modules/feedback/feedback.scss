@@ -2,11 +2,7 @@
 
   .feedback__headline {
     text-align: center;
-    padding-bottom: 80px;
-
-    @include _992 {
-      padding-bottom: 60px;
-    }
+    padding-bottom: 60px;
 
     @include _680 {
       padding-bottom: 40px;

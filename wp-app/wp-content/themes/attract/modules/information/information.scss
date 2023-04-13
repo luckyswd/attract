@@ -33,10 +33,10 @@
   }
 
   .information__cards {
-    padding-top: 107px;
+    padding-top: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 31px;
+    gap: 30px;
 
     @include _1440 {
       grid-template-columns: repeat(2, 1fr);
@@ -54,10 +54,10 @@
   }
 
   .information__card {
-    padding: 45px;
+    padding: 30px;
     box-shadow: 0 0 6px 0 rgba(23, 68, 208, 1);
     border-radius: 20px;
-    min-height: 380px;
+    min-height: 275px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
