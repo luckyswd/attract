@@ -68,6 +68,11 @@
     }
   }
 
+
+  .information__card:nth-child(2) {
+    z-index: -2;
+  }
+
   .information__card-title {
     font-family: 'Onest';
     font-weight: 900;
@@ -82,8 +87,14 @@
 
   .information__background-image {
     position: absolute;
-    top: 180px;
-    left: 0;
+    width: 100%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
     z-index: -1;
+
+    @include _1440 {
+      display: none;
+    }
   }
 }

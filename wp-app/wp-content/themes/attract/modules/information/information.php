@@ -15,7 +15,7 @@ $background_image = get_field('background_image');
 ?>
 
 <?php if (!is_admin()) : ?>
-<section class="information distance" style="background-image: url('<?=  $background_image['url'] ?>')">
+<section class="information distance">
     <?php anchorHelper('information');?>
 
     <div class="container">
@@ -51,7 +51,9 @@ $background_image = get_field('background_image');
             <?php endif; ?>
         </div>
 
-
+        <div class="information__background-image">
+            <img src="<?= $background_image['url'] ?>" alt="">
+        </div>
     </section>
 <?php else: ?>
     <h2 style="font-family: 'Mark', sans-serif;">Информационный модуль</h2>
