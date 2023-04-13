@@ -192,6 +192,7 @@
   .text-and-button-mobile {
     .text-and-button {
       margin-top: 34px;
+      display: none;
 
       @include _1280 {
         display: flex;
