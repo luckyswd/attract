@@ -88,13 +88,18 @@
   .information__background-image {
     position: absolute;
     width: 100%;
-    top:50%;
+    top:60%;
     left:50%;
     transform:translate(-50%, -50%);
     z-index: -1;
+    height: 100%;
 
     @include _1440 {
       display: none;
+    }
+
+    img {
+      height: 100%;
     }
   }
 }
