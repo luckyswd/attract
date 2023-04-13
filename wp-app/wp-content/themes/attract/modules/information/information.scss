@@ -23,7 +23,6 @@
   }
 
   .information__subheadline {
-
     span {
       color: $c-blue;
     }
@@ -31,14 +30,13 @@
     @include _992 {
       text-align: center;
     }
-
   }
 
   .information__cards {
     padding-top: 107px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 31px;
 
     @include _1440 {
       grid-template-columns: repeat(2, 1fr);
