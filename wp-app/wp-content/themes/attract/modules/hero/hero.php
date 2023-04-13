@@ -31,18 +31,11 @@ $slides = get_field('slides');
                                     </div>
                                 <?php endforeach; ?>
                             </div>
-                            <div class="hero-footer">
-                                <?php if (!empty($firstSlide['information'])) : ?>
-                                    <div class="hero-information">
-                                        <?= $firstSlide['information'] ?>
-                                    </div>
-                                <?php endif; ?>
-                                <?php if (!empty($firstSlide['button'])) : ?>
-                                    <a href="<?= $firstSlide['button']['url'] ?>" class="hero-btn btn">
-                                        <?= $firstSlide['button']['title'] ?? '' ?>
-                                    </a>
-                                <?php endif; ?>
-                            </div>
+                            <?php
+                            $text = $firstSlide['information'];
+                            $button = $firstSlide['button'];
+                            ?>
+                            <?php include get_template_directory() . '/components/text-and-button.php' ?>
                         <?php endif; ?>
                     </div>
                     <?php foreach ($slides as $slide) : ?>
@@ -53,7 +46,7 @@ $slides = get_field('slides');
                         $side_image = $slide['side_image'];
                         $side_image_mobile = $slide['side_image_mobile'];
                         $button = $slide['button'];
-                        $information = $slide['information'];
+                        $text = $slide['information'];
                         ?>
                         <div class="swiper-slide">
                             <div class="effective-marketing">
@@ -78,46 +71,24 @@ $slides = get_field('slides');
                                             <div class="effective-marketing__tags">
                                                 <?php foreach ($tags as $tag) : ?>
                                                     <?php if (!empty($tag)) : ?>
-                                                        <div class="effective-marketing__tag">
+                                                        <p class="effective-marketing__tag">
                                                             <?= '<span>#</span>' . $tag['name_tag'] ?>
-                                                        </div>
+                                                        </p>
                                                     <?php endif; ?>
                                                 <?php endforeach; ?>
                                             </div>
                                         <?php endif; ?>
-                                        <div class="effective-marketing__footer">
-                                            <?php if (!empty($information)) : ?>
-                                                <div class="effective-marketing__information">
-                                                    <?= $information ?>
-                                                </div>
-                                            <?php endif; ?>
-
-                                            <?php if (!empty($button)) : ?>
-                                                <a href="<?= $button['url'] ?>" class="effective-marketing__btn btn">
-                                                    <?= $button['title'] ?? '' ?>
-                                                </a>
-                                            <?php endif; ?>
-                                        </div>
+                                        <?php include get_template_directory() . '/components/text-and-button.php' ?>
                                     </div>
                                     <div class="effective-marketing__side">
                                         <?php if (!empty($side_image)) : ?>
                                             <?= getPictureImage($side_image) ?>
                                         <?php endif; ?>
-
                                     </div>
                                 </div>
-                                <div class="effective-marketing__footer mobile">
-                                    <?php if (!empty($information)) : ?>
-                                        <div class="effective-marketing__information">
-                                            <?= $information ?>
-                                        </div>
-                                    <?php endif; ?>
 
-                                    <?php if (!empty($button)) : ?>
-                                        <div class="effective-marketing__btn btn">
-                                            <?= $button['title'] ?? '' ?>
-                                        </div>
-                                    <?php endif; ?>
+                                <div class="text-and-button-mobile">
+                                    <?php include get_template_directory() . '/components/text-and-button.php' ?>
                                 </div>
                             </div>
                         </div>

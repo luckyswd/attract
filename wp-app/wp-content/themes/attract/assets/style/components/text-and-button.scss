@@ -1,0 +1,24 @@
+.text-and-button {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 6px 6px 40px;
+  background-color: $c-blue;
+  margin: 0 auto;
+  border-radius: 300px;
+  color: $c-white;
+  width: 100%;
+  max-width: 700px;
+  align-items: center;
+  gap: 30px;
+
+  @include _680 {
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 20px 30px;
+    margin: 45px auto 0;
+  }
+
+  .text-and-button__information {
+    text-align: center;
+  }
+}

@@ -7,6 +7,12 @@
 @import "global/variables";
 @import "global/reset";
 @import "global/global";
+@import "global/fonts-sizes";
+
+
+/* components */
+@import "components/text-and-button";
+
 
 /* PARTIALS */
 @import "partials/header";

@@ -1,0 +1,54 @@
+h2 {
+  font-family: 'CodeNext-Trial', sans-serif;;
+  font-weight: 600;
+  font-size: 58px;
+  line-height: 66px;
+  letter-spacing: -0.06em;
+
+  @include _1280 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  @include _992 {
+    letter-spacing: 0;
+  }
+
+  @include _680 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @include _375 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.subtitle-main {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+
+  @include _992 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include _680 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include _375 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+p {
+  font-family: 'Onest';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+}
