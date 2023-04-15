@@ -27,12 +27,12 @@
   }
 
   .swiper-wrapper {
-    min-height: calc(100vh - 315px);
+    height: calc(100vh - 315px);
     display: flex;
     align-items: center;
 
     @include _680 {
-      min-height: calc(100vh - 160px);
+      height: calc(100vh - 160px);
     }
   }
 
