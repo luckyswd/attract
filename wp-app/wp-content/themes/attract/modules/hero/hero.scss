@@ -157,6 +157,11 @@
       text-align: center;
     }
 
+    @include _680 {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
     span {
       color: $c-blue;
     }
