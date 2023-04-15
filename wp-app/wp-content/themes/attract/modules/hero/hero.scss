@@ -30,7 +30,7 @@
   }
 
   .swiper-slide {
-    min-height: 700px;
+    min-height: 750px;
   }
 
   .hero-photo {
@@ -103,6 +103,10 @@
 }
 
 .effective-marketing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .effective-marketing__content {
     display: flex;
     justify-content: space-between;
