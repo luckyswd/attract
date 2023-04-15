@@ -16,22 +16,3 @@ if (header) {
         })
     })
 }
-
-function moveHeaderSelector(event) {
-    const getElement = event.target;
-    const navLinks = document.querySelectorAll('header .header__buttons a');
-    navLinks.forEach(navLink => {
-        navLink.classList.remove('active');
-    });
-    getElement.classList.add('active');
-    const selectorMark = document.querySelector('.selector-mark');
-    const parentRect = selectorMark.parentElement.getBoundingClientRect();
-    const linkRect = getElement.getBoundingClientRect();
-    selectorMark.style.left = (linkRect.left - parentRect.left) + 'px';
-    selectorMark.style.width = (getElement.offsetWidth) + 'px';
-}
-
-const navLinks = document.querySelectorAll('header .header__buttons a');
-navLinks.forEach(navLink => {
-    navLink.addEventListener('click', moveHeaderSelector);
-});

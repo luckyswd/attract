@@ -30,7 +30,6 @@ header {
   .header__buttons {
     display: flex;
     position: relative;
-    gap: 5px;
 
     @include _1280 {
       display: none;
@@ -38,24 +37,12 @@ header {
   }
 
   .header__button {
-    color: $c-light-blue;
     width: max-content;
     font-size: 15px;
     line-height: 19px;
-    padding: 15px 20px;
-    position: relative;
-    z-index: 2;
-    background-color: transparent;
-    border: none;
+    padding: 14px 21px;
     min-width: 160px;
     text-align: center;
-
-    &:hover {
-      background-color: transparent;
-      border-color: transparent;
-      color: $c-light-blue;
-      box-shadow: 0 0 6px 0 rgba(23, 68, 208, 1);
-    }
 
     &.active {
       color: $c-white;
