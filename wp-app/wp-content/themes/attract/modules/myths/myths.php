@@ -51,7 +51,7 @@ $myths = get_field('myths');
                             <div class="myths__myth-body">
                                 <?php if (!empty($myth['image'])) : ?>
                                     <div class="myths__myth-image">
-                                        <?= getPictureImage($myth['image']) ?>
+                                        <?= getPictureImage($myth['image'], 250, 150) ?>
                                     </div>
                                 <?php endif; ?>
 
