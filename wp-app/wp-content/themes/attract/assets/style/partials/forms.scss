@@ -29,3 +29,15 @@ input[type=text], input[type=tel], input[type=email], input[type=number], textar
 textarea {
   border-radius: 20px;
 }
+
+.wpcf7-form.init {
+  .btn {
+    font-weight: 500;
+    width: 100%;
+    border-radius: 300px;
+    border: none;
+    cursor: pointer;
+    max-height: 76px;
+    padding: 17px 28px;
+  }
+}
