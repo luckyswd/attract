@@ -12,7 +12,7 @@ class Hero {
       slidesPerView: 1,
       slidesPerGroup: 1,
       loopFillGroupWithBlank: true,
-      // autoHeight: true,
+      autoHeight: true,
       loop: true,
       autoplay: {
         delay: 9000,
