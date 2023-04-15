@@ -36,7 +36,7 @@ $side_image = get_field('side_image');
                 <div class="follow-us__side">
                     <?php if (!empty($side_image)) : ?>
                         <div class="follow-us__image">
-                            <?= getPictureImage($side_image) ?>
+                            <?= getPictureImage($side_image, 600, 600) ?>
                         </div>
                     <?php endif; ?>
                 </div>
