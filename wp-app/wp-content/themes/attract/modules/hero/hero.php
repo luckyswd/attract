@@ -37,9 +37,9 @@ $slides = get_field('slides');
                                             </h2>
                                         <?php endif; ?>
                                         <?php if (!empty($description)) : ?>
-                                            <div class="effective-marketing__description subtitle-main">
+                                            <p class="effective-marketing__description subtitle-main">
                                                 <?= $description ?>
-                                            </div>
+                                            </p>
                                         <?php endif; ?>
                                         <div class="effective-marketing__side-mobile">
                                             <?php if (!empty($side_image_mobile)) : ?>
