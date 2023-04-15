@@ -4,9 +4,13 @@
   display: flex;
   align-items: center;
 
+  .swiper-wrapper {
+    max-height: 735px;
+  }
+
   .swiper-slide {
     height: 100%;
-    min-height: 800px;
+    min-height: 735px;
   }
 
   @include _992 {
