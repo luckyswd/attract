@@ -43,7 +43,7 @@ $slides = get_field('slides');
                                         <?php endif; ?>
                                         <div class="effective-marketing__side-mobile">
                                             <?php if (!empty($side_image_mobile)) : ?>
-                                                <?= getPictureImage($side_image_mobile) ?>
+                                                <?= getPictureImage($side_image_mobile, 400, 600) ?>
                                             <?php endif; ?>
                                         </div>
                                         <?php if (!empty($tags)) : ?>
@@ -61,7 +61,7 @@ $slides = get_field('slides');
                                     </div>
                                     <div class="effective-marketing__side">
                                         <?php if (!empty($side_image)) : ?>
-                                            <?= getPictureImage($side_image) ?>
+                                            <?= getPictureImage($side_image, 500, 100) ?>
                                         <?php endif; ?>
                                     </div>
                                 </div>

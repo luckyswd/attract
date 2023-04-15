@@ -21,7 +21,7 @@ $socials = get_field('socials', 'option');
         <div class="header__wrapper">
             <div class="header__desktop">
                 <div class="header__logo">
-                    <?= getPictureImage($logo) ?>
+                    <?= getPictureImage($logo, 150, 21) ?>
                 </div>
                 <?php if (!empty($socials)) : ?>
                     <div class="header__socials">
