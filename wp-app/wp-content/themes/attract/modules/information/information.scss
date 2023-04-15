@@ -43,13 +43,13 @@
     }
 
     @include _992 {
-      padding-top: 40px;
-      gap: 20px;
+      padding-top: 77px;
+      gap: 15px;
     }
 
     @include _680 {
       grid-template-columns: repeat(1, 1fr);
-      padding-top: 30px;
+      padding-top: 67px;
     }
   }
 
