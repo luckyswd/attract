@@ -90,7 +90,7 @@ $slides = get_field('slides');
                             $text = $firstSlide['information'];
                             $button = $firstSlide['button'];
                             ?>
-<!--                            --><?php //include get_template_directory() . '/components/text-and-button.php' ?>
+                            <?php include get_template_directory() . '/components/text-and-button.php' ?>
                         <?php endif; ?>
                     </div>
                 </div>
