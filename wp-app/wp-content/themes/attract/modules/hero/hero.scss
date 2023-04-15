@@ -14,7 +14,11 @@
 
   .swiper-slide {
     height: 100%;
-    min-height: 531px;
+    min-height: 649px;
+
+    @include _680 {
+      min-height: 531px;
+    }
   }
 
   @include _992 {
@@ -118,6 +122,7 @@
 .effective-marketing {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   .effective-marketing__content {
     display: flex;
