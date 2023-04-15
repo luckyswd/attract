@@ -15,7 +15,7 @@ class Hero {
       autoHeight: true,
       loop: true,
       autoplay: {
-        delay: 6000,
+        delay: 9000,
       },
     });
   }
