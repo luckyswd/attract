@@ -1,11 +1,13 @@
 .hero {
   margin-top: 100px;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 180px);
   display: flex;
   align-items: center;
 
   .swiper-wrapper {
-    max-height: 531px;
+    @include _680 {
+      max-height: 531px;
+    }
   }
 
   .swiper-slide {
