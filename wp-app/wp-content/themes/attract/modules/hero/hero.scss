@@ -1,8 +1,13 @@
 .hero {
   margin-top: 100px;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   display: flex;
   align-items: center;
+
+  .swiper-slide {
+    height: 100%;
+    min-height: 800px;
+  }
 
   @include _992 {
     min-height: auto;
