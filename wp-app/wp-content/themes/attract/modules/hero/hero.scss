@@ -157,6 +157,10 @@
       text-align: center;
     }
 
+    @include _375 {
+      font-size: 36px;
+    }
+
     span {
       color: $c-blue;
     }
