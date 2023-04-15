@@ -72,27 +72,27 @@ $slides = get_field('slides');
                             </div>
                         </div>
                     <?php endforeach; ?>
-                    <div class="swiper-slide">
-                        <?php if (!empty($firstSlide['headline'])) : ?>
-                            <h2>
-                                <?= $firstSlide['headline'] ?>
-                            </h2>
-                        <?php endif; ?>
-                        <?php if (!empty($firstSlide['photos'])) : ?>
-                            <div class="hero-photos">
-                                <?php foreach ($firstSlide['photos'] as $photo) : ?>
-                                    <div class="hero-photo">
-                                        <?= getPictureImage($photo['photo'], 350, 350) ?>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                            <?php
-                            $text = $firstSlide['information'];
-                            $button = $firstSlide['button'];
-                            ?>
-                            <?php include get_template_directory() . '/components/text-and-button.php' ?>
-                        <?php endif; ?>
-                    </div>
+<!--                    <div class="swiper-slide">-->
+<!--                        --><?php //if (!empty($firstSlide['headline'])) : ?>
+<!--                            <h2>-->
+<!--                                --><?php //= $firstSlide['headline'] ?>
+<!--                            </h2>-->
+<!--                        --><?php //endif; ?>
+<!--                        --><?php //if (!empty($firstSlide['photos'])) : ?>
+<!--                            <div class="hero-photos">-->
+<!--                                --><?php //foreach ($firstSlide['photos'] as $photo) : ?>
+<!--                                    <div class="hero-photo">-->
+<!--                                        --><?php //= getPictureImage($photo['photo'], 350, 350) ?>
+<!--                                    </div>-->
+<!--                                --><?php //endforeach; ?>
+<!--                            </div>-->
+<!--                            --><?php
+//                            $text = $firstSlide['information'];
+//                            $button = $firstSlide['button'];
+//                            ?>
+<!--                            --><?php //include get_template_directory() . '/components/text-and-button.php' ?>
+<!--                        --><?php //endif; ?>
+<!--                    </div>-->
                 </div>
             </div>
         </div>
