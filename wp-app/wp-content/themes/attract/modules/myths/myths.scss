@@ -22,10 +22,6 @@
 
   .myths__myth {
     border-top: 1.5px solid $c-light-blue-line;
-
-    @include  _992 {
-      padding: 20px 0;
-    }
   }
 
   .myths__myth-header {
@@ -34,6 +30,10 @@
     justify-content: space-between;
     gap: 25px;
     margin: 32px 0;
+
+    @include _680 {
+      margin: 20px 0;
+    }
   }
 
   .myths__myth-number {

@@ -71,6 +71,7 @@
     }
 
     @include _680 {
+      gap: 10px;
       padding-top: 50px;
       grid-template-columns: repeat(1, 1fr);
     }
@@ -114,6 +115,11 @@
     border-radius: 20px;
     padding: 40px;
     color: $c-white;
+
+    @include _680 {
+      text-align: center;
+      padding: 15px 24px;
+    }
   }
 
   .why-us__info-card-title {
@@ -122,6 +128,10 @@
 
   .why-us__info-card-description {
     padding-top: 25px;
+
+    @include _680 {
+      padding-top: 14px;
+    }
   }
 
   .why-us__info-card-button {
@@ -129,5 +139,9 @@
     text-align: center;
     margin-top: 50px;
     font-weight: 700;
+
+    @include _680 {
+      margin-top: 24px;
+    }
   }
 }
