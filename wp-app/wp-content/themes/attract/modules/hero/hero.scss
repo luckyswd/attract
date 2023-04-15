@@ -5,6 +5,8 @@
   align-items: center;
 
   .swiper-wrapper {
+    max-height: 649px;
+
     @include _680 {
       max-height: 531px;
     }
