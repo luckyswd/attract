@@ -23,7 +23,6 @@ $cards = get_field('cards');
                 </h2>
             <?php endif; ?>
 
-
             <?php if (!empty($cards)) : ?>
                 <div class="swiper feedback__swiper">
                     <div class="swiper-wrapper">

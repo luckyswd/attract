@@ -66,6 +66,24 @@
                     "parent_repeater": "field_64202a623966e"
                 },
                 {
+                    "key": "field_643a6561ab1dd",
+                    "label": "Сылка видео с ютуба",
+                    "name": "video",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_64202a623966e"
+                },
+                {
                     "key": "field_64202ab439670",
                     "label": "Деятельность",
                     "name": "activity",
@@ -133,5 +151,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681548479
+    "modified": 1681548761
 }
