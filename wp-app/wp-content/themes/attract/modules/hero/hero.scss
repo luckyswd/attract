@@ -29,6 +29,10 @@
     overflow: hidden;
   }
 
+  .swiper-slide {
+    min-height: 700px;
+  }
+
   .hero-photo {
     margin-right: -120px;
     width: 100%;
@@ -102,6 +106,7 @@
   .effective-marketing__content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 30px;
 
     @include _680 {
