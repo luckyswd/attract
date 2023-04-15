@@ -57,10 +57,13 @@
     height: 62px;
   }
 
+  .feedback__image {
+    position: relative;
+  }
+
   .feedback__image img {
     max-height: 240px;
     height: 100%;
-    position: relative;
 
     @include _680 {
       max-height: 200px;
