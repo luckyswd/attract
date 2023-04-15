@@ -32,7 +32,7 @@ $col4 = array_slice($blocks, 8, 2);
                             <div class="team-item">
                                 <p class="name"><?= $item['name'] ?? '' ?></p>
                                 <p class="position"><?= $item['job_title'] ?? '' ?></p>
-                                <?= getPictureImage($item['image']) ?>
+                                <?= getPictureImage($item['image'], 330, 370) ?>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -41,7 +41,7 @@ $col4 = array_slice($blocks, 8, 2);
                             <div class="team-item">
                                 <p class="name"><?= $item['name'] ?? '' ?></p>
                                 <p class="position"><?= $item['job_title'] ?? '' ?></p>
-                                <?= getPictureImage($item['image']) ?>
+                                <?= getPictureImage($item['image'], 330, 480) ?>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -50,7 +50,7 @@ $col4 = array_slice($blocks, 8, 2);
                             <div class="team-item">
                                 <p class="name"><?= $item['name'] ?? '' ?></p>
                                 <p class="position"><?= $item['job_title'] ?? '' ?></p>
-                                <?= getPictureImage($item['image']) ?>
+                                <?= getPictureImage($item['image'], 330, 370) ?>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -59,7 +59,7 @@ $col4 = array_slice($blocks, 8, 2);
                             <div class="team-item">
                                 <p class="name"><?= $item['name'] ?? '' ?></p>
                                 <p class="position"><?= $item['job_title'] ?? '' ?></p>
-                                <?= getPictureImage($item['image']) ?>
+                                <?= getPictureImage($item['image'], 330, 370) ?>
                             </div>
                         <?php endforeach; ?>
                     </div>
