@@ -1,5 +1,5 @@
 .wpcf7-not-valid-tip {
-  display: none!important;
+  display: none !important;
 }
 
 .wpcf7 form .wpcf7-response-output {
@@ -39,5 +39,10 @@ textarea {
     max-height: 76px;
     padding: 17px 28px;
     min-height: 53px;
+
   }
+}
+
+.btn-form {
+  height: 53px;
 }
