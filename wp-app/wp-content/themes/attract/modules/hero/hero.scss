@@ -1,8 +1,5 @@
 .hero {
   margin-top: 100px;
-  min-height: calc(100vh - 100px);
-  display: flex;
-  align-items: center;
 
   @include _992 {
     min-height: auto;
@@ -27,6 +24,16 @@
 
   .swiper-hero {
     overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    min-height: calc(100vh - 315px);
+    display: flex;
+    align-items: center;
+
+    @include _680 {
+      min-height: calc(100vh - 160px);
+    }
   }
 
   .swiper-slide {
