@@ -1,12 +1,18 @@
 .promotion {
   .promotion__headline {
     text-align: center;
+    max-width: 90%;
 
     @include _992 {
       font-size: 32px;
       line-height: 40px;
+      max-width: 100%
     }
 
+    @include _680 {
+      font-size: 22px;
+      line-height: 24px;
+    }
     span {
       color: $c-blue;
     }
