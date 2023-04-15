@@ -39,11 +39,11 @@ textarea {
     max-height: 76px;
     padding: 17px 28px;
     min-height: 53px;
-
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
   }
 }
 
 .btn-form {
   height: 53px;
-  border-radius: 50px!important;
 }
