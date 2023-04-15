@@ -11,7 +11,7 @@ class Hero {
     new Swiper(".swiper-hero", {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      autoHeight: true,
+      // autoHeight: true,
       // loop: true,
       autoplay: {
         delay: 9000,
