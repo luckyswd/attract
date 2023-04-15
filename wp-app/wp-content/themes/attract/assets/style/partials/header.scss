@@ -69,11 +69,10 @@ header {
     }
   }
 
-
   .header__mobile {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.7s cubic-bezier(0, 1, 0, 1);
+    transition: max-height 0.7s;
     background: $c-white;
   }
 
@@ -91,7 +90,6 @@ header {
     font-size: 20px;
     line-height: 25px;
     transition: $transition-anchor-btn;
-
 
     &:hover {
       color: $c-blue;
@@ -132,7 +130,6 @@ header {
     }
   }
 
-
   .header__socials.mobile {
     display: none;
     @include _680 {
@@ -141,20 +138,4 @@ header {
       display: flex !important;
     }
   }
-}
-
-.selector-mark {
-  position: absolute;
-  border-radius: 8px;
-  left: 0;
-  width: 0;
-  height: 51px;
-  border-radius: 300px;
-  background: linear-gradient(
-                  60deg,
-                  $c-blue 0%,
-                  blue 100%
-  );
-  z-index: 1;
-  transition: $transition;
 }

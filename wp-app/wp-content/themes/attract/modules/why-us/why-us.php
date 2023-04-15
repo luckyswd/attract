@@ -61,26 +61,25 @@ $info_card = get_field('info_card');
                                 <?= $key + 1 ?>
                             </div>
                             <?php if (!empty($card['description'])) : ?>
-                                <div class="why-us__card-description">
+                                <p class="why-us__card-description">
                                     <?= $card['description'] ?>
-                                </div>
+                                </p>
                             <?php endif; ?>
-
                         </div>
                     <?php endforeach; ?>
 
                     <?php if (!empty($info_card)) : ?>
                         <div class="why-us__info-card">
                             <?php if (!empty($info_card['title'])) : ?>
-                                <div class="why-us__info-card-title">
+                                <p class="why-us__info-card-title subtitle-main">
                                     <?= $info_card['title'] ?>
-                                </div>
+                                </p>
                             <?php endif; ?>
 
                             <?php if (!empty($info_card['description'])) : ?>
-                                <div class="why-us__info-card-description">
+                                <p class="why-us__info-card-description">
                                     <?= $info_card['description'] ?>
-                                </div>
+                                </p>
                             <?php endif; ?>
 
                             <?php if (!empty($info_card['button'])) : ?>

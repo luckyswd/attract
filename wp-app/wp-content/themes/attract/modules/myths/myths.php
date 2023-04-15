@@ -33,9 +33,9 @@ $myths = get_field('myths');
                                         <?= 'Миф №' . $key + 1 ?>
                                     </div>
                                     <?php if (!empty($myth['title'])) : ?>
-                                        <div class="myths__myth-title">
+                                        <p class="myths__myth-title subtitle-main">
                                             <?= $myth['title'] ?>
-                                        </div>
+                                        </p>
                                     <?php endif; ?>
                                 </div>
 
@@ -56,9 +56,9 @@ $myths = get_field('myths');
                                 <?php endif; ?>
 
                                 <?php if (!empty($myth['description'])) : ?>
-                                    <div class="myths__myth-description">
+                                    <p class="myths__myth-description">
                                         <?= $myth['description'] ?>
-                                    </div>
+                                    </p>
                                 <?php endif; ?>
                             </div>
                         </div>

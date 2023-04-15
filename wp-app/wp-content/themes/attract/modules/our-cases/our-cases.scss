@@ -47,7 +47,8 @@
   }
 
   .our-cases__cards-swiper {
-    padding-top: 75px;
+    padding-top: 54px;
+
     @include _992 {
       padding-top: 35px;
     }
@@ -55,15 +56,14 @@
 
   .our-cases__card-name {
     font-weight: 500;
-    font-size: 30px;
-    line-height: 35px;
-    padding-top: 13px;
+    font-size: 40px;
+    line-height: 42px;
+    padding-top: 10px;
 
     @include _1280 {
       font-size: 30px;
       line-height: 30px;
     }
-
   }
 
   .our-cases__card-budget, .our-cases__card-work-time, .our-cases__card-arbitrary-field {
@@ -75,8 +75,7 @@
   }
 
   .our-cases__card-header, .our-cases__card-footer {
-    font-size: 14px;
-    line-height: 140%
+    @extend p;
   }
 
   .our-cases__card-footer {

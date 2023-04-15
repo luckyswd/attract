@@ -41,9 +41,9 @@ $background_image = get_field('background_image');
                             <?php endif; ?>
 
                             <?php if (!empty($card['subtitle'])) : ?>
-                                <div class="information__card-subtitle subtitle-main">
+                                <p class="information__card-subtitle subtitle-main">
                                     <?= $card['subtitle'] ?>
-                                </div>
+                                </p>
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>

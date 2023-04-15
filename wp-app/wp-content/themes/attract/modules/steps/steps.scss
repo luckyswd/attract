@@ -7,11 +7,13 @@
   .steps__description {
     text-align: center;
     padding-top: 30px;
+    font-weight: 500;
+    max-width: 905px;
+    margin: 0 auto;
 
     span {
       color: $c-blue;
     }
-
 
     @include _680 {
       padding-top: 20px;
@@ -28,7 +30,7 @@
   .steps__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 25px;
     padding-top: 80px;
 
     @include _1440 {
@@ -64,14 +66,15 @@
     font-size: 20px;
     line-height: 140%;
     color: $c-blue;
-    padding-top: 35px;
+    padding-top: 25px;
+
     @include _480 {
       padding-top: 12px;
     }
   }
 
   .steps__card-description {
-    padding-top: 12px;
+    padding-top: 8px;
     font-size: 18px;
     line-height: 28px;
 

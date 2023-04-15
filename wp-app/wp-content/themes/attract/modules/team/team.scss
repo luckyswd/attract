@@ -26,10 +26,10 @@
   }
 
   .team-wrapper-desktop {
-    margin-top: 65px;
+    margin-top: 49px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
+    column-gap: 8px;
 
     @include _992 {
       margin-top: 52px;
@@ -41,7 +41,7 @@
   }
 
   .team-col-1 {
-    margin-top: 130px;
+    margin-top: 97px;
 
     @include _992 {
       margin-top: 58px;
@@ -53,7 +53,7 @@
   }
 
   .team-col-2 {
-    margin-top: 40px;
+    margin-top: 29px;
 
     @include _992 {
       margin-top: 20px;
@@ -65,7 +65,7 @@
   }
 
   .team-col-4 {
-    margin-top: 100px;
+    margin-top: 76px;
 
     @include _992 {
       margin-top: 51px;
@@ -79,7 +79,7 @@
   .col {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 29px;
   }
 
   .team-item {
@@ -93,7 +93,7 @@
 
     .position {
       font-weight: 400;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
 
       @include _992 {
         margin-bottom: 8px;

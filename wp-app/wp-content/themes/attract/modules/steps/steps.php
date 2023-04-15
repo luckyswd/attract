@@ -41,15 +41,15 @@ $cards = get_field('cards');
                             <?php endif; ?>
 
                             <?php if ($card['subtitle']) : ?>
-                                <div class="steps__card-subtitle">
+                                <p class="steps__card-subtitle">
                                     <?= $card['subtitle'] ?>
-                                </div>
+                                </p>
                             <?php endif; ?>
 
                             <?php if ($card['description']) : ?>
-                                <div class="steps__card-description">
+                                <p class="steps__card-description">
                                     <?= $card['description'] ?>
-                                </div>
+                                </p>
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
