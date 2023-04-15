@@ -45,11 +45,11 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6431c11044582",
-                    "label": "Видео",
-                    "name": "video",
+                    "key": "field_64202aa13966f",
+                    "label": "Клиент",
+                    "name": "client",
                     "aria-label": "",
-                    "type": "url",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -59,13 +59,37 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "parent_repeater": "field_64202a623966e"
                 },
                 {
-                    "key": "field_6435b658d935b",
-                    "label": "Превью картинка",
-                    "name": "preview_image",
+                    "key": "field_64202ab439670",
+                    "label": "Деятельность",
+                    "name": "activity",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64202a623966e"
+                },
+                {
+                    "key": "field_64202ad239671",
+                    "label": "Картинка",
+                    "name": "image",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -78,11 +102,11 @@
                     },
                     "return_format": "array",
                     "library": "all",
-                    "min_width": "",
-                    "min_height": "",
+                    "min_width": 1280,
+                    "min_height": 720,
                     "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
+                    "max_width": 1280,
+                    "max_height": 720,
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
@@ -109,5 +133,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681241840
+    "modified": 1681548479
 }
