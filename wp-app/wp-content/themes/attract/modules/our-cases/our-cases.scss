@@ -14,7 +14,6 @@
     color: $c-white;
     border-radius: 20px;
     height: auto;
-    min-height: 470px;
 
 
     @include _1440 {
@@ -26,13 +25,7 @@
       font-weight: 800;
     }
 
-    @include _992 {
-      min-height: 390px;
-    }
 
-    @include _480 {
-      min-height: 350px;
-    }
   }
 
   .swiper-slide img {
@@ -80,5 +73,16 @@
 
   .our-cases__card-footer {
     line-height: 200%;
+  }
+
+  .our-cases__card-image {
+    padding: 10px 0;
+    max-height: 200px;
+
+    img {
+      max-height: 200px;
+      border-radius: 20px;
+
+    }
   }
 }

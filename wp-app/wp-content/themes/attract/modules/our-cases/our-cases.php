@@ -46,6 +46,12 @@ $cards = get_field('cards');
                                                 <?= $card['name'] ?>
                                             </div>
                                         <?php endif; ?>
+
+                                        <?php if (!empty($card['image'])) : ?>
+                                            <div class="our-cases__card-image">
+                                                <?= getPictureImage($card['image'], 250, 150) ?>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
 
                                     <div class="our-cases__card-footer">
