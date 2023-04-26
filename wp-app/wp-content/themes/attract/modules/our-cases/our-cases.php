@@ -47,14 +47,15 @@ $cards = get_field('cards');
                                             </div>
                                         <?php endif; ?>
 
+
+                                    </div>
+
+                                    <div class="our-cases__card-footer">
                                         <?php if (!empty($card['image'])) : ?>
                                             <div class="our-cases__card-image">
                                                 <?= getPictureImage($card['image'], 250, 150) ?>
                                             </div>
                                         <?php endif; ?>
-                                    </div>
-
-                                    <div class="our-cases__card-footer">
                                         <?php if (!empty($card['budget'])) : ?>
                                             <div class="our-cases__card-budget">
                                                 <?= '<span>Бюджет: </span>' . $card['budget'] ?>
