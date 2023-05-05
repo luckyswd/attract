@@ -17,14 +17,16 @@ function anchorHelper(
 }
 
 function extractIdFromLink(
-    string $link
-):string {
-    parse_str(
-        parse_url($link, PHP_URL_QUERY),
-        $youtubeData
-    );
+    string $url,
+):string  {
+    $pattern = '/^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)$/';
+    preg_match($pattern, $url, $matches);
 
-    return $youtubeData['v'] ?? '';
+    if (!empty($matches[1])) {
+        $matches[1] = str_replace('shorts/', '', $matches[1]);
+    }
+
+    return $matches[1] ?? '';
 }
 
 function getYoutubePreview(
