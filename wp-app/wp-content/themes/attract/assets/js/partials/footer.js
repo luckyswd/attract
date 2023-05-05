@@ -39,7 +39,7 @@ class Modal {
             closeModal.classList.remove('open-js')
             openModals.forEach((openModal) => {
                 openModal.classList.remove('open-js')
-                html.style.overflow = 'auto'
+                html.style.overflow = 'unset'
             })
         })
     }
