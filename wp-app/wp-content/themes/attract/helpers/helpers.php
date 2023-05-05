@@ -19,16 +19,12 @@ function anchorHelper(
 function extractIdFromLink(
     string $link
 ):string {
-    try {
-        parse_str(
-            parse_url($link, PHP_URL_QUERY),
-            $youtubeData
-        );
+    parse_str(
+        parse_url($link, PHP_URL_QUERY),
+        $youtubeData
+    );
 
-        return $youtubeData['v'];
-    } catch (Exception $e) {
-        return '';
-    }
+    return $youtubeData['v'] ?? '';
 }
 
 function getYoutubePreview(
