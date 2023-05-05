@@ -2,6 +2,7 @@
   .promotion__headline {
     text-align: center;
     max-width: 90%;
+    margin: 0 auto;
 
     @include _992 {
       font-size: 32px;

@@ -10,29 +10,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
     color: $c-white;
     border-radius: 20px;
     height: auto;
-    min-height: 470px;
 
 
     @include _1440 {
       min-height: 100%;
-      gap: 40px;
     }
 
     span {
       font-weight: 800;
     }
 
-    @include _992 {
-      min-height: 390px;
-    }
 
-    @include _480 {
-      min-height: 350px;
-    }
   }
 
   .swiper-slide img {
@@ -80,5 +71,14 @@
 
   .our-cases__card-footer {
     line-height: 200%;
+  }
+
+  .our-cases__card-image {
+
+    img {
+      border-radius: 20px;
+      padding-bottom: 10px;
+
+    }
   }
 }
