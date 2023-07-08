@@ -8,91 +8,47 @@ Mode: preview
 ?>
 
 <?php
-$firstSlide = get_field('first_slide');
-$slides = get_field('slides');
+$headline = get_field('headline');
+$subheadline = get_field('subheadline');
+$image = get_field('image');
+$btn_text = get_field('btn_text');
+$btn_name = get_field('btn_name');
+$headline_profit = get_field('headline_profit');
+$profit_cards = get_field('profit_cards');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="hero distance">
+    <section class="hero">
         <div class="container">
-            <div class="swiper swiper-hero">
-                <div class="swiper-wrapper">
-                    <?php foreach ($slides as $slide) : ?>
-                        <?php
-                        $headline = $slide['headline'];
-                        $description = $slide['description'];
-                        $tags = $slide['tags'];
-                        $side_image = $slide['side_image'];
-                        $side_image_mobile = $slide['side_image_mobile'];
-                        $button = $slide['button'];
-                        $text = $slide['information'];
-                        ?>
-                        <div class="swiper-slide">
-                            <div class="effective-marketing">
-                                <div class="effective-marketing__content">
-                                    <div class="effective-marketing__main">
-                                        <?php if (!empty($headline)) : ?>
-                                            <h2 class="effective-marketing__headline">
-                                                <?= $headline ?>
-                                            </h2>
-                                        <?php endif; ?>
-                                        <?php if (!empty($description)) : ?>
-                                            <p class="effective-marketing__description subtitle-main">
-                                                <?= $description ?>
-                                            </p>
-                                        <?php endif; ?>
-                                        <div class="effective-marketing__side-mobile">
-                                            <?php if (!empty($side_image_mobile)) : ?>
-                                                <?= getPictureImage($side_image_mobile, 400, 600) ?>
-                                            <?php endif; ?>
-                                        </div>
-                                        <?php if (!empty($tags)) : ?>
-                                            <div class="effective-marketing__tags">
-                                                <?php foreach ($tags as $tag) : ?>
-                                                    <?php if (!empty($tag)) : ?>
-                                                        <p class="effective-marketing__tag">
-                                                            <?= '<span>#</span>' . $tag['name_tag'] ?>
-                                                        </p>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php include get_template_directory() . '/components/text-and-button.php' ?>
-                                    </div>
-                                    <div class="effective-marketing__side">
-                                        <?php if (!empty($side_image)) : ?>
-                                            <?= getPictureImage($side_image, 500, 100) ?>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="hero__wrapper">
+                <div class="hero__main">
+                    <h1><?= $headline ?? '' ?></h1>
+                    <div class="subheadline-button-wrapper">
+                        <div class="hero__main-image">
+                            <?= getPictureImage($image, 122, 122) ?>
                         </div>
-                    <?php endforeach; ?>
-                    <div class="swiper-slide">
-                        <?php if (!empty($firstSlide['headline'])) : ?>
-                            <h2>
-                                <?= $firstSlide['headline'] ?>
-                            </h2>
-                        <?php endif; ?>
-                        <?php if (!empty($firstSlide['photos'])) : ?>
-                            <div class="hero-photos">
-                                <?php foreach ($firstSlide['photos'] as $photo) : ?>
-                                    <div class="hero-photo">
-                                        <?= getPictureImage($photo['photo'], 350, 350) ?>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                            <?php
-                            $text = $firstSlide['information'];
-                            $button = $firstSlide['button'];
-                            ?>
-                            <?php include get_template_directory() . '/components/text-and-button.php' ?>
-                        <?php endif; ?>
+                        <div class="hero__main-subheadline">
+                            <p class="text-2"><?= $subheadline ?? '' ?></p>
+                        </div>
+                        <div class="hero__main-button-wrapper">
+                            <p class="text-4"><?= $btn_text ?? '' ?></p>
+                            <button><?= $btn_name ?? '' ?></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-and-button-mobile">
-                <?php include get_template_directory() . '/components/text-and-button.php' ?>
+                <div class="hero__profit">
+                    <h3><?= $headline_profit ?? '' ?></h3>
+                    <?php if (!empty($profit_cards)) : ?>
+                        <div class="hero__profit-cards">
+                            <?php foreach ($profit_cards as $card) : ?>
+                            <div class="profit-card" style="background-image: url(<?= $card['background_image']['url'] ?? '' ?>)">
+                                <h5> <?= $card['headline'] ?? '' ?> </h5>
+                                <p class="text-2"> <?= $card['subheadline'] ?? '' ?> </p>
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </section>

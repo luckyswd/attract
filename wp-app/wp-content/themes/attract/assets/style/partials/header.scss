@@ -1,22 +1,17 @@
 header {
   height: max-content;
-  background: $c-white;
   position: fixed;
   z-index: 50;
-  left: 50%;
-  transform: translate(-50%);
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $c-light-blue;
 
-  .container {
-    padding: 30px 0;
-    max-width: 1780px;;
-  }
+  .header__logo {
+    max-width: 166px;
 
-  .header__wrapper {
-
+    @include _430 {
+      max-width: 125px;
+    }
   }
 
   .header__desktop {
@@ -24,7 +19,26 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding: 0 40px;
+    padding: 0 50px;
+    background: $c-white;
+    height: 70px;
+    border-radius: 300px;
+
+    @include _1024 {
+      padding: 0 30px;
+    }
+
+    @include _768 {
+      padding: 0 24px;
+    }
+
+    @include _375 {
+      padding: 0 10px;
+    }
+
+    &.active {
+      box-shadow: 0px 0px 15px 0px #7390EC1C;
+    }
   }
 
   .header__buttons {
@@ -38,14 +52,15 @@ header {
 
   .header__button {
     width: max-content;
-    font-size: 15px;
-    line-height: 19px;
-    padding: 14px 21px;
-    min-width: 160px;
+    padding: 0 15px;
     text-align: center;
+    cursor: pointer;
+    color: $c-black;
+    font-size: 16px;
+    line-height: 20.4px;
 
-    &.active {
-      color: $c-white;
+    &:hover {
+      color: $c-blue;
     }
   }
 
@@ -73,7 +88,7 @@ header {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.7s;
-    background: $c-white;
+    background: $c-gray-light;
   }
 
   .header__buttons-mobile {
@@ -85,15 +100,10 @@ header {
 
   .header__button-mobile {
     padding: 16px;
-    color: $c-blue;
+    color: $c-black;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    transition: $transition-anchor-btn;
-
-    &:hover {
-      color: $c-blue;
-    }
+    font-size: 16px;
+    line-height: 20.4px;
   }
 
   &.active-menu {
@@ -102,40 +112,8 @@ header {
       transition: max-height 0.7s ease-in-out;
     }
 
-    svg {
-      fill: $c-blue;
-    }
-
-    .container {
-      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    }
-  }
-
-  .header__socials {
-    display: flex;
-    gap: 10px;
-    @include _680 {
-      display: none;
-    }
-  }
-
-  .header__social {
-    max-width: 50px;
-    max-height: 50px;
-    cursor: pointer;
-    transition: $transition-anchor-btn;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-
-  .header__socials.mobile {
-    display: none;
-    @include _680 {
-      justify-content: center;
-      padding: 20px 40px 0;
-      display: flex !important;
+    .header__mobile {
+      box-shadow: 0px 0px 15px 0px #7390EC1C;
     }
   }
 }

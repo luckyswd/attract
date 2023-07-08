@@ -13,44 +13,22 @@
 <?php
 $logo = get_field('logo', 'option');
 $buttons = get_field('anchor_buttons', 'option');
-$socials = get_field('socials', 'option');
 
 ?>
 <header id="header">
     <div class="container">
         <div class="header__wrapper">
             <div class="header__desktop">
-                <div class="header__logo">
+                <a href="/" class="header__logo">
                     <?= getPictureImage($logo, 150, 21) ?>
-                </div>
-                <?php if (!empty($socials)) : ?>
-                    <div class="header__socials">
-                        <?php foreach ($socials as $social) : ?>
-                            <?php if (!empty($social)) : ?>
-                                <?php if ($social !== end($socials)) : ?>
-                                    <a href="<?= $social['link'] ?>" class="header__social">
-                                        <?= getPictureImage($social['icon'], 64, 64) ?>
-                                    </a>
-                                <?php else: ?>
-                                    <div class="header__social header__social-modal">
-                                        <?= getPictureImage($social['icon'], 64, 64) ?>
-                                    </div>
-                                <?php endif; ?>
-
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
+                </a>
                 <div class="header__burger">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="25" viewBox="0 0 52 25" fill="none">
-                        <path d="M9.36157 2.80713H48.6003" stroke="#1744D0" stroke-width="5" stroke-linecap="round"/>
-                        <path d="M3.35889 12.2397L48.6003 12.2397" stroke="#1744D0" stroke-width="5"
-                              stroke-linecap="round"/>
-                        <path d="M3.35889 21.6724L48.6003 21.6724" stroke="#1744D0" stroke-width="5"
-                              stroke-linecap="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 35 24" fill="none">
+                        <rect x="34.8606" y="0.677979" width="1.81153" height="34.721" transform="rotate(90 34.8606 0.677979)" fill="#1744D0"/>
+                        <rect x="34.8606" y="11.2451" width="1.81153" height="34.721" transform="rotate(90 34.8606 11.2451)" fill="#1744D0"/>
+                        <rect x="34.8606" y="21.8125" width="1.81153" height="34.721" transform="rotate(90 34.8606 21.8125)" fill="#1744D0"/>
                     </svg>
                 </div>
-
                 <?php if (!empty($buttons)) : ?>
                     <div class="header__buttons">
                         <?php foreach ($buttons as $button) : ?>
@@ -64,7 +42,6 @@ $socials = get_field('socials', 'option');
                     </div>
                 <?php endif; ?>
             </div>
-
             <div class="header__mobile">
                 <?php if (!empty($socials)) : ?>
                     <div class="header__socials mobile">
@@ -95,10 +72,8 @@ $socials = get_field('socials', 'option');
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
-
             </div>
         </div>
     </div>
 </header>
 <main id="main" class="main" data-page-id="<?= get_queried_object_id() ?>">
-    <h1 class="visually-hidden">Attract</h1>

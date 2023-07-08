@@ -38,13 +38,12 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: 'CodeNext-Trial';
-  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-Bold.woff');
+  src: url('../fonts/CodeNext-Trial/CodeNext-Trial-Regular.woff');
   src: local('Roboto SemiBold'), local('Roboto-Regular'),
-  url('../fonts/CodeNext-Trial/CodeNext-Trial-Bold.woff') format('truetype');
-  font-weight: 600;
+  url('../fonts/CodeNext-Trial/CodeNext-Trial-Regular.woff') format('truetype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }

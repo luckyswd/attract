@@ -1,44 +1,152 @@
+h1 {
+  font-size: 170px;
+  line-height: 163px;
+  font-family: "CodeNext-Trial", sans-serif;
+
+  @include _1400 {
+    font-size: 130px;
+    line-height: 111.8px;
+  }
+
+  @include _1024 {
+    font-size: 100px;
+    line-height: 86px;
+  }
+
+  @include _768 {
+    font-size: 58px;
+    line-height: 49.88px;
+  }
+
+  @include _430 {
+    font-size: 48px;
+    line-height: 39.88px;
+  }
+}
+
 h2 {
-  font-family: 'CodeNext-Trial', sans-serif;;
-  font-weight: 600;
-  font-size: 58px;
-  line-height: 66px;
+  font-size: 80px;
+  line-height: 65.57px;
   letter-spacing: -0.06em;
 
-  @include _1280 {
-    font-size: 50px;
-    line-height: 50px;
-  }
-
-  @include _992 {
-    letter-spacing: 0;
-  }
-
-  @include _680 {
-    font-size: 40px;
-    line-height: 48px;
-  }
-
-  @include _375 {
-    font-size: 30px;
-    line-height: 36px;
+  @include _768 {
+    font-size: 48px;
+    line-height: 65.57px
   }
 }
 
-p {
-  font-family: 'Onest';
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19px;
+h3 {
+  font-size: 64px;
+  line-height: 67.2px;
+  letter-spacing: -0.035em;
+
+  @include _1400 {
+    font-size: 48px;
+    line-height: 50.4px;
+  }
+
+  @include _768 {
+    font-size: 32px;
+    line-height: 33.6px;
+  }
 }
 
-.subtitle-main {
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 30px;
+h4 {
+  font-size: 48px;
+  line-height: 50.4px;
+  letter-spacing: -0.035em;
 
-  @include _992 {
+  @include _1400 {
+    font-size: 33px;
+    line-height: 33.6px;
+  }
+
+  @include _768 {
+    font-size: 24px;
+    line-height: 25.2px
+  }
+}
+
+h5 {
+  font-size: 32px;
+  line-height: 33.6px;
+  letter-spacing: -0.035em;
+
+  @include _1400 {
+    font-size: 24px;
+    line-height: 25.2px
+  }
+
+  @include _768 {
+    font-size: 22px;
+    line-height: 23.1px;
+  }
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 25.2px;
+  letter-spacing: -0.015em;
+
+  @include _1400 {
     font-size: 20px;
-    line-height: 25px;
+    line-height: 21px;
+  }
+
+  @include _768 {
+    font-size: 16px;
+    line-height: 16.8px;
+  }
+}
+
+.text-1 {
+  font-size: 24px;
+  line-height: 31.2px;
+  letter-spacing: -0.015em;
+
+  @include _1400 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @include _768 {
+    font-size: 22px;
+    line-height: 28.6px;
+  }
+}
+
+.text-2 {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.010em;
+
+  @include _1400 {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+
+  @include _768 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.text-3 {
+  font-size: 18px;
+  line-height: 25.2px;
+
+  @include _1400 {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+}
+
+.text-4 {
+  font-size: 16px;
+  line-height: 20.8px;
+
+  @include _1400 {
+    font-size: 14px;
+    line-height: 18.2px;
   }
 }

@@ -1,16 +1,56 @@
-$c-black: #231F20;
-$c-white: #fff;
-$c-light-blue: #AEBAE8;
-$c-light-blue-line: #D9E1FF;
 $c-blue: #1744D0;
-$c-blue2: #7990E2;
-$light-red: #FFC8C8FF;
-$transition-anchor-btn: 250ms ease-in-out;
-$transition-btn: 300ms ease-in-out;
+$c-blue-medium: #718DE56F;
+$c-blue-light: #82A6FE;
+$c-black: #000618;
+$c-gray: #747474;
+$c-gray-light: #F1F3F9;
+$c-white: #fff;
 
-$font: 'Manrope', sans-serif;
+$font: 'Onest', sans-serif;
 
 $transition: all .3s ease-in-out;
+
+
+@mixin _1400 {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin _1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin _768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin _430 {
+    @media (max-width: 430px) {
+        @content;
+    }
+}
+
+@mixin _375 {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+
+
+
+$c-light-blue: #AEBAE8;
+$c-light-blue-line: #D9E1FF;
+$c-blue2: #7990E2;
+$light-red: #FFC8C8FF;
+
+$transition-anchor-btn: 250ms ease-in-out;
+$transition-btn: 300ms ease-in-out;
 
 @mixin _1440 {
     @media (max-width: 1440px) {
@@ -43,12 +83,6 @@ $transition: all .3s ease-in-out;
 
 @mixin _480 {
     @media (max-width: 480px) {
-        @content;
-    }
-}
-
-@mixin _375 {
-    @media (max-width: 375px) {
         @content;
     }
 }

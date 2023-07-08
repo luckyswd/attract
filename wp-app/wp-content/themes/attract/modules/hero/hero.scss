@@ -1,241 +1,260 @@
 .hero {
-  margin-top: 100px;
-  min-height: calc(100vh - 180px);
-  display: flex;
-  align-items: center;
-
-  .swiper-wrapper {
-    max-height: 649px;
-
-    @include _680 {
-      max-height: 529px;
-    }
-  }
-
-  .swiper-slide {
-    height: 100%;
-    min-height: 649px;
-
-    @include _680 {
-      min-height: 529px;
-    }
-  }
-
-  @include _992 {
-    min-height: auto;
-  }
-
-  h2 {
-   text-align: center;
-  }
-
-  .hero-photos {
-    display: flex;
-    justify-content: center;
-    padding: 75px 120px 75px 0;
-
-    @include _680 {
-      padding: 15px 0 0 0;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-    }
-  }
-
-  .swiper-hero {
-    overflow: hidden;
-  }
-
-  .swiper-slide {
-    height: auto;
-  }
-
-  .hero-photo {
-    margin-right: -120px;
-    width: 100%;
-    max-width: 250px;
-
-    @include _680 {
-      margin-right: 0;
-      margin-bottom: 0;
-      display: flex;
-      justify-content: center;
-
-      img {
-        max-width: 150px;
-      }
-    }
-  }
-  .hero-photo:first-child {
-    margin-right: 40px;
-
-    @include _680 {
-      padding-right: 0;
-      margin-bottom: 0;
-      margin-right: 0;
-    }
-  }
-
-  .hero-photo img {
-    border-radius: 100%;
-  }
-
-  .hero-footer {
-    display: flex;
-    padding: 6px 6px 6px 40px;
-    background-color: $c-blue;
-    margin: 0 auto;
-    border-radius: 300px;
-    color: $c-white;
-    width: 100%;
-    max-width: 700px;
-    align-items: center;
-    gap: 30px;
-    font-family: 'Onest';
+  h1 {
+    letter-spacing: -12px;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
 
-    @include _680 {
-      border-radius: 10px;
-      flex-direction: column;
-      padding: 20px 30px;
-    }
-  }
-  .hero-information {
-    font-size: 15px;
-    line-height: 19px;
-
-    @include _680 {
+    @include _1024 {
       text-align: center;
+      letter-spacing: -9.37px;
     }
-  }
-  .hero-btn {
-    padding: 20px 100px;
 
-    @include _992 {
-      padding: 15px 40px;
+    @include _768 {
+      letter-spacing: -5.36px;
     }
-  }
-}
 
-.effective-marketing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .effective-marketing__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-
-    @include _680 {
-      flex-direction: column;
+    span {
+      color: $c-blue;
     }
   }
 
-  .effective-marketing__main {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
+  .hero__wrapper {
+    padding: 243px 50px 50px 50px;
+    background: $c-white;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 
-    @include _680 {
-      width: 100%;
+    @include _1024 {
+      padding: 170px 30px 30px 30px;
     }
-  }
 
-  .effective-marketing__headline {
-    font-size: 70px;
-    line-height: 66px;
-    font-weight: 600;
-    text-align: start;
-
-    @include _992 {
-      font-size: 42px;
-      line-height: 47px;
-      text-align: center;
+    @include _768 {
+      padding: 308px 24px 24px 24px;
     }
 
     @include _375 {
-      font-size: 36px;
-    }
-
-    span {
-      color: $c-blue;
+      padding: 308px 10px 10px 10px;
     }
   }
 
-  .effective-marketing__description {
-    padding-top: 30px;
+  .hero__main {
+    position: relative;
+    margin-bottom: 100px;
 
-    @include _680 {
-      padding-top: 15px;
+    @include _1400 {
+      margin-bottom: 80px;
     }
   }
 
-  .effective-marketing__tags {
-    padding-top: 20px;
+  .hero__main-image {
+    position: absolute;
+    top: 22px;
+    right: 0;
+
+    @include _1400 {
+      position: absolute;
+      width: 105px;
+      height: 105px;
+      top: 125px;
+      right: 0;
+      left: 570px;
+    }
+
+    @include _1024 {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    @include _768 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -179px;
+    }
+  }
+
+  .hero__main-subheadline {
+    position: absolute;
+    top: 215px;
+    right: 0;
+    max-width: 441px;
+    letter-spacing: -1px;
+
+    @include _1400 {
+      position: relative;
+      top: unset;
+      right: unset;
+    }
+
+    @include _768 {
+      text-align: center;
+    }
+  }
+
+  .hero__main-button-wrapper {
+    padding: 14px 14px 14px 46px;
     display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    margin-bottom: 75px;
+    gap: 31px;
+    width: 100%;
+    max-width: 347px;
+    max-height: 102px;
+    border-radius: 219px;
+    background: $c-blue;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
 
-    @include _680 {
-      padding-top: 20px;
-      justify-content: center;
-      margin-bottom: 0;
+    @include _1400 {
+      position: relative;
+      bottom: unset;
+      right: unset;
+    }
+
+    @include _1024 {
+      padding: 5px 5px 5px 46px;
+      max-width: 450px;
+      max-height: 80px;
+      justify-content: space-between;
+    }
+
+    @include _768 {
+      max-width: 100%;
+    }
+
+    .text-4 {
+      color: $c-white;
+      max-width: 182px;
+      display: flex;
+      align-items: center;
+
+      @include _1024 {
+        max-width: 247px;
+      }
+
+      @include _768 {
+        font-size: 12px;
+        line-height: 15.3px;
+        max-width: 184px;
+      }
+    }
+
+    button {
+      border-radius: 219px;
+      background: $c-white;
+      color: $c-blue;
+      width: 100%;
+      max-width: 74px;
+      height: 74px;
+      transition: $transition;
+
+      @include _1024 {
+        max-width: 70px;
+        height: 70px;
+      }
+
+      @include _768 {
+        max-width: 46px;
+        height: 46px;
+        font-size: 12px;
+        line-height: 15.3px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+
+        @include _1024 {
+          transform: scale(1.0);
+        }
+      }
     }
   }
 
-  .effective-marketing__tag {
+  .subheadline-button-wrapper {
+    @include _1400 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 48px;
+    }
+
+    @include _1024 {
+      justify-content: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      column-gap: 32px;
+      row-gap: 60px;
+    }
+
+    @include _768 {
+      margin-top: 32px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      row-gap: 57px;
+    }
+  }
+}
+
+.hero__profit {
+  h3 {
+    text-align: center;
+    font-weight: 500;
+    margin: 0 auto;
+    max-width: 914px;
+
+    @include _1400 {
+      max-width: 685px;
+    }
+
+    @include _768 {
+      max-width: 455px;
+    }
+
     span {
       color: $c-blue;
     }
   }
 
-  .effective-marketing__side {
-    img {
-      max-height: 641px;
+  .hero__profit-cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include _1400 {
+      margin-top: 40px;
+      gap: 15px;
     }
 
-    @include _680 {
-      display: none;
+    @include _1024 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @include _768 {
+      grid-template-columns: 1fr;
     }
   }
 
-  .effective-marketing__side-mobile {
-    display: none;
-    padding-top: 40px;
+  .profit-card {
+    height: 370px;
+    border-radius: 20px;
+    padding: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-    @include _680 {
-      display: block;
-      padding-top: 30px;
+    @include _1400 {
+      height: 249px;
     }
-  }
 
-  .effective-marketing__btn {
-    padding: 20px 100px;
-
-    @include _992 {
-      padding: 15px 40px;
+    @include _768 {
+      height: 200px;
     }
-  }
-}
 
-.text-and-button {
-  @include _1280 {
-    display: none;
-  }
-}
-
-.text-and-button-mobile {
-  .text-and-button {
-    margin-top: 34px;
-    display: none;
-
-    @include _1280 {
-      display: flex;
+    h5 {
+      font-weight: 500;
+      margin-bottom: 9px;
     }
   }
 }
