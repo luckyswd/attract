@@ -22,7 +22,7 @@ $cases = get_field('cases');
                         <?php
                         $shor_description = get_field('shor_description', $case->ID);
                         $preview_image = get_field('preview_image', $case->ID);
-                        $tags = wp_get_post_terms($case->ID, 'tag');
+                        $tags = get_field('tags', $case->ID);
                         $index = $key + 1;
                         $class = 'medium-mode';
                         $h = 'h5';
@@ -52,7 +52,7 @@ $cases = get_field('cases');
                             <?php if (!empty($tags)) : ?>
                                 <div class="case-card__tags">
                                     <?php foreach ($tags as $tag) : ?>
-                                        <div class="case-card__tag text-4"><?= $tag->name ?></div>
+                                        <div class="case-card__tag text-4"><?= $tag['name'] ?></div>
                                     <?php endforeach;?>
                                 </div>
                             <?php endif;?>

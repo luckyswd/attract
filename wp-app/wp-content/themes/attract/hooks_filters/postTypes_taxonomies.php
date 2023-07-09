@@ -9,40 +9,6 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
-function create_taxonomy()
-{
-    register_taxonomy('tag', ['case'], [
-        'label' => __('Тэги'),
-        'rewrite' => ['slug' => 'tag'],
-        'labels' => [
-            'name' => 'Тэг',
-            'singular_name' => 'Тэги',
-            'search_items' => 'Найти тэг',
-            'all_items' => 'Все тэги',
-            'view_item ' => 'Просмотреть тэг',
-            'parent_item' => 'Родительский тэг',
-            'parent_item_colon' => 'Родительский тэг:',
-            'edit_item' => 'Редактировать тэг',
-            'update_item' => 'Обновить тэг',
-            'add_new_item' => 'Добавить новый тэг',
-            'new_item_name' => 'Новое название тэга',
-            'menu_name' => 'Тэги',
-        ],
-        'public' => true,
-        'hierarchical' => true,
-        'capabilities' => [],
-        'meta_box_cb' => null,
-        'show_admin_column' => false,
-        'show_in_rest' => true,
-        'show_ui' => true,
-        'publicly_queryable' => true,
-        'update_count_callback' => '_update_post_term_count',
-        'query_var' => true,
-    ]);
-}
-
-add_action('init', 'create_taxonomy');
-
 function custom_register_post_types()
 {
     $post_types = [
