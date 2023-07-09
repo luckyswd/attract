@@ -69,14 +69,7 @@ header {
 
     svg {
       cursor: pointer;
-      transition: $transition-anchor-btn;
-      fill: $c-light-blue;
-    }
-
-    &:hover {
-      svg {
-        fill: $c-blue;
-      }
+      transition: $transition;
     }
 
     @include _1280 {
