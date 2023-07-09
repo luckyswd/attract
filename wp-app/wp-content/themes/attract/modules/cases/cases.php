@@ -52,7 +52,7 @@ $cases = get_field('cases');
                             <?php if (!empty($tags)) : ?>
                                 <div class="case-card__tags">
                                     <?php foreach ($tags as $tag) : ?>
-                                        <?php if (!empty($tag)) : ?>
+                                        <?php if (!empty($tag['name'])) : ?>
                                             <div class="case-card__tag text-4"><?= $tag['name'] ?></div>
                                         <?php endif;?>
                                     <?php endforeach;?>
