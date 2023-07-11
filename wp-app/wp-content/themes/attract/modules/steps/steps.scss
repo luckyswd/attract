@@ -1,0 +1,113 @@
+.steps {
+  margin: 111px 0;
+
+  .steps-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 555px;
+    gap: 135px;
+
+    @include _1400 {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @include _992 {
+      gap: 24px;
+    }
+
+    .h4 {
+      position: sticky;
+      font-weight: 500;
+      margin-bottom: 20px;
+
+      @include _1400 {
+        text-align: center;
+      }
+    }
+
+    .text-2 {
+      color: $c-gray;
+
+      @include _1400 {
+        text-align: center;
+      }
+    }
+  }
+
+  .steps-left-container {
+    position: sticky;
+    top: 100px;
+
+    @include _1400 {
+      position: relative;
+      top: 0;
+    }
+  }
+
+  .steps-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include _1400 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include _992 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .steps-card {
+    padding: 32px 48px 32px 32px;
+    background: $c-white;
+    border-radius: 20px;
+    height: 100%;
+    min-height: 242px;
+    display: flex;
+    flex-direction: column;
+
+    @include _1400 {
+      min-height: 253px;
+      padding: 24px 32px;
+    }
+
+    @include _992 {
+      min-height: 208px;
+      padding: 24px;
+    }
+
+    .card-number {
+      color: $c-blue;
+      font-size: 20px;
+      line-height: 26px;
+
+      @include _768 {
+        font-size: 14px;
+        line-height: 18.2px;
+      }
+    }
+
+    .h6 {
+      font-weight: 500;
+      margin-bottom: 20px;
+
+      @include _1400 {
+        margin-bottom: 18px;
+      }
+
+      @include _768 {
+        margin-bottom: 16px;
+      }
+    }
+
+    .text-4 {
+      color: $c-gray;
+    }
+  }
+
+  .card-bottom {
+    margin-top: auto;
+  }
+}
