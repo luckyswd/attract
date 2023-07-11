@@ -15,7 +15,7 @@ $cases = get_field('cases');
 <?php if (!is_admin()) : ?>
     <section class="cases">
         <div class="container">
-            <h2><?= $headline ?? '' ?></h2>
+            <p class="h2"><?= $headline ?? '' ?></p>
             <?php if (!empty($cases)) : ?>
                 <div class="cases-wrapper">
                     <?php foreach ($cases as $key => $case) : ?>
@@ -48,7 +48,7 @@ $cases = get_field('cases');
                                     <line x1="29.9555" y1="14.7745" x2="29.9555" y2="28.4632" stroke="#000618" stroke-width="2.24138"/>
                                 </svg>
                             </div>
-                            <<?= $h ?> class="case-card_short-description"><?= $shor_description ?? '' ?></<?= $h ?>>
+                            <p class="case-card_short-description <?= $h ?>"><?= $shor_description ?? '' ?></p>
                             <?php if (!empty($tags)) : ?>
                                 <div class="case-card__tags">
                                     <?php foreach ($tags as $tag) : ?>

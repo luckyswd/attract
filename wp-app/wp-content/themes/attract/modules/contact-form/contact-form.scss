@@ -1,127 +1,219 @@
 .contact-form {
-  .contact-form__wrapper {
-    background-color: $c-blue;
-    padding: 56px 72px;
-    border-radius: 70px;
-
-    @include _992 {
-      border-radius: 10px;
-    }
-
-    @include _680 {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-  }
-  .contact-form__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .contact-form__form-activities, .contact-form__form-goals, .contact-form__form-budet, .contact-form__form-tools{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-  }
-
-  .contact-form__headline {
-    font-family: 'Onest';
-    font-weight: 500;
-    width: 80%;
-    color: $c-white;
-    font-size: 58px;
-    line-height: 66px;
-
-    @include _992 {
-      font-size: 24px;
-      line-height: 32px;
-    }
-    @include _768 {
-      width: 100%;
-    }
-  }
-
-  .contact-form__form {
-    padding-top: 40px;
+  .form-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 15px;
-    column-gap: 50px;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    p {
-      color: $c-white;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 19px;
-      padding-bottom: 10px;
-
-      @include _992 {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-
-    @include _992 {
-      grid-template-columns: repeat(1, 1fr);
-      padding-top: 30px;
-
-      p {
-        padding-bottom: 10px;
-      }
-    }
-  }
-  .contact-form__icon {
-    max-width: 100px;
-    @include _768 {
-      display: none;
-    }
-  }
-  .contact-form__footer {
-    padding-top: 75px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 50px;
-
-
-    .contact-form__form-send {
-      width: 100%;
-      cursor: pointer;
-    }
-
-    .wpcf7-spinner {
-      display: none;
-    }
-
-    @include _992 {
-      grid-template-columns: repeat(1, 1fr);
-      padding-top: 30px;
-      gap: 30px;
-    }
-  }
-
-  .contact-form__form-send {
-    color: $c-white;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 32px;
-    display: flex;
-    align-items: center;
+    grid-template-columns: 555px 1fr;
     gap: 20px;
 
-    @include _992 {
-      justify-content: center;
-      font-size: 16px;
-      line-height: 24px;
+    @include _1400 {
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form-left {
+    background: $c-white;
+    border-radius: 60px;
+    padding: 60px 60px 50px 60px;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    position: relative;
+
+    @include _1400 {
+      height: 466px;
+    }
+
+    @include _768 {
+      height: 374px;
+      padding: 24px 25px;
+    }
+
+    .h4 {
+      font-weight: 500;
+
+      @include _1400 {
+        max-width: 561px;
+      }
+
+      @include _768 {
+        text-align: center;
+      }
+    }
+
+    .form-icon-wrap {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+
+      @include _768 {
+        justify-content: center;
+      }
+
+      .text-1 {
+        max-width: 264px;
+      }
+    }
+
+    .social-wrap {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-top: 15px;
+
+      @include _768 {
+        justify-content: center;
+      }
+    }
+
+    .left-bottom {
+      margin-top: auto;
+      z-index: 2;
+
+      .h6 {
+        font-weight: 500;
+        max-width: 323px;
+
+        @include _768 {
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .left-overlay {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      @include _768 {
+        display: none;
+      }
+    }
+  }
+
+  .form-right {
+    padding: 50px;
+    background: linear-gradient(180.14deg, #1744D0 0.11%, #003BC5 99.87%);
+    border-radius: 60px;
+
+    @include _768 {
+      padding: 24px;
+    }
+
+    .h5 {
+      text-align: center;
+      color: $c-white;
+      font-weight: 500;
+      margin-bottom: 39px;
+
+      @include _768 {
+        margin-bottom: 20px;
+      }
+    }
+
+    .contact-form__form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include _1400 {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+
+    .form-input {
+      input {
+        width: 100%;
+        padding: 20px 30px;
+        border: 1px solid #265FEB;
+        border-radius: 300px;
+        color: $c-white;
+        background: inherit;
+        font-size: 16px;
+        line-height: 22.4px;
+
+        @include _1400 {
+          font-size: 14px;
+          line-height: 19.6px;
+        }
+
+        @include _768 {
+          font-size: 12px;
+          line-height: 16.8px;
+        }
+
+        &::placeholder {
+          color: $c-blue-light;
+        }
+
+        &:focus {
+          border-color: $c-blue-light;
+        }
+
+        &:focus::placeholder {
+          color: $c-white;
+        }
+
+        &:focus-visible {
+          outline: unset;
+        }
+      }
+
+      @include _1400 {
+        &:nth-child(1), &:nth-child(2) {
+          width: calc(50% - 5px);
+        }
+
+        &:nth-child(3), &:nth-child(4) {
+          width: 100%;
+        }
+      }
+
+      @include _768 {
+        width: 100%!important;
+      }
+    }
+
+    .contact-form__footer {
+      margin-top: 104px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .btn-white {
+        @include _768 {
+          max-width: 100%;
+        }
+      }
+
+      a {
+        padding-right: 49px;
+        color: $c-white;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 21px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      @include _1400 {
+        margin-top: 32px;
+      }
+
+      @include _768 {
+        margin-top: 20px;
+      }
+
+      .contact-form__form-send {
+        @include _768 {
+          display: none;
+        }
+      }
     }
   }
 }

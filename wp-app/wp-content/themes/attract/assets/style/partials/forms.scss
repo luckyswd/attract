@@ -1,50 +1,15 @@
-//.wpcf7-not-valid-tip {
-//  display: none !important;
-//}
-//
-//.wpcf7 form .wpcf7-response-output {
-//  display: none;
-//}
-//
-//input[type=text], input[type=tel], input[type=email], input[type=number], textarea {
-//  background: $c-light-blue-line;
-//  border-radius: 300px;
-//  padding: 17px 28px;
-//  width: 100%;
-//  direction: unset;
-//  outline: unset;
-//  border: none;
-//  font-size: 15px;
-//  line-height: 19px;
-//
-//  &::placeholder {
-//    color: $c-blue2;
-//  }
-//
-//  &.wpcf7-not-valid {
-//    background: $light-red;
-//  }
-//}
-//
-//textarea {
-//  border-radius: 20px;
-//}
-//
-//.wpcf7-form.init {
-//  .btn {
-//    font-weight: 500;
-//    width: 100%;
-//    border-radius: 300px;
-//    cursor: pointer;
-//    max-height: 76px;
-//    padding: 17px 28px;
-//    min-height: 53px;
-//    -webkit-border-radius: 300px;
-//    -moz-border-radius: 300px;
-//    -khtml-border-radius:300px;
-//  }
-//}
-//
-//.btn-form {
-//  height: 53px;
-//}
+.wpcf7-not-valid-tip {
+  display: none !important;
+}
+
+.wpcf7-spinner {
+  display: none!important;
+}
+
+.wpcf7-response-output {
+  border: unset!important;
+  color: $c-white;
+  text-align: center;
+  margin-bottom: 0!important;
+  padding-bottom: 0!important;
+}

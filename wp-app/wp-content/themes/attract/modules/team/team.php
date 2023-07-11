@@ -20,7 +20,7 @@ $image_mobile = get_field('image_mobile');
         <div class="container">
             <div class="team-wrapper">
                 <div class="team-wrapper__left">
-                    <h3><?= $headline ?? '' ?></h3>
+                    <p class="h3"><?= $headline ?? '' ?></p>
                     <p class="text-2"> <?= $text ?? '' ?> </p>
                 </div>
                 <div class="team-wrapper__right">
