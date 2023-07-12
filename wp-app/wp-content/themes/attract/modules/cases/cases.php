@@ -13,7 +13,7 @@ $cases = get_field('cases');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="cases">
+    <section class="cases distance">
         <div class="container">
             <p class="h2"><?= $headline ?? '' ?></p>
             <?php if (!empty($cases)) : ?>

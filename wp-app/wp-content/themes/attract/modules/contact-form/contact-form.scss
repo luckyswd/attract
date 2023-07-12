@@ -23,6 +23,10 @@
       height: 466px;
     }
 
+    @include _1024 {
+      border-radius: 40px;
+    }
+
     @include _768 {
       height: 374px;
       padding: 24px 25px;
@@ -96,6 +100,10 @@
     padding: 50px;
     background: linear-gradient(180.14deg, #1744D0 0.11%, #003BC5 99.87%);
     border-radius: 60px;
+
+    @include _1024 {
+      border-radius: 40px;
+    }
 
     @include _768 {
       padding: 24px;

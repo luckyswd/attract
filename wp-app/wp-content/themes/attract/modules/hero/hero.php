@@ -18,7 +18,7 @@ $profit_cards = get_field('profit_cards');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="hero">
+    <section class="hero distance">
         <div class="container">
             <div class="hero__wrapper">
                 <div class="hero__main">

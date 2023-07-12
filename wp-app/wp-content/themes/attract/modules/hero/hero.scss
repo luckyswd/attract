@@ -24,6 +24,11 @@
     border-bottom-right-radius: 60px;
 
     @include _1024 {
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    @include _1024 {
       padding: 170px 30px 30px 30px;
     }
 
