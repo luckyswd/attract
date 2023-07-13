@@ -71,8 +71,7 @@ section {
     border: 1px solid $c-white;
 
     &:hover {
-      background: $c-white;
-      color: $c-blue;
+      transform: scale(1.1);
     }
   }
 }

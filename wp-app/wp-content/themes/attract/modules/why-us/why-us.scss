@@ -112,13 +112,14 @@
     }
 
     .btn {
-      color: $c-white;
-      background: $c-blue;
-      border: 1px solid $c-white;
+      @include _768 {
+        color: $c-white;
+        background: $c-blue;
+        border: 1px solid $c-white;
 
-      &:hover {
-        background: $c-white;
-        color: $c-blue;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
 
