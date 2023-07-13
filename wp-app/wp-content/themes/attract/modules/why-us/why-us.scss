@@ -1,0 +1,180 @@
+.why-us {
+  .h3 {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .text-1 {
+    margin: 0 auto;
+    max-width: 776px;
+    text-align: center;
+
+    span {
+      color: $c-blue;
+    }
+  }
+
+  .why-us__cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include _1400 {
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    @include _1024 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .why-us__card {
+    padding: 50px;
+    background: $c-white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 524px;
+
+    @include _1024 {
+      max-height: 425px;
+      padding: 50px 24px 24px 24px;
+      margin: 0 auto;
+      width: 440px;
+    }
+
+    @include _768 {
+      width: 100%;
+    }
+
+    picture {
+      display: flex;
+      justify-content: center;
+
+      @include _1400 {
+        height: 216px;
+      }
+    }
+
+    .card-image {
+      height: 272px;
+      margin-bottom: 50px;
+
+      @include _1400 {
+        height: 216px;
+        margin-bottom: 60px;
+      }
+
+      @include _1024 {
+        margin-bottom: 50px;
+      }
+    }
+
+    img  {
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .text-3 {
+      @include _1024 {
+        text-align: center;
+      }
+    }
+  }
+
+  .solution-wrapper {
+    margin-top: 20px;
+    background: $c-white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 438px;
+    position: relative;
+    overflow: hidden;
+
+    @include _1400 {
+      height: 360px;
+    }
+
+    @include _768 {
+      background: $c-blue;
+      padding: 24px 30px;
+      align-items: center;
+      justify-content: start;
+      height: auto;
+    }
+
+    .btn {
+      color: $c-white;
+      background: $c-blue;
+      border: 1px solid $c-white;
+
+      &:hover {
+        background: $c-white;
+        color: $c-blue;
+      }
+    }
+
+    .h5 {
+      font-weight: 500;
+
+      @include _768 {
+        color: $c-white;
+        max-width: 303px;
+        text-align: center;
+      }
+    }
+
+    .text-2 {
+      width: 100%;
+      max-width: 708px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+
+      @include _1400 {
+        margin-bottom: 60px;
+      }
+
+      @include _768 {
+        color: $c-white;
+        margin-top: 14px;
+        margin-bottom: 29px;
+      }
+    }
+
+    .background-image-1 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      @include _768 {
+        display: none;
+      }
+    }
+
+    .background-image-2 {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      @include _1400 {
+        bottom: 0;
+        top: unset;
+      }
+
+      @include _768 {
+        display: none;
+      }
+    }
+  }
+}

@@ -26,13 +26,15 @@ $cards = get_field('cards');
                 <div class="steps-right">
                     <?php if (!empty($cards)) : ?>
                         <?php foreach ($cards as $key => $card) : ?>
-                        <div class="steps-card">
-                            <p class="card-number">(0<?= $key + 1 ?>)</p>
-                            <div class="card-bottom">
-                                <p class="h6"> <?=$card['headline'] ?> </p>
-                                <p class="text-4"> <?= $card['subheadline'] ?> </p>
-                            </div>
-                        </div>
+                            <?php if (!empty($card)) : ?>
+                                <div class="steps-card">
+                                    <p class="card-number">(0<?= $key + 1 ?>)</p>
+                                    <div class="card-bottom">
+                                        <p class="h6"> <?= $card['headline'] ?> </p>
+                                        <p class="text-4"> <?= $card['subheadline'] ?> </p>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </div>

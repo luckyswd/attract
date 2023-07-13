@@ -41,10 +41,13 @@ $profit_cards = get_field('profit_cards');
                     <?php if (!empty($profit_cards)) : ?>
                         <div class="hero__profit-cards">
                             <?php foreach ($profit_cards as $card) : ?>
-                            <div class="profit-card" style="background-image: url(<?= $card['background_image']['url'] ?? '' ?>)">
-                                <p class="h5"> <?= $card['headline'] ?? '' ?> </p>
-                                <p class="text-2"> <?= $card['subheadline'] ?? '' ?> </p>
-                            </div>
+                                <?php if (!empty($card)) : ?>
+                                    <div class="profit-card"
+                                         style="background-image: url(<?= $card['background_image']['url'] ?? '' ?>)">
+                                        <p class="h5"> <?= $card['headline'] ?? '' ?> </p>
+                                        <p class="text-2"> <?= $card['subheadline'] ?? '' ?> </p>
+                                    </div>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </div>
                     <?php endif; ?>

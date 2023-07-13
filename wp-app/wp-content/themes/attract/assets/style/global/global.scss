@@ -35,17 +35,14 @@ section {
   top: -100px;
 }
 
-.btn-white {
+.btn {
   width: 100%;
   padding: 18.5px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 300px;
-  background: $c-white;
-  color: $c-blue;
   max-width: 328px;
-  border: 1px solid $c-blue;
   font-size: 20px;
   line-height: 28px;
   font-weight: 500;
@@ -57,9 +54,26 @@ section {
     line-height: 22.4px;
   }
 
-  &:hover {
-    background: $c-blue;
+  &.white {
+    background: $c-white;
+    color: $c-blue;
+    border: 1px solid $c-blue;
+
+    &:hover {
+      background: $c-blue;
+      color: $c-white;
+    }
+  }
+
+  &.blue {
     color: $c-white;
+    background: $c-blue;
+    border: 1px solid $c-white;
+
+    &:hover {
+      background: $c-white;
+      color: $c-blue;
+    }
   }
 }
 
