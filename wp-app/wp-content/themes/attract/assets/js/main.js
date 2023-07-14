@@ -10,3 +10,4 @@
 
 /**** MODULES ****/
 //=include ../../modules/hero/hero.js
+//=include ../../modules/myths/myths.js
