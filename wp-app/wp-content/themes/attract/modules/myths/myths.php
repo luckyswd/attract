@@ -14,6 +14,7 @@ $questions = get_field('questions');
 
 <?php if (!is_admin()) : ?>
     <section class="myths distance">
+        <div class="block-anchor" id="myths"></div>
         <div class="container">
             <div class="myths-wrapper">
                 <div class="sticky-wrap">

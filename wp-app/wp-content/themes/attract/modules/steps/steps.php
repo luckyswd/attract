@@ -15,6 +15,7 @@ $cards = get_field('cards');
 
 <?php if (!is_admin()) : ?>
     <section class="steps distance">
+        <div class="block-anchor" id="steps"></div>
         <div class="container">
             <div class="steps-wrapper">
                 <div class="steps-left">

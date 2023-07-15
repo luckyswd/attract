@@ -23,6 +23,7 @@ $background_image_2_tablet = get_field('background_image_2_tablet');
 
 <?php if (!is_admin()) : ?>
     <section class="why-us distance">
+        <div class="block-anchor" id="why-us"></div>
         <div class="container">
             <p class="h3"> <?= $headline ?? '' ?> </p>
             <p class="text-1"> <?= $subheadline ?? '' ?> </p>

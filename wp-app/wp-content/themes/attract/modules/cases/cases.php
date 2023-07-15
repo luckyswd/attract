@@ -14,6 +14,7 @@ $cases = get_field('cases');
 
 <?php if (!is_admin()) : ?>
     <section class="cases distance">
+        <div class="block-anchor" id="cases"></div>
         <div class="container">
             <p class="h2"><?= $headline ?? '' ?></p>
             <?php if (!empty($cases)) : ?>

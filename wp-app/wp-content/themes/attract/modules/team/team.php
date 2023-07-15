@@ -17,6 +17,7 @@ $image_mobile = get_field('image_mobile');
 
 <?php if (!is_admin()) : ?>
     <section class="team distance">
+        <div class="block-anchor" id="team"></div>
         <div class="container">
             <div class="team-wrapper">
                 <div class="team-wrapper__left">

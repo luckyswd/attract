@@ -20,6 +20,7 @@ $socials = get_field('socials');
 
 <?php if (!is_admin()) : ?>
     <section class="contact-form distance">
+        <div class="block-anchor" id="contact-form"></div>
         <div class="container">
             <div class="form-wrapper">
                 <div class="form-left">

@@ -14,6 +14,7 @@ $reviews = get_field('reviews');
 <?php if (!is_admin()) : ?>
     <?php if (!empty($reviews)) : ?>
         <section class="review distance">
+            <div class="block-anchor" id="review"></div>
             <div class="container">
                 <div class="review-wrapper">
                     <div class="swiper swiper-review">

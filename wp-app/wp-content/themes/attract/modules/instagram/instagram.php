@@ -16,6 +16,7 @@ $image = get_field('image');
 
 <?php if (!is_admin()) : ?>
     <section class="instagram distance">
+        <div class="block-anchor" id="instagram"></div>
         <div class="container">
             <div class="instagram-wrapper">
                 <div class="sticky-wrap">
