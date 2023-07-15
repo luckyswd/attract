@@ -10,7 +10,6 @@ class Review {
       speed: 500,
       slidersPerView: 1,
       effect: "fade",
-      loop: true,
       simulateTouch: false,
 
       pagination: {
