@@ -11,7 +11,7 @@ $button_feedback = get_field('button_feedback', 'option');
     <div class="container">
         <div class="footer-feedback">
             <p class="h5"> <?= $feedback_text ?? '' ?> </p>
-            <a class="btn blue" href="<?= $button_feedback['url'] ?>"> <?= $button_feedback['title'] ?> </a>
+            <a class="btn blue" href="<?= $button_feedback['url'] ?? '' ?>"> <?= $button_feedback['title'] ?? '' ?> </a>
         </div>
         <div class="footer-wrapper">
             <?php if (!empty($socials)) : ?>
