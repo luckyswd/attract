@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     [...document.querySelectorAll('.ultimate')].forEach(el => {
-        console.log(_wpmeteor.blockers[el.dataset.prefix]);
         ReactDOM.render(
             <Ultimate prefix={el.dataset.prefix} title={el.dataset.title} settings={_wpmeteor.blockers[el.dataset.prefix]} />,
             el
@@ -99,4 +98,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-

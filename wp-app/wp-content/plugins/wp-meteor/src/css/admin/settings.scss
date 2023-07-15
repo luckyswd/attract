@@ -62,6 +62,31 @@
   }
 }
 
+#author {
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .author-image img {
+    width: 20vw;
+    height: auto;
+  }
+  .author-bio {
+    padding-left: 10px;
+    width: 70vw;
+    button {
+      padding: 2px;
+    }
+  }
+  ul {
+    padding-inline-start: 1em;
+    li {
+      list-style-type: circle;
+      margin-left: 1em;
+    }
+  }
+}
+
 @media screen and (max-width: 414px) {
   #tabs {
     .ui-tabs-nav {
@@ -72,6 +97,17 @@
         flex-grow: 1;
       }
 
+    }
+  }
+  #author {
+    h1 {
+      text-align: center;
+    }
+    .row {
+      flex-direction: column;
+    }
+    .author-image img {
+      width: 100%;
     }
   }
 }

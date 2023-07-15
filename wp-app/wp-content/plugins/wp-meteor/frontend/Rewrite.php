@@ -27,7 +27,7 @@ class Rewrite extends Base
     public function register()
     {
         if (defined('LSCWP_V') && version_compare(constant('LSCWP_V'), '3.2.3.1 ', '>=')) {
-            \add_action('litespeed_buffer_after', [$this, 'rewrite'], PHP_INT_MAX);
+            \add_action('litespeed_buffer_before', [$this, 'rewrite'], PHP_INT_MAX);
         // } else if (defined('WP_ROCKET_VERSION') && !defined('SiteGround_Optimizer\VERSION')) {
         //     \add_action('rocket_buffer', [$this, 'rewrite'], PHP_INT_MAX);
         } elseif (class_exists('Swift_Performance') && isset($_SERVER['HTTP_X_PREBUILD']) && $_SERVER['HTTP_X_PREBUILD']) {
@@ -135,7 +135,7 @@ class Rewrite extends Base
         $ieredirect = preg_replace('/\/\/# sourceMappingURL=ie-redirect\.js\.map/', '', $ieredirect);
         /* /ie redirect */
 
-        $EXTRA = constant('WPMETEOR_EXTRA_ATTRS') ?: '';
+        $EXTRA = defined('WPMETEOR_EXTRA_ATTRS') ? constant('WPMETEOR_EXTRA_ATTRS') : '';
         // Swift Performance compatibility
         if (class_exists('Swift_Performance')) {
             $EXTRA .= ' data-dont-merge';

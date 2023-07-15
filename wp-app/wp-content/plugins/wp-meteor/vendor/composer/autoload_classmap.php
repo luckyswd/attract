@@ -47,6 +47,7 @@ return array(
     'WP_Meteor\\Blocker\\Base' => $baseDir . '/blocker/Base.php',
     'WP_Meteor\\Blocker\\Exclusions\\Compatibility' => $baseDir . '/blocker/Exclusions/Compatibility.php',
     'WP_Meteor\\Blocker\\Exclusions\\Exclude' => $baseDir . '/blocker/Exclusions/Exclude.php',
+    'WP_Meteor\\Blocker\\Exclusions\\GDPR' => $baseDir . '/blocker/Exclusions/GDPR.php',
     'WP_Meteor\\Blocker\\FirstInteraction\\Base' => $baseDir . '/blocker/FirstInteraction/Base.php',
     'WP_Meteor\\Blocker\\FirstInteraction\\UltimateReorder' => $baseDir . '/blocker/FirstInteraction/UltimateReorder.php',
     'WP_Meteor\\Blocker\\Integration\\ElementorAnimations' => $baseDir . '/blocker/Integration/ElementorAnimations.php',

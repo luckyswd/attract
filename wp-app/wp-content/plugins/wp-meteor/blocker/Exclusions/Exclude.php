@@ -40,7 +40,7 @@ class Exclude extends \WP_Meteor\Blocker\Base
                 // return preg_quote(str_replace('#', '\#', $value), '#');
             }, $settings[$this->id]['value']);
             $regexp = "#(" . join('|', array_filter($value, function ($value) {
-                return $value && @preg_match("#${value}#", "") !== false;
+                return $value && @preg_match("#{$value}#", "") !== false;
             })) . ")#";
             if ($regexp !== '#()#') {
                 add_filter('wpmeteor_exclude', function ($exclude, $content) use ($regexp) {
@@ -75,6 +75,12 @@ class Exclude extends \WP_Meteor\Blocker\Base
                 \add_filter('breeze_filter_js_exclude', $exclude_js_string);
                 // SG compatibility
                 \add_filter('sgo_javascript_combine_excluded_inline_content', $exclude_js_array);
+
+                \add_filter('wphb_minify_resource', function ($block, $handle, $type, $src) use ($regexp) {
+                    if ($type === "scripts") {
+                        return true;
+                    }
+                }, 10, 4);
             }
         }
     }

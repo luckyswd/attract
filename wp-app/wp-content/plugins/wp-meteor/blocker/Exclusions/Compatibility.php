@@ -58,6 +58,8 @@ class Compatibility extends \WP_Meteor\Blocker\Base
                 'data-swift-image-lazyload', // Swift Performance Lazyload
                 'c.replace(/woocommerce-no-js/, \'woocommerce-js\')', // WooCommerce
                 // 'navigator.serviceWorker', // serviceWorker
+                "var wpforms_settings",
+                // "-js-extra$",
             ];
 
             $regexp = '#(' . join("|", array_map(function ($script) {

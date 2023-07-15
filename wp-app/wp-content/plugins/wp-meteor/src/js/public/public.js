@@ -1,3 +1,4 @@
+import jQueryMock from "./includes/mocks/jquery";
 import InteractionEvents from "./includes/utils/interaction-events";
 import dispatcher from "./includes/utils/dispatcher";
 import delta from "./includes/utils/delta";
@@ -201,11 +202,14 @@ wOrigAddEventListener(DCL, (e) => {
   process.env.DEBUG && c(delta(), "enqueued window " + DCL);
   eventQueue.push([e, origReadyStateGetter(), w]);
 });
+const jQuery = new jQueryMock();
 wOrigAddEventListener(L, (e) => {
   process.env.DEBUG && c(delta(), "enqueued window " + L);
   eventQueue.push([e, origReadyStateGetter(), w]);
-  if (!iterating)
+  if (!iterating) {
     fireQueuedEvents([DCL, RSC, M, L]);
+    jQuery.init();
+  }
 });
 const messageListener = (e) => {
   process.env.DEBUG && c(delta(), "enqueued window " + M);
@@ -298,6 +302,7 @@ const iterate = () => {
         }
         d.readyState = "complete";
         restoreMessageListener();
+        jQuery.unmock();
         iterating = false;
         DONE = true;
         w[_setTimeout](scriptLoaded);
@@ -660,6 +665,7 @@ dispatcher.on("l", () => {
   } else {
     process.env.DEBUG && c(delta(), "createElement is overridden, keeping observers in place");
   }
+  d.dispatchEvent(new CustomEvent("l"));
 });
 let documentWrite = (str) => {
   let parent, currentScript;

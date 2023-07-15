@@ -3,6 +3,7 @@
 namespace WebpConverter\Loader;
 
 use WebpConverter\Service\CloudflareConfigurator;
+use WebpConverter\Service\EnvDetector;
 use WebpConverter\Service\OptionsAccessManager;
 use WebpConverter\Service\PathsGenerator;
 use WebpConverter\Settings\Option\ExtraFeaturesOption;
@@ -28,6 +29,7 @@ class HtaccessLoader extends LoaderAbstract {
 	 */
 	public function init_admin_hooks() {
 		add_filter( 'webpc_htaccess_rewrite_root', [ $this, 'modify_document_root_path' ] );
+		add_filter( 'webpc_debug_image_url', [ $this, 'update_image_urls_to_bunny_cdn' ] );
 	}
 
 	/**
@@ -68,13 +70,25 @@ class HtaccessLoader extends LoaderAbstract {
 	 */
 	public function modify_document_root_path( string $original_path ): string {
 		if ( isset( $_SERVER['SERVER_ADMIN'] ) && strpos( $_SERVER['SERVER_ADMIN'], '.home.pl' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-			if ( strpos( ABSPATH, '/autoinstalator/' ) !== false ) {
-				return '%{DOCUMENT_ROOT}/';
-			}
 			return '%{DOCUMENT_ROOT}' . str_replace( '//', '/', ABSPATH );
 		}
 
 		return $original_path;
+	}
+
+	/**
+	 * @param string $url .
+	 *
+	 * @return string
+	 * @internal
+	 */
+	public function update_image_urls_to_bunny_cdn( string $url ): string {
+		if ( ! class_exists( '\BunnyCDN' ) || ! EnvDetector::is_cdn_bunny() ) {
+			return $url;
+		}
+		$options = \BunnyCDN::getOptions();
+
+		return str_replace( $options['site_url'], ( is_ssl() ? 'https://' : 'http://' ) . $options['cdn_domain_name'], $url );
 	}
 
 	/**
@@ -196,12 +210,17 @@ class HtaccessLoader extends LoaderAbstract {
 				if ( in_array( ExtraFeaturesOption::OPTION_VALUE_ONLY_SMALLER, $settings[ ExtraFeaturesOption::OPTION_NAME ] ) ) {
 					$content .= "  RewriteCond %{REQUEST_FILENAME} -f" . PHP_EOL;
 				}
-				if ( strpos( $document_root, '%{DOCUMENT_ROOT}' ) !== false ) {
-					$content .= "  RewriteCond {$document_root}{$output_path}/$1.{$ext}.{$format} -f" . PHP_EOL;
+
+				if ( $document_root === '%{DOCUMENT_ROOT}/' ) {
+					$content .= "  RewriteCond %{DOCUMENT_ROOT}/{$output_path}/$1.{$ext}.{$format} -f" . PHP_EOL;
+				} elseif ( strpos( $document_root, '%{DOCUMENT_ROOT}' ) !== false ) {
+					$content .= "  RewriteCond {$document_root}{$output_path}/$1.{$ext}.{$format} -f [OR]" . PHP_EOL;
+					$content .= "  RewriteCond %{DOCUMENT_ROOT}/{$output_path}/$1.{$ext}.{$format} -f" . PHP_EOL;
 				} else {
 					$content .= "  RewriteCond {$document_root}{$output_path}/$1.{$ext}.{$format} -f [OR]" . PHP_EOL;
 					$content .= "  RewriteCond %{DOCUMENT_ROOT}{$root_suffix}{$output_path}/$1.{$ext}.{$format} -f" . PHP_EOL;
 				}
+
 				if ( apply_filters( 'webpc_htaccess_mod_rewrite_referer', false ) === true ) {
 					$content .= "  RewriteCond %{HTTP_HOST}@@%{HTTP_REFERER} ^([^@]*)@@https?://\\1/.*" . PHP_EOL;
 				}
@@ -226,6 +245,8 @@ class HtaccessLoader extends LoaderAbstract {
 
 		$cache_control = true;
 		if ( OptionsAccessManager::get_option( CloudflareConfigurator::REQUEST_CACHE_CONFIG_OPTION ) === 'yes' ) {
+			$cache_control = false;
+		} elseif ( EnvDetector::is_cdn_bunny() ) {
 			$cache_control = false;
 		}
 

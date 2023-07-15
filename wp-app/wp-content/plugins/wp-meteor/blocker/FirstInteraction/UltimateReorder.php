@@ -79,6 +79,8 @@ class UltimateReorder extends Base
             // type="rocketlazyloadscript" data-rocket-type='text/javascript'
         }*/
 
+        $EXTRA = defined('WPMETEOR_EXTRA_ATTRS') ? constant('WPMETEOR_EXTRA_ATTRS') : '';
+
         $REPLACEMENTS = [];
         $searchOffset = 0;
         while (preg_match('/<script\b[^>]*?>/is', $buffer, $matches, PREG_OFFSET_CAPTURE, $searchOffset)) {
@@ -86,7 +88,7 @@ class UltimateReorder extends Base
             $searchOffset = $offset + 1;
             if (preg_match('/<\/\s*script>/is', $buffer, $endMatches, PREG_OFFSET_CAPTURE, $matches[0][1])) {
                 $len = $endMatches[0][1] - $matches[0][1] + strlen($endMatches[0][0]);
-                $everything = substr($buffer, $matches[0][1], $len);
+                // $everything = substr($buffer, $matches[0][1], $len);
                 $tag = $matches[0][0];
                 $closingTag = $endMatches[0][0];
 
@@ -94,13 +96,11 @@ class UltimateReorder extends Base
                 $hasType = preg_match('/\s+type=/i', $tag);
                 $shouldReplace = !$hasType || preg_match('/\s+type=([\'"])((application|text)\/(javascript|ecmascript|html|template)|module)\1/i', $tag);
                 $noOptimize = preg_match('/data-wpmeteor-nooptimize="true"/i', $tag);
-                if ($shouldReplace && !$hasSrc && !$noOptimize) {
+                if ($shouldReplace && !$hasSrc) {
                     // inline script
                     $content = substr($buffer, $matches[0][1] + strlen($matches[0][0]), $endMatches[0][1] - $matches[0][1] - strlen($matches[0][0]));
-                    if (apply_filters('wpmeteor_exclude', false, $content)) {
-                        $replacement = preg_replace('/^<script\b/i', '<script data-wpmeteor-nooptimize="true"', $everything);
-                        $buffer = substr_replace($buffer, $replacement, $offset, $len);
-                        continue;
+                    if (!$noOptimize && apply_filters('wpmeteor_exclude', false, $content)) {
+                        $tag = preg_replace('/^<script\b/i', "<script {$EXTRA} data-wpmeteor-nooptimize=\"true\"", $tag);
                     }
                     $replacement = $tag . "WPMETEOR[" . count($REPLACEMENTS) . "]WPMETEOR" . $closingTag;
                     $REPLACEMENTS[] = $content;
@@ -110,10 +110,8 @@ class UltimateReorder extends Base
             }
         }
 
-        $buffer = preg_replace_callback('/<script\b[^>]*?>/is', function ($matches) {
+        $buffer = preg_replace_callback('/<script\b[^>]*?>/is', function ($matches) use ($EXTRA) {
             list($tag) = $matches;
-
-            $EXTRA = constant('WPMETEOR_EXTRA_ATTRS') ?: '';
 
             $result = $tag;
             if (!preg_match('/\s+data-src=/i', $result)
@@ -123,6 +121,9 @@ class UltimateReorder extends Base
                 && !preg_match('/data-rocketlazyloadscript=/i', $result)) {
 
                 $src = preg_match('/\s+src=([\'"])(.*?)\1/i', $result, $matches)
+                    ? $matches[2]
+                    : null;
+                $id = preg_match('/\s+id=([\'"])(.*?)\1/i', $result, $matches)
                     ? $matches[2]
                     : null;
                 if (!$src) {
@@ -136,9 +137,12 @@ class UltimateReorder extends Base
                     || preg_match('/\s+type=([\'"])((application|text)\/(javascript|ecmascript)|module)\1/i', $result)
                     || preg_match('/\s+type=((application|text)\/(javascript|ecmascript)|module)/i', $result);
                 if ($isJavascript) {
+                    if ($id && apply_filters('wpmeteor_exclude', false, $id)) {
+                        return preg_replace('/<script/i', "<script {$EXTRA} ", $result);
+                    }
                     if ($src) {
                         if (apply_filters('wpmeteor_exclude', false, $src)) {
-                            return $result;
+                            return preg_replace('/<script/i', "<script {$EXTRA} ", $result);
                         }
                         $result = preg_replace('/\s+src=/i', " data-wpmeteor-src=", $result);
                         $result = preg_replace('/\s+(async|defer|integrity)\b/i', " data-wpmeteor-\$1", $result);
@@ -151,14 +155,10 @@ class UltimateReorder extends Base
                     } else {
                         $result = preg_replace('/<script/i', "<script type=\"javascript/blocked\" data-wpmeteor-type=\"text/javascript\" ", $result);
                     }
-                    $result = preg_replace('/<script/i', "<script ${EXTRA} data-wpmeteor-after=\"REORDER\"", $result);
+                    $result = preg_replace('/<script/i', "<script {$EXTRA} data-wpmeteor-after=\"REORDER\"", $result);
                 }
             }
             return $result; // preg_replace('/\s*data-wpmeteor-nooptimize="true"/i', '', $result);
-        }, $buffer);
-
-        $buffer = preg_replace_callback('/WPMETEOR\[(\d+)\]WPMETEOR/', function ($matches) use (&$REPLACEMENTS) {
-            return $REPLACEMENTS[(int)$matches[1]];
         }, $buffer);
 
         $buffer = preg_replace_callback('/<(body|img|iframe)\b[^>]*?>/is', function ($matches) {
@@ -172,6 +172,15 @@ class UltimateReorder extends Base
             $result = preg_replace('/\s+onload=/i', ' onload="document.dispatchEvent(new CustomEvent(\'wpl\', { detail: { event: event, target: this } }))" data-wpmeteor-onload=', $result);
             $result = preg_replace('/\s+onerror=/i', ' onerror="document.dispatchEvent(new CustomEvent(\'wpl\', { detail: { event: event, target: this }))" data-wpmeteor-onerror=', $result);
             return $result;
+        }, $buffer);
+
+        /**
+         * this should go the last, because there can be images inserted by scripts as with https://wbuac.progresssite.pro/ 
+         * effectively breaking JSON
+         * covered by test/test.php
+         */
+        $buffer = preg_replace_callback('/WPMETEOR\[(\d+)\]WPMETEOR/', function ($matches) use (&$REPLACEMENTS) {
+            return $REPLACEMENTS[(int)$matches[1]];
         }, $buffer);
 
         return $buffer;

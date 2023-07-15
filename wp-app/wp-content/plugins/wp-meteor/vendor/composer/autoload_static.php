@@ -101,6 +101,7 @@ class ComposerStaticInitc8ad16be4b6ad6bb5692c6ca98d4a0f0
         'WP_Meteor\\Blocker\\Base' => __DIR__ . '/../..' . '/blocker/Base.php',
         'WP_Meteor\\Blocker\\Exclusions\\Compatibility' => __DIR__ . '/../..' . '/blocker/Exclusions/Compatibility.php',
         'WP_Meteor\\Blocker\\Exclusions\\Exclude' => __DIR__ . '/../..' . '/blocker/Exclusions/Exclude.php',
+        'WP_Meteor\\Blocker\\Exclusions\\GDPR' => __DIR__ . '/../..' . '/blocker/Exclusions/GDPR.php',
         'WP_Meteor\\Blocker\\FirstInteraction\\Base' => __DIR__ . '/../..' . '/blocker/FirstInteraction/Base.php',
         'WP_Meteor\\Blocker\\FirstInteraction\\UltimateReorder' => __DIR__ . '/../..' . '/blocker/FirstInteraction/UltimateReorder.php',
         'WP_Meteor\\Blocker\\Integration\\ElementorAnimations' => __DIR__ . '/../..' . '/blocker/Integration/ElementorAnimations.php',

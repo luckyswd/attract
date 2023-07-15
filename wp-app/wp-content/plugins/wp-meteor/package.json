@@ -1,7 +1,7 @@
 {
     "title": "WP Meteor Wordpress Plugin",
     "name": "wp-meteor",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "scripts": {
         "watch:admin": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production DEBUG=1 node_modules/.bin/webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js --env.mixfile=webpack.mix.admin",
         "watch:public": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production DEBUG=1 node_modules/.bin/webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js --env.mixfile=webpack.mix.public-debug",
@@ -20,13 +20,15 @@
     ],
     "devDependencies": {
         "autoprefixer": "^10.4.13",
-        "esbuild": "^0.17.10",
-        "esbuild-sass-plugin": "^2.6.0",
+        "esbuild": "^0.18.6",
+        "esbuild-sass-plugin": "^2.10.0",
         "postcss": "^8.4.21"
     },
     "dependencies": {
-        "@aguidrevitch/spo-inpage-wp-meteor": "^0",
+        "@aguidrevitch/fpo-inpage-wp-meteor": "^0.1",
         "core-js": "^3.8.1",
+        "fast-csv": "^4.3.6",
+        "geoip-lite": "^1.4.7",
         "intersection-observer": "^0.11.0",
         "react": "^16.14.0",
         "react-contenteditable": "^3.3.5",

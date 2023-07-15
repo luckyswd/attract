@@ -57,7 +57,11 @@ class Initialize
 			$extraAttrs[] = 'data-cfasync="false"';
 		}
 		if (defined('LSCWP_V')) {
-			$extraAttrs[] = 'data-no-optimize="true"';
+			$extraAttrs[] = 'data-no-optimize="1"';
+			$extraAttrs[] = 'data-no-defer';
+		}
+		if (defined('PHASTPRESS_VERSION')) {
+			$extraAttrs[] = 'data-phast-no-defer';
 		}
 		define('WPMETEOR_EXTRA_ATTRS', join(" ", $extraAttrs));
 

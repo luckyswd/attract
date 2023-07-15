@@ -3,9 +3,9 @@ Contributors: aguidrevitch
 Donate link: 
 Tags: pagespeed, optimization, performance, page, speed
 Requires at least: 4.5
-Tested up to: 6.1.1
+Tested up to: 6.2.2
 Stable tag: trunk
-Requires PHP: 5.6
+Requires PHP: 7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -113,6 +113,12 @@ Use `wpmeteor-frontend-adjust-wpmeteor` filter in the following way:
 
 == Changelog ==
 
+3.2.6 - https://legalblink.it/ GDPR banner added for exclusion
+3.2.5 - fix for jQuery being excluded from optimization (eg by Phastpress)
+3.2.4 - fix for when is_plugin_active is not available [Issue](https://wordpress.org/support/topic/newest-version-3-2-3-causes-a-fatal-error/)
+3.2.3 - bugfix release
+3.2.2 - better compatibility with LiteSpeed cache
+3.2.1 - support for automatic exclusion of GDPR / Cookie banners, attempt to reduce blocking time when inserting scripts
 3.2.0 - migration to external wp-meteor javascript library, support for shadow root inserted scripts added to address [Issue](https://wordpress.org/support/topic/wp-meteor-breaking-js-code-from-heyflow-form/)
 3.1.9 - migration to esbuild to produce smaller footprint javascript, upgrade of wp-notice library to fix CSRF perfmanently
 3.1.8 - jQuery mock improved
