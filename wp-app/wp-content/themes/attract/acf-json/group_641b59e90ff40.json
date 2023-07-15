@@ -3,8 +3,8 @@
     "title": "Theme settings",
     "fields": [
         {
-            "key": "field_641b59e92696d",
-            "label": "Шапка",
+            "key": "field_64b2b192f32e0",
+            "label": "Основные",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -134,6 +134,48 @@
                     "parent_repeater": "field_642fa3274e6aa"
                 },
                 {
+                    "key": "field_64b2a1328f11d",
+                    "label": "Название",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_642fa3274e6aa"
+                },
+                {
+                    "key": "field_64b2a1c511ccf",
+                    "label": "Описание",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_642fa3274e6aa"
+                },
+                {
                     "key": "field_642fa35e4e6ac",
                     "label": "Ссылка",
                     "name": "link",
@@ -154,8 +196,8 @@
             ]
         },
         {
-            "key": "field_64301827a262f",
-            "label": "Модальная форма",
+            "key": "field_64b2b125a816f",
+            "label": "Футер",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -171,11 +213,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_64301845a2630",
-            "label": "Форма",
-            "name": "form",
+            "key": "field_64b2a22e83e58",
+            "label": "Футер картинка",
+            "name": "footer_image",
             "aria-label": "",
-            "type": "acf_cf7",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -183,7 +225,53 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64b2b136a8170",
+            "label": "Текст для связи",
+            "name": "feedback_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64b2b15ba8171",
+            "label": "Кнопка обратной связи",
+            "name": "button_feedback",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -204,5 +292,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680873558
+    "modified": 1689432484
 }
