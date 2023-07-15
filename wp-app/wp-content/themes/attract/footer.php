@@ -17,7 +17,7 @@ $button_feedback = get_field('button_feedback', 'option');
             <?php if (!empty($socials)) : ?>
                 <div class="socials-wrapper">
                     <?php foreach ($socials as $social) : ?>
-                    <a href="<?= $social['link'] ?>" target="_blank" class="social-card">
+                    <a href="<?= $social['url'] ?? '' ?>" target="_blank" class="social-card">
                         <div class="social-card-top">
                             <?= getPictureImage($social['icon'], 47, 47) ?>
                             <svg class="card-top-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
