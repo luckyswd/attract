@@ -144,7 +144,7 @@
       }
     }
 
-    button {
+    a {
       border-radius: 219px;
       background: $c-white;
       color: $c-blue;
@@ -152,6 +152,9 @@
       max-width: 74px;
       height: 74px;
       transition: $transition;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @include _1024 {
         max-width: 70px;

@@ -32,7 +32,7 @@ $profit_cards = get_field('profit_cards');
                         </div>
                         <div class="hero__main-button-wrapper">
                             <p class="text-4"><?= $btn_text ?? '' ?></p>
-                            <button><?= $btn_name ?? '' ?></button>
+                            <a href="#contact-form"><?= $btn_name ?? '' ?></a>
                         </div>
                     </div>
                 </div>
