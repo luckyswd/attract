@@ -24,7 +24,7 @@ $reviews = get_field('reviews');
                                 $preview_image = get_field('preview_image', $review);
                                 $video = get_field('video', $review);
                                 $author_review = get_field('author_review', $review);
-                                $title = $review->post_title;
+                                $title = get_field('short_description', $review);
                                 ?>
                                 <div class="swiper-slide">
                                     <div class="slide-left">
