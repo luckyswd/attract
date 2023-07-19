@@ -9,7 +9,6 @@ class Review {
       fadeEffect: { crossFade: true },
       speed: 500,
       slidersPerView: 1,
-      effect: "fade",
       simulateTouch: false,
 
       pagination: {

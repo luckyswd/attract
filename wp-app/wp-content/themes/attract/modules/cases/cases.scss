@@ -1,6 +1,26 @@
 .cases {
   .h2 {
-    padding-left: 111px;
+    padding-left: 90px;
+
+    @include _1024 {
+      padding-left: 70px;
+    }
+
+    @include _768 {
+      padding-left: 0;
+    }
+  }
+
+  .cases-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include _768 {
+      .btn {
+        text-align: center;
+      }
+    }
   }
 
   .cases-wrapper {

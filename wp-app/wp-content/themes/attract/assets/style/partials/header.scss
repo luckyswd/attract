@@ -48,6 +48,12 @@ header {
     @include _1280 {
       display: none;
     }
+
+    .btn.blue {
+      width: max-content;
+      font-size: 16px;
+      line-height: 20.4px;
+    }
   }
 
   .header__button {
@@ -88,7 +94,13 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 15px;
+    padding: 15px 0;
+
+    .btn.blue {
+      width: max-content;
+      font-size: 16px;
+      line-height: 20.4px;
+    }
   }
 
   .header__button-mobile {

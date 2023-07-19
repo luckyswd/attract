@@ -9,6 +9,7 @@ Mode: preview
 
 <?php
 $headline = get_field('headline');
+$button = get_field('button');
 $cases = get_field('cases');
 ?>
 
@@ -16,7 +17,10 @@ $cases = get_field('cases');
     <section class="cases distance">
         <div class="block-anchor" id="cases"></div>
         <div class="container">
-            <p class="h2"><?= $headline ?? '' ?></p>
+            <div class="cases-top">
+                <p class="h2"><?= $headline ?? '' ?></p>
+                <a class="btn blue" href="<?= $button['link'] ?>"><?= $button['title'] ?? '' ?></a>
+            </div>
             <?php if (!empty($cases)) : ?>
                 <div class="cases-wrapper">
                     <?php foreach ($cases as $key => $case) : ?>
@@ -39,7 +43,7 @@ $cases = get_field('cases');
                         }
 
                         ?>
-                        <div class="case-card <?= $class ?>" style="background-image: url(<?= $preview_image['url'] ?? '' ?>)">
+                        <a href="javascript:;" data-fancybox="" data-src="#develop-message" class="case-card <?= $class ?>" style="background-image: url(<?= $preview_image['url'] ?? '' ?>)">
                             <div class="case-card-top">
                                 <p class="text-4"><?= $case->post_title ?></p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="44" height="43" viewBox="0 0 44 43" fill="none">
@@ -59,7 +63,7 @@ $cases = get_field('cases');
                                     <?php endforeach;?>
                                 </div>
                             <?php endif;?>
-                        </div>
+                        </a>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>

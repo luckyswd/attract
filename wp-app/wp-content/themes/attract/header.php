@@ -38,6 +38,9 @@ $buttons = get_field('anchor_buttons', 'option');
                                 </a>
                             <?php endif; ?>
                         <?php endforeach; ?>
+                        <a href="#contact-form" class="btn blue">
+                            Бесплатная оценка
+                        </a>
                         <div class="selector-mark"></div>
                     </div>
                 <?php endif; ?>
@@ -70,6 +73,9 @@ $buttons = get_field('anchor_buttons', 'option');
                                 </a>
                             <?php endif; ?>
                         <?php endforeach; ?>
+                        <a href="#contact-form" class="header__button-mobile btn blue">
+                            Бесплатная оценка
+                        </a>
                     </div>
                 <?php endif; ?>
             </div>

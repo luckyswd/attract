@@ -16,7 +16,6 @@
     padding: 60px 60px 50px 60px;
     display: flex;
     flex-direction: column;
-    height: 650px;
     position: relative;
 
     @include _1400 {
@@ -175,9 +174,7 @@
           width: calc(50% - 5px);
         }
 
-        &:nth-child(3), &:nth-child(4) {
-          width: 100%;
-        }
+        width: 100%;
       }
 
       @include _768 {
@@ -191,7 +188,7 @@
       align-items: center;
       justify-content: space-between;
 
-      .btn-white {
+      .btn.white {
         @include _768 {
           max-width: 100%;
         }

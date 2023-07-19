@@ -38,7 +38,7 @@ $socials = get_field('socials');
                         <?php if (!empty($socials)) : ?>
                             <div class="social-wrap">
                                 <?php foreach ($socials as $social) : ?>
-                                    <a class="social-icon">
+                                    <a href="<?= $social['url'] ?? '' ?>" target="_blank" class="social-icon">
                                         <?= getPictureImage($social['icon'], 31, 31) ?>
                                     </a>
                                 <?php endforeach;?>

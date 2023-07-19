@@ -8,6 +8,12 @@ $feedback_text = get_field('feedback_text', 'option');
 $button_feedback = get_field('button_feedback', 'option');
 ?>
 <footer id="footer" class="footer">
+    <div class="modal-form" id="develop-message">
+        <div class="form-wrapper">
+            <p class="form-headline text-1">Эта часть сайта находится в разработке, попробуйте позже</p>
+        </div>
+    </div>
+
     <div class="container">
         <div class="footer-feedback">
             <p class="h5"> <?= $feedback_text ?? '' ?> </p>
