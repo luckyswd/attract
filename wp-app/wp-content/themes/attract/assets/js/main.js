@@ -1,6 +1,7 @@
 /* libs */
 //=include libs/swiper.min.js
 //=include libs/fancybox.js
+//=include libs/marquee3k.js
 
 
 /* PARTIALS */

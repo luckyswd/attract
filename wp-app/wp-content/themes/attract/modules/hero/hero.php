@@ -15,6 +15,7 @@ $btn_text = get_field('btn_text');
 $btn_name = get_field('btn_name');
 $headline_profit = get_field('headline_profit');
 $profit_cards = get_field('profit_cards');
+$tags = get_field('tags');
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -36,6 +37,19 @@ $profit_cards = get_field('profit_cards');
                         </div>
                     </div>
                 </div>
+                <?php if (!empty($tags)) : ?>
+                    <div class="marquee-container">
+                        <div class="marquee-content marquee3k"
+                             data-speed="1"
+                             data-pausable="true">
+                            <p>
+                                <?php foreach ($tags as $tag) : ?>
+                                    <span class="marquee-tag"><?= mb_strtoupper($tag['name'] ?? '') ?></span>
+                                <?php endforeach; ?>
+                            </p>
+                        </div>
+                    </div>
+                <?php endif; ?>
                 <div class="hero__profit">
                     <p class="h3"><?= $headline_profit ?? '' ?></p>
                     <?php if (!empty($profit_cards)) : ?>

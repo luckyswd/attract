@@ -43,10 +43,10 @@
 
   .hero__main {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     @include _1400 {
-      margin-bottom: 80px;
+      margin-bottom: 40px;
     }
   }
 
@@ -264,5 +264,26 @@
       font-weight: 500;
       margin-bottom: 9px;
     }
+  }
+}
+
+.marquee-tag {
+  font-size: 14px;
+  line-height: 17.85px;
+  padding: 7px 15px;
+  border: 1px solid $c-blue;
+  border-radius: 300px;
+  margin: 0 3px;
+}
+
+.marquee-container {
+  margin-bottom: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 34px;
+
+  @include _1400 {
+    margin-bottom: 40px;
   }
 }
