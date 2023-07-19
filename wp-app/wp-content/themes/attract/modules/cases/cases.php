@@ -19,7 +19,7 @@ $cases = get_field('cases');
         <div class="container">
             <div class="cases-top">
                 <p class="h2"><?= $headline ?? '' ?></p>
-                <a class="btn blue" href="<?= $button['link'] ?>"><?= $button['title'] ?? '' ?></a>
+                <a class="btn blue" href="<?= $button['url'] ?>"><?= $button['title'] ?? '' ?></a>
             </div>
             <?php if (!empty($cases)) : ?>
                 <div class="cases-wrapper">
