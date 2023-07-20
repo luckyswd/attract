@@ -47,6 +47,20 @@
     height: auto;
     min-height: 430px;
 
+    svg {
+      transition: $transition;
+    }
+
+    &:hover {
+      svg {
+        transform: rotate(45deg);
+
+        line {
+          stroke: $c-blue;
+        }
+      }
+    }
+
     &:before {
       content: "";
       background: #00031480;

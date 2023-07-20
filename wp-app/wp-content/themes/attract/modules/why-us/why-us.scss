@@ -161,6 +161,10 @@
       @include _768 {
         display: none;
       }
+
+      picture {
+        display: flex;
+      }
     }
 
     .background-image-2 {

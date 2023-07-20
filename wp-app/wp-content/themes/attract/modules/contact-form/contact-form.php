@@ -34,7 +34,7 @@ $socials = get_field('socials');
                     </div>
 
                     <div class="left-bottom">
-                        <h6> <?= $signature_social ?? '' ?></h6>
+                        <p class="h6"> <?= $signature_social ?? '' ?></p>
                         <?php if (!empty($socials)) : ?>
                             <div class="social-wrap">
                                 <?php foreach ($socials as $social) : ?>

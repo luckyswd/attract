@@ -75,6 +75,24 @@ footer {
     height: 100%;
     min-height: 257px;
 
+    .card-top-icon {
+      transition: $transition;
+    }
+
+    &:hover {
+      .card-top-icon {
+        transform: rotate(45deg);
+
+        path {
+          stroke: $c-blue !important;
+        }
+
+        path:first-child {
+          stroke: transparent!important;
+        }
+      }
+    }
+
     @include _768 {
       min-height: 187px;
       padding: 24px;

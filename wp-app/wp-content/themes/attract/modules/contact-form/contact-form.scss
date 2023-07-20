@@ -92,6 +92,10 @@
       @include _768 {
         display: none;
       }
+
+      picture {
+        display: flex;
+      }
     }
   }
 
