@@ -1,0 +1,82 @@
+.catalog-cases {
+  .catalog-cases-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    @include _768 {
+      gap: 20px;
+    }
+  }
+
+  .catalog-top  {
+    min-height: 430px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    @include _768 {
+      min-height: 100%;
+      padding-top: 100px;
+    }
+
+    .text-1 {
+      margin-bottom: 18px;
+      color: $c-blue;
+    }
+
+    .h2 {
+      text-align: center;
+    }
+  }
+
+  .cases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include _1024 {
+      grid-template-columns: 1fr;
+    }
+
+    .case-card {
+      width: 100%;
+      min-height: 650px;
+
+      @include _1400 {
+        min-height: 500px;
+      }
+
+      @include _768 {
+        min-height: 400px;
+      }
+    }
+  }
+
+  .cases-right {
+    margin-top: 89px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include _768 {
+      margin-top: 0;
+      gap: 10px;
+    }
+  }
+
+  .cases-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include _768 {
+      gap: 10px;
+    }
+  }
+}
