@@ -1,0 +1,44 @@
+.case-text {
+  .case-text-wrap {
+    max-width: 1130px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include _768 {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .case-text-column {
+      .text-1 {
+        color: $c-blue;
+        margin-bottom: 40px;
+
+        @include _768 {
+          margin-bottom: 16px;
+          text-align: center;
+        }
+      }
+
+      .h5 {
+        font-weight: 500;
+        margin-bottom: 20px;
+
+        @include _768 {
+          margin-bottom: 16px;
+          text-align: center;
+        }
+      }
+
+      .text-2 {
+        color: $c-gray;
+
+        @include _768 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
