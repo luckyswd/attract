@@ -3,6 +3,26 @@
     "title": "Шаги модуль",
     "fields": [
         {
+            "key": "field_64c65f89df296",
+            "label": "Подпись",
+            "name": "caption",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64ada73e0a20b",
             "label": "Заголовок",
             "name": "headline",
@@ -127,5 +147,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689105025
+    "modified": 1690722217
 }

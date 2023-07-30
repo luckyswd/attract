@@ -10,6 +10,7 @@ Mode: preview
 <?php
 $headline = get_field('headline');
 $subheadline = get_field('subheadline');
+$caption = get_field('caption');
 $cards = get_field('cards');
 ?>
 
@@ -20,8 +21,15 @@ $cards = get_field('cards');
             <div class="steps-wrapper">
                 <div class="steps-left">
                     <div class="steps-left-container">
-                        <p class="h4"> <?= $headline ?? '' ?> </p>
-                        <p class="text-2"><?= $subheadline ?? '' ?></p>
+                        <?php if (!empty($caption)) : ?>
+                            <p class="text-1"><?= $caption ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($headline)) : ?>
+                            <p class="h4"> <?= $headline ?> </p>
+                        <?php endif; ?>
+                        <?php if (!empty($subheadline)) : ?>
+                            <p class="text-2"><?= $subheadline ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="steps-right">
