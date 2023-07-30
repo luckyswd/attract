@@ -38,7 +38,7 @@ $buttons = get_field('anchor_buttons', 'option');
                                 </a>
                             <?php endif; ?>
                         <?php endforeach; ?>
-                        <a href="#contact-form" class="btn blue">
+                        <a href="<?= get_home_url() ?>/#contact-form" class="btn blue">
                             Бесплатная оценка
                         </a>
                         <div class="selector-mark"></div>
