@@ -18,7 +18,7 @@
   }
 
   .hero__wrapper {
-    padding: 120px 50px 50px 50px;
+    padding: 190px 50px 50px 50px;
     background: $c-white;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -204,6 +204,12 @@
 }
 
 .hero__profit {
+  margin-top: 150px;
+
+  @include _1400 {
+    margin-top: 0;
+  }
+
   .h3 {
     text-align: center;
     font-weight: 500;
