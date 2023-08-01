@@ -203,6 +203,22 @@
   }
 }
 
+#hero-video {
+  border-radius: 0;
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel__button.is-close {
+    margin: 0;
+    right: -20px;
+    background: $c-white;
+    top: -20px;
+  }
+}
+
 .hero__profit {
   margin-top: 150px;
 

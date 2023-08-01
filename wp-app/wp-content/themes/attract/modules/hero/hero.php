@@ -16,6 +16,7 @@ $btn_name = get_field('btn_name');
 $headline_profit = get_field('headline_profit');
 $profit_cards = get_field('profit_cards');
 $tags = get_field('tags');
+$video = get_field('video');
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -25,9 +26,9 @@ $tags = get_field('tags');
                 <div class="hero__main">
                     <h1><?= $headline ?? '' ?></h1>
                     <div class="subheadline-button-wrapper">
-                        <div class="hero__main-image">
+                        <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-image">
                             <?= getPictureImage($image, 122, 122) ?>
-                        </div>
+                        </a>
                         <div class="hero__main-subheadline">
                             <p class="text-2"><?= $subheadline ?? '' ?></p>
                         </div>
@@ -66,6 +67,14 @@ $tags = get_field('tags');
                         </div>
                     <?php endif; ?>
                 </div>
+            </div>
+        </div>
+        <div class="modal-form" id="hero-video">
+            <div class="form-wrapper">
+                <video controls>
+                    <source src="<?= $video['url'] ?>" type="<?= $video['mime_type'] ?>">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
         </div>
     </section>
