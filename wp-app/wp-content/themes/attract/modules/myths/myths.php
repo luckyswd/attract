@@ -18,7 +18,7 @@ $questions = get_field('questions');
         <div class="container">
             <div class="myths-wrapper">
                 <div class="sticky-wrap">
-                    <p class="h5"><?= $headline ?? '' ?></p>
+                    <p class="h4"><?= $headline ?? '' ?></p>
                 </div>
                 <?php if (!empty($questions)) : ?>
                     <div class="myths-questions">
