@@ -258,6 +258,21 @@
             "append": ""
         },
         {
+            "key": "field_64cf668fcbec9",
+            "label": "Форма",
+            "name": "footer_form",
+            "aria-label": "",
+            "type": "acf_cf7",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "key": "field_64b2b15ba8171",
             "label": "Кнопка обратной связи",
             "name": "button_feedback",
@@ -292,5 +307,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689432484
+    "modified": 1691313831
 }
