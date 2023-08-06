@@ -224,5 +224,48 @@
         }
       }
     }
+
+    &.modal-mode {
+      border-radius: 30px;
+      padding: 16px;
+
+      .h5 {
+        margin-bottom: 20px;
+      }
+
+      .contact-form__form {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .form-input {
+        input {
+          font-size: 12px;
+          line-height: 16.8px;
+        }
+
+        width: 100%!important;
+      }
+
+      .contact-form__footer {
+        .btn.white {
+          max-width: 100%;
+        }
+
+        margin-top: 20px;
+      }
+
+      .contact-form__form-send {
+        display: none;
+      }
+    }
   }
+}
+
+#modal-feedback-form .carousel__button.is-close {
+  margin: 0;
+  right: -20px;
+  background: #fff;
+  top: -20px;
 }

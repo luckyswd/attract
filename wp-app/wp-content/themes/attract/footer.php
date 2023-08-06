@@ -14,10 +14,20 @@ $button_feedback = get_field('button_feedback', 'option');
         </div>
     </div>
 
+    <div class="modal-form" id="modal-feedback-form">
+        <div class="form-wrapper">
+            <div class="contact-form">
+                <div class="form-right modal-mode">
+                    <?= do_shortcode('[contact-form-7 id="155" title="Contact form 1"]') ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="footer-feedback">
             <p class="h5"> <?= $feedback_text ?? '' ?> </p>
-            <a class="btn blue" href="<?= $button_feedback['url'] ?? '' ?>"> <?= $button_feedback['title'] ?? '' ?> </a>
+            <a class="btn blue" href="javascript:;" data-fancybox="" data-src="#modal-feedback-form"> <?= $button_feedback['title'] ?? '' ?> </a>
         </div>
         <div class="footer-wrapper">
             <?php if (!empty($socials)) : ?>
