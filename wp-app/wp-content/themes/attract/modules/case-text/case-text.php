@@ -19,7 +19,9 @@ $columns = get_field('columns');
                     <?php foreach ($columns as $column) : ?>
                         <div class="case-text-column">
                             <p class="text-1"> <?= $column['caption'] ?? '' ?> </p>
-                            <p class="h5"><?= $column['headline'] ?? '' ?></p>
+                            <?php if (!empty($column['headline'])) : ?>
+                                <p class="h5"><?= $column['headline'] ?></p>
+                            <?php endif;?>
                             <p class="text-2"><?= $column['sub_headline'] ?? '' ?></p>
                         </div>
                     <?php endforeach; ?>
