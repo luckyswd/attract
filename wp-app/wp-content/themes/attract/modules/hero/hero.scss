@@ -216,6 +216,11 @@
     right: -20px;
     background: $c-white;
     top: -20px;
+
+    @include _768 {
+      right: 0;
+      top: -37px;
+    }
   }
 }
 
