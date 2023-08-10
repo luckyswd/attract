@@ -3,6 +3,10 @@
     max-width: 1130px;
     margin: 0 auto;
     font-weight: 500;
+
+    @include _768 {
+      text-align: center;
+    }
   }
 
   .project-objectives {
