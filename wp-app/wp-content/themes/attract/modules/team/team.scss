@@ -1,4 +1,10 @@
 .team {
+  .btn {
+    @include _1024 {
+      margin: 0 auto;
+    }
+  }
+
   .team-wrapper {
     padding: 80px 95px 80px 100px;
     background: $c-white;
