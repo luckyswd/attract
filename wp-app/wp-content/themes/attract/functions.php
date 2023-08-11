@@ -63,3 +63,5 @@ function my_acf_block_render_callback($block)
         include(get_theme_file_path("modules/" . $slug . '/' . $slug . ".php"));
     }
 }
+
+add_filter( 'allow_dev_auto_core_updates', '__return_false' );
