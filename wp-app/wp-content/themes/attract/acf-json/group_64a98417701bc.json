@@ -164,7 +164,7 @@
         },
         {
             "key": "field_64c64ad85d980",
-            "label": "Затраченное время",
+            "label": "Время работы",
             "name": "elapsed_time",
             "aria-label": "",
             "type": "text",
@@ -221,5 +221,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1690720066
+    "modified": 1691826712
 }

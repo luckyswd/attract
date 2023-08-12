@@ -20,7 +20,7 @@ $year = get_field('year');
                 <div class="right">
                     <?php if (!empty($elapsedTime)) : ?>
                         <div class="elapsed-time">
-                            <p class="text-3">ЗАТРАЧЕНОЕ ВРЕМЯ</p>
+                            <p class="text-3">Время работы</p>
                             <p class="h6"><?= $elapsedTime ?></p>
                         </div>
                     <?php endif; ?>
