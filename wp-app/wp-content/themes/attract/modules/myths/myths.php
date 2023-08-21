@@ -18,13 +18,13 @@ $questions = get_field('questions');
         <div class="container">
             <div class="myths-wrapper">
                 <div class="sticky-wrap">
-                    <p class="h4"><?= $headline ?? '' ?></p>
+                    <p class="h5"><?= $headline ?? '' ?></p>
                 </div>
                 <?php if (!empty($questions)) : ?>
                     <div class="myths-questions">
                         <?php foreach ($questions as $key => $question) : ?>
                             <?php if (!empty($question)) : ?>
-                                <div class="myths-question <?php if ($key === 0) : ?> js-active <?php endif;?>">
+                                <div class="myths-question">
                                     <div class="myths-question-top">
                                         <p class="h6"> <?= $question['question'] ?> </p>
                                         <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
