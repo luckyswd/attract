@@ -310,6 +310,23 @@
   display: flex;
   align-items: center;
   min-height: 34px;
+  margin-left: -50px;
+  width: calc(100% + 100px);
+
+  @include _1024 {
+    margin-left: -30px;
+    width: calc(100% + 60px);
+  }
+
+  @include _768 {
+    margin-left: -24px;
+    width: calc(100% + 48px);
+  }
+
+  @include _375 {
+    margin-left: -10px;
+    width: calc(100% + 20px);
+  }
 
   @include _1400 {
     margin-bottom: 40px;

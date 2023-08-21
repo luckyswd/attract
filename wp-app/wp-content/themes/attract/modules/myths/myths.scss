@@ -29,9 +29,8 @@
   }
 
   .myths-question {
-    padding-top: 16px;
+    padding: 16px 0;
     border-top: 1px solid #D4D4D4;
-    margin-bottom: 40px;
     position: relative;
 
     &:last-child {
@@ -40,11 +39,11 @@
 
     @include _768 {
       padding-top: 10px;
-      margin-bottom: 24px;
     }
 
     .h6 {
       font-weight: 500;
+      max-width: 90%;
     }
 
     .myths-question-top {
@@ -54,6 +53,7 @@
       gap: 20px;
       cursor: pointer;
       margin-bottom: 20px;
+      position: relative;
 
       @include _768 {
         margin-bottom: 20px;
@@ -66,31 +66,32 @@
       height: 1px;
       width: 137px;
       background: $c-blue;
-      transition: $transition;
+      transition: all .5s ease-in-out;;
     }
 
     .text-4 {
       color: $c-gray;
       max-height: 0;
-      opacity: 0;
+      transition: max-height .5s ease-out;
+      overflow: hidden;
+    }
+
+    .plus {
+      transform: rotate(90deg);
     }
 
     .minus, .plus {
       min-width: 20px;
       min-height: 20px;
-    }
-
-    .minus {
-      display: none;
+      transition: $transition;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
 
     &.js-active {
-      .minus {
-        display: block;
-      }
-
       .plus {
-        display: none;
+        transform: rotate(0);
       }
 
       .line {
@@ -99,7 +100,7 @@
 
       .text-4 {
         max-height: 2000px;
-        opacity: 1;
+        transition: max-height .5s ease-in;
       }
     }
   }

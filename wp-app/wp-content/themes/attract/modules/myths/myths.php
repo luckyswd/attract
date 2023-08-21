@@ -30,9 +30,8 @@ $questions = get_field('questions');
                                         <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
                                             <rect x="20" width="1.2" height="20" transform="rotate(90 20 0)" fill="#1744D0"/>
                                         </svg>
-                                        <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                            <rect x="20" y="10" width="1.2" height="20" transform="rotate(90 20 10)" fill="#1744D0"/>
-                                            <rect x="10.6" y="20.6001" width="1.2" height="20" transform="rotate(-180 10.6 20.6001)" fill="#1744D0"/>
+                                        <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <rect x="20" width="1.2" height="20" transform="rotate(90 20 0)" fill="#1744D0"/>
                                         </svg>
                                     </div>
                                     <p class="text-4"> <?= $question['answer'] ?? '' ?> </p>
