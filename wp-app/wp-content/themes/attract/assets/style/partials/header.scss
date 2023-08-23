@@ -48,12 +48,13 @@ header {
     @include _1280 {
       display: none;
     }
+  }
 
-    .btn.blue {
-      width: max-content;
-      font-size: 16px;
-      line-height: 20.4px;
-    }
+  .btn.white {
+    width: max-content;
+    font-size: 16px;
+    line-height: 20.4px;
+    color: $c-black;
   }
 
   .header__button {
