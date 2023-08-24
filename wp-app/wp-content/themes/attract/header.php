@@ -72,8 +72,8 @@ $buttons = get_field('anchor_buttons', 'option');
                                 </a>
                             <?php endif; ?>
                         <?php endforeach; ?>
-                        <a href="#contact-form" class="header__button-mobile btn blue">
-                            Бесплатная оценка
+                        <a href="<?= get_home_url() ?>/#contact-form" class="header__button-mobile btn white">
+                            Оставить заявку
                         </a>
                     </div>
                 <?php endif; ?>
