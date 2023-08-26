@@ -23,7 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding-left: 50px;
+    padding: 0 5px 0 50px;
     background: $c-white;
     height: 70px;
     border-radius: 300px;
@@ -66,6 +66,7 @@ header {
 
   .btn.white {
     width: max-content;
+    min-width: 270px;
     font-size: 16px;
     line-height: 20.4px;
     color: $c-black;
