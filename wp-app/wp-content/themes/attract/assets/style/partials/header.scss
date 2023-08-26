@@ -6,6 +6,10 @@ header {
   display: flex;
   align-items: center;
 
+  @include _1280 {
+    margin-top: 14px;
+  }
+
   .header__logo {
     max-width: 166px;
 
@@ -24,16 +28,20 @@ header {
     height: 70px;
     border-radius: 300px;
 
+    @include _1280 {
+      padding: 0 50px;
+    }
+
     @include _1024 {
-      padding-left: 30px;
+      padding: 0 30px;
     }
 
     @include _768 {
-      padding-left: 24px;
+      padding: 0 24px;
     }
 
     @include _375 {
-      padding-left: 10px;
+      padding: 0 10px;
     }
 
     &.active {
@@ -90,36 +98,70 @@ header {
     }
   }
 
+  .socials-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 15px;
+
+    .social-card {
+      padding: 7px 10px 7px 10px;
+      background: $c-gray-light;
+      border-radius: 20px;
+      color: $c-black;
+      margin: 11px 0 24px 0;
+
+      p {
+        font-size: 14px;
+        line-height: 14.7px;
+      }
+    }
+  }
+
   .header__mobile {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.7s;
-    background: $c-gray-light;
+    background: $c-white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .header__buttons-mobile {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 15px;
     padding: 15px 0;
   }
 
   .header__button-mobile {
-    padding: 16px;
     color: $c-black;
     font-weight: 400;
     font-size: 16px;
     line-height: 20.4px;
   }
 
+  .close {
+    display: none;
+  }
+
   &.active-menu {
     .header__mobile {
       max-height: 500px;
-      transition: max-height 0.7s ease-in-out;
     }
 
-    .header__mobile {
-      box-shadow: 0px 0px 15px 0px #7390EC1C;
+    .header__desktop {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .burger {
+      display: none;
+    }
+
+    .close {
+      display: block;
     }
   }
 }

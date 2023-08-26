@@ -13,6 +13,7 @@
 <?php
 $logo = get_field('logo', 'option');
 $buttons = get_field('anchor_buttons', 'option');
+$socials = get_field('socials', 'option');
 
 ?>
 <header id="header">
@@ -23,10 +24,21 @@ $buttons = get_field('anchor_buttons', 'option');
                     <?= getPictureImage($logo, 150, 21) ?>
                 </a>
                 <div class="header__burger">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 35 24" fill="none">
-                        <rect x="34.8606" y="0.677979" width="1.81153" height="34.721" transform="rotate(90 34.8606 0.677979)" fill="#1744D0"/>
-                        <rect x="34.8606" y="11.2451" width="1.81153" height="34.721" transform="rotate(90 34.8606 11.2451)" fill="#1744D0"/>
-                        <rect x="34.8606" y="21.8125" width="1.81153" height="34.721" transform="rotate(90 34.8606 21.8125)" fill="#1744D0"/>
+                    <svg class="burger" xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewBox="0 0 25 18"
+                         fill="none">
+                        <rect x="24.0002" y="1.38477" width="1.2" height="23" transform="rotate(90 24.0002 1.38477)"
+                              fill="#1744D0"/>
+                        <rect x="24.0002" y="8.38477" width="1.2" height="23" transform="rotate(90 24.0002 8.38477)"
+                              fill="#1744D0"/>
+                        <rect x="24.0002" y="15.3848" width="1.2" height="23" transform="rotate(90 24.0002 15.3848)"
+                              fill="#1744D0"/>
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                         fill="none">
+                        <rect x="16.2637" y="0.884766" width="1.2" height="23" transform="rotate(45 16.2637 0.884766)"
+                              fill="#1744D0"/>
+                        <rect width="1.2" height="23"
+                              transform="matrix(-0.707107 0.707107 0.707107 0.707107 1.1123 0.884766)" fill="#1744D0"/>
                     </svg>
                 </div>
                 <?php if (!empty($buttons)) : ?>
@@ -45,24 +57,6 @@ $buttons = get_field('anchor_buttons', 'option');
                 <?php endif; ?>
             </div>
             <div class="header__mobile">
-                <?php if (!empty($socials)) : ?>
-                    <div class="header__socials mobile">
-                        <?php foreach ($socials as $social) : ?>
-                            <?php if (!empty($social)) : ?>
-                                <?php if ($social !== end($socials)) : ?>
-                                    <a href="<?= $social['link'] ?>" class="header__social">
-                                        <?= getPictureImage($social['icon'], 64, 64) ?>
-                                    </a>
-                                <?php else: ?>
-                                    <div class="header__social header__social-mobile-modal">
-                                        <?= getPictureImage($social['icon'], 64, 64) ?>
-                                    </div>
-                                <?php endif; ?>
-
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
                 <?php if (!empty($buttons)) : ?>
                     <div class="header__buttons-mobile">
                         <?php foreach ($buttons as $button) : ?>
@@ -72,10 +66,16 @@ $buttons = get_field('anchor_buttons', 'option');
                                 </a>
                             <?php endif; ?>
                         <?php endforeach; ?>
-                        <a href="<?= get_home_url() ?>/#contact-form" class="header__button-mobile btn white">
-                            Оставить заявку
-                        </a>
                     </div>
+                    <?php if (!empty($socials)) : ?>
+                        <div class="socials-wrapper">
+                            <?php foreach ($socials as $social) : ?>
+                                <a href="<?= $social['link'] ?>" target="_blank" class="social-card">
+                                    <p class="h6"> <?= $social['name'] ?> </p>
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 <?php endif; ?>
             </div>
         </div>
