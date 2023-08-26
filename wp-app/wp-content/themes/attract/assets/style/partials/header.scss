@@ -19,21 +19,21 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding: 0 50px;
+    padding-left: 50px;
     background: $c-white;
     height: 70px;
     border-radius: 300px;
 
     @include _1024 {
-      padding: 0 30px;
+      padding-left: 30px;
     }
 
     @include _768 {
-      padding: 0 24px;
+      padding-left: 24px;
     }
 
     @include _375 {
-      padding: 0 10px;
+      padding-left: 10px;
     }
 
     &.active {
