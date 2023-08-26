@@ -9,6 +9,40 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
+add_action('init', 'create_taxonomy');
+function create_taxonomy()
+{
+
+    register_taxonomy('service-category', ['service'], [
+        'label' => __('service category'),
+        'rewrite' => ['slug' => 'service-category'],
+        'labels' => [
+            'name' => 'Категория услуг',
+            'singular_name' => 'Категории услуг',
+            'search_items' => 'Найти услугу',
+            'all_items' => 'Все категории услуг',
+            'view_item ' => 'Просмотреть категорию услуг',
+            'parent_item' => 'Родительская категория услуги',
+            'parent_item_colon' => 'Родительская категория услуги:',
+            'edit_item' => 'Редактировать категорию услуги',
+            'update_item' => 'Обновить категорию услуги',
+            'add_new_item' => 'Добавить новую категорию услуги',
+            'new_item_name' => 'Новое название категории услуги',
+            'menu_name' => 'Категории услуг',
+        ],
+        'public' => true,
+        'hierarchical' => true,
+        'capabilities' => [],
+        'meta_box_cb' => null,
+        'show_admin_column' => false,
+        'show_in_rest' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+    ]);
+}
+
 function custom_register_post_types()
 {
     $post_types = [
@@ -28,6 +62,16 @@ function custom_register_post_types()
             "name_plural" => "Отзывы",
             "name_lowercase" => "Отзывы",
             "name_lowercase_plural" => "Отзывы",
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            "supports" => ['title', 'editor'],
+            "has_archive" => false,
+        ],
+        [
+            "post_type_name" => "service",
+            "name" => "Услуги",
+            "name_plural" => "Услуги",
+            "name_lowercase" => "Услуги",
+            "name_lowercase_plural" => "Услуги",
             'menu_icon' => 'dashicons-welcome-write-blog',
             "supports" => ['title', 'editor'],
             "has_archive" => false,

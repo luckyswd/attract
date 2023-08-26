@@ -1,0 +1,155 @@
+.services {
+  .h3 {
+    text-align: center;
+  }
+
+  .services-wrapper {
+    position: relative;
+  }
+
+  .services-sticky {
+    position: sticky;
+    top: 69px;
+    background: $c-gray-light;
+    padding-top: 10px;
+  }
+
+  .services-categories {
+    margin-top: 32px;
+    display: flex;
+    row-gap: 10px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid $c-border;
+    padding-bottom: 15px;
+
+    @include _768 {
+      row-gap: 6px;
+      column-gap: 15px;
+      margin-top: 20px;
+    }
+  }
+
+  .single-service {
+    cursor: pointer;
+
+    &.js-active {
+      color: $c-blue;
+    }
+  }
+
+  .services-cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 32px;
+
+    @include _1024 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include _768 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .service-card {
+    padding: 10px;
+    min-height: 460px;
+    background: $c-white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    @include _1024 {
+      padding: 25px;
+    }
+
+    @include _768 {
+      min-height: 378px;
+      padding: 10px;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .service-card-content-price {
+    padding: 7px 15px 7px 15px;
+    background: $c-light-white;
+    border-radius: 90px;
+    color: $c-blue;
+    width: max-content;
+    margin-bottom: 8px;
+
+    @include _1024 {
+      margin-top: 20px;
+    }
+
+    @include _768 {
+      margin-top: 0;
+    }
+  }
+
+  .service-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 22px 22px 22px;
+    height: 100%;
+
+    @include _1024 {
+      padding: 0;
+    }
+
+    @include _768 {
+      padding: 25px 15px 15px 15px;
+    }
+
+    .h6 {
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .service-card-content-description {
+      color: $c-gray;
+    }
+  }
+
+  .service-card-content-bottom {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 20px;
+
+    @include _1024 {
+      justify-content: space-between;
+    }
+
+    .btn {
+      font-size: 14px;
+      line-height: 19.6px;
+      max-width: max-content;
+      padding: 9px 30px;
+
+      @include _1280 {
+        padding: 9px 20px;
+      }
+
+      @include _1024 {
+        padding: 15px 30px;
+        font-weight: 500;
+      }
+
+      @include _430 {
+        padding: 15px 20px;
+      }
+    }
+
+    .text-4 {
+      color: $c-black;
+    }
+  }
+}

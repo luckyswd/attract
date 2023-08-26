@@ -38,5 +38,5 @@ $background_image_mobile = get_field('background_image_mobile');
         </div>
     </section>
 <?php else: ?>
-    <h2 style="font-family: 'Mark', sans-serif;">Услуги главный модуль модуль</h2>
+    <h2 style="font-family: 'Mark', sans-serif;">Услуги главный модуль</h2>
 <?php endif; ?>
