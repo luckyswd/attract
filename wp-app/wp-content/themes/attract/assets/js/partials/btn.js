@@ -32,9 +32,9 @@ buttons.forEach((btn, index) => {
         btn.classList.remove('js-animation-down');
         spanText.style.visibility = 'visible';
         delete timers[uniqBtnName]
-      }, 300)
+      }, 250)
 
-    }, 600);
+    }, 500);
   });
 
   btn.addEventListener('mouseout', (event) => {
