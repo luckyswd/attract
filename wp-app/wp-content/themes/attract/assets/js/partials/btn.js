@@ -50,6 +50,10 @@ buttons.forEach((btn, index) => {
 function setHoverWidth(btn) {
   const negativeTranslate = btn.dataset.negativeTranslate || '';
   defaultWidth = btn.dataset.width
+
+  if (defaultWidth === 2) {
+    defaultWidth = btn.clientWidth + 2;
+  }
   const percentWidth = (5 / 100) * defaultWidth;
 
   btn.style.maxWidth = (defaultWidth - (percentWidth * 2)) + 'px';
