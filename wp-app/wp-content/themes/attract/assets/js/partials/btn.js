@@ -48,7 +48,7 @@ buttons.forEach((btn, index) => {
 });
 
 function setHoverWidth(btn) {
-  const negativeTranslate = btn.dataset.negativeTranslate ?? '';
+  const negativeTranslate = btn.dataset.negativeTranslate || '';
   defaultWidth = btn.dataset.width
   const percentWidth = (5 / 100) * defaultWidth;
 
