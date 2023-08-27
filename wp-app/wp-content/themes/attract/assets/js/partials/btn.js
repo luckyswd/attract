@@ -51,7 +51,7 @@ function setHoverWidth(btn) {
   const negativeTranslate = btn.dataset.negativeTranslate || '';
   defaultWidth = btn.dataset.width
 
-  if (defaultWidth === 2) {
+  if (defaultWidth === '2') {
     defaultWidth = btn.clientWidth + 2;
   }
   const percentWidth = (5 / 100) * defaultWidth;
