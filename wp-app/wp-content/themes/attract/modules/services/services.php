@@ -84,7 +84,7 @@ $services = get_posts([
                                     <p class="h6"><?= $service->post_title ?? '' ?></p>
                                     <p class="text-4 service-card-content-description"><?= $description ?? '' ?></p>
                                     <div class="service-card-content-bottom">
-                                        <a href="#contact-form" class="btn blue">Оставить заявку</a>
+                                        <a href="#contact-form" class="btn blue"><span>Оставить заявку</span></a>
                                         <a href="javascript:;" data-fancybox="" data-src="#develop-message" class="text-4">Подробнее</a>
                                     </div>
                                 </div>

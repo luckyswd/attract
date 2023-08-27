@@ -22,7 +22,7 @@ $image = get_field('image');
                 <div class="sticky-wrap">
                     <p class="h3"><?= $headline ?? '' ?></p>
                     <p class="subheadline"> <?= $subheadline ?? '' ?></p>
-                    <a href="<?= $button['url'] ?>" target="_blank" class="btn white"><?= $button['title'] ?></a>
+                    <a href="<?= $button['url'] ?>" target="_blank" class="btn white"><span><?= $button['title'] ?></span></a>
                 </div>
             </div>
             <div class="instagram-image">

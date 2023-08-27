@@ -7,6 +7,7 @@
 /* PARTIALS */
 //=include partials/header.js
 //=include partials/footer.js
+//=include partials/btn.js
 
 
 /**** MODULES ****/

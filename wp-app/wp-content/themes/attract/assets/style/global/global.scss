@@ -48,6 +48,7 @@ section {
   font-weight: 400;
   cursor: pointer;
   transition: $transition;
+  overflow: hidden;
 
   @include _768 {
     font-size: 16px;
@@ -59,9 +60,8 @@ section {
     color: $c-blue;
     border: 1px solid $c-blue;
 
-    &:hover {
-      background: $c-blue;
-      color: $c-white;
+    span {
+      color: $c-blue;
     }
   }
 
@@ -70,8 +70,24 @@ section {
     background: $c-blue;
     border: 1px solid $c-white;
 
-    &:hover {
-      transform: scale(1.1);
+    span {
+      color: $c-white;
+    }
+  }
+
+  span {
+    transition: $transition;
+  }
+
+  &.js-animation-up {
+    span {
+      transform: translateY(-50px) rotate(7deg);
+    }
+  }
+
+  &.js-animation-down {
+    span {
+      transform: translateY(50px) rotate(-10deg);
     }
   }
 }

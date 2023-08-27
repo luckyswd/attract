@@ -199,18 +199,6 @@
         }
       }
 
-      a {
-        padding-right: 49px;
-        color: $c-white;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 21px;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
       @include _1400 {
         margin-top: 32px;
       }

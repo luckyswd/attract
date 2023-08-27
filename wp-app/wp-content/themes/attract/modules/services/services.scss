@@ -12,6 +12,7 @@
     top: 69px;
     background: $c-gray-light;
     padding-top: 10px;
+    z-index: 2;
   }
 
   .services-categories {
@@ -45,7 +46,7 @@
     grid-template-columns: repeat(3, 1fr);
     margin-top: 32px;
 
-    @include _1024 {
+    @include _1280 {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -132,6 +133,7 @@
       font-size: 14px;
       line-height: 19.6px;
       max-width: max-content;
+      min-width: 195px;
       padding: 9px 30px;
 
       @include _1280 {

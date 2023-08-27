@@ -29,8 +29,8 @@ $background_image_mobile = get_field('background_image_mobile');
                     <p class="h2"><?= $headline ?? '' ?></p>
                     <p class="text-2"><?= $subheadline ?? '' ?></p>
                     <?php if (!empty($link)) : ?>
-                        <a href="<?= $link['url'] ?>" class="btn blue">
-                            <?= $link['title'] ?? '' ?>
+                        <a href="<?= $link['url'] ?>" class="btn blue" data-negative-translate="disabled">
+                            <span><?= $link['title'] ?? '' ?></span>
                         </a>
                     <?php endif; ?>
                 </div>
