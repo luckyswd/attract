@@ -199,6 +199,13 @@
         }
       }
 
+      a {
+        padding-right: 49px;
+        color: $c-white;
+        font-size: 18px;
+        line-height: 19px;
+      }
+
       @include _1400 {
         margin-top: 32px;
       }

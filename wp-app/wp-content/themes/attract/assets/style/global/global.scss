@@ -60,8 +60,9 @@ section {
     color: $c-blue;
     border: 1px solid $c-blue;
 
-    span {
-      color: $c-blue;
+    &:hover {
+      background: $c-blue;
+      color: $c-white;
     }
   }
 
@@ -73,21 +74,9 @@ section {
     span {
       color: $c-white;
     }
-  }
 
-  span {
-    transition: $transition;
-  }
-
-  &.js-animation-up {
-    span {
-      transform: translateY(-50px) rotate(7deg);
-    }
-  }
-
-  &.js-animation-down {
-    span {
-      transform: translateY(50px) rotate(-10deg);
+    &:hover {
+      scale: 1.05;
     }
   }
 }
@@ -116,4 +105,26 @@ section {
   position: absolute;
   top: -100px;
   left: 0;
+}
+
+.hover-animation {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+
+  span {
+    transition: $transition;
+  }
+}
+
+.js-animation-up {
+  span {
+    transform: translateY(-50px);
+  }
+}
+
+.js-animation-down {
+  span {
+    transform: translateY(50px);
+  }
 }

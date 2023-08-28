@@ -51,7 +51,7 @@ $socials = get_field('socials', 'option');
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
-                    <a href="<?= get_home_url() ?>/#contact-form" class="btn white" data-negative-translate="-">
+                    <a href="<?= get_home_url() ?>/#contact-form" class="btn white">
                         <span>Оставить заявку</span>
                     </a>
                 <?php endif; ?>

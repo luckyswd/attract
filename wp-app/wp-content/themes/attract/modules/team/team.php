@@ -23,7 +23,7 @@ $image_mobile = get_field('image_mobile');
                 <div class="team-wrapper__left">
                     <p class="h3"><?= $headline ?? '' ?></p>
                     <p class="text-2"> <?= $text ?? '' ?> </p>
-                    <a href="#contact-form" class="btn blue"><span>Записаться на аудит</span></a>
+                    <a href="#contact-form" class="btn blue"><span class="hover-animation"><span>Записаться на аудит</span></span></a>
                 </div>
                 <div class="team-wrapper__right">
                     <picture>

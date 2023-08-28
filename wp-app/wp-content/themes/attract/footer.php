@@ -28,7 +28,11 @@ $footer_form = get_field('footer_form', 'option');
     <div class="container">
         <div class="footer-feedback">
             <p class="h5"> <?= $feedback_text ?? '' ?> </p>
-            <a class="btn blue" href="javascript:;" data-fancybox="" data-src="#modal-feedback-form" data-negative-translate="-"> <span> <?= $button_feedback['title'] ?? '' ?></span> </a>
+            <a class="btn blue" href="javascript:;" data-fancybox="" data-src="#modal-feedback-form">
+                <span class="hover-animation">
+                    <span><?= $button_feedback['title'] ?? '' ?></span>
+                </span>
+            </a>
         </div>
         <div class="footer-wrapper">
             <?php if (!empty($socials)) : ?>
