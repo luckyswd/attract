@@ -65,9 +65,14 @@ $services = get_posts([
                         <?php foreach ($services as $service) : ?>
                             <?php
                             $serviceCategories = get_the_terms($service, 'service-category');
-                            $serviceCategories = array_map(function ($cat) {
-                                return $cat->term_id;
-                            }, $serviceCategories);
+
+                            if (!empty($serviceCategories)) {
+                                $serviceCategories = array_map(function ($cat) {
+                                    return $cat->term_id;
+                                }, $serviceCategories);
+                            } else {
+                                $serviceCategories = [];
+                            }
 
                             $image = get_field('image', $service->ID);
                             $price = get_field('price', $service->ID);
@@ -76,7 +81,7 @@ $services = get_posts([
                             ?>
                             <div class="service-card <?php if (!in_array($categories[0]->term_id, $serviceCategories)) : ?> hidden <?php endif; ?>"
                                  data-id="<?= $service->ID ?>">
-                                <?= getPictureImage($image, 420, 146) ?>
+                                <?= getPictureImage(is_array($image) ? $image : null, 420, 146) ?>
                                 <div class="service-card-content">
                                     <?php if (!empty($price)) : ?>
                                         <p class="text-4 service-card-content-price"><?= $price ?></p>
