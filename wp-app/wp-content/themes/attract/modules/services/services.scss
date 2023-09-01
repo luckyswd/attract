@@ -125,10 +125,6 @@
     margin-top: auto;
     padding-top: 20px;
 
-    @include _1024 {
-      justify-content: space-between;
-    }
-
     .btn {
       font-size: 14px;
       line-height: 19.6px;
@@ -152,6 +148,10 @@
 
     .text-4 {
       color: $c-black;
+
+      @include _1024 {
+        font-size: 14px;
+      }
     }
   }
 }
