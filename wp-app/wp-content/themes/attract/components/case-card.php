@@ -1,4 +1,4 @@
-<a href="javascript:;" data-fancybox="" data-src="#develop-message" class="case-card <?= $class ?? '' ?>" style="background-image: url(<?= $preview_image['url'] ?? '' ?>)">
+<a href="<?= $link ?? '' ?>" class="case-card <?= $class ?? '' ?>" style="background-image: url(<?= $preview_image['url'] ?? '' ?>)">
     <div class="case-card-top">
         <p class="text-4"><?= $case->post_title ?></p>
         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="43" viewBox="0 0 44 43" fill="none">

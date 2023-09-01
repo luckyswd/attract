@@ -37,6 +37,7 @@ $chunkedArrays = array_chunk($cases, ceil(count($cases) / 2));
                                 <?php
                                 $shor_description = get_field('shor_description', $case->ID);
                                 $preview_image = get_field('catalog_image', $case->ID);
+                                $link = get_permalink($case);
                                 $tags = get_field('tags', $case->ID);
                                 $h = 'h5';
                                 ?>
@@ -49,6 +50,7 @@ $chunkedArrays = array_chunk($cases, ceil(count($cases) / 2));
                                 <?php
                                 $shor_description = get_field('shor_description', $case->ID);
                                 $preview_image = get_field('preview_image', $case->ID);
+                                $link = get_permalink($case);
                                 $tags = get_field('tags', $case->ID);
                                 $h = 'h5';
                                 ?>

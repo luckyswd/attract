@@ -31,6 +31,7 @@ $cases = get_field('cases');
                         <?php
                         $shor_description = get_field('shor_description', $case->ID);
                         $preview_image = get_field('preview_image', $case->ID);
+                        $link = get_permalink($case);
                         $tags = get_field('tags', $case->ID);
                         $index = $key + 1;
                         $class = 'medium-mode';
