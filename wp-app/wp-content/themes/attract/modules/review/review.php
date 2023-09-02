@@ -9,6 +9,7 @@ Mode: preview
 
 <?php
 $reviews = get_field('reviews');
+$headline = get_field('headline');
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -17,6 +18,7 @@ $reviews = get_field('reviews');
             <div class="block-anchor" id="review"></div>
             <div class="container">
                 <div class="review-wrapper">
+                    <p class="text-1 review-headline"><?= $headline ?? '' ?></p>
                     <div class="swiper swiper-review">
                         <div class="swiper-wrapper">
                             <?php foreach ($reviews as $review) : ?>
@@ -46,13 +48,13 @@ $reviews = get_field('reviews');
                                                         </defs>
                                                     </svg>
                                                 </div>
-                                                <div class="swiper-next">
+                                                <div class="swiper-next animation-right">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
                                                         <g clip-path="url(#clip0_906_620)">
                                                             <circle cx="22" cy="21.6992" r="21.5" fill="white"/>
-                                                            <line x1="32.5758" y1="22.3189" x2="10.4515" y2="22.3189" stroke="#000618" stroke-width="2.24138"/>
-                                                            <line y1="-1.12069" x2="13.6887" y2="-1.12069" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 31.0055 22.7939)" stroke="#000618" stroke-width="2.24138"/>
-                                                            <line x1="31.7981" y1="22.6709" x2="22.1187" y2="32.3502" stroke="#000618" stroke-width="2.24138"/>
+                                                            <line class="arrow" x1="32.5758" y1="22.3189" x2="10.4515" y2="22.3189" stroke="#000618" stroke-width="2.24138"/>
+                                                            <line class="arrow" y1="-1.12069" x2="13.6887" y2="-1.12069" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 31.0055 22.7939)" stroke="#000618" stroke-width="2.24138"/>
+                                                            <line class="arrow" x1="31.7981" y1="22.6709" x2="22.1187" y2="32.3502" stroke="#000618" stroke-width="2.24138"/>
                                                         </g>
                                                         <defs>
                                                             <clipPath id="clip0_906_620">
@@ -64,7 +66,6 @@ $reviews = get_field('reviews');
                                             </div>
                                             <div class="pagination mobile"></div>
                                         </div>
-
                                         <p class="h5"> <?= $description ?? '' ?> </p>
                                         <p class="author_review"><?= $author_review ?? '' ?></p>
                                         <p class="title"> <?= $title ?? '' ?> </p>

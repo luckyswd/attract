@@ -3,6 +3,11 @@
     overflow: hidden;
   }
 
+  .review-headline {
+    color: $c-blue;
+    margin-bottom: 16px;
+  }
+
   .swiper-slide {
     display: grid;
     grid-template-columns: 1fr 562px;

@@ -3,6 +3,26 @@
     "title": "Отзывы модуль",
     "fields": [
         {
+            "key": "field_64f2e656c0df5",
+            "label": "Заголовок",
+            "name": "headline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64b19bfba7ca5",
             "label": "Отзывы",
             "name": "reviews",
@@ -44,5 +64,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689362640
+    "modified": 1693640295
 }
