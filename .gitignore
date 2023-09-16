@@ -1,12 +1,13 @@
 db
+dump_attract.sql
+access
 .idea
 info.txt
 
 !wp-app/
 wp-app/*
-
 !wp-app/wp-content/
 wp-app/wp-content/*
 !wp-app/wp-content/themes
-!wp-app/wp-content/plugins
+wp-app/wp-content/plugins
 wp-app/wp-content/themes/attract/dist

@@ -53,8 +53,7 @@ $services = get_posts([
                                 }, $servicesForCategory);
                                 ?>
 
-                                <p class="text-4 single-service <?php if ($key === 0) : ?> js-active <?php endif; ?>"
-                                   data-ids="<?= json_encode($servicesForCategoryIds) ?>"><?= $category->name ?></p>
+                                <p class="text-4 single-service <?php if ($key === 0) : ?> js-active <?php endif; ?>" data-ids="<?= json_encode($servicesForCategoryIds) ?>"><?= $category->name ?></p>
                             <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
@@ -79,8 +78,7 @@ $services = get_posts([
                             $description = get_field('description', $service->ID);
 
                             ?>
-                            <div class="service-card <?php if (!in_array($categories[0]->term_id, $serviceCategories)) : ?> hidden <?php endif; ?>"
-                                 data-id="<?= $service->ID ?>">
+                            <div class="service-card <?php if (!in_array($categories[0]->term_id, $serviceCategories)) : ?> hidden <?php endif; ?>" data-id="<?= $service->ID ?>">
                                 <?= getPictureImage(is_array($image) ? $image : null, 420, 146) ?>
                                 <div class="service-card-content">
                                     <?php if (!empty($price)) : ?>
@@ -94,7 +92,7 @@ $services = get_posts([
                                                 <span>Оставить заявку</span>
                                             </span>
                                         </a>
-                                        <a href="javascript:;" data-fancybox="" data-src="#develop-message" class="text-4">Подробнее</a>
+                                        <a href="javascript:;" data-fancybox="" data-src="#develop-message" class="card-btn__more text-4">Подробнее</a>
                                     </div>
                                 </div>
 
@@ -105,6 +103,6 @@ $services = get_posts([
             </div>
         </div>
     </section>
-<?php else: ?>
+<?php else : ?>
     <h2 style="font-family: 'Mark', sans-serif;">Услуги модуль</h2>
 <?php endif; ?>

@@ -17,6 +17,8 @@ class Services {
 
         category.classList.add('js-active');
 
+        window.scrollTo(0, 790);
+
         posts.forEach((post) => {
           const postId = post.dataset.id;
 
