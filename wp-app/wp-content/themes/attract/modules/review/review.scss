@@ -29,10 +29,16 @@
       gap: 8px;
     }
 
+    .slide-left-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     .slide-left {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: end;
 
       .h5 {
         font-weight: 500;

@@ -42,16 +42,16 @@
 
   .services-cards {
     display: grid;
-    gap: 20px;
+    gap: 2%;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 32px;
 
     @include _1280 {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 49%);
     }
 
     @include _768 {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
     }
   }
 
@@ -64,7 +64,7 @@
     flex-direction: column;
 
     @include _1024 {
-      padding: 25px;
+      padding: 18px;
     }
 
     @include _768 {
@@ -97,7 +97,7 @@
   .service-card-content {
     display: flex;
     flex-direction: column;
-    padding: 32px 22px 22px 22px;
+    padding: 32px 10px 22px 10px;
     height: 100%;
 
     @include _1024 {
@@ -105,7 +105,7 @@
     }
 
     @include _768 {
-      padding: 25px 15px 15px 15px;
+      padding: 25px 15px 50px 15px;
     }
 
     .h6 {
@@ -125,6 +125,11 @@
     margin-top: auto;
     padding-top: 20px;
 
+    @include _430 {
+      justify-content: space-between;
+      gap: 10px;
+    }
+
     .btn {
       font-size: 14px;
       line-height: 19.6px;
@@ -142,7 +147,10 @@
       }
 
       @include _430 {
-        padding: 15px 20px;
+        padding: 15px 0px;
+        max-width: 195px;
+        width: 100%;
+        min-width: 150px;
       }
     }
 
