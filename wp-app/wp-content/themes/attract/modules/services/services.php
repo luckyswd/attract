@@ -29,6 +29,7 @@ $services = get_posts([
             <div class="services-wrapper">
                 <div class="services-sticky">
                     <p class="h3"><?= $headline ?? '' ?></p>
+                    <p class="h3 mobile-headline">Услуги</p>
                     <?php if (!empty($categories)) : ?>
                         <div class="services-categories">
                             <?php foreach ($categories as $key => $category) : ?>

@@ -13,6 +13,20 @@
     background: $c-gray-light;
     padding-top: 10px;
     z-index: 2;
+
+    .mobile-headline {
+      display: none;
+    }
+
+    @include _768 {
+      .h3{
+        display: none;
+      }
+
+      .h3.mobile-headline {
+        display: block;
+      }
+    }
   }
 
   .services-categories {

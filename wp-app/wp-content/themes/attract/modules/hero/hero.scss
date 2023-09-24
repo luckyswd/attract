@@ -20,8 +20,7 @@
   .hero__wrapper {
     padding: 200px 50px 50px 50px;
     background: $c-white;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-radius: 60px;
 
     @include _1024 {
       border-bottom-left-radius: 40px;
