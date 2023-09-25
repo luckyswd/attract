@@ -17,7 +17,8 @@ class Services {
 
         category.classList.add('js-active');
 
-        window.scrollTo(0, 790);
+        const sectionStart = document.querySelector('.services.distance');
+        sectionStart.scrollIntoView(true);
 
         posts.forEach((post) => {
           const postId = post.dataset.id;
