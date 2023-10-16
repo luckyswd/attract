@@ -1,107 +1,119 @@
 .myths {
-  .myths-wrapper {
-    display: grid;
-    grid-template-columns: 440px 1fr;
-    gap: 135px;
+    .myths-wrapper {
+        display: grid;
+        grid-template-columns: 580px 1fr;
+        gap: 110px;
 
-    @include _1400 {
-      grid-template-columns: 1fr;
-      gap: 40px;
+        @include _1400 {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @include _1400 {
+            gap: 24px;
+        }
     }
 
-    @include _1400 {
-      gap: 24px;
-    }
-  }
-
-  .sticky-wrap {
-    position: relative;
-  }
-
-  .h5 {
-    font-weight: 500;
-    position: sticky;
-    top: 100px;
-
-    @include _768 {
-      text-align: center;
-    }
-  }
-
-  .myths-question {
-    padding: 16px 0;
-    border-top: 1px solid #D4D4D4;
-    position: relative;
-
-    &:last-child {
-      margin-bottom: 0;
+    .sticky-wrap {
+        position: relative;
     }
 
-    @include _768 {
-      padding-top: 10px;
+    .h5 {
+        font-weight: 500;
+        position: sticky;
+        top: 100px;
+
+        @include _768 {
+            text-align: center;
+        }
     }
 
-    .h6 {
-      font-weight: 500;
-      max-width: 90%;
+    .myths-question {
+        padding: 16px 0;
+        border-top: 1px solid #D4D4D4;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include _768 {
+            padding-top: 10px;
+        }
+
+        .h6 {
+            font-weight: 500;
+            max-width: 95%;
+        }
+
+        .myths-question-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            position: relative;
+
+            @include _768 {
+                margin-bottom: 20px;
+            }
+        }
+
+        .line {
+            position: absolute;
+            top: 0;
+            height: 1px;
+            width: 137px;
+            background: $c-blue;
+            transition: all .5s ease-in-out;
+            ;
+        }
+
+        .text-4 {
+            color: $c-gray;
+            max-height: 0;
+            transition: max-height .5s ease-out;
+            overflow: hidden;
+
+            ul {
+                list-style: disc;
+                margin-left: 20px;
+            }
+
+            ol {
+                list-style: decimal;
+                margin-left: 20px;
+            }
+        }
+
+        .plus {
+            transform: rotate(90deg);
+        }
+
+        .minus,
+        .plus {
+            min-width: 20px;
+            min-height: 20px;
+            transition: $transition;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &.js-active {
+            .plus {
+                transform: rotate(0);
+            }
+
+            .line {
+                width: 100%;
+            }
+
+            .text-4 {
+                max-height: 2000px;
+                transition: max-height .5s ease-in;
+            }
+        }
     }
-
-    .myths-question-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      position: relative;
-
-      @include _768 {
-        margin-bottom: 20px;
-      }
-    }
-
-    .line {
-      position: absolute;
-      top: 0;
-      height: 1px;
-      width: 137px;
-      background: $c-blue;
-      transition: all .5s ease-in-out;;
-    }
-
-    .text-4 {
-      color: $c-gray;
-      max-height: 0;
-      transition: max-height .5s ease-out;
-      overflow: hidden;
-    }
-
-    .plus {
-      transform: rotate(90deg);
-    }
-
-    .minus, .plus {
-      min-width: 20px;
-      min-height: 20px;
-      transition: $transition;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    &.js-active {
-      .plus {
-        transform: rotate(0);
-      }
-
-      .line {
-        width: 100%;
-      }
-
-      .text-4 {
-        max-height: 2000px;
-        transition: max-height .5s ease-in;
-      }
-    }
-  }
 }
