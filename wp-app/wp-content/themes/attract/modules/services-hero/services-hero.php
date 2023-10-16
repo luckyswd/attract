@@ -14,6 +14,7 @@ $link = get_field('link');
 $background_image_desktop = get_field('background_image_desktop');
 $background_image_tablet = get_field('background_image_tablet');
 $background_image_mobile = get_field('background_image_mobile');
+$contentOnLeft = get_field('content_on_left');
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -25,9 +26,9 @@ $background_image_mobile = get_field('background_image_mobile');
                     <source media="(min-width: 480px)" srcset="<?= $background_image_tablet['url'] ?>">
                     <img src="<?= $background_image_mobile['url'] ?>" alt="фон">
                 </picture>
-                <div class="content">
+                <div class="content <?= $contentOnLeft ? 'left' : '' ?>">
                     <p class="h2"><?= $headline ?? '' ?></p>
-                    <p class="text-2"><?= $subheadline ?? '' ?></p>
+                    <div class="text-2"><?= $subheadline ?? '' ?></div>
                     <?php if (!empty($link)) : ?>
                         <a href="<?= $link['url'] ?>" class="btn blue">
                             <span class="hover-animation">
