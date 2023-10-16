@@ -136,7 +136,7 @@ footer {
   .footer-bottom {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
     margin-top: 72px;
 
     @include _1024 {
