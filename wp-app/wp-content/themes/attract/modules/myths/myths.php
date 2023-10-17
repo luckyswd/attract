@@ -34,7 +34,7 @@ $questions = get_field('questions');
                                             <rect x="20" width="1.2" height="20" transform="rotate(90 20 0)" fill="#1744D0"/>
                                         </svg>
                                     </div>
-                                    <p class="text-4"> <?= $question['answer'] ?? '' ?> </p>
+                                    <div class="text-4"> <?= $question['answer'] ?? '' ?> </div>
                                     <span class="line"></span>
                                 </div>
                             <?php endif; ?>

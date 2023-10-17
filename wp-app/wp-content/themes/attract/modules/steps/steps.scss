@@ -1,122 +1,191 @@
 .steps {
-  .steps-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 555px;
-    gap: 135px;
+    .steps-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 555px;
+        gap: 135px;
 
-    @include _1400 {
-      grid-template-columns: 1fr;
-      gap: 32px;
+        @include _1400 {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @include _992 {
+            gap: 24px;
+        }
+
+        .h4 {
+            position: sticky;
+            font-weight: 500;
+            margin-bottom: 20px;
+
+            @include _1400 {
+                text-align: center;
+            }
+        }
+
+        .text-1 {
+            color: $c-blue;
+            margin-bottom: 32px;
+
+            @include _1400 {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+        }
+
+        .text-2 {
+            color: $c-gray;
+
+            @include _1400 {
+                text-align: center;
+            }
+        }
     }
 
-    @include _992 {
-      gap: 24px;
+    .steps-left-container {
+        position: sticky;
+        top: 100px;
+
+        @include _1400 {
+            position: relative;
+            top: 0;
+        }
     }
 
-    .h4 {
-      position: sticky;
-      font-weight: 500;
-      margin-bottom: 20px;
+    .steps-left-photos {
+        display: flex;
+        margin-bottom: 40px;
 
-      @include _1400 {
-        text-align: center;
-      }
+        @include _1400 {
+            justify-content: center;
+        }
+
+        @include _1024 {
+            margin-bottom: 30px;
+        }
     }
 
-    .text-1 {
-      color: $c-blue;
-      margin-bottom: 32px;
+    .steps-left-photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        
+        @include _768 {
+            width: 80px;
+            height: 80px;
+        }
 
-      @include _1400 {
-        text-align: center;
-        margin-bottom: 16px;
-      }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        & + .steps-left-photo {
+            margin-left: -33px;
+        }
+
+        &:nth-child(1) {
+            z-index: 3;
+        }
+
+        &:nth-child(2) {
+            z-index: 2;
+        }
+
+        &:nth-child(3) {
+            z-index: 1;
+        }
     }
 
-    .text-2 {
-      color: $c-gray;
+    .btn {
+        margin-top: 40px;
+        
+        @include _1400 {
+            margin: 40px auto 0;
+        }
 
-      @include _1400 {
-        text-align: center;
-      }
-    }
-  }
-
-  .steps-left-container {
-    position: sticky;
-    top: 100px;
-
-    @include _1400 {
-      position: relative;
-      top: 0;
-    }
-  }
-
-  .steps-right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    @include _1400 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+        @include _1024 {
+            margin-top: 20px;
+        }
     }
 
-    @include _992 {
-      grid-template-columns: 1fr;
-    }
-  }
+    .steps-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-  .steps-card {
-    padding: 32px 48px 32px 32px;
-    background: $c-white;
-    border-radius: 20px;
-    height: max-content;
-    min-height: 242px;
-    display: flex;
-    flex-direction: column;
+        @include _1400 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    @include _1400 {
-      min-height: 253px;
-      padding: 24px 32px;
+        @include _992 {
+            grid-template-columns: 1fr;
+        }
     }
 
-    @include _992 {
-      min-height: 208px;
-      padding: 24px;
+    .steps-card {
+        padding: 32px 48px 32px 32px;
+        background: $c-white;
+        border-radius: 20px;
+        height: max-content;
+        min-height: 242px;
+        display: flex;
+        flex-direction: column;
+
+        @include _1400 {
+            min-height: 253px;
+            padding: 24px 32px;
+        }
+
+        @include _992 {
+            min-height: 208px;
+            padding: 24px;
+        }
+
+        .card-number {
+            color: $c-blue;
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 20px;
+
+            @include _768 {
+                font-size: 14px;
+                line-height: 18.2px;
+            }
+        }
+
+        .h6 {
+            font-weight: 500;
+            margin-bottom: 20px;
+
+            @include _1400 {
+                margin-bottom: 18px;
+            }
+
+            @include _768 {
+                margin-bottom: 16px;
+            }
+        }
+
+        .text-4 {
+            color: $c-gray;
+            
+            ul {
+                list-style: disc;
+                margin-left: 20px;
+            }
+
+            ol {
+                list-style: decimal;
+                margin-left: 20px;
+            }
+        }
     }
 
-    .card-number {
-      color: $c-blue;
-      font-size: 20px;
-      line-height: 26px;
-      margin-bottom: 20px;
-
-      @include _768 {
-        font-size: 14px;
-        line-height: 18.2px;
-      }
+    .card-bottom {
+        margin-top: auto;
     }
-
-    .h6 {
-      font-weight: 500;
-      margin-bottom: 20px;
-
-      @include _1400 {
-        margin-bottom: 18px;
-      }
-
-      @include _768 {
-        margin-bottom: 16px;
-      }
-    }
-
-    .text-4 {
-      color: $c-gray;
-    }
-  }
-
-  .card-bottom {
-    margin-top: auto;
-  }
 }

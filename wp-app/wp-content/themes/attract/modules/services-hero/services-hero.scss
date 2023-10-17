@@ -53,9 +53,19 @@
         .text-2 {
             text-align: left;
             margin: 0 0 40px;
+
+            ul {
+                list-style: disc;
+                margin-left: 20px;
+            }
+
+            * + ul {
+                margin-top: 20px;
+            }
         }
 
         @include _1024 {
+            top: 45%;
             align-items: center;
             padding-left: 0;
 
@@ -66,8 +76,18 @@
             .text-2 {
                 text-align: center;
                 max-width: 520px;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
             }
-        } 
+        }
+
+        @include _768 {
+            top: 35%;
+        }
     }
   }
 }
