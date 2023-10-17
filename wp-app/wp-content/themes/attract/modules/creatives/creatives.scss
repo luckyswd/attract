@@ -1,0 +1,28 @@
+.creatives {
+    &-top {
+        .h3 {
+            max-width: 730px;
+        }
+    }
+
+    &-bottom {
+        margin-top: 70px;
+
+        .swiper-wrapper {
+            transition-timing-function: linear;
+        }
+    }
+
+    &-items {
+        display: flex;
+    }
+
+    &-item {
+        margin: 0 5px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
