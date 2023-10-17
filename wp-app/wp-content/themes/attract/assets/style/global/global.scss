@@ -79,6 +79,10 @@ section {
       scale: 1.05;
     }
   }
+          
+  &.transparent {
+    background: $c-transparent;
+  }
 }
 
 .distance {
