@@ -6,7 +6,6 @@ info.txt
 
 !wp-app/
 wp-app/*
-!wp-config.php
 !wp-app/wp-content/
 wp-app/wp-content/*
 !wp-app/wp-content/themes
