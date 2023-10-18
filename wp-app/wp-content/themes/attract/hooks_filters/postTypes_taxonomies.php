@@ -41,7 +41,37 @@ function create_taxonomy()
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
     ]);
+
+    register_taxonomy('team-category', ['team'], [
+        'label' => __('team category'),
+        'rewrite' => ['slug' => 'team-category'],
+        'labels' => [
+            'name' => 'Команда',
+            'singular_name' => 'Команда',
+            'search_items' => 'Найти сотрудника',
+            'all_items' => 'Все сотрудники',
+            'view_item ' => 'Просмотреть сотрудника',
+            'parent_item' => 'Родительская категория сотрудника',
+            'parent_item_colon' => 'Родительская категория сотрудника:',
+            'edit_item' => 'Редактировать категорию команды',
+            'update_item' => 'Обновить категорию команды',
+            'add_new_item' => 'Добавить новую категорию команды',
+            'new_item_name' => 'Новое название категории команды',
+            'menu_name' => 'Категории команды',
+        ],
+        'public' => true,
+        'hierarchical' => true,
+        'capabilities' => [],
+        'meta_box_cb' => null,
+        'show_admin_column' => false,
+        'show_in_rest' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+    ]);
 }
+
 
 function custom_register_post_types()
 {
@@ -72,6 +102,16 @@ function custom_register_post_types()
             "name_plural" => "Услуги",
             "name_lowercase" => "Услуги",
             "name_lowercase_plural" => "Услуги",
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            "supports" => ['title', 'editor'],
+            "has_archive" => false,
+        ],
+        [
+            "post_type_name" => "team",
+            "name" => "Сотрудника",
+            "name_plural" => "Команда",
+            "name_lowercase" => "Сотрудники",
+            "name_lowercase_plural" => "Сотрудники",
             'menu_icon' => 'dashicons-welcome-write-blog',
             "supports" => ['title', 'editor'],
             "has_archive" => false,

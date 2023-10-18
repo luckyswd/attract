@@ -14,5 +14,6 @@
 //=include ../../modules/hero/hero.js
 //=include ../../modules/myths/myths.js
 //=include ../../modules/review/review.js
+//=include ../../modules/team/team.js
 //=include ../../modules/services/services.js
 //=include ../../modules/creatives/creatives.js

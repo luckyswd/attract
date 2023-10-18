@@ -9,32 +9,67 @@ Mode: preview
 
 <?php
 $headline = get_field('headline');
-$text = get_field('text');
-$image_desktop = get_field('image_desktop');
-$image_tablet = get_field('image_tablet');
-$image_mobile = get_field('image_mobile');
+$description_text = get_field('text');
+
+$categories = get_terms([
+    'taxonomy' => 'team-category',
+    'hide_empty' => true,
+]);
+
+
+$team = get_posts([
+    'post_type' => 'team',
+    'posts_per_page' => -1,
+    'post_status' => 'publish',
+]);
+
 ?>
 
 <?php if (!is_admin()) : ?>
     <section class="team distance">
-        <div class="block-anchor" id="team"></div>
         <div class="container">
             <div class="team-wrapper">
-                <div class="team-wrapper__left">
+                <div class="head-text__wrap">
                     <p class="h3"><?= $headline ?? '' ?></p>
-                    <p class="text-2"> <?= $text ?? '' ?> </p>
-                    <a href="#contact-form" class="btn blue"><span class="hover-animation"><span>Записаться на аудит</span></span></a>
+                    <p class="description_text"><?= $description_text; ?></p>
                 </div>
-                <div class="team-wrapper__right">
-                    <picture>
-                        <source media="(min-width: 1400px)" srcset="<?= $image_desktop['url'] ?>">
-                        <source media="(min-width: 1024px)" srcset="<?= $image_tablet['url'] ?>">
-                        <img src="<?= $image_mobile['url'] ?>" alt="картинка" width="482" height="585">
-                    </picture>
-                </div>
+                <?php if (!empty($team)) : ?>
+
+                    <div class="swiper swiper-team">
+                        <div class="swiper-wrapper">
+
+                            <?php foreach ($team as $team_member) : ?>
+                                <?php
+
+                                $name = $team_member->post_title;
+                                $image = get_field('staff-image', $team_member->ID);
+                                $position = get_field('position', $team_member->ID);
+                                $description = get_field('description', $team_member->ID);
+
+                                ?>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <?= getPictureImageWithText(is_array($image) ? $image : null, 420, 146, $name, $position, $description) ?>
+                                    </div>
+
+                                </div>
+                            <?php endforeach; ?>
+
+                        </div>
+                        <div class="swiper-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="39" viewBox="0 0 25 39" fill="none">
+                                <path d="M2.5 2L21 19.5L2.5 36.5" stroke="white" stroke-width="5" />
+                            </svg>
+                        </div>
+                        <div class="swiper-next animation-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="39" viewBox="0 0 25 39" fill="none">
+                                <path d="M2.5 2L21 19.5L2.5 36.5" stroke="white" stroke-width="5" />
+                            </svg>
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
-        </div>
     </section>
-<?php else: ?>
+<?php else : ?>
     <h2 style="font-family: 'Mark', sans-serif;">Команда модуль</h2>
 <?php endif; ?>

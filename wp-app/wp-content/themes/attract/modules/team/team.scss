@@ -1,67 +1,131 @@
 .team {
-  .btn {
-    @include _1024 {
-      margin: 0 auto;
-    }
+
+  .h3 {
+    text-align: left;
   }
 
   .team-wrapper {
-    padding: 80px 60px 80px 60px;
-    background: $c-white;
-    display: grid;
-    grid-template-columns: 1fr 482px;
-    gap: 147px;
-    border-radius: 50px;
+    position: relative;
 
-    @include _1400 {
-      padding: 59px 49px 77px 100px;
-      grid-template-columns: 1fr 326px;
-      gap: 108px;
+    .head-text__wrap {
+      display: flex;
+      justify-content: space-between;
+
+      p{
+        width: 50%;
+      }
+
+      .description_text {
+        color: $c-gray;
+      }
+
+      @include _1024 {
+
+          flex-direction: column;
+          gap: 14px;
+
+          p{
+            width: 100%;
+            text-align: center;
+          }
+      }
     }
 
-    @include _1024 {
-      padding: 50px 60px;
-      grid-template-columns: 1fr;
-      align-items: center;
-      gap: 36px;
-      border-radius: 40px;
-    }
+    .swiper-team {
+      padding-top: 47px;
+      overflow: hidden !important;
+      position: relative;
 
-    @include _768 {
-      padding: 24px;
+      .swiper-next, .swiper-prev {
+        position: absolute;
+        z-index: 1;
+      }
+
+      .swiper-next{
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+
+      }
+
+      .swiper-prev {
+        top: 47%;
+        left: 30px;
+        transform: rotate(180deg);
+      }
+
+      .swiper-next.swiper-button-disabled , .swiper-prev.swiper-button-disabled {
+        display: none;
+      }
+
+      .swiper-slide {
+        picture{
+          position: relative;
+        }
+
+        .staff-position__info {
+          position: absolute;
+          bottom: 0;
+          padding: 0px 10px 28px 28px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .h6 {
+          font-weight: 500;
+        }
+
+        .h6, .text-3  {
+          color: #fff !important;
+        }
+
+        .staff-position__text {
+          width: max-content;
+          padding: 7px 17px;
+          border-radius: 300px;
+          border: 1px solid #FFF;
+          color: #FFF;
+          font-family: Onest;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        @include _430 {
+          .staff-position__info {
+            padding: 0px 10px 20px 28px;
+
+            .text-3{
+              display: none;
+            }
+          }
+        }
+      }
+
+      @include _1024 {
+          .swiper-next, .swiper-prev {
+            display: none;
+          }
+      }
     }
   }
 
-  .team-wrapper__left {
+  .service-card-content-bottom {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 20px;
 
-    .h3 {
-      font-weight: 500;
-      margin-bottom: 40px;
-      color: $c-black;
-
-      @include _1024 {
-        text-align: center;
-      }
+    @include _430 {
+      justify-content: space-between;
+      gap: 10px;
     }
 
-    .text-2 {
-      color: $c-gray;
-      margin-bottom: 24px;
+    .btn {
 
-      @include _1024 {
-        text-align: center;
-      }
-    }
-  }
-
-  .team-wrapper__right {
-    @include _1024 {
-      width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
     }
   }
 }
