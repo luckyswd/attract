@@ -61,6 +61,13 @@
       .swiper-slide {
         picture{
           position: relative;
+
+          img {
+              width: 325px;
+              height: 460px;
+              object-fit: cover;
+              border-radius: 20px;
+          }
         }
 
         .staff-position__info {
