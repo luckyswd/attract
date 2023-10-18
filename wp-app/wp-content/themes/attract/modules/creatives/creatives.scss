@@ -1,4 +1,6 @@
 .creatives {
+    overflow: hidden;
+
     &-top {
         .h3 {
             max-width: 730px;
@@ -8,21 +10,58 @@
     &-bottom {
         margin-top: 70px;
 
+        @include _1024 {
+            margin-top: 50px;
+        }
+
+        @include _768 {
+            margin-top: 40px;
+        }
+
         .swiper-wrapper {
             transition-timing-function: linear;
         }
     }
 
     &-items {
-        display: flex;
-    }
+        &.first {
+            margin-left: calc((100% - 118vw) / 2);
+        }
 
-    &-item {
-        margin: 0 5px;
+        &.second {
+            margin-left: calc((100% - 105vw) / 2);
+            margin-top: 10px;
+        }
 
         img {
-            display: block;
-            width: 100%;
+            display: inline-flex;
+            width: min(320px, 20vw);
+            border-radius: 15px;
+
+            @include _1024 {
+                width: min(320px, 26vw);
+            }
+
+            @include _768 {
+                width: min(320px, 30vw);
+            }
+
+            @include _480 {
+                width: min(320px, 40vw);
+            }
+        }
+
+        & > div {
+            display: flex;
+        }
+
+        .marquee3k__wrapper .marquee3k__copy {
+            padding-right: 5px;
+        }
+
+        .marquee3k__copy {
+            display: flex !important;
+            gap: 10px;
         }
     }
 }

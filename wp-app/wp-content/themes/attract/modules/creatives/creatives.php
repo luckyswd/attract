@@ -23,15 +23,22 @@ $creatives_second_line = get_field('creatives_second_line');
                 <div class="creatives-bottom">
                     <?php if (!empty($creatives_first_line)) : ?>
                         <div class="creatives-items first marquee3k" data-speed="1" data-pausable="true">
-                            <p>
+                            <div>
                                 <?php foreach ($creatives_first_line as $creative) : ?>
                                     <img src="<?= $creative['url'] ?>" />
                                 <?php endforeach; ?>
-                            </p>
+                            </div>
                         </div>
                     <?php endif; ?>
-                    
-
+                    <?php if (!empty($creatives_second_line)) : ?>
+                        <div class="creatives-items second marquee3k" data-speed="1" data-pausable="true" data-reverse="true">
+                            <div>
+                                <?php foreach ($creatives_second_line as $creative) : ?>
+                                    <img src="<?= $creative['url'] ?>" />
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

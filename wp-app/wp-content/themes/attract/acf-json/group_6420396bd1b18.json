@@ -49,20 +49,22 @@
         },
         {
             "key": "field_64203992c9048",
-            "label": "Иконка",
-            "name": "icon",
+            "label": "Иконки",
+            "name": "icons",
             "aria-label": "",
-            "type": "image",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "array",
             "library": "all",
+            "min": "",
+            "max": 3,
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -70,7 +72,8 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "insert": "append",
+            "preview_size": "full"
         },
         {
             "key": "field_64ac3b9cb1204",
@@ -82,7 +85,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "70",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -214,6 +217,26 @@
                 "class": "",
                 "id": ""
             }
+        },
+        {
+            "key": "field_653013f8d802e",
+            "label": "Сделать форму 50\/50",
+            "name": "size_50_50",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         }
     ],
     "location": [
@@ -234,5 +257,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689013928
+    "modified": 1697650392
 }
