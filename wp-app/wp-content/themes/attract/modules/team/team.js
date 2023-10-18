@@ -5,7 +5,7 @@ class Team {
 
   init() {
     const swiper = new Swiper(".swiper-team", {
-        loop: true,
+        loop: false,
         spaceBetween: 10,
 
         pagination: false,  
