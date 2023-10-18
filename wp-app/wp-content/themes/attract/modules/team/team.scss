@@ -54,6 +54,10 @@
         transform: rotate(180deg);
       }
 
+      .swiper-prev {
+        display: none;
+      }
+
       .swiper-slide {
         picture{
           position: relative;
