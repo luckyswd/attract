@@ -11,22 +11,31 @@ Mode: preview
 $headline = get_field('headline');
 $subheadline = get_field('subheadline');
 $background_image = get_field('background_image');
-$icon = get_field('icon');
+$icons = get_field('icons');
 $form_headline = get_field('form_headline');
 $form = get_field('form');
 $signature_social = get_field('signature_social');
 $socials = get_field('socials');
+$size_50_on_50 = get_field('size_50_50');
 ?>
 
 <?php if (!is_admin()) : ?>
     <section class="contact-form distance">
         <div class="block-anchor" id="contact-form"></div>
         <div class="container">
-            <div class="form-wrapper">
+            <div class="form-wrapper <?= $size_50_on_50 ? 'half' : ''; ?>">
                 <div class="form-left">
                     <p class="h4"><?= $headline ?? '' ?></p>
                     <div class="form-icon-wrap">
-                        <?= getPictureImage($icon, 68, 68) ?>
+                        <?php if (!empty($icons)) : ?>
+                            <div class="form-icons">
+                                <?php foreach ($icons as $icon): ?>
+                                    <div class="form-icon">
+                                        <img src="<?= $icon['url']; ?>" alt="<?= $icon['alt']; ?>">
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
                         <p class="text-1"> <?= $subheadline ?? '' ?> </p>
                     </div>
                     <div class="left-overlay">
