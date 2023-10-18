@@ -21,6 +21,8 @@ $team = get_posts([
     'post_type' => 'team',
     'posts_per_page' => -1,
     'post_status' => 'publish',
+    'orderby' => 'date',
+    'order' => 'ASC',
 ]);
 
 ?>
