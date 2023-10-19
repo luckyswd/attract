@@ -36,7 +36,7 @@ $displayButton = get_field('display_button');
                             <p class="text-1"><?= $caption ?></p>
                         <?php endif; ?>
                         <?php if (!empty($headline)) : ?>
-                            <p class="h4"> <?= $headline ?> </p>
+                            <p class="h2"> <?= $headline ?> </p>
                         <?php endif; ?>
                         <?php if (!empty($subheadline)) : ?>
                             <p class="text-2"><?= $subheadline ?></p>
@@ -54,7 +54,7 @@ $displayButton = get_field('display_button');
                                     <p class="card-number">(0<?= $key + 1 ?>)</p>
                                     <div class="card-bottom">
                                         <p class="h6"> <?= $card['headline'] ?> </p>
-                                        <div class="text-4"> <?= $card['subheadline'] ?> </div>
+                                        <div class="text-3"> <?= $card['subheadline'] ?> </div>
                                     </div>
                                 </div>
                             <?php endif; ?>

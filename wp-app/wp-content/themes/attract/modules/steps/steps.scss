@@ -13,13 +13,16 @@
             gap: 24px;
         }
 
-        .h4 {
+        .h2 {
             position: sticky;
-            font-weight: 500;
             margin-bottom: 20px;
 
             @include _1400 {
                 text-align: center;
+            }
+
+            @include _1024 {
+                text-align: left;
             }
         }
 
@@ -170,7 +173,7 @@
             }
         }
 
-        .text-4 {
+        .text-3 {
             color: $c-gray;
             
             ul {
@@ -181,6 +184,10 @@
             ol {
                 list-style: decimal;
                 margin-left: 20px;
+            }
+
+            @include _1024 {
+                color: $c-black;
             }
         }
     }
