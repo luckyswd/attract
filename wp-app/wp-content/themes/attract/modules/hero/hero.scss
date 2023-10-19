@@ -32,11 +32,11 @@
     }
 
     @include _768 {
-      padding: 308px 24px 24px 24px;
+      padding: 128px 24px 24px 24px;
     }
 
     @include _375 {
-      padding: 308px 10px 10px 10px;
+      padding: 128px 10px 10px 10px;
     }
   }
 
@@ -50,6 +50,7 @@
   }
 
   .hero__main-image {
+    display: none;
     position: absolute;
     top: 22px;
     right: 6px;
