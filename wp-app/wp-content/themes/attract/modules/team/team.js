@@ -16,12 +16,12 @@ class Team {
         
         breakpoints: {
             320: {
-                slidesPerView: 1,
+                slidesPerView: 1.5,
                 spaceBetween: 20,
             },
 
-            433: {
-                slidesPerView: 2,
+            769: {
+                slidesPerView: 2.5,
             },
 
             1025: {
