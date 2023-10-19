@@ -141,6 +141,22 @@ section {
   }
 }
 
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animation-left {
+  animation: moveLeft 2s ease-in-out infinite;
+}
+
 @keyframes moveRight {
   0% {
     transform: translateX(0);

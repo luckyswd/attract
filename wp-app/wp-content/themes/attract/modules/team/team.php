@@ -58,7 +58,7 @@ $team = get_posts([
                             <?php endforeach; ?>
 
                         </div>
-                        <div class="swiper-prev animation-right">
+                        <div class="swiper-prev animation-left">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="39" viewBox="0 0 25 39" fill="none">
                                 <path d="M2.5 2L21 19.5L2.5 36.5" stroke="white" stroke-width="5" />
                             </svg>
