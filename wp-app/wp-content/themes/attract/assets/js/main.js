@@ -1,3 +1,6 @@
+/* JQUERY */
+//=include jquery/jquery.js
+
 /* libs */
 //=include libs/swiper.min.js
 //=include libs/fancybox.js
