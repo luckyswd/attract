@@ -30,7 +30,16 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding-top: 200px;
         z-index: 1;
+
+        @include _1024 {
+            padding: 140px 30px;
+        }
+
+        @include _480 {
+            padding: 130px 30px 100px;
+        }
 
         .h2 {
             margin-bottom: 20px;
@@ -45,7 +54,7 @@
 
         &.left {
             align-items: flex-start;
-            padding-top: 150px;
+            padding-top: 160px;
             padding-left: min(14vw, 220px);
             transform: none;
 
