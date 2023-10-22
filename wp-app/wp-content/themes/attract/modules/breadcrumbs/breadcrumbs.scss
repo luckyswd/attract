@@ -1,0 +1,46 @@
+.breadcrumbs {
+    margin-top: -90px;
+    margin-bottom: -20px;
+
+    @include _1400 {
+        margin-top: -70px;
+        margin-bottom: 0px;
+    }
+
+    @include _768 {
+        margin-top: -60px;
+        margin-bottom: -40px;
+    }
+
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        padding-left: 50px;
+
+        @include _1024 {
+            padding-left: 30px;
+        }
+
+        @include _768 {
+            padding-left: 0px;
+        }
+
+        .separator {
+            color: $c-gray;
+        }
+
+        .breadcrumb_last {
+            color: $c-blue;
+        }
+
+        a {
+            color: $c-gray;
+            transition: $transition;
+    
+            &:hover {
+                color: $c-blue;
+            }
+        }
+    }
+}
