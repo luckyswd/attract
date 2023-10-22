@@ -47,8 +47,11 @@
         }
 
         &.left {
+            top: 150px;
+            left: 0;
             align-items: flex-start;
             padding-left: min(14vw, 220px);
+            transform: none;
 
             .h2 {
                 max-width: 640px;
@@ -70,7 +73,6 @@
             }
 
             @include _1024 {
-                top: 45%;
                 align-items: center;
                 padding-left: 0;
 
@@ -84,12 +86,11 @@
             }
 
             @include _768 {
-                top: 40%;
                 padding: 0 30px;
             }
 
             @include _480 {
-                top: 50%;
+                top: 130px;
             }
         }
     }
