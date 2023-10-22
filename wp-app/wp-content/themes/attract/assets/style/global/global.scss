@@ -51,8 +51,9 @@ section {
   overflow: hidden;
 
   @include _768 {
+    padding: 16px;
     font-size: 16px;
-    line-height: 22.4px;
+    line-height: 20px;
   }
 
   &.white {
