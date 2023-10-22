@@ -42,7 +42,7 @@ $displayButton = get_field('display_button');
                             <p class="text-2"><?= $subheadline ?></p>
                         <?php endif; ?>
                         <?php if (!empty($displayButton)) : ?>
-                            <a href="#contact-form" class="btn blue"><span class="hover-animation"><span>Оставить заявку</span></span></a>
+                            <a href="#contact-form" class="btn blue only-large-laptop"><span class="hover-animation"><span>Оставить заявку</span></span></a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -59,6 +59,9 @@ $displayButton = get_field('display_button');
                                 </div>
                             <?php endif; ?>
                         <?php endforeach; ?>
+                    <?php endif; ?>
+                    <?php if (!empty($displayButton)) : ?>
+                        <a href="#contact-form" class="btn blue only-laptop"><span class="hover-animation"><span>Оставить заявку</span></span></a>
                     <?php endif; ?>
                 </div>
             </div>
