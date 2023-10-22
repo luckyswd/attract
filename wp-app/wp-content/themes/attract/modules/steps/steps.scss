@@ -159,7 +159,7 @@
         }
 
         @include _1024 {
-            min-height: 208px;
+            min-height: auto;
             padding: 24px;
         }
 
@@ -176,6 +176,7 @@
         }
 
         .h6 {
+            position: relative;
             font-weight: 500;
             margin-bottom: 20px;
 
@@ -185,6 +186,18 @@
 
             @include _768 {
                 margin-bottom: 16px;
+                padding-bottom: 16px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: flex;
+                    width: 80px;
+                    height: 1px;
+                    background: linear-gradient(90deg, $c-blue 0%, rgba(255, 255, 255, 0.00) 100%);
+                }
             }
         }
 
