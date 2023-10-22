@@ -39,7 +39,7 @@
         }
 
         @include _768 {
-            height: 374px;
+            height: 360px;
             padding: 24px 25px;
         }
 
@@ -64,6 +64,7 @@
 
             @include _768 {
                 justify-content: center;
+                margin-bottom: 20px;
             }
 
             .form-icons {
@@ -188,13 +189,14 @@
         .form-input {
             input {
                 width: 100%;
-                padding: 10px 30px;
-                border: 0px solid #265FEB;
-                border-bottom: 1px solid #265FEB;
-                color: $c-white;
-                background: inherit;
+                padding: 20px 30px;
                 font-size: 16px;
                 line-height: 22.4px;
+                color: $c-white;
+                border: 1px solid #265FEB;
+                border-radius: 80px;
+                background: inherit;
+                transition: $transition;
 
                 @include _1400 {
                     font-size: 14px;
@@ -202,18 +204,27 @@
                 }
 
                 @include _768 {
+                    padding: 16px 30px;
                     font-size: 12px;
                     line-height: 16.8px;
                 }
 
                 &::placeholder {
+                    position: absolute;
+                    top: 50%;
+                    padding-right: 30px;
                     color: $c-blue-light;
+                    white-space: pre-line;
+                    transform: translateY(-50%);
+                    transition: $transition;
                 }
 
+                &:hover,
                 &:focus {
                     border-color: $c-blue-light;
                 }
 
+                &:hover::placeholder,
                 &:focus::placeholder {
                     color: $c-white;
                 }
