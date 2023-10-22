@@ -83,6 +83,36 @@ section {
   &.transparent {
     background: $c-transparent;
   }
+  
+  &.only-large-laptop {
+    @include _1400 {
+        display: none;
+    }
+  }
+
+  &.only-laptop {
+    display: none;
+
+    @include _1400 {
+        display: flex;
+    }
+  }
+
+  &.only-tablet {
+    display: none;
+
+    @include _1024 {
+        display: flex;
+    }
+  }
+
+  &.only-mobile {
+    display: none;
+
+    @include _768 {
+        display: flex;
+    }
+  }
 }
 
 .distance {
