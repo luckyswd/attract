@@ -6,34 +6,31 @@
         overflow: hidden;
 
         @include _1024 {
+            height: 100%;
             border-radius: 0px 0px 40px 40px;
-        }
-
-        @include _480 {
-            height: 650px;
         }
     }
 
     picture {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 750px;
+        height: 100%;
 
         img {
-            width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
 
     .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        z-index: 1;
 
         .h2 {
             margin-bottom: 20px;
@@ -47,9 +44,8 @@
         }
 
         &.left {
-            top: 150px;
-            left: 0;
             align-items: flex-start;
+            padding-top: 150px;
             padding-left: min(14vw, 220px);
             transform: none;
 
@@ -74,7 +70,7 @@
 
             @include _1024 {
                 align-items: center;
-                padding-left: 0;
+                padding: 140px 30px;
 
                 .h2 {
                     text-align: center;
@@ -85,12 +81,8 @@
                 }
             }
 
-            @include _768 {
-                padding: 0 30px;
-            }
-
             @include _480 {
-                top: 130px;
+                padding: 130px 30px 100px;
             }
         }
     }
