@@ -116,14 +116,14 @@ section {
 }
 
 .distance {
-  margin: 111px 0;
+  margin: 120px 0;
 
   @include _1400 {
-    margin: 80px 0;
+    margin: 100px 0;
   }
 
   @include _768 {
-    margin: 60px 0;
+    margin: 80px 0;
   }
 
   &:first-child {
