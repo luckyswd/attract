@@ -52,13 +52,26 @@
         background-color: $c-white;
         border-radius: 20px;
 
+        @include _1024 {
+            padding: 30px;
+        }
+
         .h5 {
+            max-width: 90%;
             margin-bottom: 20px;
             color: $c-blue;
         }
 
-        @include _1024 {
-            padding: 30px;
+        .text-3 {
+            ul {
+                list-style: disc;
+                margin-left: 20px;
+            }
+    
+            ol {
+                list-style: decimal;
+                margin-left: 20px;
+            }
         }
     }
 }
