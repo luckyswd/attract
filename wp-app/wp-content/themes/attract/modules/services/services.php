@@ -93,7 +93,7 @@ $services = get_posts([
                                                 <span>Оставить заявку</span>
                                             </span>
                                         </a>
-                                        <a href="javascript:;" data-fancybox="" data-src="#develop-message" class="card-btn__more text-4">Подробнее</a>
+                                        <a href="<?= get_permalink($service->ID); ?>">Подробнее</a>
                                     </div>
                                 </div>
 
