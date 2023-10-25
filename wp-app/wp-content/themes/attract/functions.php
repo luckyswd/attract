@@ -64,4 +64,44 @@ function my_acf_block_render_callback($block)
     }
 }
 
-add_filter( 'allow_dev_auto_core_updates', '__return_false' );
+add_filter('allow_dev_auto_core_updates', '__return_false');
+
+
+/*----- Breadcrumbs -----*/
+
+add_filter('wpseo_breadcrumb_separator', 'modify_yoast_breadcrumb_separator');
+function modify_yoast_breadcrumb_separator($separator)
+{
+    $separator = "<span class='separator'>" . $separator . "</span>";
+    return $separator;
+}
+
+add_filter('wpseo_breadcrumb_output_wrapper', 'modify_yoast_breadcrumb_wrapper');
+function modify_yoast_breadcrumb_wrapper()
+{
+    return 'wrapper';
+}
+
+add_filter('wpseo_breadcrumb_output', 'modify_yoast_breadcrumb_output');
+function modify_yoast_breadcrumb_output($html)
+{
+    $html = str_replace(['<wrapper>', '</wrapper>'], '', $html);
+
+    return $html;
+}
+
+add_filter('wpseo_breadcrumb_links', 'modify_yoast_breadcrumb_links');
+function modify_yoast_breadcrumb_links($links)
+{
+
+    if (is_singular('service')) {
+        $breadcrumb[] = array(
+            'url' => site_url('/uslugi/'),
+            'text' => 'Услуги',
+        );
+
+        array_splice($links, 1, -2, $breadcrumb);
+    }
+
+    return $links;
+}

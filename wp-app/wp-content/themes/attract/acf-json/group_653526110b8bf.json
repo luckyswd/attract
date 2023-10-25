@@ -1,9 +1,9 @@
 {
-    "key": "group_652da3eb62159",
-    "title": "Для чего нужна услуга модуль",
+    "key": "group_653526110b8bf",
+    "title": "Преимущества модуль",
     "fields": [
         {
-            "key": "field_652da3eb6e907",
+            "key": "field_653526111e0b7",
             "label": "Заголовок",
             "name": "headline",
             "aria-label": "",
@@ -23,29 +23,9 @@
             "append": ""
         },
         {
-            "key": "field_652da43489943",
-            "label": "Текст",
-            "name": "text",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_652da47289944",
-            "label": "Блоки с информацией",
-            "name": "for_what_blocks",
+            "key": "field_653526111e0fc",
+            "label": "Карточки преимуществ",
+            "name": "advantages_cards",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -59,13 +39,13 @@
             "layout": "block",
             "pagination": 0,
             "min": 0,
-            "max": 4,
-            "collapsed": "",
+            "max": 0,
+            "collapsed": "field_6535261133cbb",
             "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_652da4ae89945",
+                    "key": "field_6535261133cbb",
                     "label": "Заголовок",
                     "name": "headline",
                     "aria-label": "",
@@ -74,7 +54,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -83,28 +63,54 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_652da47289944"
+                    "parent_repeater": "field_653526111e0fc"
                 },
                 {
-                    "key": "field_652da4da89946",
-                    "label": "Текст",
-                    "name": "text",
+                    "key": "field_6535261133d06",
+                    "label": "Подзаголовок",
+                    "name": "subheadline",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
                     "maxlength": "",
-                    "rows": "",
                     "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_652da47289944"
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_653526111e0fc"
+                },
+                {
+                    "key": "field_6535261133d50",
+                    "label": "Фоновая картинка",
+                    "name": "background_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_653526111e0fc"
                 }
             ]
         }
@@ -114,7 +120,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/for-what"
+                "value": "acf\/advantages"
             }
         ]
     ],
@@ -127,5 +133,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697988237
+    "modified": 1697982054
 }

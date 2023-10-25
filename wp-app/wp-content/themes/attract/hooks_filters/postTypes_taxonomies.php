@@ -105,6 +105,7 @@ function custom_register_post_types()
             'menu_icon' => 'dashicons-welcome-write-blog',
             "supports" => ['title', 'editor'],
             "has_archive" => false,
+            "rewrite" => ['slug' => 'uslugi', 'with_front' => false],
         ],
         [
             "post_type_name" => "team",

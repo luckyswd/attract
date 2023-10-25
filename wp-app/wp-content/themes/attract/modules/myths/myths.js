@@ -1,13 +1,14 @@
-const questions = document.querySelectorAll('.myths-question');
+jQuery(document).ready(function($) {
+    const questions = $('.myths-question');
 
-questions && questions.forEach((question) => {
-  const mythsQuestionTop = question.querySelector('.myths-question-top');
+    questions.each(function() {
+        const mythsQuestionTop = $(this).find('.myths-question-top');
 
-  mythsQuestionTop.addEventListener('click', () => {
-    questions && questions.forEach((question) => {
-      question.classList.remove('js-active');
+        mythsQuestionTop.click(function() {
+            const mythsQuestion = $(this).closest('.myths-question');
+            
+            mythsQuestion.siblings().removeClass('js-active');
+            mythsQuestion.toggleClass('js-active');
+        })
     })
-
-    question.classList.add('js-active');
-  })
 })
