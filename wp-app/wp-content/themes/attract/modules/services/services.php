@@ -95,7 +95,11 @@ $services = get_posts([
                                                 <span>Оставить заявку</span>
                                             </span>
                                         </a>
-                                        <a href=" <?= $publicate_page ? $page_permalink : "javascript:;" ?>" data-fancybox="" data-src="#develop-message" class="card-btn__more text-4">Подробнее</a>
+                                        <?php if ($publicate_page) : ?>
+                                            <a href=" <?= $publicate_page ? $page_permalink : "javascript:;" ?>" class="card-btn__more text-4">Подробнее</a>
+                                        <?php else : ?>
+                                            <a href="javascript:;" data-fancybox="" data-src="#develop-message" class="card-btn__more text-4">Подробнее</a>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
 
