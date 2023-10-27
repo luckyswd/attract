@@ -37,7 +37,7 @@ $services = get_posts([
                                 $servicesForCategory = get_posts([
                                     'post_type' => 'service',
                                     'posts_per_page' => -1,
-                                    'post_status' => 'publish',
+                                    'post_status' => array('publish', 'private'),
                                     'tax_query' => [
                                         [
                                             'relation' => 'AND',
