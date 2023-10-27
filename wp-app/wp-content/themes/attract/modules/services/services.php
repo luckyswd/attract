@@ -78,7 +78,7 @@ $services = get_posts([
                             $price = get_field('price', $service->ID);
                             $description = get_field('description', $service->ID);
                             $page_permalink = get_permalink($service->ID);
-                            $publicate_page = get_field('publicate_page', $service->ID);
+                            $is_published = get_post_status() === 'publish';
 
                             ?>
                             <div class="service-card <?php if (!in_array($categories[0]->term_id, $serviceCategories)) : ?> hidden <?php endif; ?>" data-id="<?= $service->ID ?>">
@@ -95,8 +95,8 @@ $services = get_posts([
                                                 <span>Оставить заявку</span>
                                             </span>
                                         </a>
-                                        <?php if ($publicate_page) : ?>
-                                            <a href=" <?= $publicate_page ? $page_permalink : "javascript:;" ?>" class="card-btn__more text-4">Подробнее</a>
+                                        <?php if ($is_published) : ?>
+                                            <a href="<?= $page_permalink ?>" class="card-btn__more text-4">Подробнее</a>
                                         <?php else : ?>
                                             <a href="javascript:;" data-fancybox="" data-src="#develop-message" class="card-btn__more text-4">Подробнее</a>
                                         <?php endif; ?>
