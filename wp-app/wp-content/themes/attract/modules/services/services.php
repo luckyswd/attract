@@ -18,7 +18,7 @@ $categories = get_terms([
 $services = get_posts([
     'post_type' => 'service',
     'posts_per_page' => -1,
-    'post_status' => 'publish',
+    'post_status' => array('publish', 'private'),
 ]);
 
 ?>
