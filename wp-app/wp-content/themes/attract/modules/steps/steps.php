@@ -25,7 +25,7 @@ $displayButton = get_field('display_button');
                     <div class="steps-left-container">
                         <?php if (!empty($photos)) : ?>
                             <div class="steps-left-photos">
-                                <?php foreach ($photos as $photo): ?>
+                                <?php foreach ($photos as $photo) : ?>
                                     <div class="steps-left-photo">
                                         <img src="<?= $photo['url']; ?>" alt="<?= $photo['alt']; ?>">
                                     </div>
@@ -36,7 +36,7 @@ $displayButton = get_field('display_button');
                             <p class="text-1"><?= $caption ?></p>
                         <?php endif; ?>
                         <?php if (!empty($headline)) : ?>
-                            <p class="h2"> <?= $headline ?> </p>
+                            <p class="h4"> <?= $headline ?> </p>
                         <?php endif; ?>
                         <?php if (!empty($subheadline)) : ?>
                             <p class="text-2"><?= $subheadline ?></p>
@@ -67,6 +67,6 @@ $displayButton = get_field('display_button');
             </div>
         </div>
     </section>
-<?php else: ?>
+<?php else : ?>
     <h2 style="font-family: 'Mark', sans-serif;">Шаги модуль</h2>
 <?php endif; ?>

@@ -5,11 +5,13 @@
     gap: 115px;
     min-height: 575px;
 
-    @include _1400 {
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 20px;
-      min-height: 100%;
+    @include _1024 {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+
+    @include _430 {
+      gap: 40px;
     }
   }
 
@@ -22,44 +24,37 @@
       object-position: center;
     }
 
-    @include _1400 {
-      max-width: 575px;
-      margin: 0 auto;
+    @include _1024 {
+      height: 350px;
     }
+
   }
 
   .result-right {
     padding-top: 46px;
 
-    @include _1400 {
-      padding-top: 0;
+    @include _1024 {
+      padding-top: 0px;
     }
 
     .text-1 {
       color: $c-blue;
       margin-bottom: 40px;
 
-      @include _1400 {
+      @include _430 {
         margin-bottom: 20px;
-        text-align: center;
       }
     }
 
     .h5 {
-      font-weight: 400;
+      font-weight: 500;
       margin-bottom: 20px;
 
-      @include _1400 {
-        text-align: center;
-      }
     }
 
     .text-2 {
       color: $c-gray;
 
-      @include _1400 {
-        text-align: center;
-      }
     }
 
     .result-blocks {
@@ -68,12 +63,13 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
 
-      @include _1400 {
-        margin-top: 30px;
+      @include _1024 {
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 40px;
       }
 
       @include _480 {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -81,6 +77,14 @@
       .h5 {
         font-weight: 500;
         margin-bottom: 20px;
+      }
+
+      @include _1024 {
+        text-align: center;
+      }
+
+      @include _430 {
+        text-align: left;
       }
 
       .text-2 {

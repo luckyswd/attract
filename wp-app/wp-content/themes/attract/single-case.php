@@ -11,11 +11,16 @@ $year = get_field('year');
 <section class="hero-case distance">
     <div class="container">
         <div class="hero-case-wrap" style="background-image: url(<?= $backgroundImage['url'] ?>)">
-            <p class="text-4"><?= get_the_title() ?></p>
-            <p class="h2"><?= $shorDescription ?? '' ?></p>
-            <div class="wrap-bottom">
-                <div class="left">
-                    <p class="h5"><?= $subHeadline ?? '' ?></p>
+            <div class="case-info">
+                <div class="case-left-info">
+                    <p class="text-4"><?= get_the_title() ?></p>
+                    <p class="h3"><?= $shorDescription ?? '' ?></p>
+                    <div class="wrap-bottom">
+                        <div class="left">
+                            <p class="text-2"><?= $subHeadline ?? '' ?></p>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="right">
                     <?php if (!empty($elapsedTime)) : ?>

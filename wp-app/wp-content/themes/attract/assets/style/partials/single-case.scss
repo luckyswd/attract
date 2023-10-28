@@ -1,5 +1,4 @@
 .hero-case {
-  padding-top: 70px;
 
   .hero-case-wrap {
     border-radius: 20px;
@@ -15,13 +14,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include _1024 {
-      min-height: max-content;
-      justify-content: center;
-      align-items: center;
-      padding: 30px 20px;
-    }
-
     &:before {
       content: "";
       background: #00031480;
@@ -33,6 +25,30 @@
       border-radius: 20px;
       transition: $transition;
     }
+
+    @include _768 {
+      padding: 24px;
+    }
+
+    .case-info {
+      display: grid;
+      grid-template-columns: 1fr 290px;
+
+      @include _1440 {
+        grid-template-columns: max(620px);
+        gap: 60px;
+      }
+
+      @include _768 {
+        grid-template-columns: auto;
+
+        .case-left-info {
+          position: absolute;
+          top: 24px;
+          padding-right: 24px;
+        }
+      }
+    }
   }
 
   .text-4 {
@@ -41,20 +57,18 @@
     color: $c-black;
     padding: 7px 17px;
     border-radius: 300px;
+    font-size: 14px;
     height: max-content;
     width: max-content;
     position: relative;
     margin-bottom: 15px;
   }
 
-  .h2 {
+  .h3 {
     max-width: 850px;
     color: $c-white;
     position: relative;
-
-    @include _1024 {
-      text-align: center;
-    }
+    font-weight: 500;
   }
 
   .wrap-bottom {
@@ -63,43 +77,43 @@
     gap: 135px;
     position: relative;
     color: $c-white;
-    margin-top: 40px;
-
-    @include _1400 {
-      grid-template-columns: 1fr auto;
-      gap: 70px;
-    }
+    margin-top: 32px;
 
     @include _1024 {
+      margin-top: 20px;
       grid-template-columns: 1fr;
       gap: 40px;
     }
+  }
 
-    .h5 {
+   .h5 {
       font-weight: 500;
 
-      @include _1024 {
-        text-align: center;
-      }
     }
 
     .right {
+      position: relative;
       display: flex;
       gap: 69px;
 
-      @include _1024 {
-        justify-content: center;
-      }
 
       .h6 {
+        color: #fff;
+        font-size: 24px;
         font-weight: 500;
+      }
+
+      .elapsed-time .text-3, .year .text-3  {
+        color: $c-gray;
+        font-size: 16px;
+        text-transform: uppercase;
       }
 
       .elapsed-time, .year {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         gap: 16px;
       }
     }
-  }
 }
