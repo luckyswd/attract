@@ -17,8 +17,11 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 50px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-radius: 60px;
+
+    @include _1024 {
+        border-radius: 40px;
+    }
 
     @include _768 {
       min-height: 100%;

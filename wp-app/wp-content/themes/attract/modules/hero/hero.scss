@@ -23,8 +23,7 @@
     border-radius: 60px;
 
     @include _1024 {
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
+        border-radius: 40px;
     }
 
     @include _1024 {
