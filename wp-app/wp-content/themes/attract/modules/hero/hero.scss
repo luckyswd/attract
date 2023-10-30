@@ -241,7 +241,8 @@
     }
 
     @include _768 {
-      max-width: 455px;
+      max-width: 100%;
+      text-align: left;
     }
 
     span {

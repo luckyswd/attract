@@ -52,7 +52,7 @@
 
             @include _768 {
                 max-width: 100%;
-                text-align: center;
+                text-align: left;
             }
         }
 
@@ -171,6 +171,7 @@
 
             @include _768 {
                 margin-bottom: 20px;
+                text-align: left;
             }
         }
 
