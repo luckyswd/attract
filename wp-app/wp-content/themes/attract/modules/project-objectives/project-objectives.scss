@@ -16,12 +16,13 @@
     gap: 20px;
 
     @include _1440 {
+      border-radius: 30px;
       padding: 20px;
       gap: 10px;
     }
 
     @include _1024 {
-      grid-template-columns: repeat(2, 47%);
+      grid-template-columns: repeat(2, 1fr);
       justify-content: center;
     }
 
@@ -30,7 +31,7 @@
     }
 
     @include _430 {
-      grid-template-columns: 95%;
+      grid-template-columns: 1fr;
     }
   }
 

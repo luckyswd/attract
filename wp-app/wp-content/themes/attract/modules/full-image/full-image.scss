@@ -2,5 +2,17 @@
   img {
     max-height: 659px;
     object-fit: cover;
+
+    @include _1024{
+      min-height: 486px;
+    }
+
+    @include _768{
+      min-height: 358px;
+    }
+
+    @include _430{
+      min-height: 245px;
+    }
   }
 }
