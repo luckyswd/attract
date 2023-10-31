@@ -102,7 +102,10 @@
 
         .staff-position__text {
           display: inline-block;
-          max-width: max-content;
+          width: max-content;
+          width: -moz-max-content;
+          width: -webkit-max-content;
+          width: -o-max-content;
           box-sizing: border-box;
           text-align: center;
           padding: 7px 17px;
