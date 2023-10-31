@@ -104,7 +104,7 @@
         }
 
         .staff-position__text {
-          width: auto;
+          width: max-content;
           box-sizing: border-box;
           text-align: center;
           padding: 7px 17px;
@@ -116,7 +116,13 @@
           font-style: normal;
           font-weight: 500;
           line-height: normal;
+
+          @include _430{
+            width: auto;
+          }
         }
+
+        
 
         @include _430 {
           .staff-position__info {
