@@ -4,8 +4,6 @@
 $socials = get_field('socials', 'option');
 $image = get_field('footer_image', 'option');
 $logo = get_field('logo', 'option');
-$feedback_text = get_field('feedback_text', 'option');
-$button_feedback = get_field('button_feedback', 'option');
 $footer_form = get_field('footer_form', 'option');
 ?>
 <footer id="footer" class="footer">
@@ -26,14 +24,6 @@ $footer_form = get_field('footer_form', 'option');
     </div>
 
     <div class="container">
-        <div class="footer-feedback">
-            <p class="h5"> <?= $feedback_text ?? '' ?> </p>
-            <a class="btn blue" href="javascript:;" data-fancybox="" data-src="#modal-feedback-form">
-                <span class="hover-animation">
-                    <span><?= $button_feedback['title'] ?? '' ?></span>
-                </span>
-            </a>
-        </div>
         <div class="footer-wrapper">
             <?php if (!empty($socials)) : ?>
                 <div class="socials-wrapper">
