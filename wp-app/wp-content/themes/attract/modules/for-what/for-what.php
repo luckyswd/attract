@@ -8,6 +8,7 @@ Mode: preview
 ?>
 
 <?php
+$headline_svg = get_field('headline_svg');
 $headline = get_field('headline');
 $text = get_field('text');
 $for_what_blocks = get_field('for_what_blocks');
@@ -26,6 +27,7 @@ $for_what_blocks = get_field('for_what_blocks');
                         <div class="for-what-blocks">
                             <?php foreach ($for_what_blocks as $block) : ?>
                                 <div class="for-what-block">
+                                    <div class="headline-svg"><?= $headline_svg ?></div>
                                     <div class="h5"><?= $block['headline'] ?? '' ?></div>
                                     <div class="text-3"><?= $block['text'] ?? '' ?></div>
                                 </div>
