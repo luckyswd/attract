@@ -12,7 +12,7 @@ $headline = get_field('headline');
 
 $categories = get_terms([
     'taxonomy' => 'service-category',
-    'hide_empty' => true,
+    'hide_empty' => false,
 ]);
 
 $services = get_posts([
