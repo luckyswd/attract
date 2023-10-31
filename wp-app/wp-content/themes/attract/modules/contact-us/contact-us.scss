@@ -1,0 +1,39 @@
+.contact-us {
+    position: relative;
+    z-index: 5;
+
+    &:last-child {
+        @include _1024 {
+            margin-top: -60px;
+        }
+
+        @include _768 {
+            margin-top: -20px;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        max-width: 1133px;
+        margin: 0 auto;
+
+        @include _1024 {
+            display: block;
+            max-width: 566px;
+
+            .btn.blue {
+                margin: 20px auto 0 auto;
+            }
+        }
+
+        .h5 {
+            font-weight: 500;
+
+            @include _1024 {
+                text-align: center;
+            }
+        }
+    }
+}
