@@ -85,18 +85,10 @@ section {
   &.transparent {
     background: $c-transparent;
   }
-  
-  &.only-large-laptop {
-    @include _1400 {
-        display: none;
-    }
-  }
 
   &.only-laptop {
-    display: none;
-
-    @include _1400 {
-        display: flex;
+    @include _1024 {
+        display: none;
     }
   }
 
