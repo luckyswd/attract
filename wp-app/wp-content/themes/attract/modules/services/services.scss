@@ -141,7 +141,8 @@
     margin-top: auto;
     padding-top: 20px;
 
-    @include _430 {
+    @include _480 {
+      flex-direction: column;
       justify-content: space-between;
       gap: 10px;
     }
