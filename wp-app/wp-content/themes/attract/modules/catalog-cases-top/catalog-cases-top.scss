@@ -1,0 +1,32 @@
+.catalog-cases-top {
+  .catalog-top  {
+    min-height: 430px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    border-radius: 60px;
+
+    @include _1024 {
+        border-radius: 40px;
+    }
+
+    @include _768 {
+      min-height: 100%;
+      padding-top: 100px;
+    }
+
+    .text-1 {
+      margin-bottom: 18px;
+      color: $c-blue;
+    }
+
+    .h2 {
+      text-align: center;
+      max-width: 1035px;
+      margin: 0 auto;
+    }
+  }
+}

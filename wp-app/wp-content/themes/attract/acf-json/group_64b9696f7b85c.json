@@ -1,6 +1,6 @@
 {
     "key": "group_64b9696f7b85c",
-    "title": "Каталог кейсов",
+    "title": "Каталог кейсов (шапка)",
     "fields": [
         {
             "key": "field_64b9696f6d7ec",
@@ -53,7 +53,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/catalog-cases"
+                "value": "acf\/catalog-cases-top"
             }
         ]
     ],
@@ -66,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689873493
+    "modified": 1699213682
 }
