@@ -1,221 +1,230 @@
-html, body {
-  position: relative;
+html,
+body {
+    position: relative;
 }
 
 body {
-  font-family: $font;
-  font-style: normal;
-  font-weight: 400;
-  background: $c-gray-light;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 400;
+    background: $c-gray-light;
 }
 
 section {
-  position: relative;
+    position: relative;
 }
 
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 40px;
-  width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
 
-  @include _768 {
-    padding: 0 10px;
-  }
+    @include _768 {
+        padding: 0 10px;
+    }
 }
 
 .main {
-  min-height: 100vh;
-  margin-top: 70px;
-  font-weight: 400;
-  font-size: 16px;
+    min-height: 100vh;
+    margin-top: 70px;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .anchor-helper {
-  position: absolute;
-  top: -100px;
+    position: absolute;
+    top: -100px;
 }
 
 .btn {
-  width: 100%;
-  padding: 18.5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 300px;
-  max-width: 328px;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: $transition;
-  overflow: hidden;
-
-  @include _768 {
-    padding: 16px;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  &.white {
-    background: $c-white;
-    color: $c-blue;
-    border: 1px solid $c-blue;
-
-    &:hover {
-      background: $c-blue;
-      color: $c-white;
-    }
-  }
-
-  &.blue {
-    color: $c-white;
-    background: $c-blue;
-    border: 1px solid $c-white;
-
-    span {
-      color: $c-white;
-    }
-
-    &:hover {
-      scale: 1.05;
-    }
-  }
-          
-  &.transparent {
-    background: $c-transparent;
-  }
-
-  &.only-laptop {
-    @include _1024 {
-        display: none;
-    }
-  }
-
-  &.only-tablet {
-    display: none;
-
-    @include _1024 {
-        display: flex;
-    }
-  }
-
-  &.only-mobile {
-    display: none;
+    width: 100%;
+    padding: 18.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    max-width: 328px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: $transition;
+    overflow: hidden;
 
     @include _768 {
-        display: flex;
+        padding: 16px;
+        font-size: 16px;
+        line-height: 20px;
     }
-  }
+
+    &.white {
+        background: $c-white;
+        color: $c-blue;
+        border: 1px solid $c-blue;
+
+        &:hover {
+            background: $c-blue;
+            color: $c-white;
+        }
+    }
+
+    &.blue {
+        color: $c-white;
+        background: $c-blue;
+        border: 1px solid $c-white;
+
+        span {
+            color: $c-white;
+        }
+
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+    &.transparent {
+        background: $c-transparent;
+    }
+
+    &.only-laptop {
+        @include _1024 {
+            display: none;
+        }
+    }
+
+    &.only-tablet {
+        display: none;
+
+        @include _1024 {
+            display: flex;
+        }
+    }
+
+    &.only-mobile {
+        display: none;
+
+        @include _768 {
+            display: flex;
+        }
+    }
 }
 
 .distance {
-  margin: 120px 0;
+    margin: 120px 0;
 
-  @include _1400 {
-    margin: 100px 0;
-  }
+    @include _1400 {
+        margin: 100px 0;
+    }
 
-  @include _768 {
-    margin: 0;
-    padding: 40px 0;
-  }
+    @include _768 {
+        margin: 0;
+        padding: 40px 0;
+    }
 
-  @include _430 {
-    margin: 0;
-    padding: 30px 0;
-  }
+    @include _430 {
+        padding: 30px 0;
+    }
 
-  &:first-child {
-   margin-top: 0;
-  }
+    &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 }
 
 .block-anchor {
-  position: absolute;
-  top: -100px;
-  left: 0;
+    position: absolute;
+    top: -100px;
+    left: 0;
 }
 
 .hover-animation {
-  overflow: hidden;
-  position: relative;
-  display: flex;
+    overflow: hidden;
+    position: relative;
+    display: flex;
 
-  span {
-    transition: $transition;
-  }
+    span {
+        transition: $transition;
+    }
 }
 
 .js-animation-up {
-  span {
-    transform: translateY(-50px);
-  }
+    span {
+        transform: translateY(-50px);
+    }
 }
 
 .js-animation-down {
-  span {
-    transform: translateY(50px);
-  }
+    span {
+        transform: translateY(50px);
+    }
 }
 
 .hover-opacity {
-  transition: $transition;
+    transition: $transition;
 
-  &:hover {
-    opacity: 0.7;
-  }
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 @keyframes moveLeft {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .animation-left {
-  animation: moveLeft 2s ease-in-out infinite;
+    animation: moveLeft 2s ease-in-out infinite;
 }
 
 @keyframes moveRight {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .animation-right {
-  animation: moveRight 2s ease-in-out infinite;
+    animation: moveRight 2s ease-in-out infinite;
 }
 
 .arrow {
-  stroke: $c-black;
+    stroke: $c-black;
 }
 
 .animation-right .arrow {
-  animation: changeColor 2s ease-in-out infinite;
+    animation: changeColor 2s ease-in-out infinite;
 }
 
 @keyframes changeColor {
-  0%, 100% {
-    stroke: $c-black;
-  }
-  50% {
-    stroke: $c-blue;
-  }
+
+    0%,
+    100% {
+        stroke: $c-black;
+    }
+
+    50% {
+        stroke: $c-blue;
+    }
 }
