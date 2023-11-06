@@ -85,7 +85,7 @@
             height: min(30vw, 350px);
 
             @include _768 {
-                height: min(50vw, 350px);
+                height: min(70vw, 350px);
             }
 
             &.cover { 
@@ -116,10 +116,6 @@
             justify-content: center;
             gap: 5px;
             margin-top: 20px;
-
-            @include _768 {
-                margin-top: 15px;
-            }
 
             .swiper-pagination-bullet {
                 margin: 0;

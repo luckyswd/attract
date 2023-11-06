@@ -22,6 +22,7 @@ class Result {
                 320: {
                     slidesPerView: 1,
                     spaceBetween: 20,
+                    draggable: true
                 },
 
                 768: {
