@@ -70,6 +70,35 @@ function create_taxonomy()
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
     ]);
+
+    register_taxonomy('case-category', ['case'], [
+        'label' => __('case category'),
+        'rewrite' => ['slug' => 'case-category'],
+        'labels' => [
+            'name' => 'Категория кейсов',
+            'singular_name' => 'Категории кейсов',
+            'search_items' => 'Найти кейс',
+            'all_items' => 'Все категории кейсов',
+            'view_item ' => 'Просмотреть категорию кейсов',
+            'parent_item' => 'Родительская категория кейса',
+            'parent_item_colon' => 'Родительская категория кейса:',
+            'edit_item' => 'Редактировать категорию кейса',
+            'update_item' => 'Обновить категорию кейса',
+            'add_new_item' => 'Добавить новую категорию кейса',
+            'new_item_name' => 'Новое название категории кейса',
+            'menu_name' => 'Категории кейсов',
+        ],
+        'public' => true,
+        'hierarchical' => false,
+        'capabilities' => [],
+        'meta_box_cb' => null,
+        'show_admin_column' => false,
+        'show_in_rest' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+    ]);
 }
 
 

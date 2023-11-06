@@ -1,8 +1,16 @@
 <?php
 get_header();
 
+global $post;
+
+$category = get_the_terms($post->ID, 'case-category');
+$categoryName = '';
+if (!empty($category)) {
+    $categoryName = $category[0]->name;
+}
+
 $backgroundImage = get_field('individual_image');
-$shorDescription = get_field('shor_description');
+$shortDescription = get_field('shor_description');
 $subHeadline = get_field('sub_headline');
 $elapsedTime = get_field('elapsed_time');
 $year = get_field('year');
@@ -13,8 +21,8 @@ $year = get_field('year');
         <div class="hero-case-wrap" style="background-image: url(<?= $backgroundImage['url'] ?>)">
             <div class="case-info">
                 <div class="case-left-info">
-                    <p class="text-4"><?= get_the_title() ?></p>
-                    <p class="h3"><?= $shorDescription ?? '' ?></p>
+                    <p class="text-4"><?= $categoryName ? $categoryName : get_the_title() ?></p>
+                    <p class="h3"><?= $shortDescription ?? '' ?></p>
                     <div class="wrap-bottom">
                         <div class="left">
                             <p class="text-2"><?= $subHeadline ?? '' ?></p>
