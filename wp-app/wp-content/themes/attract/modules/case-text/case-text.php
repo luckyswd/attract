@@ -18,17 +18,23 @@ $columns = get_field('columns');
                 <div class="case-text-wrap">
                     <?php foreach ($columns as $column) : ?>
                         <div class="case-text-column">
-                            <p class="text-1"> <?= $column['caption'] ?? '' ?> </p>
+                            <?php if (!empty($column['caption'])) : ?>
+                                <p class="text-1"> <?= $column['caption'] ?> </p>
+                            <?php endif; ?>
+
                             <?php if (!empty($column['headline'])) : ?>
                                 <p class="h5"><?= $column['headline'] ?></p>
-                            <?php endif;?>
-                            <p class="text-2"><?= $column['sub_headline'] ?? '' ?></p>
+                            <?php endif; ?>
+
+                            <?php if (!empty($column['sub_headline'])) : ?>
+                                <p class="text-2"><?= $column['sub_headline'] ?></p>
+                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
         </section>
     <?php endif; ?>
-<?php else: ?>
+<?php else : ?>
     <h2 style="font-family: 'Mark', sans-serif;">Кейс текст модуль</h2>
 <?php endif; ?>
