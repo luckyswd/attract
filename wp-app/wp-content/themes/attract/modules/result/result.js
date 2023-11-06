@@ -4,11 +4,10 @@ class Result {
     }
 
     init() {
-        const columns = document.querySelector('.result-bottom').getAttribute('data-columns');
+        const columns = parseInt(document.querySelector('.result-bottom').getAttribute('data-columns'));
         const swiper = new Swiper(".result-bottom", {
             loop: false,
             spaceBetween: 20,
-            slidesPerView: columns,
 
             pagination: {
                 el: '.pagination',
@@ -25,9 +24,13 @@ class Result {
                     draggable: true
                 },
 
-                768: {
-                    slidesPerView: columns,
+                769: {
+                    slidesPerView: columns - 1,
                 },
+
+                1024: {
+                    slidesPerView: columns,
+                }
             }
         });
     }

@@ -82,10 +82,14 @@
         flex-direction: column;
 
         .result-picture {
-            height: min(30vw, 350px);
+            height: min(30vw, 450px);
+
+            @include _1024 {
+                height: min(40vw, 450px);
+            }
 
             @include _768 {
-                height: min(70vw, 350px);
+                height: min(95vw, 350px);
             }
 
             &.cover { 
