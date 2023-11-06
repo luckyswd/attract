@@ -13,7 +13,7 @@ $image = get_field('image');
 
 <?php if (!is_admin()) : ?>
     <section class="full-image distance">
-        <?= getPictureImage($image) ?>
+        <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
     </section>
 <?php else: ?>
     <h2 style="font-family: 'Mark', sans-serif;">Полное изображение модуль</h2>
