@@ -87,6 +87,28 @@
             @include _768 {
                 height: min(50vw, 350px);
             }
+
+            &.cover { 
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            &.contain { 
+                text-align: center;
+
+                img {
+                    width: auto;
+                    object-fit: contain;
+                }
+            }
+
+            img {
+                border-radius: 20px;
+                height: 100%;
+                width: 100%;
+                object-position: center;
+            }
         }
 
         .pagination {
@@ -102,6 +124,7 @@
             .swiper-pagination-bullet {
                 margin: 0;
                 background: $c-blue-light;
+                outline: none;
             }
 
             .swiper-pagination-bullet-active {
@@ -119,12 +142,8 @@
             }
         }
 
-        img {
-            border-radius: 20px;
-            height: 100%;
-            width: 100%;
-            object-fit: var(--fit);
-            object-position: center;
+        .swiper-pagination-lock {
+            display: none !important;
         }
     }
 }

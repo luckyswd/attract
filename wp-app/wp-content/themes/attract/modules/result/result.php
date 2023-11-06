@@ -48,7 +48,7 @@ $result_blocks = get_field('result_blocks');
                 <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>">
                     <div class="swiper-wrapper">
                         <?php foreach($images as $image) : ?>
-                            <div class="swiper-slide result-picture" style="--fit: <?= $objectFit ?>;">
+                            <div class="swiper-slide result-picture <?= $objectFit ?>">
                                 <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
                             </div>
                         <?php endforeach; ?>

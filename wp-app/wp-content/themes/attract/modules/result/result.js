@@ -8,12 +8,15 @@ class Result {
         const swiper = new Swiper(".result-bottom", {
             loop: false,
             spaceBetween: 20,
+            slidesPerView: columns,
 
             pagination: {
                 el: '.pagination',
                 clickable: true
             },
             navigation: false,
+
+            watchOverflow: true,
 
             breakpoints: {
                 320: {
