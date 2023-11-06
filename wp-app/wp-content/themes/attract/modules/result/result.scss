@@ -88,17 +88,21 @@
                 height: min(40vw, 450px);
             }
 
-            @include _768 {
-                height: min(100vw, 380px);
-            }
+            &.cover {
+                @include _768 {
+                    height: min(48vw, 350px);
+                }
 
-            &.cover { 
                 img {
                     object-fit: cover;
                 }
             }
 
-            &.contain { 
+            &.contain {
+                @include _768 {
+                    height: min(100vw, 380px);
+                }
+
                 text-align: center;
 
                 img {
