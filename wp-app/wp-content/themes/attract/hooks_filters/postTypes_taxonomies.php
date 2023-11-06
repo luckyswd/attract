@@ -89,7 +89,7 @@ function create_taxonomy()
             'menu_name' => 'Категории кейсов',
         ],
         'public' => true,
-        'hierarchical' => false,
+        'hierarchical' => true,
         'capabilities' => [],
         'meta_box_cb' => null,
         'show_admin_column' => false,
