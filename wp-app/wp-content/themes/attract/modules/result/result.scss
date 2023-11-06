@@ -1,98 +1,136 @@
 .result {
-  .result-wrapper {
-    display: grid;
-    grid-template-columns: 575px 1fr;
-    gap: 115px;
-    min-height: 575px;
+    overflow: hidden;
 
-    @include _1024 {
-      grid-template-columns: 1fr;
-      gap: 60px;
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include _768 {
+            gap: 40px;
+        }
     }
 
-    @include _430 {
-      gap: 40px;
+    &-top {
+        padding-top: 46px;
+
+        @include _1024 {
+            padding-top: 0px;
+        }
+
+        .text-1 {
+            color: $c-blue;
+            margin-bottom: 40px;
+
+            @include _768 {
+                margin-bottom: 20px;
+            }
+        }
+
+        .h5 {
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .text-2 {
+            color: $c-gray;
+
+            ul {
+                list-style: disc;
+                margin-left: 20px;
+            }
+
+            *+ul {
+                margin-top: 20px;
+            }
+        }
+
+        .result-blocks {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            @include _1440 {
+                margin-top: 40px;
+            }
+
+            @include _1024 {
+                grid-template-columns: repeat(2, auto);
+                justify-content: center;
+                column-gap: 40px;
+                row-gap: 20px;
+            }
+        }
+
+        .result-block {
+            .h5 {
+                font-weight: 500;
+                margin-bottom: 0px;
+            }
+
+            @include _1024 {
+                text-align: center;
+            }
+
+            @include _768 {
+                text-align: left;
+            }
+
+            .text-2 {
+                color: $c-gray;
+            }
+        }
     }
-  }
 
-  .result-left {
-    img {
-      border-radius: 20px;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
+    &-bottom {
+        display: flex;
+        flex-direction: column;
+
+        .result-picture {
+            height: min(30vw, 350px);
+
+            @include _768 {
+                height: min(50vw, 350px);
+            }
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 20px;
+
+            @include _768 {
+                margin-top: 15px;
+            }
+
+            .swiper-pagination-bullet {
+                margin: 0;
+                background: $c-blue-light;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: $c-blue;
+            }
+
+            span {
+                width: 16px;
+                height: 16px;
+
+                @include _768 {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+
+        img {
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
-
-    @include _1024 {
-      height: 350px;
-    }
-
-  }
-
-  .result-right {
-    padding-top: 46px;
-
-    @include _1024 {
-      padding-top: 0px;
-    }
-
-    .text-1 {
-      color: $c-blue;
-      margin-bottom: 40px;
-
-      @include _430 {
-        margin-bottom: 20px;
-      }
-    }
-
-    .h5 {
-      font-weight: 500;
-      margin-bottom: 20px;
-
-    }
-
-    .text-2 {
-      color: $c-gray;
-
-    }
-
-    .result-blocks {
-      margin-top: 80px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-
-      @include _1440 {
-        margin-top: 40px;
-      }
-
-      @include _1024 {
-        grid-template-columns: repeat(2, auto);
-        justify-content: center;
-        column-gap: 40px;
-        row-gap: 20px;
-      }
-
-    }
-
-    .result-block {
-      .h5 {
-        font-weight: 500;
-        margin-bottom: 20px;
-      }
-
-      @include _1024 {
-        text-align: center;
-      }
-
-      @include _430 {
-        text-align: left;
-      }
-
-      .text-2 {
-        color: $c-gray;
-      }
-    }
-  }
 }
