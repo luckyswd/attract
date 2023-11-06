@@ -12,12 +12,6 @@
     }
 
     &-top {
-        padding-top: 46px;
-
-        @include _1024 {
-            padding-top: 0px;
-        }
-
         .text-1 {
             color: $c-blue;
             margin-bottom: 40px;
@@ -129,7 +123,7 @@
             border-radius: 20px;
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            object-fit: var(--fit);
             object-position: center;
         }
     }

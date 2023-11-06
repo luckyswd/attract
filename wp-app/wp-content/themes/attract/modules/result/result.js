@@ -4,6 +4,7 @@ class Result {
     }
 
     init() {
+        const columns = document.querySelector('.result-bottom').getAttribute('data-columns');
         const swiper = new Swiper(".result-bottom", {
             loop: true,
             spaceBetween: 20,
@@ -21,7 +22,7 @@ class Result {
                 },
 
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: columns,
                 },
             }
         });

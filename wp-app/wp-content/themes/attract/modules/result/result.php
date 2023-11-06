@@ -9,6 +9,8 @@ Mode: preview
 
 <?php
 $images = get_field('image');
+$columnsCount = get_field('columns_count');
+$objectFit = get_field('object_fit');
 $caption = get_field('caption');
 $headline = get_field('headline');
 $text = get_field('text');
@@ -43,10 +45,10 @@ $result_blocks = get_field('result_blocks');
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="swiper result-bottom">
+                <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>">
                     <div class="swiper-wrapper">
                         <?php foreach($images as $image) : ?>
-                            <div class="swiper-slide result-picture">
+                            <div class="swiper-slide result-picture" style="--fit: <?= $objectFit ?>;">
                                 <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
                             </div>
                         <?php endforeach; ?>
