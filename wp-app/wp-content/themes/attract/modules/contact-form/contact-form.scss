@@ -23,12 +23,13 @@
     }
 
     .form-left {
-        background: $c-white;
-        border-radius: 60px;
-        padding: 60px 60px 50px 60px;
+        position: relative;
         display: flex;
         flex-direction: column;
-        position: relative;
+        padding: 60px 60px 50px 60px;
+        border-radius: 60px;
+        background: $c-white;
+        overflow: hidden;
 
         @include _1400 {
             height: 466px;
