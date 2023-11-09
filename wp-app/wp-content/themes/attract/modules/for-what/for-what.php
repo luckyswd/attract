@@ -26,7 +26,9 @@ $for_what_blocks = get_field('for_what_blocks');
                         <div class="for-what-blocks">
                             <?php foreach ($for_what_blocks as $block) : ?>
                                 <div class="for-what-block">
+                                    <?php if($block['headline_svg']): ?>
                                     <div class="headline-svg"><img src="<?= $block['headline_svg'] ?? '' ?>" alt="<?= $block['headline'] ?? '' ?>" /></div>
+                                    <?php endif; ?>
                                     <div class="h5"><?= $block['headline'] ?? '' ?></div>
                                     <div class="text-3"><?= $block['text'] ?? '' ?></div>
                                 </div>
