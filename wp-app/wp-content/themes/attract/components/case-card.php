@@ -1,6 +1,6 @@
 <a href="<?= $link ?? '' ?>" class="case-card <?= $class ?? '' ?>" style="background-image: url(<?= $preview_image['url'] ?? '' ?>)">
     <div class="case-card-top">
-        <p class="text-4"><?= $case->post_title ?></p>
+        <p class="text-4"><?= $categoryName ? $categoryName : $case->post_title ?></p>
         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="43" viewBox="0 0 44 43" fill="none">
             <circle cx="22.1309" cy="21.5" r="21.5" fill="white"/>
             <line x1="30.2566" y1="13.9756" x2="14.6124" y2="29.6198" stroke="#000618" stroke-width="2.24138"/>

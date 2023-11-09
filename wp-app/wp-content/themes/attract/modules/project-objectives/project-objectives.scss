@@ -2,7 +2,11 @@
   .h4 {
     margin: 0 auto;
     font-weight: 500;
+    padding-left: 115px;
 
+    @include _1440 {
+        padding-left: 0;
+    }
   }
 
   .project-objectives {

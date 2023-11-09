@@ -29,6 +29,12 @@ $cases = get_field('cases');
                 <div class="cases-wrapper">
                     <?php foreach ($cases as $key => $case) : ?>
                         <?php
+                        $category = get_the_terms($case->ID, 'case-category');
+                        $categoryName = '';
+                        if (!empty($category)) {
+                            $categoryName = $category[0]->name;
+                        }
+
                         $shor_description = get_field('shor_description', $case->ID);
                         $preview_image = get_field('preview_image', $case->ID);
                         $link = get_permalink($case);

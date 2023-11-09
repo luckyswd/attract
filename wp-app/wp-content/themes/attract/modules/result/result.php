@@ -8,7 +8,9 @@ Mode: preview
 ?>
 
 <?php
-$image = get_field('image');
+$images = get_field('image');
+$columnsCount = get_field('columns_count');
+$objectFit = get_field('object_fit');
 $caption = get_field('caption');
 $headline = get_field('headline');
 $text = get_field('text');
@@ -19,13 +21,19 @@ $result_blocks = get_field('result_blocks');
     <section class="result distance">
         <div class="container">
             <div class="result-wrapper">
-                <div class="result-left">
-                    <?php getPictureImage($image, 575, 575); ?>
-                </div>
-                <div class="result-right">
-                    <p class="text-1"><?= $caption ?? '' ?></p>
-                    <p class="h5"><?= $headline ?? '' ?></p>
-                    <p class="text-2"><?= $text ?? '' ?></p>
+                <div class="result-top">
+                    <?php if (!empty($caption)) : ?>
+                        <p class="text-1"><?= $caption ?></p>
+                    <?php endif; ?>
+
+                    <?php if (!empty($headline)) : ?>
+                        <p class="h5"><?= $headline ?></p>
+                    <?php endif; ?>
+
+                    <?php if (!empty($text)) : ?>
+                        <div class="text-2"><?= $text ?></div>
+                    <?php endif; ?>
+
                     <?php if (!empty($result_blocks)) : ?>
                         <div class="result-blocks">
                             <?php foreach ($result_blocks as $block) : ?>
@@ -37,9 +45,19 @@ $result_blocks = get_field('result_blocks');
                         </div>
                     <?php endif; ?>
                 </div>
+                <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>">
+                    <div class="swiper-wrapper">
+                        <?php foreach($images as $image) : ?>
+                            <div class="swiper-slide result-picture <?= $objectFit ?>">
+                                <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
             </div>
         </div>
     </section>
-<?php else: ?>
+<?php else : ?>
     <h2 style="font-family: 'Mark', sans-serif;">Результат модуль</h2>
 <?php endif; ?>

@@ -1,14 +1,17 @@
 .case-text {
   .case-text-wrap {
-    max-width: 1130px;
     margin: 0 auto;
+    padding: 0 115px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 40px;
+
+    @include _1440 {
+        padding: 0;
+    }
 
     @include _768 {
       grid-template-columns: 1fr;
-      gap: 40px;
     }
 
     .case-text-column {

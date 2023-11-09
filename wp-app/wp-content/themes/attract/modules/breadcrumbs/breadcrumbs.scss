@@ -8,8 +8,9 @@
     }
 
     @include _768 {
-        margin-top: -60px;
-        margin-bottom: -40px;
+        margin-top: -20px;
+        margin-bottom: 0px;
+        padding: 0;
     }
 
     &-wrap {
