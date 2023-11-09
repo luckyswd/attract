@@ -18,7 +18,7 @@
   }
 
   .hero__wrapper {
-    padding: 200px 50px 50px 50px;
+    padding: 120px 50px 50px 50px;
     background: $c-white;
     border-radius: 60px;
 
@@ -31,11 +31,11 @@
     }
 
     @include _768 {
-      padding: 128px 24px 24px 24px;
+      padding: 100px 24px 24px 24px;
     }
 
     @include _375 {
-      padding: 128px 10px 10px 10px;
+      padding: 100px 10px 10px 10px;
     }
   }
 
