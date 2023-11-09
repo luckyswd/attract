@@ -32,7 +32,7 @@
 
     .case-info {
       display: grid;
-      grid-template-columns: 1fr 315px;
+      grid-template-columns: 1fr 320px;
 
       @include _1440 {
         grid-template-columns: max(620px);
