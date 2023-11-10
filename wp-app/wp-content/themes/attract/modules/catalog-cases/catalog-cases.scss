@@ -66,28 +66,12 @@
             @include _768 {
                 min-height: 400px;
             }
+            
+            &.hidden {
+                display: none;
+            }
         }
     }
 
-    .cases-right {
-        margin-top: 89px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
 
-        @include _768 {
-            margin-top: 0;
-            gap: 10px;
-        }
-    }
-
-    .cases-left {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        @include _768 {
-            gap: 10px;
-        }
-    }
 }

@@ -22,15 +22,13 @@ $cases = get_posts([
     'order' => 'ASC',
 ]);
 
-$chunkedArrays = array_chunk($cases, ceil(count($cases) / 2));
-
 ?>
 
 <?php if (!is_admin()) : ?>
     <section class="catalog-cases distance">
         <div class="container">
-            <div class="cases-sticky">
-                <?php if (!empty($categories)) : ?>
+            <?php if (!empty($categories)) : ?>
+                <div class="cases-sticky">
                     <div class="cases-categories">
                         <?php foreach ($categories as $key => $category) : ?>
                             <?php
@@ -54,50 +52,35 @@ $chunkedArrays = array_chunk($cases, ceil(count($cases) / 2));
                             }, $casesForCategory);
                             ?>
 
-                            <p class="text-4 single-case <?php if ($key === 0) : ?> js-active <?php endif; ?>" data-ids="<?= json_encode($casesForCategoryIds) ?>"><?= $category->name ?></p>
+                            <p class="text-4 single-case <?= $key === 0 ? 'js-active' : '' ?>" data-ids="<?= json_encode($casesForCategoryIds) ?>"><?= $category->name ?></p>
                         <?php endforeach; ?>
                     </div>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
             <?php if (!empty($cases)) : ?>
                 <div class="cases">
-                    <div class="cases-left">
-                        <?php foreach ($chunkedArrays[0] as $key => $case) : ?>
-                            <?php
-                            $category = get_the_terms($case->ID, 'case-category');
-                            $categoryName = '';
-                            if (!empty($category)) {
-                                $categoryName = $category[0]->name;
-                            }
+                    <?php foreach ($cases as $key => $case) : ?>
+                        <?php
+                        $category = get_the_terms($case->ID, 'case-category');
+                        $categoryName = '';
+                        if (!empty($category)) {
+                            $categoryName = $category[0]->name;
 
-                            $shor_description = get_field('shor_description', $case->ID);
-                            $preview_image = get_field('catalog_image', $case->ID);
-                            $link = get_permalink($case);
-                            $tags = get_field('tags', $case->ID);
-                            $h = 'h5';
-                            ?>
-                            <?php include get_template_directory() . '/components/case-card.php' ?>
-                        <?php endforeach; ?>
-                    </div>
+                            $caseCategories = array_map(function ($cat) {
+                                return $cat->term_id;
+                            }, $category);
+                        } else {
+                            $caseCategories = [];
+                        }
 
-                    <div class="cases-right">
-                        <?php foreach ($chunkedArrays[1] as $key => $case) : ?>
-                            <?php
-                            $category = get_the_terms($case->ID, 'case-category');
-                            $categoryName = '';
-                            if (!empty($category)) {
-                                $categoryName = $category[0]->name;
-                            }
-
-                            $shor_description = get_field('shor_description', $case->ID);
-                            $preview_image = get_field('preview_image', $case->ID);
-                            $link = get_permalink($case);
-                            $tags = get_field('tags', $case->ID);
-                            $h = 'h5';
-                            ?>
-                            <?php include get_template_directory() . '/components/case-card.php' ?>
-                        <?php endforeach; ?>
-                    </div>
+                        $shor_description = get_field('shor_description', $case->ID);
+                        $preview_image = get_field('catalog_image', $case->ID);
+                        $link = get_permalink($case);
+                        $tags = get_field('tags', $case->ID);
+                        $h = 'h5';
+                        ?>
+                        <?php include get_template_directory() . '/components/case-card.php' ?>
+                    <?php endforeach; ?>
                 </div>
             <?php endif; ?>
         </div>
