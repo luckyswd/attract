@@ -21,3 +21,4 @@
 //=include ../../modules/services/services.js
 //=include ../../modules/creatives/creatives.js
 //=include ../../modules/result/result.js
+//=include ../../modules/catalog-cases/catalog-cases.js
