@@ -1,16 +1,16 @@
 <?php
-$categories = get_terms([
-    'taxonomy' => 'case-category',
-    'hide_empty' => false,
-]);
+// $categories = get_terms([
+//     'taxonomy' => 'case-category',
+//     'hide_empty' => false,
+// ]);
 
-if (!isset($caseCategories) && empty($caseCategories)) {
-    $caseCategories = array();
-}
+// if (!isset($caseCategories) && empty($caseCategories)) {
+//     $caseCategories = array();
+// }
 ?>
 
 <a href="<?= $link ?? '' ?>"
-   class="case-card <?= $class ?? '' ?> <?= !in_array($categories[0]->term_id, $caseCategories) ? 'hidden' : '' ?>"
+   class="case-card <?= $class ?? '' ?>"
    data-id="<?= $case->ID ?>"
    style="background-image: url(<?= $preview_image['url'] ?? '' ?>)">
     <div class="case-card-top">

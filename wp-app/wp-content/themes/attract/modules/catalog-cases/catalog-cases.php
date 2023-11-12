@@ -5,6 +5,8 @@ Title: Каталог кейсов модуль
 Mode: preview
 */
 
+use WPML\Collect\Support\Arr;
+
 ?>
 
 <?php
@@ -22,6 +24,10 @@ $cases = get_posts([
     'order' => 'ASC',
 ]);
 
+$allCasesIDs = array_map(function ($cat) {
+    return $cat->ID;
+}, $cases);
+
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -30,6 +36,7 @@ $cases = get_posts([
             <?php if (!empty($categories)) : ?>
                 <div class="cases-sticky">
                     <div class="cases-categories">
+                        <p class="text-4 single-case js-active" data-ids="<?= json_encode($allCasesIDs) ?>">Все</p>
                         <?php foreach ($categories as $key => $category) : ?>
                             <?php
                             $casesForCategory = get_posts([
@@ -52,7 +59,7 @@ $cases = get_posts([
                             }, $casesForCategory);
                             ?>
 
-                            <p class="text-4 single-case <?= $key === 0 ? 'js-active' : '' ?>" data-ids="<?= json_encode($casesForCategoryIds) ?>"><?= $category->name ?></p>
+                            <p class="text-4 single-case" data-ids="<?= json_encode($casesForCategoryIds) ?>"><?= $category->name ?></p>
                         <?php endforeach; ?>
                     </div>
                 </div>
