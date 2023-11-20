@@ -1,46 +1,79 @@
 .catalog-cases {
-  .cases {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-
-    @include _1024 {
-      grid-template-columns: 1fr;
+    .cases-sticky {
+        position: sticky;
+        top: 69px;
+        background: $c-gray-light;
+        padding-top: 20px;
+        z-index: 3;
     }
 
-    .case-card {
-      width: 100%;
-      min-height: 650px;
+    .cases-categories {
+        display: flex;
+        row-gap: 10px;
+        column-gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-bottom: 1px solid $c-border;
+        padding-bottom: 15px;
 
-      @include _1400 {
-        min-height: 500px;
-      }
+        @include _768 {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            row-gap: 0px;
+            column-gap: 15px;
+            margin: 0 calc((100% - 100vw) / 2);
+            padding: 0 15px 15px;
+            overflow: auto;
+            scrollbar-width: none;
 
-      @include _768 {
-        min-height: 400px;
-      }
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
     }
-  }
 
-  .cases-right {
-    margin-top: 89px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    .single-case {
+        cursor: pointer;
 
-    @include _768 {
-      margin-top: 0;
-      gap: 10px;
+        @include _768 {
+            white-space: nowrap;
+        }
+
+        &.js-active {
+            color: $c-blue;
+        }
     }
-  }
 
-  .cases-left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    .cases {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 32px;
 
-    @include _768 {
-      gap: 10px;
+        @include _768 {
+            grid-template-columns: 1fr;
+        }
+
+        .case-card {
+            width: 100%;
+            min-height: 650px;
+
+            @include _1400 {
+                min-height: 430px;
+            }
+
+            @include _1024 {
+                min-height: 400px;
+            }
+
+            @include _768 {
+                min-height: 320px;
+            }
+            
+            &.hidden {
+                display: none;
+            }
+        }
     }
-  }
 }
