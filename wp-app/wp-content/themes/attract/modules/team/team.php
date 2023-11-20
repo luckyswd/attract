@@ -29,6 +29,7 @@ $team = get_posts([
 
 <?php if (!is_admin()) : ?>
     <section class="team distance">
+        <div class="block-anchor" id="team"></div>
         <div class="container">
             <div class="team-wrapper">
                 <div class="head-text__wrap">
