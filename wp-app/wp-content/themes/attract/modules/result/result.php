@@ -21,7 +21,7 @@ $result_blocks = get_field('result_blocks');
 <?php if (!is_admin()) : ?>
     <section class="result">
         <div class="container">
-            <div class="result-wrapper" <?php if ($columnsCount <= 0) : ?> style="gap: 0" <?php endif;?>>
+            <div class="result-wrapper" <?php if ($imagesCount <= 0) : ?> style="gap: 0" <?php endif;?>>
                 <div class="result-top">
                     <?php if (!empty($caption)) : ?>
                         <p class="text-1"><?= $caption ?></p>
