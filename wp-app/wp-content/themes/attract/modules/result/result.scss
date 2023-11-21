@@ -1,19 +1,5 @@
 .result {
     overflow: hidden;
-    margin: 60px 0;
-
-    @include _1400 {
-        margin: 50px 0;
-    }
-
-    @include _768 {
-        margin: 0;
-        padding: 20px 0;
-    }
-
-    @include _430 {
-        padding: 15px 0;
-    }
 
     &-wrapper {
         display: flex;
