@@ -18,7 +18,7 @@ $result_blocks = get_field('result_blocks');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="result distance">
+    <section class="result">
         <div class="container">
             <div class="result-wrapper">
                 <div class="result-top">
