@@ -73,7 +73,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: -179px;
+      top: -100px;
     }
   }
 
@@ -215,8 +215,8 @@
     top: -20px;
 
     @include _768 {
-      right: 0;
-      top: -37px;
+      right: -20px;
+      top: -20px;
     }
   }
 }
