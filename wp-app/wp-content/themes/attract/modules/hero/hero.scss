@@ -206,6 +206,8 @@
 
   video {
     width: 100%;
+    height: calc(100% + 1px);
+    margin-top: -1px;
   }
 
   .carousel__button.is-close {
