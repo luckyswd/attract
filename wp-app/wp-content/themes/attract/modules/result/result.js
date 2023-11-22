@@ -7,7 +7,8 @@ class Result {
         const resultBottom = document.querySelector('.result-bottom');
         if (resultBottom) {
             const columns = parseInt(resultBottom.getAttribute('data-columns'));
-            const swiper = new Swiper(".result-bottom", {
+
+            new Swiper(".result-bottom", {
                 loop: false,
                 spaceBetween: 20,
     
