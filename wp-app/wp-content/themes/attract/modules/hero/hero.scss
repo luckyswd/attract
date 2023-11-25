@@ -52,6 +52,31 @@
     position: absolute;
     top: 22px;
     right: 6px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    picture {
+      display: flex;
+    }
+
+    svg {
+      position: absolute;
+      top: 31%;
+      left: 38%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 
     @include _1400 {
       position: absolute;
