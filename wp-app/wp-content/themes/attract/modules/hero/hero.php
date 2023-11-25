@@ -27,6 +27,9 @@ $video = get_field('video');
                     <h1><?= $headline ?? '' ?></h1>
                     <div class="subheadline-button-wrapper">
                         <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" fill="none">
+                                <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
+                            </svg>
                             <?= getPictureImage($image, 122, 122) ?>
                         </a>
                         <div class="hero__main-subheadline">
