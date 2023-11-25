@@ -48,7 +48,7 @@ $video = get_field('video');
                              data-pausable="true">
                             <p>
                                 <?php foreach ($tags as $tag) : ?>
-                                    <span class="marquee-tag"><?= mb_strtoupper($tag['name'] ?? '') ?></span>
+                                    <span class="marquee-tag" style="  font-size: 14px; line-height: 18px;"><?= mb_strtoupper($tag['name'] ?? '') ?></span>
                                 <?php endforeach; ?>
                             </p>
                         </div>
