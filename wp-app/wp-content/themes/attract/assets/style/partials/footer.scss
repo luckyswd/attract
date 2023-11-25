@@ -362,6 +362,10 @@ footer {
                 font-size: 16px;
                 line-height: 24px;
             }
+
+            a {
+                color: $c-white-opacity;
+            }
         }
 
         .bottom-wrap__policy:hover {
