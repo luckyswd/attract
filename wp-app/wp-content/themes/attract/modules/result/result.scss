@@ -118,20 +118,19 @@
             }
 
             &.contain {
-                height: min(24vw, 450px);
+                height: min(24vw, 100%);
                                 
                 @include _1024 {
-                    height: min(40vw, 450px);
+                    height: min(40vw, 100%);
                 }
                 
                 @include _768 {
-                    height: min(100vw, 380px);
+                    height: min(100vw, 100%);
                 }
 
                 text-align: center;
 
                 img {
-                    width: auto;
                     object-fit: contain;
                 }
             }
