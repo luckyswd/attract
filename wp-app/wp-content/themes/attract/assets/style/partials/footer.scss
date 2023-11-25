@@ -65,7 +65,7 @@ footer {
 
                     @include _768 {
                         gap: 0;
-                        justify-content: space-between;
+                        justify-content: flex-start;
                     }
 
                     .menu-page {
@@ -77,38 +77,16 @@ footer {
                         @include _768 {
                             font-size: 14px;
                             line-height: 18px;
-                            display: flex;
-                            justify-content: space-between;
-                            width: 100%;
-
-                            &:after, &:before {
-                                content: '';
-                                display: block;
-                                height: 100%;
-                                width: 1px;
-                                background: $c-white-opacity-15;
-                            }
+                            padding: 0 18px;
+                            border-right: 1px solid $c-white-opacity-15;
 
                             &:first-child {
-                                justify-content: flex-start;
-
-                                &:after, &:before {
-                                    display: none;
-                                }
+                                padding-left: 0;
                             }
 
                             &:last-child {
-                                justify-content: flex-end;
-
-                                &:after, &:before {
-                                    display: none;
-                                }
-                            }
-
-                            &:not(:nth-child(1)):not(:nth-child(2)) {
-                                &:before {
-                                    opacity: 0;
-                                }
+                                padding-right: 0;
+                                border-right: unset;
                             }
                         }
 
