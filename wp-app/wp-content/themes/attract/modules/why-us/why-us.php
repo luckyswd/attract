@@ -15,10 +15,8 @@ $cards = get_field('cards');
 $headline_solution = get_field('headline_solution');
 $subheadline_solution = get_field('subheadline_solution');
 $button = get_field('button');
-$background_image_1 = get_field('background_image_1');
-$background_image_2 = get_field('background_image_2');
-$background_image_1_tablet = get_field('background_image_1_tablet');
-$background_image_2_tablet = get_field('background_image_2_tablet');
+$background_image = get_field('background_image');
+$background_image_tablet = get_field('background_image_tablet');
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -29,36 +27,27 @@ $background_image_2_tablet = get_field('background_image_2_tablet');
             <p class="text-1"> <?= $subheadline ?? '' ?> </p>
             <?php if (!empty($cards)) : ?>
                 <div class="why-us__cards">
-                    <?php foreach ($cards as $card) : ?>
+                    <?php foreach ($cards as $key => $card) : ?>
                         <?php if (!empty($card)) : ?>
-                            <div class="why-us__card">
-                                <div class="card-image">
-                                    <?= getPictureImage($card['image'], 272, 272) ?>
-                                </div>
+                            <div class="why-us__card" style="background-image: url(<?= $card['image']['url'] ?>)">
+                                <p class="why-us__number text-2">(0<?= $key + 1 ?>)</p>
                                 <p class="text-3"><?= $card['text'] ?></p>
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>
+                    <div class="solution-wrapper">
+                        <p class="h5"> <?= $headline_solution ?? '' ?> </p>
+                        <p class="text-3"> <?= $subheadline_solution ?? '' ?> </p>
+                        <a href="<?= $button['url'] ?? '' ?>" class="btn blue"><span><?= $button['title'] ?? '' ?></span></a>
+                        <div class="background-image-1">
+                            <picture>
+                                <source media="(min-width: 1400px)" srcset="<?= $background_image['url'] ?>">
+                                <img src="<?= $background_image_tablet['url'] ?>" alt="картинка" width="564" height="564">
+                            </picture>
+                        </div>
+                    </div>
                 </div>
             <?php endif; ?>
-
-            <div class="solution-wrapper">
-                <p class="h5"> <?= $headline_solution ?? '' ?> </p>
-                <p class="text-2"> <?= $subheadline_solution ?? '' ?> </p>
-                <a href="<?= $button['url'] ?? '' ?>" class="btn white"><span><?= $button['title'] ?? '' ?></span></a>
-                <div class="background-image-1">
-                    <picture>
-                        <source media="(min-width: 1400px)" srcset="<?= $background_image_1['url'] ?>">
-                        <img src="<?= $background_image_1_tablet['url'] ?>" alt="картинка" width="564" height="564">
-                    </picture>
-                </div>
-                <div class="background-image-2">
-                    <picture>
-                        <source media="(min-width: 1400px)" srcset="<?= $background_image_2['url'] ?>">
-                        <img src="<?= $background_image_2_tablet['url'] ?>" alt="картинка" width="564" height="564">
-                    </picture>
-                </div>
-            </div>
         </div>
     </section>
 <?php else: ?>
