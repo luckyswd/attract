@@ -198,6 +198,7 @@ footer {
 
                         @include _768 {
                             color: $c-white;
+                            text-transform: unset;
                         }
                     }
                 }
