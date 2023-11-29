@@ -31,11 +31,11 @@
     }
 
     @include _768 {
-      padding: 100px 24px 24px 24px;
+      padding: 170px 24px 24px 24px;
     }
 
     @include _375 {
-      padding: 100px 10px 10px 10px;
+      padding: 170px 10px 10px 10px;
     }
   }
 
@@ -57,6 +57,10 @@
 
     picture {
       display: flex;
+
+      img {
+        max-width: 122px;
+      }
     }
 
     svg {
@@ -98,7 +102,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: -100px;
+      top: -130px;
     }
   }
 
