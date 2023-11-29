@@ -18,6 +18,7 @@
 
   @include _768 {
     height: 750px;
+    margin-bottom: 40px;
   }
 
   .container {
@@ -84,7 +85,7 @@
     .sticky-wrap {
       position: sticky;
       top: 80px;
-      padding: 80px;
+      padding: 80px 0;
 
       @include _1024 {
         top: 0;
