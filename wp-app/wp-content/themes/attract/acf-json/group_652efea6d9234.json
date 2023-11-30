@@ -43,6 +43,26 @@
             "append": "$"
         },
         {
+            "key": "field_6568ceeb27f96",
+            "label": "Текст после цены",
+            "name": "end_text_price",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Например: в час",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_652efeec855a9",
             "label": "Текст (справа)",
             "name": "text_right",
@@ -179,5 +199,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697582213
+    "modified": 1701367574
 }
