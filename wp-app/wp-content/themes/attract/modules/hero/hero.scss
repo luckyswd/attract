@@ -350,7 +350,7 @@
   @include _768 {
     margin-left: -24px;
     width: calc(100% + 48px);
-    overflow: unset;
+    min-height: 50px;
   }
 
   @include _375 {
