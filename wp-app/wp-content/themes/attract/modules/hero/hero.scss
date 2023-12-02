@@ -325,8 +325,8 @@
 }
 
 .marquee-tag {
-  //font-size: 14px;
-  //line-height: 17.85px;
+  font-size: 14px;
+  line-height: 17.85px;
   padding: 6px 15px;
   border: 1px solid $c-blue;
   border-radius: 300px;
@@ -335,7 +335,6 @@
 
 .marquee-container {
   margin-bottom: 50px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   min-height: 34px;
