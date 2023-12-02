@@ -15,6 +15,6 @@ setTimeout(() => {
   const tags = document.querySelectorAll('.marquee-tag')
 
   tags && tags.forEach((tag) => {
-    tag.style.fontSize = '14px';
+    tag.style.fontSize = '12px';
   })
-}, 1000)
+}, 2000)
