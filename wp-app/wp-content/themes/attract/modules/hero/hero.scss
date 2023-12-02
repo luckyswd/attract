@@ -335,6 +335,7 @@
 
 .marquee-container {
   margin-bottom: 50px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   min-height: 40px;
