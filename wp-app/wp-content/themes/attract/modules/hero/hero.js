@@ -17,4 +17,4 @@ setTimeout(() => {
   tags && tags.forEach((tag) => {
     tag.style.fontSize = '12px';
   })
-}, 2000)
+}, 3000)
