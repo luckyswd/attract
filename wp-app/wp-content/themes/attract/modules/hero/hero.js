@@ -10,11 +10,3 @@ window.addEventListener('click', (e) => {
     })
   }
 })
-
-setTimeout(() => {
-  const tags = document.querySelectorAll('.marquee-tag')
-
-  tags && tags.forEach((tag) => {
-    tag.style.fontSize = '12px';
-  })
-}, 3000)
