@@ -74,4 +74,4 @@
             </div>
         </div>
     </header>
-    <main id="main" class="main" data-page-id="<?= get_queried_object_id() ?>">
+    <main id="main" class="main slug-<?= get_queried_object()->post_name ?>" data-page-id="<?= get_queried_object_id() ?>">
