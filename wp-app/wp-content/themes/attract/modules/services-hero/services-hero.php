@@ -30,7 +30,7 @@ $contentOnLeft = get_field('content_on_left');
                     <p class="h2"><?= $headline ?? '' ?></p>
                     <div class="text-2"><?= $subheadline ?? '' ?></div>
                     <?php if (!empty($link)) : ?>
-                        <a href="<?= $link['url'] ?>" class="btn blue">
+                        <a href="javascript:;" data-fancybox="" data-src="#modal-feedback-form" class="btn blue">
                             <span class="hover-animation">
                                 <span><?= $link['title'] ?? '' ?></span>
                             </span>
