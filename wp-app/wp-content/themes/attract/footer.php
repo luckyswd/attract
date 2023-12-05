@@ -101,6 +101,8 @@ $footer_form = get_field('footer_form', 'option');
         <div class="form-wrapper">
             <div class="contact-form">
                 <div class="form-right modal-mode">
+                    <p class="h6">ОСТАВЬТЕ ЗАЯВКУ <br>
+                        И мы перезвоним Вам!</p>
                     <?= $footer_form ?>
                 </div>
             </div>
