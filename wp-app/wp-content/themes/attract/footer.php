@@ -86,7 +86,7 @@ $footer_form = get_field('footer_form', 'option');
                     <p class="bottom-wrap__requisites requisites"><?= $requisites ?? '' ?></p>
                     <a class="bottom-wrap__sale-email" href="mailto:<?= $sale_email ?>"
                        target="_blank"><?= $sale_email ?></a>
-                    <a class="bottom-wrap__policy" href="/" target="_blank">Политика конфиденциальности</a>
+                    <a class="bottom-wrap__policy" href="/privacy-policy" target="_blank">Политика конфиденциальности</a>
                 </div>
             </div>
         </div>
