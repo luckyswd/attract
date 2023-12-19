@@ -9,6 +9,7 @@ Mode: preview
 
 <?php
 $images = get_field('image');
+$imagesCount = $images ? count($images) : 0;
 $columnsCount = get_field('columns_count');
 $objectFit = get_field('object_fit');
 $caption = get_field('caption');
@@ -18,9 +19,9 @@ $result_blocks = get_field('result_blocks');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="result distance">
+    <section class="result">
         <div class="container">
-            <div class="result-wrapper">
+            <div class="result-wrapper" <?php if ($imagesCount <= 0) : ?> style="gap: 0" <?php endif;?>>
                 <div class="result-top">
                     <?php if (!empty($caption)) : ?>
                         <p class="text-1"><?= $caption ?></p>

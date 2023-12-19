@@ -20,7 +20,7 @@ $categories = get_terms([
 $team = get_posts([
     'post_type' => 'team',
     'posts_per_page' => -1,
-    'post_status' => 'publish',
+    'post_status' => ['publish', 'private'],
     'orderby' => 'date',
     'order' => 'ASC',
 ]);

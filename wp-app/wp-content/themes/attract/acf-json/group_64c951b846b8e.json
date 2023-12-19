@@ -45,9 +45,11 @@
                 "id": ""
             },
             "choices": {
+                "1": "1",
                 "2": "2",
                 "3": "3",
-                "4": "4"
+                "4": "4",
+                "5": "5"
             },
             "default_value": "",
             "return_format": "value",
@@ -226,5 +228,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699293835
+    "modified": 1700939568
 }

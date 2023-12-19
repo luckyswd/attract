@@ -86,6 +86,57 @@
             ]
         },
         {
+            "key": "field_64b2b136a8170",
+            "label": "Текст для связи",
+            "name": "feedback_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64b2b15ba8171",
+            "label": "Кнопка обратной связи",
+            "name": "button_feedback",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_64cf668fcbec9",
+            "label": "Форма",
+            "name": "footer_form",
+            "aria-label": "",
+            "type": "acf_cf7",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "key": "field_642fa3274e6aa",
             "label": "Социальные сети",
             "name": "socials",
@@ -155,27 +206,6 @@
                     "parent_repeater": "field_642fa3274e6aa"
                 },
                 {
-                    "key": "field_64b2a1c511ccf",
-                    "label": "Описание",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_642fa3274e6aa"
-                },
-                {
                     "key": "field_642fa35e4e6ac",
                     "label": "Ссылка",
                     "name": "link",
@@ -214,8 +244,8 @@
         },
         {
             "key": "field_64b2a22e83e58",
-            "label": "Футер картинка",
-            "name": "footer_image",
+            "label": "Футер лого",
+            "name": "footer_logo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -238,9 +268,104 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_64b2b136a8170",
-            "label": "Текст для связи",
-            "name": "feedback_text",
+            "key": "field_655f8f1734277",
+            "label": "Меню основное",
+            "name": "footer_main_menu",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_655f8cdd3fb06",
+            "label": "Меню услуг",
+            "name": "footer_service_menu",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_655f8dcc9cc53",
+                    "label": "Категория",
+                    "name": "category",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "service-category",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "parent_repeater": "field_655f8cdd3fb06"
+                },
+                {
+                    "key": "field_655f8d233fb07",
+                    "label": "Услуги",
+                    "name": "services",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "service"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "object",
+                    "multiple": 1,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "parent_repeater": "field_655f8cdd3fb06"
+                }
+            ]
+        },
+        {
+            "key": "field_655f907675c32",
+            "label": "Sale Email",
+            "name": "sale_email",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -258,26 +383,11 @@
             "append": ""
         },
         {
-            "key": "field_64cf668fcbec9",
-            "label": "Форма",
-            "name": "footer_form",
+            "key": "field_655f91d3c7733",
+            "label": "Реквизиты",
+            "name": "requisites",
             "aria-label": "",
-            "type": "acf_cf7",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "key": "field_64b2b15ba8171",
-            "label": "Кнопка обратной связи",
-            "name": "button_feedback",
-            "aria-label": "",
-            "type": "link",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -286,7 +396,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -307,5 +421,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691313831
+    "modified": 1700764564
 }

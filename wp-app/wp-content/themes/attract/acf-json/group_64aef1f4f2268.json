@@ -171,33 +171,8 @@
         },
         {
             "key": "field_64b03aec2e645",
-            "label": "Фоновая картинка 1",
-            "name": "background_image_1",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_64b03b222e646",
-            "label": "Фоновая картинка 2",
-            "name": "background_image_2",
+            "label": "Фоновая картинка",
+            "name": "background_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -221,33 +196,8 @@
         },
         {
             "key": "field_64b04105fb35c",
-            "label": "Фоновая картинка 1 планшет",
-            "name": "background_image_1_tablet",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_64b04127fb35d",
-            "label": "Фоновая картинка 2 планшет",
-            "name": "background_image_2_tablet",
+            "label": "Фоновая картинка планшет",
+            "name": "background_image_tablet",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -288,5 +238,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689272641
+    "modified": 1700997738
 }

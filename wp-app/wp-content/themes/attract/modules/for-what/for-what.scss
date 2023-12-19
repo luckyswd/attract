@@ -35,7 +35,7 @@
 
     &-blocks {
         display: grid;
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
                 
         @include _1280 {
@@ -43,7 +43,7 @@
         }
 
         @include _1024 {
-            grid-template: 4fr / 1fr;
+            grid-template-columns: 1fr;
         }
     }
 

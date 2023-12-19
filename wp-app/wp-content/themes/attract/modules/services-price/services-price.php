@@ -15,6 +15,7 @@ $services = get_field('services');
 $background_image_desktop = get_field('background_image_desktop');
 $background_image_tablet = get_field('background_image_tablet');
 $background_image_mobile = get_field('background_image_mobile');
+$end_text_price = get_field('end_text_price');
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -30,7 +31,7 @@ $background_image_mobile = get_field('background_image_mobile');
                     <div class="services-price-left">
                         <p class="text-1"><?= $textLeft ?? '' ?></p>
                         <div class="text-1 price">
-                            от <span><?= $price ?? '' ?>$</span>
+                            от <span><?= $price ?? '' ?>$</span> <?= $end_text_price ?? '' ?>
                         </div>
                         <a class="btn blue" href="#contact-form">
                             <span class="hover-animation">

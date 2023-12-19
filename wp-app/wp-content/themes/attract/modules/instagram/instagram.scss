@@ -3,6 +3,10 @@
   position: relative;
   height: 832px;
 
+  .container {
+    position: relative;
+  }
+
   @include _1400 {
     height: 700px;
   }
@@ -14,6 +18,7 @@
 
   @include _768 {
     height: 750px;
+    margin-bottom: 40px;
   }
 
   .container {
@@ -22,7 +27,7 @@
 
   .instagram-image {
     position: absolute;
-    right: 133px;
+    right: 115px;
     bottom: 0;
     height: 752px;
     width: 476px;
@@ -49,6 +54,7 @@
     @include _768 {
       padding: 0 24px;
       bottom: -160px;
+      height: 550px;
     }
   }
 
@@ -86,7 +92,8 @@
       }
 
       @include _768 {
-        padding: 40px 0;
+        padding-top: 0;
+        padding-bottom: 40px;
       }
     }
 

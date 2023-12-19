@@ -44,7 +44,7 @@
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </div>
-                        <a href="<?= get_home_url() ?>/#contact-form" class="btn white">
+                        <a href="javascript:;" data-fancybox="" data-src="#modal-feedback-form" class="btn white">
                             <span>Оставить заявку</span>
                         </a>
                     <?php endif; ?>
@@ -74,4 +74,4 @@
             </div>
         </div>
     </header>
-    <main id="main" class="main" data-page-id="<?= get_queried_object_id() ?>">
+    <main id="main" class="main slug-<?= get_queried_object()->post_name ?>" data-page-id="<?= get_queried_object_id() ?>">
