@@ -39,14 +39,29 @@ function register_styles_scripts(): void
         $fileName = str_replace('.js', ' ', $fileName);
         wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), getHasFile('js/build-min.js'), true);
     }
+    wp_localize_script(
+        'build',
+        'loadpostsAjax',
+        array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+        ),
+    );
 }
 
-add_action('wp_enqueue_scripts', 'register_styles_scripts', 1);
+add_action('wp_enqueue_scripts', 'register_styles_scripts', 10);
 
 function admin_register_styles_scripts()
 {
     wp_enqueue_style('admin-styles', get_stylesheet_directory_uri() . '/assets/admin/admin-style.css');
+    
 }
+
+// add_action('wp_enqueue_scripts', 'admin_register_localize_scripts', 100);
+
+// function admin_register_localize_scripts()
+// {
+    
+// }
 
 add_action('admin_enqueue_scripts', 'admin_register_styles_scripts');
 
@@ -61,3 +76,4 @@ function getHasFile(
 
     return hash_file('md5', $fullPath);
 }
+
