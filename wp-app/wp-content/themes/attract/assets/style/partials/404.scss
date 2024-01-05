@@ -1,0 +1,55 @@
+.not-found__wrap {
+    min-height: 90vh;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    .h3 {
+        font-size: 42px;
+
+        @include _1024 {
+            font-size: 38px;
+            line-height: 40.573px;
+        }
+
+        @include _480 {
+            font-size: 26px;
+            line-height: 31.573px;
+            text-align: center;
+        }
+    }
+
+    .h1 {
+        color: $c-blue;
+        font-size: 170px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 86%; /* 111.8px */
+        letter-spacing: -12px;
+        @include _480 {
+            width: 100%;
+            margin-left: -6px;
+            text-align: center;
+            font-size: 140px;
+        }
+    }
+
+    .h4 {
+        font-size: 42px;
+        text-align: center;
+
+        @include _1024 {
+            font-size: 38px;
+            line-height: 40.573px;
+        }
+
+        @include _480 {
+            font-size: 26px;
+            line-height: 31.573px;
+        }
+    }
+}
