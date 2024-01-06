@@ -57,13 +57,12 @@ $end_text_price = get_field('end_text_price');
                         </a>
                     </div>
                 </div>
-                <?php if ($text_bottom) : ?>
-                    <div class="services-price__text-bottom text-4">
-                        <?= $text_bottom; ?>
-                    </div>
-                <?php endif; ?>
             </div>
-
+            <?php if ($text_bottom) : ?>
+                <div class="services-price__text-bottom text-4">
+                    <?= $text_bottom; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 <?php else : ?>
