@@ -4,6 +4,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="facebook-domain-verification" content="7uzstvjd65ff4zqr7dx3011dwt6vrl" />
     <title><?php wp_title('«', true, 'right'); ?> | <?php bloginfo('name'); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <?php wp_head(); ?>

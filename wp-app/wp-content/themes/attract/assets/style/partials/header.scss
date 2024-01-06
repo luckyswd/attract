@@ -184,6 +184,7 @@ header {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            z-index: 1;
 
           a {
             color: #000;
