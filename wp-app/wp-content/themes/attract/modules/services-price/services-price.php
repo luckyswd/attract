@@ -12,6 +12,7 @@ $textLeft = get_field('text_left');
 $price = get_field('price');
 $textRight = get_field('text_right');
 $services = get_field('services');
+$text_bottom = get_field('text_bottom');
 $background_image_desktop = get_field('background_image_desktop');
 $background_image_tablet = get_field('background_image_tablet');
 $background_image_mobile = get_field('background_image_mobile');
@@ -56,6 +57,11 @@ $end_text_price = get_field('end_text_price');
                         </a>
                     </div>
                 </div>
+                <?php if ($text_bottom) : ?>
+                    <div class="services-price__text-bottom text-4">
+                        <?= $text_bottom; ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
         </div>
