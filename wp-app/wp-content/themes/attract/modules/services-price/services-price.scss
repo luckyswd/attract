@@ -5,6 +5,20 @@
         overflow: hidden;
     }
 
+    .services-price__text-bottom {
+        margin-top: 20px;
+        padding: 32px;
+        border-radius: 60px;
+        background-color: #fff;
+        color: #747474;       
+        
+        @include _768 {
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 20px;
+        }
+    }
+
     picture {
         position: absolute;
         top: 0;

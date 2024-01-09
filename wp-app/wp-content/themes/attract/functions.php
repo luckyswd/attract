@@ -105,3 +105,43 @@ function modify_yoast_breadcrumb_links($links)
 
     return $links;
 }
+
+// Add custom class to parent header mobile
+
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
+function special_nav_class($classes, $item)
+{
+    if ($item->menu_item_parent == 0) {
+        $classes[] = 'parent-menu-item';
+    }
+    return $classes;
+}
+
+function upload_posts()
+{
+
+    $articles = get_posts([
+        'post_type' => 'post',
+        'category' => $_POST['currentCategory'],
+        'posts_per_page' => $_POST['countProducts'] ? $_POST['countProducts'] : 9,
+        'post_status' => array('publish'),
+    ]);
+
+
+    $categories = get_terms([
+        'taxonomy' => 'category',
+        'hide_empty' => false,
+    ]);
+
+
+    // $query = new WP_Query($articles);
+
+    get_template_part('components/article',
+        null,
+        $articles
+    );
+
+    die();
+}
+add_action('wp_ajax_upload_posts', 'upload_posts');
+add_action('wp_ajax_nopriv_upload_posts', 'upload_posts');
