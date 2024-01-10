@@ -1,14 +1,17 @@
-jQuery(document).ready(function($) {
-    const questions = $('.myths-question');
+const questions = document.querySelectorAll('.myths-question');
 
-    questions.each(function() {
-        const mythsQuestionTop = $(this).find('.myths-question-top');
+questions.forEach(function(question) {
+    const mythsQuestionTop = question.querySelector('.myths-question-top');
 
-        mythsQuestionTop.click(function() {
-            const mythsQuestion = $(this).closest('.myths-question');
-            
-            mythsQuestion.siblings().removeClass('js-active');
-            mythsQuestion.toggleClass('js-active');
-        })
-    })
-})
+    mythsQuestionTop.addEventListener('click', function() {
+        const mythsQuestion = question;
+
+        questions.forEach(function(q) {
+            if (q !== mythsQuestion) {
+                q.classList.remove('js-active');
+            }
+        });
+
+        mythsQuestion.classList.toggle('js-active');
+    });
+});
