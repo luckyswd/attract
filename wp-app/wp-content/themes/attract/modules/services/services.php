@@ -24,7 +24,7 @@ $services = get_posts([
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="services distance">
+    <section id="services" class="services distance">
         <div class="container">
             <div class="services-wrapper">
                 <div class="services-sticky">

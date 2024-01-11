@@ -20,5 +20,6 @@
 //=include ../../modules/team/team.js
 //=include ../../modules/services/services.js
 //=include ../../modules/creatives/creatives.js
+//=include ../../modules/document-rules/document-rules.js
 //=include ../../modules/result/result.js
 //=include ../../modules/catalog-cases/catalog-cases.js

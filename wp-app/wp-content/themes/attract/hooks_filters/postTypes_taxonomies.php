@@ -99,6 +99,35 @@ function create_taxonomy()
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
     ]);
+
+    register_taxonomy('rules-documents', ['rules'], [
+        'label' => __('rule document'),
+        'rewrite' => ['slug' => 'rules-documents'],
+        'labels' => [
+            'name' => 'Категория правового документа',
+            'singular_name' => 'Категории правовых документов',
+            'search_items' => 'Найти правовой документ',
+            'all_items' => 'Все категории правовых документов',
+            'view_item ' => 'Просмотреть категорию правового документа',
+            'parent_item' => 'Родительская категория правового документа',
+            'parent_item_colon' => 'Родительская категория правового документа:',
+            'edit_item' => 'Редактировать категорию правового документа',
+            'update_item' => 'Обновить категорию правового документа',
+            'add_new_item' => 'Добавить новую категорию правового документа',
+            'new_item_name' => 'Новое название категории правового документа',
+            'menu_name' => 'Категории правовых документов',
+        ],
+        'public' => true,
+        'hierarchical' => true,
+        'capabilities' => [],
+        'meta_box_cb' => null,
+        'show_admin_column' => false,
+        'show_in_rest' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+    ]);
 }
 
 
@@ -142,6 +171,16 @@ function custom_register_post_types()
             "name_plural" => "Команда",
             "name_lowercase" => "Сотрудники",
             "name_lowercase_plural" => "Сотрудники",
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            "supports" => ['title', 'editor'],
+            "has_archive" => false,
+        ],
+        [
+            "post_type_name" => "rules",
+            "name" => "правовой документ",
+            "name_plural" => "Правовые документы",
+            "name_lowercase" => "правовые документы",
+            "name_lowercase_plural" => "правовые документы",
             'menu_icon' => 'dashicons-welcome-write-blog',
             "supports" => ['title', 'editor'],
             "has_archive" => false,
