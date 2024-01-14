@@ -343,15 +343,14 @@
             .contact-form__form {
                 flex-wrap: wrap;
                 flex-direction: row;
-                gap: 14px;
+                gap: 20px;
+
+                @include _1400 {
+                    gap: 14px;
+                }
             }
 
             .form-input {
-                input {
-                    font-size: 12px;
-                    line-height: 16.8px;
-                }
-
                 width: 100% !important;
             }
 
