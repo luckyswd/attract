@@ -302,11 +302,18 @@ footer {
                 }
             }
 
-            .bottom-wrap__policy {
-                @include _768 {
-                    text-align: center;
-                }
+            .bottom-wrap__requires {
+                display: flex;
+                flex-direction: column;
+
+                .bottom-wrap__policy {
+                    @include _768 {
+                            text-align: center;
+                        }
+                    }
             }
+
+            
 
             .bottom-wrap__requisites {
                 display: none;

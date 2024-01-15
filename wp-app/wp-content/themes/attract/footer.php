@@ -17,8 +17,7 @@ $footer_form = get_field('footer_form', 'option');
                     <div class="main-menu-wrap">
                         <?php if (!empty($footer_main_menu)) : ?>
                             <?php foreach ($footer_main_menu as $main_menu) : ?>
-                                <a href="<?= get_permalink($main_menu->ID) ?>"
-                                   class="menu-page"><?= $main_menu->post_title ?></a>
+                                <a href="<?= get_permalink($main_menu->ID) ?>" class="menu-page"><?= $main_menu->post_title ?></a>
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </div>
@@ -40,28 +39,26 @@ $footer_form = get_field('footer_form', 'option');
                 <div class="right">
                     <?php if (!empty($footer_service_menu)) : ?>
                         <?php foreach ($footer_service_menu as $key => $service_menu) : ?>
-                        <div class="category-wrap">
-                            <div class="service_category">
-                                <p><?= $service_menu['category']->name ?></p>
-                            </div>
+                            <div class="category-wrap">
+                                <div class="service_category">
+                                    <p><?= $service_menu['category']->name ?></p>
+                                </div>
 
-                            <div class="services-wrap">
-                                <?php if (!empty($service_menu['services'])) : ?>
-                                    <?php foreach ($service_menu['services'] as $service) : ?>
-                                        <a href="<?= get_permalink($service->ID) ?>"
-                                           class="service-page"><?= $service->post_title ?></a>
-                                    <?php endforeach; ?>
+                                <div class="services-wrap">
+                                    <?php if (!empty($service_menu['services'])) : ?>
+                                        <?php foreach ($service_menu['services'] as $service) : ?>
+                                            <a href="<?= get_permalink($service->ID) ?>" class="service-page"><?= $service->post_title ?></a>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </div>
+
+                                <?php if (count($footer_service_menu) === $key + 1) : ?>
+                                    <div class="info-requisites">
+                                        <p class="top-wrap__requisites requisites"><?= $requisites ?? '' ?></p>
+                                        <a class="bottom-wrap__sale-email" href="mailto:<?= $sale_email ?>" target="_blank"><?= $sale_email ?></a>
+                                    </div>
                                 <?php endif; ?>
                             </div>
-
-                            <?php if (count($footer_service_menu) === $key + 1) : ?>
-                                <div class="info-requisites">
-                                    <p class="top-wrap__requisites requisites"><?= $requisites ?? '' ?></p>
-                                    <a class="bottom-wrap__sale-email" href="mailto:<?= $sale_email ?>"
-                                       target="_blank"><?= $sale_email ?></a>
-                                </div>
-                            <?php endif;?>
-                        </div>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </div>
@@ -84,9 +81,11 @@ $footer_form = get_field('footer_form', 'option');
                         <?php endif; ?>
                     </div>
                     <p class="bottom-wrap__requisites requisites"><?= $requisites ?? '' ?></p>
-                    <a class="bottom-wrap__sale-email" href="mailto:<?= $sale_email ?>"
-                       target="_blank"><?= $sale_email ?></a>
-                    <a class="bottom-wrap__policy" href="/privacy-policy" target="_blank">Политика конфиденциальности</a>
+                    <a class="bottom-wrap__sale-email" href="mailto:<?= $sale_email ?>" target="_blank"><?= $sale_email ?></a>
+                    <div class="bottom-wrap__requires">
+                        <a class="bottom-wrap__policy" href="/pravovye-dokumenty/" target="_blank">Правовые документы</a>
+                        <a class="bottom-wrap__policy" href="/privacy-policy/" target="_blank">Политика конфиденциальности</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,4 +111,5 @@ $footer_form = get_field('footer_form', 'option');
 
 <?php wp_footer(); ?>
 </body>
+
 </html>
