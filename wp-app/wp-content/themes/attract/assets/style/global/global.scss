@@ -228,3 +228,9 @@ section {
         stroke: $c-blue;
     }
 }
+
+// Gtrnslate remove flag icon
+
+.gt_float_switcher .gt-current-lang img {
+    display: none;
+}
