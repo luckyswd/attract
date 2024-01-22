@@ -23,20 +23,12 @@
         })(window, document, 'script', 'dataLayer', 'GTM-TTH5VDK6');
     </script>
     <!-- End Google Tag Manager -->
-    <title><?php wp_title('«', true, 'right'); ?> | <?php bloginfo('name'); ?></title>
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <?php wp_head(); ?>
-</head>
-
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTH5VDK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m, e, t, r, i, k, a) {
             m[i] = m[i]
+
             function() {
                 (m[i].a = m[i].a[]).push(arguments)
             };
@@ -61,6 +53,16 @@
         <div><img src="https://mc.yandex.ru/watch/95119440" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
+    <title><?php wp_title('«', true, 'right'); ?> | <?php bloginfo('name'); ?></title>
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <?php wp_head(); ?>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTH5VDK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <?php
     $logo = get_field('logo', 'option');
     $buttons = get_field('anchor_buttons', 'option');
