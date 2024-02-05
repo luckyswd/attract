@@ -14,8 +14,10 @@ $headline = get_field('headline');
 
 <?php if (!is_admin()) : ?>
     <section class="full-image distance">
-        <p class="h2"><?= $headline; ?></p>
-        <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
+        <?php if ($headline) : ?>
+            <p class="h2"><?= $headline; ?></p>
+            <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
+        <?php endif; ?>
     </section>
 <?php else: ?>
     <h2 style="font-family: 'Mark', sans-serif;">Полное изображение модуль</h2>
