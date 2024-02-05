@@ -1,0 +1,279 @@
+.cases-results.distance {
+    margin: 128px 0px 0px;
+
+    @include _1440 {
+        margin-top: 100px;
+    }
+
+    @include _768 {
+        margin-top: 0px;
+        padding: 60px 0px 30px;
+    }
+
+    .h2 {
+        text-align: center;
+
+        @include _768 {
+            font-size: 48px;
+        }
+    }
+
+    .cases-info__wrap {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include _1440 {
+            margin-top: 80px;
+        }
+
+        @include _1024 {
+            margin-top: 60px;
+        }
+
+        @include _768 {
+            margin-top: 40px;
+        }
+
+        .cases-info__card {
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            gap: 90px;
+            border-radius: 60px;
+            background-color: $c-white;
+
+            @include _1440 {
+                padding: 20px 28px 20px 20px;
+                justify-content: space-between;
+                gap: 40px;
+                border-radius: 30px;
+            }
+
+            @include _1024 {
+                padding: 19px 22px 19px 20px;   
+            }
+
+            @include _768 {
+                flex-direction: column;
+                gap: 30px;
+                padding: 20px 20px 24px 20px
+            }
+
+            .info-gallery__wrap {
+                display: flex;
+                gap: 11px;
+
+                @include _1440 {
+                    gap: 9px;
+                }
+
+                @include _768{
+                    width: 100%;
+                }
+
+                img {
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+
+                img:first-child {
+                    width: 335px;
+                    height: 335px;
+
+                    @include _1440 {
+                        width: 270px;
+                        height: 270px;
+                    }
+
+                    @include _1024 {
+                        width: 180px;
+                        height: 180px;
+                    }
+
+                    @include _768 {
+                        width: 63%;
+                        height: 232px;
+                    }
+                    
+                }
+
+                img:last-child {
+                    width: 189px;
+                    height: 335px;
+
+                    @include _1440 {
+                        width: 150px;
+                        height: 270px;
+                    }
+
+                    @include _1024 {
+                        width: 100px;
+                        height: 180px;
+                    }
+
+                    @include _768 {
+                        width: 37%;
+                        height: 232px;
+                    }
+                }
+            }
+
+            .info-spitter {
+                width: 1px;
+                height: 335px;
+                background-color: $c-blue;
+
+                @include _1440 {
+                    height: 270px;
+                }
+
+                @include _1024 {
+                    height: 204px;
+                }
+
+                @include _768 {
+                    width: 100%;
+                    height: 1px;
+                }
+            }
+
+            .info-data__wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                @include _1440 {
+                    gap: 20px;
+                }
+
+                @include _1024 {
+                    gap: 10px;
+                }
+
+                @include _1024 {
+                    gap: 14px;
+                }
+
+                .info-data__desc {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    @include _1440 {
+                        gap: 6px;
+                    }
+
+                    .case-desc__title {
+                        font-size: 32px;
+                        font-weight: 500;
+                        color: $c-black;
+
+                        @include _1440 {
+                            font-size: 24px;
+                        }
+
+                        @include _768{
+                            font-size: 22px;
+                            text-align: center;
+                        }
+                    }
+
+                    .case-desc__info {
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: $c-gray;
+
+                        @include _1440 {
+                            font-size: 18px;
+                        }
+
+                        @include _768{
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .cases-bottom__info {
+            padding: 60px 135px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 60px;
+            background-color: $c-blue;
+
+            @include _1440 {
+                padding: 50px 100px;
+                border-radius: 30px;
+            }
+
+            @include _1024 {
+                padding: 50px 36px;
+            }
+
+            @include _768 {
+                padding: 24px 20px;
+                gap: 17px;
+            }
+
+            @include _768 {
+                flex-direction: column;
+            }
+
+
+            .botton-info__card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 8px;
+
+                .info-card__title {
+                    color: $c-white;
+                    font-size: 32px;
+                    font-weight: 500;
+                    text-align: center;
+
+                    @include _1440 {
+                        font-size: 24px;
+                    }
+
+                    @include _768 {
+                        font-size: 22px;
+                    }
+                }
+
+                .info-card__description {
+                    color: $c-white;
+                    font-size: 20px;
+                    font-weight: 400;
+
+                    @include _768 {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .bottom-splitter {
+                width: 1px;
+                height: 109px;
+                background-color: $c-white;
+            }
+
+            .bottom-splitter:first-child, .bottom-splitter:nth-child(2), .bottom-splitter:nth-child(4), .bottom-splitter:nth-child(6), .bottom-splitter:last-child {
+                display: none;
+
+                
+            }
+
+            @include _768 {
+                .bottom-splitter {
+                    display: none;
+                }
+            }
+        }
+    }
+}
