@@ -1,6 +1,7 @@
 .full-image {
-  .h2 {
+  .h4 {
     margin-bottom: 60px;
+    font-weight: 500;
 
     @include _768{
       margin-bottom: 30px;
