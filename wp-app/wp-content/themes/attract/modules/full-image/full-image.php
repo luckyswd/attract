@@ -15,7 +15,9 @@ $headline = get_field('headline');
 <?php if (!is_admin()) : ?>
     <section class="full-image distance">
         <?php if ($headline) : ?>
-            <p class="h2"><?= $headline; ?></p>
+            <div class="container">
+                <p class="h4"><?= $headline; ?></p>
+            </div>
         <?php endif; ?>
         <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
     </section>
