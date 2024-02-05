@@ -1,4 +1,12 @@
 .full-image {
+  .h2 {
+    margin-bottom: 60px;
+
+    @include _768{
+      margin-bottom: 30px;
+    }
+  }
+
   img {
     max-height: 659px;
     object-fit: cover;
