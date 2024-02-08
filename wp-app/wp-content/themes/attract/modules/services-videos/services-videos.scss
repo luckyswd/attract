@@ -49,8 +49,9 @@
                 .swiper-slide {
                     width: calc(50% - 5px);
                     min-width: 470px;
-                    @include _430 {
-                        min-width: 441px;
+                    @include _480 {
+                        width: 100%;
+                        min-width: 280px;
                     }
                 }
             }
