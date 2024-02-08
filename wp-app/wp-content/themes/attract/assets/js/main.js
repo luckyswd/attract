@@ -16,6 +16,7 @@
 //=include ../../modules/review/review.js
 //=include ../../modules/team/team.js
 //=include ../../modules/services/services.js
+//=include ../../modules/services-videos/services-videos.js
 //=include ../../modules/creatives/creatives.js
 //=include ../../modules/document-rules/document-rules.js
 //=include ../../modules/result/result.js
