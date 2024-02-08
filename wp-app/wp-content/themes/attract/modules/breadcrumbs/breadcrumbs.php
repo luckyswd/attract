@@ -1,13 +1,12 @@
 <?php
 
 /*
-Title: Хлебные крошки модуль
+Title: Блог hero модуль
 Mode: preview
 */
 
 $show_page_title = get_field("show_page_title");
-$page_title =
-    get_the_title();
+$page_title = get_field("title");
 ?>
 
 <?php if (!is_admin()) : ?>

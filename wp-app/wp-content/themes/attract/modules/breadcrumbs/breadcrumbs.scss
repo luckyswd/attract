@@ -1,6 +1,6 @@
 .breadcrumbs {
     margin-top: -90px;
-    margin-bottom: -20px;
+    margin-bottom: -45px;
 
     @include _1400 {
         margin-top: -70px;
@@ -28,7 +28,17 @@
         }
 
         .separator {
+            font-size: 0px;
             color: $c-gray;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: $c-blue;
+                vertical-align: middle;
+            }
         }
 
         .breadcrumb_last {
@@ -49,6 +59,9 @@
         display: flex;
         justify-content: center;
         margin-top: -26px;
+        @include _480 {
+            margin-top: 20px;
+        }
     }
 }
 
