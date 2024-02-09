@@ -82,7 +82,9 @@
         &__sub-title,
         &__title,
         &__blue-title {
-            margin-bottom: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
