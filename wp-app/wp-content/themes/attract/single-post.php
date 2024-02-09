@@ -7,7 +7,7 @@ $category_detail = get_the_category($post_id);
 $category_name = end($category_detail)->name;
 $post_title = get_the_title();
 $post_excerpt = $post->post_excerpt;
-$post_author = get_the_author();
+$post_author = get_field("author-caption") ?? '';
 $post_date = get_the_date('d.m.Y');
 
 // leave comment
