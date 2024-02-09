@@ -205,6 +205,9 @@
         align-items: center;
         margin-top: 60px;
         gap: 10px;
+        &:empty {
+            display: none;
+        }
         @include _480 {
             gap: 6px;
         }
