@@ -1,7 +1,4 @@
 .content-block {
-    &.distance {
-        margin: 100px 0;
-    }
     &__row {
         display: flex;
         flex-wrap: wrap;
@@ -17,6 +14,9 @@
         }
         & + &_full-width {
             margin-top: 65px;
+            @include _768 {
+                margin-top: 0px;
+            }
         }
         @include _768 {
             flex-basis: 100%;
@@ -44,6 +44,9 @@
     }
     &__sub-title {
         margin-bottom: 30px;
+        @include _768 {
+            margin-bottom: 0px;
+        }
         &:not(:last-child) {
             @include _768 {
                 margin-bottom: 20px;
@@ -114,6 +117,9 @@
                 @include _768 {
                     flex-basis: 100%;
                 }
+            }
+            &:first-child:last-child {
+                flex-basis: 100%;
             }
         }
         
