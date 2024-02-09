@@ -1,4 +1,7 @@
 .content-block {
+    &.distance {
+        margin: 100px 0;
+    }
     &__row {
         display: flex;
         flex-wrap: wrap;
@@ -11,6 +14,9 @@
         flex-basis: calc(50% - 10px);
         &_full-width {
             flex-basis: 100%;
+        }
+        & + &_full-width {
+            margin-top: 65px;
         }
         @include _768 {
             flex-basis: 100%;
