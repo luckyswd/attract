@@ -89,6 +89,7 @@ $categories = get_terms([
 
             <?php endif; ?>
         </div>
+        <?php if($articles->max_num_pages > 1): ?>
             <div class='page-nav-container'>
                 <?php
                     echo paginate_links(array(
@@ -108,6 +109,7 @@ $categories = get_terms([
                     ));
                 ?>
             </div>
+        <?php endif; ?>
     </div>
 </section>
 
