@@ -17,18 +17,17 @@ if(!empty($_POST['paged'])) {
     set_query_var( 'paged', $paged );
 }
 
-$cat_id = $_POST['cat'] ?? $_GET['cat'] ?? null;
+$cat_id = $_POST['cat'] ?? $_GET['cat'] ?? 'null';
 
 $args = array(
     'posts_per_page' => wp_is_mobile() ? 8 : 9,
     'post_type' => 'post',
+    'cat' => $cat_id,
     'post_status' => array('publish'),
     'paged' => $paged,
+    'orderby' => 'date',
+    'order' => 'DESC'
 );
-
-if(!!$cat_id) {
-    $args['cat'] = $cat_id;
-}
 
 $articles = new WP_Query($args);
 
@@ -103,6 +102,9 @@ $categories = get_terms([
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12" fill="none">
                                 <path id="Vector 4" d="M1.89844 1.10059L6.79783 5.99998L1.89844 10.8994" stroke="#AB755C" stroke-width="2" stroke-linecap="round"></path>
                             </svg>'),
+                        'add_args' => array(
+                            'cat' => $cat_id
+                        )
                     ));
                 ?>
             </div>
