@@ -8,8 +8,7 @@
         }
     }
     &__cl {
-        flex-basis: 100px;
-        flex-grow: 1;
+        flex-basis: calc(50% - 10px);
         &_full-width {
             flex-basis: 100%;
         }
