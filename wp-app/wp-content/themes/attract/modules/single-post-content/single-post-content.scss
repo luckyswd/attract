@@ -1,0 +1,112 @@
+.content-block {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        @include _768 {
+            gap: 0px;
+        }
+    }
+    &__cl {
+        flex-basis: 100px;
+        flex-grow: 1;
+        &_full-width {
+            flex-basis: 100%;
+        }
+        @include _768 {
+            flex-basis: 100%;
+        }
+    }
+    &__blue-title {
+        color: $c-blue;
+        margin-bottom: 40px;
+        @include _768 {
+            margin-bottom: 20px;
+        }
+    }
+    &__title {
+        letter-spacing: -0.035em;
+        color: $c-black;
+        margin-bottom: 20px;
+    }
+    &__sub-title {
+        margin-bottom: 30px;
+    }
+    &__number {
+        font-size: 20px;
+        line-height: 1.3em;
+        color: $c-blue;
+        margin-bottom: 10px;
+    }
+    &__cl:not(.content-block__cl_full-width) &{
+        &__blue-title,
+        &__title,
+        &__sub-title {
+            &:last-child {
+                @include _768 {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    &__cl:not(:first-child) &{
+        &__blue-title,
+        &__title,
+        &__sub-title {
+            @include _768 {
+                margin-top: 40px;
+            }
+        }
+        &__blue-box-text {
+            @include _768 {
+                margin-top: 60px;
+            }
+        }
+    }
+    &__cl:not(:last-child) &{
+        &__text {
+            img {
+                @include _768 {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        color: $c-gray;
+        letter-spacing: -0.01em;
+        img {
+            display: inline-block;
+            max-width: 460px;
+            vertical-align: middle;
+            border-radius: 20px;
+            @include _768 {
+                display: block;
+                width: 460px;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        a {
+            color: inherit;
+            text-decoration: underline;
+            transition: color 0.22s;
+            &:hover {
+                color: $c-blue;
+            }
+        }
+        ul {
+            list-style: disc;
+            padding-left: 1.5em;
+        }
+    }
+    &__blue-box-text {
+        padding: 50px 30px;
+        background: $c-blue;
+        color: #fff;
+        border-radius: 20px;
+        text-align: center;
+        letter-spacing: -0.01em;
+    }
+}

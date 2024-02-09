@@ -106,6 +106,21 @@ function modify_yoast_breadcrumb_links($links)
     return $links;
 }
 
+add_filter('wpseo_breadcrumb_links', function ($links)
+{
+
+    if (is_singular('post')) {
+        $breadcrumb[] = array(
+            'url' => site_url('/blog/'),
+            'text' => 'Блог',
+        );
+
+        array_splice($links, 1, -2, $breadcrumb);
+    }
+
+    return $links;
+});
+
 // Add custom class to parent header mobile
 
 add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);

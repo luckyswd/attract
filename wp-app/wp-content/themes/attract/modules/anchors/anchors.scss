@@ -1,0 +1,23 @@
+.anchor-links {
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        a {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #fff;
+            border-radius: 300px;
+            font-size: 12px;
+            line-height: 1.25em;
+            transition: 0.22s ease-in-out;
+            &:hover {
+                background-color: #1744D0;
+                color: #ffffff;
+            }
+        }
+    }
+}
