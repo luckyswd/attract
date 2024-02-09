@@ -67,11 +67,11 @@
                     "rows_per_page": 20,
                     "sub_fields": [
                         {
-                            "key": "field_65c6019972493",
-                            "label": "Колонка",
-                            "name": "column",
+                            "key": "field_65c67486e1f01",
+                            "label": "На полную ширину",
+                            "name": "full-width",
                             "aria-label": "",
-                            "type": "group",
+                            "type": "true_false",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -80,149 +80,226 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "row",
-                            "sub_fields": [
-                                {
-                                    "key": "field_65c5fc8da4e57",
-                                    "label": "На всю ширину?",
-                                    "name": "full-width",
-                                    "aria-label": "",
-                                    "type": "true_false",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "message": "",
-                                    "default_value": 0,
-                                    "ui": 0,
-                                    "ui_on_text": "",
-                                    "ui_off_text": ""
-                                },
-                                {
-                                    "key": "field_65c5ffbea49a4",
-                                    "label": "Синий заголовок",
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "parent_repeater": "field_65c5fc75a4e56"
+                        },
+                        {
+                            "key": "field_65c6732bd33f2",
+                            "label": "Колонка",
+                            "name": "column",
+                            "aria-label": "",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_65c6733c53492": {
+                                    "key": "layout_65c6733c53492",
                                     "name": "blue-title",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": ""
+                                    "label": "Синий заголовок",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_65c67362d33f3",
+                                            "label": "Текст",
+                                            "name": "text",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
                                 },
-                                {
-                                    "key": "field_65c5ffd5a49a5",
-                                    "label": "Заголовок",
+                                "layout_65c675610a9b2": {
+                                    "key": "layout_65c675610a9b2",
                                     "name": "title",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": ""
+                                    "label": "Заголовок",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_65c675610a9b3",
+                                            "label": "Текст",
+                                            "name": "text",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
                                 },
-                                {
-                                    "key": "field_65c5ffe3a49a6",
-                                    "label": "Подзаголовок",
+                                "layout_65c67396c4a25": {
+                                    "key": "layout_65c67396c4a25",
                                     "name": "sub-title",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": ""
+                                    "label": "Подзаголовок",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_65c673d7c4a29",
+                                            "label": "Текст",
+                                            "name": "text",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
                                 },
-                                {
-                                    "key": "field_65c5fff7a49a7",
-                                    "label": "Нумерация",
-                                    "name": "number",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": ""
-                                },
-                                {
-                                    "key": "field_65c60001a49a8",
-                                    "label": "Текст",
-                                    "name": "text",
-                                    "aria-label": "",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "all",
-                                    "toolbar": "full",
-                                    "media_upload": 1,
-                                    "delay": 0
-                                },
-                                {
-                                    "key": "field_65c61cf2d0fe6",
-                                    "label": "Текст в синем box",
+                                "layout_65c673b7c4a26": {
+                                    "key": "layout_65c673b7c4a26",
                                     "name": "blue-box-text",
-                                    "aria-label": "",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "all",
-                                    "toolbar": "full",
-                                    "media_upload": 1,
-                                    "delay": 0
+                                    "label": "Синий контент блок",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_65c673c9c4a28",
+                                            "label": "Текст",
+                                            "name": "text",
+                                            "aria-label": "",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "delay": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "layout_65c674a2e1f02": {
+                                    "key": "layout_65c674a2e1f02",
+                                    "name": "text-block-wrapper",
+                                    "label": "Текст",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_65c67519e1f06",
+                                            "label": "Показывать нумерацию",
+                                            "name": "show-numbers",
+                                            "aria-label": "",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "ui": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": ""
+                                        },
+                                        {
+                                            "key": "field_65c674b9e1f03",
+                                            "label": "Текстовой блок",
+                                            "name": "text-block",
+                                            "aria-label": "",
+                                            "type": "repeater",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layout": "table",
+                                            "min": 0,
+                                            "max": 0,
+                                            "collapsed": "",
+                                            "button_label": "Добавить",
+                                            "rows_per_page": 20,
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_65c674f5e1f04",
+                                                    "label": "Текст",
+                                                    "name": "text",
+                                                    "aria-label": "",
+                                                    "type": "wysiwyg",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "tabs": "all",
+                                                    "toolbar": "full",
+                                                    "media_upload": 1,
+                                                    "delay": 0,
+                                                    "parent_repeater": "field_65c674b9e1f03"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
                                 }
-                            ],
+                            },
+                            "min": "",
+                            "max": "",
+                            "button_label": "Добавить",
                             "parent_repeater": "field_65c5fc75a4e56"
                         }
                     ],
@@ -249,5 +326,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707482383
+    "modified": 1707505094
 }

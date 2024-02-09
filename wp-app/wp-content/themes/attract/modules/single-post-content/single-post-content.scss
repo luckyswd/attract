@@ -19,17 +19,30 @@
     &__blue-title {
         color: $c-blue;
         margin-bottom: 40px;
-        @include _768 {
-            margin-bottom: 20px;
+        &:not(:last-child) {
+            @include _768 {
+                margin-bottom: 20px;
+            }
         }
     }
     &__title {
         letter-spacing: -0.035em;
         color: $c-black;
         margin-bottom: 20px;
+        &:not(:last-child) {
+            // @include _768 {
+            //     margin-bottom: 20px;
+            // }
+            // margin-bottom: 20px;
+        }
     }
     &__sub-title {
         margin-bottom: 30px;
+        &:not(:last-child) {
+            @include _768 {
+                margin-bottom: 20px;
+            }
+        }
     }
     &__number {
         font-size: 20px;
@@ -37,23 +50,26 @@
         color: $c-blue;
         margin-bottom: 10px;
     }
-    &__cl:not(.content-block__cl_full-width) &{
-        &__blue-title,
-        &__title,
-        &__sub-title {
-            &:last-child {
-                @include _768 {
-                    margin-bottom: 0px;
-                }
-            }
-        }
-    }
+    // &__cl:not(.content-block__cl_full-width) &{
+    //     &__blue-title,
+    //     &__title,
+    //     &__sub-title {
+    //         &:last-child {
+    //             @include _768 {
+    //                 margin-bottom: 0px;
+    //             }
+    //         }
+    //     }
+    // }
     &__cl:not(:first-child) &{
         &__blue-title,
         &__title,
-        &__sub-title {
-            @include _768 {
-                margin-top: 40px;
+        &__sub-title,
+        &__texts-wrapper {
+            &:first-child {
+                @include _768 {
+                    margin-top: 40px;
+                }
             }
         }
         &__blue-box-text {
@@ -62,19 +78,36 @@
             }
         }
     }
-    &__cl:not(:last-child) &{
-        &__text {
-            img {
-                @include _768 {
-                    margin-bottom: 60px;
-                }
-            }
-        }
+    // &__cl:not(:last-child) &{
+    //     &__text {
+    //         img {
+    //             @include _768 {
+    //                 margin-bottom: 60px;
+    //             }
+    //         }
+    //     }
+    // }
+
+    &__texts-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     &__text {
         color: $c-gray;
         letter-spacing: -0.01em;
+
+        &-wrapper {
+            // flex-basis: calc(50% - 10px);
+            &:not(:first-child:last-child) {
+                flex-basis: calc(50% - 10px);
+                @include _768 {
+                    flex-basis: 100%;
+                }
+            }
+        }
+        
         img {
             display: inline-block;
             max-width: 460px;
