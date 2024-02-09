@@ -78,15 +78,13 @@
             }
         }
     }
-    // &__cl:not(:last-child) &{
-    //     &__text {
-    //         img {
-    //             @include _768 {
-    //                 margin-bottom: 60px;
-    //             }
-    //         }
-    //     }
-    // }
+    &__cl:last-child &{
+        &__sub-title,
+        &__title,
+        &__blue-title {
+            margin-bottom: 0;
+        }
+    }
 
     &__texts-wrapper {
         display: flex;
