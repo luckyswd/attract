@@ -80,19 +80,16 @@
             flex-direction: column;
             gap: 10px;
 
+            @include _768 {
+                flex-basis: 50px;
+                flex-grow: 1;
+            }
+
             .right-desc__sub-title.text-3 {
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%; /* 22.4px */
-            }
-
-            .h6 {
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 105%; /* 25.2px */
-                letter-spacing: -0.36px;
             }
         }
     }
