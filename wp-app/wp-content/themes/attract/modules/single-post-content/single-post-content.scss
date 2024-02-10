@@ -15,7 +15,7 @@
         & + &_full-width {
             margin-top: 65px;
             @include _768 {
-                margin-top: 0px;
+                margin-top: 40px;
             }
         }
         &_full-width + & {
