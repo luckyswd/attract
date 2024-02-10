@@ -88,6 +88,14 @@
                 }
             }
         }
+        &__text {
+            img {
+                @include _768 {
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
         &__blue-box-text {
             @include _768 {
                 margin-top: 60px;
@@ -144,7 +152,7 @@
                 display: block;
                 width: 460px;
                 max-width: 100%;
-                margin: 40px auto;
+                margin: 0 auto;
             }
         }
         a {
