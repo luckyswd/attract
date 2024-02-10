@@ -20,7 +20,7 @@ $blocks = get_field("content-blocks");
         <?php endif; ?>
         <div class="content-block__row">
             <?php foreach($block['block'] as $col): ?>
-                <div class="content-block__cl <?php echo !empty($col['full-width']) && !!$col['full-width'] ? 'content-block__cl_full-width' : '' ?>">
+                <div class="content-block__cl <?php echo !empty($col['align-center']) && !!$col['align-center'] ? 'content-block__cl_align-center' : '' ?> <?php echo !empty($col['full-width']) && !!$col['full-width'] ? 'content-block__cl_full-width' : '' ?>">
                     <?php $col = $col['column'] ?>
                     <?php //var_dump($col); ?>
                     <?php foreach($col as $el): ?>

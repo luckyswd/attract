@@ -18,6 +18,9 @@
                 margin-top: 0px;
             }
         }
+        &_align-center {
+            align-self: center;
+        }
         @include _768 {
             flex-basis: 100%;
         }
@@ -104,6 +107,11 @@
         & + & {
             margin-top: 20px;
         }
+    }
+
+    &__texts-wrapper + &__sub-title,
+    &__texts-wrapper + &__title{ 
+        margin-top: 30px;
     }
 
     &__text {
