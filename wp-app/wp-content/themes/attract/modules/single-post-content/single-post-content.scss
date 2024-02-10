@@ -18,6 +18,11 @@
                 margin-top: 0px;
             }
         }
+        &_full-width + & {
+            @include _768 {
+                margin-top: 40px;
+            }
+        }
         &_align-center {
             align-self: center;
         }
