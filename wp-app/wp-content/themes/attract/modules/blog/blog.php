@@ -60,7 +60,7 @@ $categories = get_terms([
                         <?php
                         $post_id = get_the_ID();
 
-                        $image = get_the_post_thumbnail_url($post_id);
+                        $image = get_the_post_thumbnail_url($post_id, 'blog-post-thumbnail');
                         $description = get_field('description', $post_id);
                         $page_permalink = get_permalink($post_id);
                         $article_title = get_the_title($post_id);

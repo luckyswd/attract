@@ -19,4 +19,8 @@ add_action('after_setup_theme', function () {
             'flex-height' => true,
         )
     );
+
+    if ( function_exists( 'add_image_size' ) ) {
+        add_image_size( 'blog-post-thumbnail', 400, 190, true );
+    }
 });
