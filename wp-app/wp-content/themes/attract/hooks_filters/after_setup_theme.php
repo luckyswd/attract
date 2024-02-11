@@ -21,6 +21,6 @@ add_action('after_setup_theme', function () {
     );
 
     if ( function_exists( 'add_image_size' ) ) {
-        add_image_size( 'blog-post-thumbnail', 400, 190, true );
+        add_image_size( 'blog-post-thumbnail', 445, 210, true );
     }
 });
