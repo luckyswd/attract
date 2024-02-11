@@ -96,7 +96,7 @@
             }
         }
     }
-    &__cl:not(:first-child) &{
+    &__cl:not(:first-child, .content-block__cl_full-width) &{
         &__blue-title,
         &__title,
         &__sub-title {
@@ -127,7 +127,7 @@
         flex-wrap: wrap;
         gap: 20px;
         & + & {
-            margin-top: 20px;
+            margin-top: 40px;
         }
     }
 
