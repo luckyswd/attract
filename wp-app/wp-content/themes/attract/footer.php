@@ -108,7 +108,11 @@ $footer_form = get_field('footer_form', 'option');
         </div>
     </div>
 </footer>
-
+<script type="text/javascript" id="thm-js-extra">
+/* <![CDATA[ */
+var myajax = {"url":"<?= esc_attr(admin_url('admin-ajax.php')) ?>","nonce":"<?= wp_create_nonce('myajax-nonce') ?>"};
+/* ]]> */
+</script>
 <?php wp_footer(); ?>
 </body>
 

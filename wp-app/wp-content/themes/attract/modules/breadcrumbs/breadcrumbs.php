@@ -1,19 +1,18 @@
 <?php
 
 /*
-Title: Хлебные крошки модуль
+Title: Блог hero модуль
 Mode: preview
 */
 
 $show_page_title = get_field("show_page_title");
-$page_title =
-    get_the_title();
+$page_title = get_field("title");
 ?>
 
 <?php if (!is_admin()) : ?>
     <section class="breadcrumbs distance <?php if ($show_page_title) :  ?> breadcrumbs-with-title <?php endif; ?>">
         <div class="container">
-            <div class="breadcrumbs-wrap">
+            <div class="breadcrumbs-wrap site-breadcrumb">
                 <?= do_shortcode('[wpseo_breadcrumb]'); ?>
             </div>
             <?php if ($show_page_title) : ?>

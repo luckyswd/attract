@@ -18,10 +18,15 @@
 @import "partials/footer";
 @import "partials/404";
 @import "partials/forms";
+@import "partials/breadcrumb";
 @import "partials/single-case";
+@import "partials/single-post";
 
 
 /* MODULES */
+@import "modules/blog/blog";
+@import "modules/anchors/anchors";
+@import "modules/single-post-content/single-post-content";
 @import "modules/hero/hero";
 @import "modules/contact-form/contact-form";
 @import "modules/cases/cases";
@@ -39,6 +44,7 @@
 @import "modules/project-objectives/project-objectives";
 @import "modules/result/result";
 @import "modules/services-hero/services-hero";
+@import "modules/services-videos/services-videos";
 @import "modules/services/services";
 @import "modules/for-what/for-what";
 @import "modules/creatives/creatives";

@@ -41,9 +41,10 @@ function register_styles_scripts(): void
     }
     wp_localize_script(
         'build',
-        'loadpostsAjax',
+        'myajax',
         array(
-            'ajaxurl' => admin_url('admin-ajax.php'),
+            'url' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('myajax-nonce')
         ),
     );
 }

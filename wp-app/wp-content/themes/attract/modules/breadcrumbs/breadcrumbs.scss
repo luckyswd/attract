@@ -1,6 +1,6 @@
 .breadcrumbs {
     margin-top: -90px;
-    margin-bottom: -20px;
+    margin-bottom: -45px;
 
     @include _1400 {
         margin-top: -70px;
@@ -14,9 +14,6 @@
     }
 
     &-wrap {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 8px;
         padding-left: 50px;
 
         @include _1024 {
@@ -26,29 +23,15 @@
         @include _768 {
             padding-left: 0px;
         }
-
-        .separator {
-            color: $c-gray;
-        }
-
-        .breadcrumb_last {
-            color: $c-blue;
-        }
-
-        a {
-            color: $c-gray;
-            transition: $transition;
-    
-            &:hover {
-                color: $c-blue;
-            }
-        }
     }
 
     .breadcrumbs-page-title {
         display: flex;
         justify-content: center;
         margin-top: -26px;
+        @include _480 {
+            margin-top: 20px;
+        }
     }
 }
 
