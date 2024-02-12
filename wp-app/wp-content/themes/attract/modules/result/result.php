@@ -50,7 +50,7 @@ $full_width_img = get_field("horizontal_image");
                 <div class="result-bottom__wrap">
                     <?php if($full_width_img): ?>
                         <div class="full-width__img">
-                            <img src="<?= $full_width_img; ?>" />
+                            <img src="<?= $full_width_img[0]['url']; ?>" />
                         </div>
                     <?php endif; ?>
                     <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>">
