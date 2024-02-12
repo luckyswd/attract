@@ -48,11 +48,11 @@ $full_width_img = get_field("horizontal_image");
                     <?php endif; ?>
                 </div>
                 <div class="result-bottom__wrap">
-                    <?php if($full_width_img): ?>
+                    <?php foreach ($full_width_img as $image) : ?>
                         <div class="full-width__img">
-                            <img src="<?= $full_width_img[0]['url']; ?>" />
+                            <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
                         </div>
-                    <?php endif; ?>
+                    <?php endforeach; ?>
                     <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>">
                         <div class="swiper-wrapper">
                             <?php foreach ($images as $image) : ?>
