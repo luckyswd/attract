@@ -9,7 +9,8 @@ if (!empty($category)) {
     $categoryName = $category[0]->name;
 }
 
-$backgroundImage = get_field('individual_image');
+$img = get_field('individual_image');
+$backgroundImage['url'] = is_array($img) ? $img['sizes']['case-hero'] : '';
 $shortDescription = get_field('shor_description');
 $subHeadline = get_field('sub_headline');
 $elapsedTime = get_field('elapsed_time');
