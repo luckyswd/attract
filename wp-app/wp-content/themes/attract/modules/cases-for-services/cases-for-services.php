@@ -36,7 +36,8 @@ $cases = get_field('cases');
                         }
 
                         $shor_description = get_field('shor_description', $case->ID);
-                        $preview_image = get_field('preview_image', $case->ID);
+                        $img = get_field('preview_image', $case->ID);
+                        $preview_image['url'] = is_array($img) ? $img['sizes']['catalog-case-thumbnail'] : '';
                         $link = get_permalink($case);
                         $tags = get_field('tags', $case->ID);
                         $class = 'medium-mode';
