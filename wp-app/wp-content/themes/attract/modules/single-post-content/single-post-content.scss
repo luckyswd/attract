@@ -51,6 +51,7 @@
         }
     }
     &__sub-title {
+        font-weight: 500;
         margin-bottom: 30px;
         @include _768 {
             margin-bottom: 0px;
@@ -173,7 +174,7 @@
                 color: $c-blue;
             }
         }
-        ul {
+        ul, ol {
             list-style: disc;
             padding-left: 1.5em;
         }
