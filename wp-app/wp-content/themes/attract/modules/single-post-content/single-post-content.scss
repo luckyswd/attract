@@ -68,6 +68,14 @@
         color: $c-blue;
         margin-bottom: 10px;
     }
+
+    &__title,
+    &__sub-title {
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
     // &__cl:not(.content-block__cl_full-width) &{
     //     &__blue-title,
     //     &__title,
