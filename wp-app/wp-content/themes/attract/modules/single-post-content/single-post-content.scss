@@ -174,8 +174,13 @@
                 color: $c-blue;
             }
         }
-        ul, ol {
+        ul {
             list-style: disc;
+        }
+        ol {
+            list-style: decimal;
+        }
+        ul, ol {
             padding-left: 1.5em;
         }
     }
