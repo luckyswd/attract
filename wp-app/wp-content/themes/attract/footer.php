@@ -109,11 +109,48 @@ $footer_form = get_field('footer_form', 'option');
     </div>
 </footer>
 <script type="text/javascript" id="thm-js-extra">
-/* <![CDATA[ */
-var myajax = {"url":"<?= esc_attr(admin_url('admin-ajax.php')) ?>","nonce":"<?= wp_create_nonce('myajax-nonce') ?>"};
-/* ]]> */
+    /* <![CDATA[ */
+    var myajax = {
+        "url": "<?= esc_attr(admin_url('admin-ajax.php')) ?>",
+        "nonce": "<?= wp_create_nonce('myajax-nonce') ?>"
+    };
+    /* ]]> */
 </script>
 <?php wp_footer(); ?>
+<script type="application/javascript">
+    function getYClientID() {
+        var match = document.cookie.match('(?:^|;)\\s*_ym_uid=([^;]*)');
+        return (match) ? decodeURIComponent(match[1]) : false;
+    }
+
+    function getGoogleClientID() {
+        var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
+        var raw = (match) ? decodeURIComponent(match[1]) : null;
+        if (raw) {
+            match = raw.match(/(\d+\.\d+)$/);
+        }
+        var gacid = (match) ? match[1] : null;
+        if (gacid) {
+            return gacid;
+        }
+    }
+
+    window.onload = function() {
+        const yCids = document.getElementsByClassName('yAnalytic');
+        const yandexCid = getYClientID();
+
+        const gCids = document.getElementsByClassName('gAnalytic');
+        const googleCid = getGoogleClientID();
+
+        for (let i = 0; i < yCids.length; i++) {
+            yCids[i].value = yandexCid;
+        }
+
+        for (let i = 0; i < gCids.length; i++) {
+            gCids[i].value = googleCid;
+        }
+    };
+</script>
 </body>
 
 </html>
