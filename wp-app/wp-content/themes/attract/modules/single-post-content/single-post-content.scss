@@ -51,6 +51,7 @@
         }
     }
     &__sub-title {
+        font-weight: 500;
         margin-bottom: 30px;
         @include _768 {
             margin-bottom: 0px;
@@ -66,6 +67,14 @@
         line-height: 1.3em;
         color: $c-blue;
         margin-bottom: 10px;
+    }
+
+    &__title,
+    &__sub-title {
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
     }
     // &__cl:not(.content-block__cl_full-width) &{
     //     &__blue-title,
@@ -175,6 +184,11 @@
         }
         ul {
             list-style: disc;
+        }
+        ol {
+            list-style: decimal;
+        }
+        ul, ol {
             padding-left: 1.5em;
         }
     }

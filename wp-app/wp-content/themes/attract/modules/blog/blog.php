@@ -34,6 +34,8 @@ $articles = new WP_Query($args);
 $categories = get_terms([
     'taxonomy' => 'category',
     'hide_empty' => false,
+    'orderby' => 'term_id',
+    'order' => 'ASC'
 ]);
 
 ?>
