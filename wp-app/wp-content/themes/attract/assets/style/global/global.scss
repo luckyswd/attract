@@ -243,3 +243,9 @@ section {
 .gt_float_switcher .gt-current-lang img {
     display: none;
 }
+
+.cl {
+    &-blue {
+        color: $c-blue;
+    }
+}

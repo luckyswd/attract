@@ -23,39 +23,52 @@ $video = get_field('video');
     <section class="hero distance">
         <div class="container">
             <div class="hero__wrapper">
-                <div class="hero__main">
-                    <h1><?= $headline ?? '' ?></h1>
-                    <div class="subheadline-button-wrapper">
-                        <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-image">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" fill="none">
-                                <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
-                            </svg>
-                            <?= getPictureImage($image, 122, 122) ?>
-                        </a>
-                        <div class="hero__main-subheadline">
-                            <p class="text-2"><?= $subheadline ?? '' ?></p>
-                        </div>
-                        <div class="hero__main-button-wrapper">
-                            <p class="text-4"><?= $btn_text ?? '' ?></p>
-                            <a href="#contact-form"><?= $btn_name ?? '' ?></a>
-                        </div>
-                    </div>
-                </div>
                 <?php if (!empty($tags)) : ?>
                     <div class="marquee-container">
                         <div class="marquee-content marquee3k"
                              data-speed="1"
                              data-pausable="true">
                             <p>
-                                <?php foreach ($tags as $tag) : ?>
+                                <?php foreach ($tags as $key => $tag) : ?>
                                     <span class="marquee-tag"><?= mb_strtoupper($tag['name'] ?? '') ?></span>
+                                    <?php if($key + 1 < count($tags)): ?>
+                                        <span class="marquee-divider"></span>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </p>
                         </div>
                     </div>
                 <?php endif; ?>
+                <div class="hero__main">
+                    <div class="hero__main-text">
+                        <h1 class="hero__main-title"><?= $headline ?? '' ?></h1>
+                        <div class="hero__main-subheadline">
+                            <div class="hero__main-figure">
+                                <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-figure-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" class="hero__main-figure-play" fill="none">
+                                        <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
+                                    </svg>
+                                    <?= getPictureImage($image, 80, 80) ?>
+                                </a>
+                            </div>
+                            <p class="text-2"><?= $subheadline ?? '' ?></p>
+                        </div>
+                        <div class="hero__main-button">
+                            <p class="text-4"><?= $btn_text ?? '' ?></p>
+                            <a href="#contact-form"><?= $btn_name ?? '' ?></a>
+                        </div>
+                    </div>
+                    <div class="hero__main-figure">
+                        <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-figure-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" class="hero__main-figure-play" fill="none">
+                                <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
+                            </svg>
+                            <?= getPictureImage($image, 420, 420) ?>
+                        </a>
+                    </div>
+                </div>
                 <div class="hero__profit">
-                    <p class="h3"><?= $headline_profit ?? '' ?></p>
+                    <p class="hero__profit-title"><?= $headline_profit ?? '' ?></p>
                     <?php if (!empty($profit_cards)) : ?>
                         <div class="hero__profit-cards">
                             <?php foreach ($profit_cards as $card) : ?>
