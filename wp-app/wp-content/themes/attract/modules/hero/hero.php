@@ -41,8 +41,8 @@ $video = get_field('video');
                 <?php endif; ?>
                 <div class="hero__main">
                     <div class="hero__main-text">
-                        <h1 class="hero__main-title"><?= $headline ?? '' ?></h1>
-                        <div class="hero__main-subheadline">
+                        <h1 class="hero__main-title a-fall-in a-delay-100"><?= $headline ?? '' ?></h1>
+                        <div class="hero__main-subheadline a-fall-in a-delay-300">
                             <div class="hero__main-figure">
                                 <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-figure-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" class="hero__main-figure-play" fill="none">
@@ -53,12 +53,12 @@ $video = get_field('video');
                             </div>
                             <p class="text-2"><?= $subheadline ?? '' ?></p>
                         </div>
-                        <div class="hero__main-button">
+                        <div class="hero__main-button a-fall-in a-delay-500">
                             <p class="text-4"><?= $btn_text ?? '' ?></p>
                             <a href="#contact-form"><?= $btn_name ?? '' ?></a>
                         </div>
                     </div>
-                    <div class="hero__main-figure">
+                    <div class="hero__main-figure a-scale-in a-delay-200">
                         <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-figure-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" class="hero__main-figure-play" fill="none">
                                 <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
@@ -67,7 +67,7 @@ $video = get_field('video');
                         </a>
                     </div>
                 </div>
-                <div class="hero__profit">
+                <div class="hero__profit a-fall-in a-delay-700">
                     <p class="hero__profit-title"><?= $headline_profit ?? '' ?></p>
                     <?php if (!empty($profit_cards)) : ?>
                         <div class="hero__profit-cards">

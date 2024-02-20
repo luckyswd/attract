@@ -288,6 +288,9 @@
 }
 
 .marquee {
+  &-content p{
+    white-space: nowrap;
+  }
   &-tag {
     font-size: 14px;
     line-height: 17.85px;
@@ -312,5 +315,64 @@
     @include _1280 {
       margin-bottom: 60px;
     }
+  }
+}
+.a {
+  &-delay {
+    &-100 {
+      animation-delay: 100ms;
+    }
+    &-200 {
+      animation-delay: 200ms;
+    }
+    &-300 {
+      animation-delay: 300ms;
+    }
+    &-400 {
+      animation-delay: 400ms;
+    }
+    &-500 {
+      animation-delay: 500ms;
+    }
+    &-600 {
+      animation-delay: 600ms;
+    }
+    &-700 {
+      animation-delay: 700ms;
+    }
+  }
+  &-fall-in {
+    opacity: 0;
+    animation-name: a-fall-in;
+    animation-duration: 330ms;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  &-scale-in {
+    opacity: 0;
+    animation-name: a-scale-in;
+    animation-duration: 330ms;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes a-fall-in {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes a-scale-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
