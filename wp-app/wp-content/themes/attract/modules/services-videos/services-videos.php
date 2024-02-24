@@ -29,7 +29,7 @@ $is_2_row_hide = !empty($videos_row_1) && count($videos_row_1);
                                 <div class="swiper-slide">
                                     <div class="services-videos__item">
                                         <?php //var_dump(current($video['poster'])); ?>
-                                        <video src="<?= current($video['video']) ?? '' ?>" controls playsinline></video>
+                                        <video src="<?= current($video['video']) ?? '' ?>" preload="none" controls playsinline></video>
                                         <div class="services-videos__item-poster">
                                             <img src="<?= current($video['poster'])['sizes']['medium_large'] ?? '' ?>" alt="" lazyload>
                                             <button class="play-video"><svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="36" cy="36" r="36" transform="rotate(180 36 36)" fill="white"/><path d="M50.5117 35.5893L28.8638 48.0877L28.8638 23.0908L50.5117 35.5893Z" fill="#1744D0"/></svg></button>
