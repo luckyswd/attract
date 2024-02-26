@@ -20,7 +20,7 @@ $size_50_on_50 = get_field('size_50_50');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="contact-form distance">
+    <section class="contact-form distance ">
         <div class="block-anchor" id="contact-form"></div>
         <div class="container">
             <div class="form-wrapper <?= $size_50_on_50 ? 'half' : ''; ?>">
