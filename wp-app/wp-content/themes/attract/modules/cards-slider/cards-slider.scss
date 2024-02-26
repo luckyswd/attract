@@ -1,0 +1,68 @@
+.cards-slider {
+    &__header {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 60px;
+        @include _1024 {
+            margin-bottom: 40px;
+        }
+        @include _480 {
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+    &__arrows-wrap {
+        display: flex;
+        gap: 5px;
+        margin: auto 0 auto auto;
+        .swiper-button-disabled {
+            cursor: not-allowed;
+        }
+        @include _1024 {
+            display: none;
+        }
+    }
+    &__slider {
+        overflow: hidden;
+    }
+    &__item {
+        min-height: 224px;
+        display: flex;
+        padding: 32px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        gap: 30px;
+        @include _480 {
+            gap: 15px;
+        }
+        &-title {
+            font-weight: 500;
+        }
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &-number {
+            flex-shrink: 0;
+            font-size: 20px;
+            line-height: 1.3em;
+            color: $c-blue;
+            margin: 0 0 auto auto;
+            @include _480 {
+                font-size: 14px;
+            }
+        }
+        .btn {
+            width: auto;
+            padding: 8px 30px;
+            font-size: 14px;
+            line-height: 1.42em;
+        }
+    }
+    .swiper-slide {
+        max-width: 515px;
+    }
+}

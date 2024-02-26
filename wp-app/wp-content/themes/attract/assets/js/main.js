@@ -24,3 +24,4 @@
 //=include ../../modules/result/result.js
 //=include ../../modules/catalog-cases/catalog-cases.js
 //=include ../../modules/contact-form/contact-form.js
+//=include ../../modules/cards-slider/cards-slider.js
