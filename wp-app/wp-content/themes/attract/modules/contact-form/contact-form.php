@@ -15,12 +15,13 @@ $icons = get_field('icons');
 $form_headline = get_field('form_headline');
 $form = get_field('form');
 $signature_social = get_field('signature_social');
-$socials = get_field('socials');
+$contact_us_block = get_field('contact_us_block', 'options');
+$socials = $contact_us_block['social_links'];
 $size_50_on_50 = get_field('size_50_50');
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="contact-form distance ">
+    <section class="contact-form distance">
         <div class="block-anchor" id="contact-form"></div>
         <div class="container">
             <div class="form-wrapper <?= $size_50_on_50 ? 'half' : ''; ?>">
@@ -47,7 +48,8 @@ $size_50_on_50 = get_field('size_50_50');
                         <?php if (!empty($socials)) : ?>
                             <div class="social-wrap">
                                 <?php foreach ($socials as $social) : ?>
-                                    <a href="<?= $social['url'] ?? '' ?>" target="_blank" class="social-icon">
+                                    <?php $link = $social['link'] ?>
+                                    <a href="<?= $link['url'] ?? '' ?>" title="<?= $link['title'] ?? '' ?>" target="<?= $link['target'] ?? '' ?>" class="social-icon">
                                         <?= getPictureImage($social['icon'], 31, 31) ?>
                                     </a>
                                 <?php endforeach;?>
