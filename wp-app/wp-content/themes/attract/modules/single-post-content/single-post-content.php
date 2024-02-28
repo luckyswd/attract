@@ -33,7 +33,7 @@ $blocks = get_field("content-blocks");
                                 break;
                             case 'title':
                                 ?>
-                                <div class="content-block__title h5"><?= $el['text']; ?></div>
+                                <h2 class="content-block__title h5"><?= $el['text']; ?></h2>
                                 <?php
                                 break;
                             case 'sub-title':
