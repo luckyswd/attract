@@ -100,6 +100,35 @@ function create_taxonomy()
         'query_var' => true,
     ]);
 
+    register_taxonomy('case-project', ['case'], [
+        'label' => __('case project'),
+        'rewrite' => ['slug' => 'case-project'],
+        'labels' => [
+            'name' => 'Проекты',
+            'singular_name' => 'Проект',
+            'search_items' => 'Найти проект',
+            'all_items' => 'Все проекты',
+            'view_item ' => 'Просмотреть проект',
+            'parent_item' => 'Родительский проект',
+            'parent_item_colon' => 'Родительский проект:',
+            'edit_item' => 'Редактировать проект',
+            'update_item' => 'Обновить проект',
+            'add_new_item' => 'Добавить новый проект',
+            'new_item_name' => 'Новое название проекта',
+            'menu_name' => 'Проекты',
+        ],
+        'public' => true,
+        'hierarchical' => true,
+        'capabilities' => [],
+        'meta_box_cb' => null,
+        'show_admin_column' => false,
+        'show_in_rest' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+    ]);
+
     register_taxonomy('rules-documents', ['rules'], [
         'label' => __('rule document'),
         'rewrite' => ['slug' => 'rules-documents'],
