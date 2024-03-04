@@ -58,6 +58,14 @@
             }
         }
 
+        a {
+            color: inherit;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
         .result-blocks {
             margin-top: 50px;
             display: grid;
