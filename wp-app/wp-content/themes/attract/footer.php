@@ -93,7 +93,7 @@ $footer_form = get_field('footer_form', 'option');
 
     <div class="modal-form" id="success-send-message">
         <div class="form-wrapper">
-            <p class="form-headline text-1">Ваше письмо отправлено, <br>мы скоро свяжемся с вами</p>
+            <p class="form-headline text-1">Ваше письмо отправлено, <br>мы скоро свяжемся с вами!</p>
         </div>
     </div>
     <div class="modal-form" id="develop-message">
