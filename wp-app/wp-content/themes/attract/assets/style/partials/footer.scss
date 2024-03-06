@@ -408,3 +408,24 @@ footer {
         margin: 12px 0 24px 0;
     }
 }
+
+#success-send-message {
+    background: $c-blue;
+    color: #fff;
+    text-align: center;
+    & .form-wrapper {
+        justify-content: center;
+    }
+    &.fancybox__content > .carousel__button.is-close {
+        position: absolute;
+        top: initial;
+        margin: 0;
+        right: -20px;
+        background: #fff;
+        top: -20px;
+        @include _768 {
+            right: 0;
+            top: -37px; 
+        }
+    }
+}

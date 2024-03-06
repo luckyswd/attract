@@ -2,6 +2,7 @@
 //=include libs/swiper.min.js
 //=include libs/fancybox.js
 //=include libs/marquee3k.js
+//=include libs/imask.min.js
 
 
 /* PARTIALS */
@@ -9,6 +10,7 @@
 //=include partials/footer.js
 //=include partials/recent-posts.js
 //=include partials/btn.js
+//=include partials/form.js
 
 
 /**** MODULES ****/
