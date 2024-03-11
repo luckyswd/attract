@@ -20,8 +20,8 @@ $cases = get_posts([
     'post_type' => 'case',
     'posts_per_page' => -1,
     'post_status' => 'publish',
-    'orderby' => 'ID',
-    'order' => 'ASC',
+    'orderby' => 'date',
+    'order' => 'DESC',
 ]);
 
 $allCasesIDs = array_map(function ($cat) {

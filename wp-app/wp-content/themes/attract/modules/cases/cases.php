@@ -27,6 +27,7 @@ $cases = get_field('cases');
             </div>
             <?php if (!empty($cases)) : ?>
                 <div class="cases-wrapper">
+                    <?php shuffle($cases); ?>
                     <?php foreach ($cases as $key => $case) : ?>
                         <?php
                         $category = get_the_terms($case->ID, 'case-category');
