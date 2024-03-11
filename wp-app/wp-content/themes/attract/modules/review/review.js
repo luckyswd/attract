@@ -84,6 +84,7 @@ class Review {
 
       const playVideo = (e) => {
         // poster.classList.add('hide');
+        !video.src && (video.src = video.dataset.src);
         this.swiper2 && this.swiper2.autoplay.stop();
         if(videoContainer.classList.contains('playing')) {
           // console.log(videoContainer.classList.contains('playing'));

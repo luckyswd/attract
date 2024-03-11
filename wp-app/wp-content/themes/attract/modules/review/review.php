@@ -89,7 +89,7 @@ $headline = get_field('headline');
                                                 </svg>
                                                 <?= getPictureImage($preview_image, 562, 630) ?>
                                             </div>
-                                            <video src="<?= $video['url'] ?>">
+                                            <video data-src="<?= $video['url'] ?>">
                                                 Ваш браузер не поддерживает видео.
                                             </video>
                                         </div>
