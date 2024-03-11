@@ -1,5 +1,6 @@
 /* libs */
-//=include libs/swiper.min.js
+//=include libs/enter-view.min.js
+//=include libs/swiper-bundle.min.js
 //=include libs/fancybox.js
 //=include libs/marquee3k.js
 //=include libs/imask.min.js

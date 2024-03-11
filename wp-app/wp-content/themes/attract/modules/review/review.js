@@ -1,57 +1,104 @@
 class Review {
   constructor() {
+    this.swiper1 = null;
+    this.swiper2 = null;
     this.init();
     this.handelVideo()
   }
 
   init() {
-    const swiper = new Swiper(".swiper-review", {
-      fadeEffect: { crossFade: true },
-      speed: 500,
-      slidersPerView: 1,
-      simulateTouch: false,
+    const delayAutoplay = (s) => {
+      s.autoplay.stop();
+      enterView({
+          selector: '.review-sides',
+          offset: 0.52,
+          enter: function() {
+              s.autoplay.start();
+          },
+          exit: function() {
+              console.log('exit')
+              s.autoplay.stop();
+          },
+          // once: true,
+      });
+    }
 
+    this.swiper1 = new Swiper(".review-sides__left-slider", {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      spaceBetween: 30,
+      allowTouchMove: false,
       pagination: {
         el: ".pagination",
         clickable: true
       },
-
       navigation: {
         nextEl: ".swiper-next",
         prevEl: ".swiper-prev",
       },
     });
-
-    swiper.on('slideChange', function () {
-      const videos = document.querySelectorAll('.review video')
-
-      videos && videos.forEach((video) => {
-        video.pause();
-      })
+    this.swiper2 = new Swiper(".review-sides__right-slider", {
+      effect: "cards",
+      grabCursor: true,
+      autoplay: {
+        delay: 5000,
+        pauseOnMouseEnter: true,
+      },
+      navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+      },
+      pagination: {
+        el: ".pagination",
+        clickable: true
+      },
+      thumbs: {
+        swiper: this.swiper1
+      },
+      on: {
+        init: delayAutoplay
+    },
     });
+
+    const stopVideos = () => {
+      const posters = document.querySelectorAll('.video__container.playing .video__poster')
+      posters && posters.forEach((poster) => {
+        poster.click();
+      })
+
+      this.swiper2 && this.swiper2.autoplay.start();
+    }
+
+    this.swiper2.on('slideChange', stopVideos );
   }
 
   handelVideo() {
-    const videoContainers = document.querySelectorAll('.video-container');
+    const videoContainers = document.querySelectorAll('.video__container');
 
     videoContainers && videoContainers.forEach((videoContainer) => {
-      const previewImage = videoContainer.querySelector('img')
+      const poster = videoContainer.querySelector('.video__poster')
+      const playIcon = videoContainer.querySelector('.video__play-icon')
       const video = videoContainer.querySelector('video')
-      const playIcon = videoContainer.querySelector('.play-icon')
 
-      previewImage && previewImage.addEventListener('click', () => {
-        previewImage.style.display = 'none';
-        playIcon.style.display = 'none';
-        video.style.display = 'block';
-        video.play();
-      })
+      const playVideo = (e) => {
+        // poster.classList.add('hide');
+        this.swiper2 && this.swiper2.autoplay.stop();
+        if(videoContainer.classList.contains('playing')) {
+          // console.log(videoContainer.classList.contains('playing'));
+          video.pause();
+          videoContainer.classList.add('stopped');
+          videoContainer.classList.remove('playing');
+        } else {
+          video.play();
+          videoContainer.classList.remove('stopped');
+          videoContainer.classList.add('playing');
+        }
+      }
 
-      playIcon && playIcon.addEventListener('click', () => {
-        previewImage.style.display = 'none';
-        playIcon.style.display = 'none';
-        video.style.display = 'block';
-        video.play();
-      })
+      poster && poster.addEventListener('click', playVideo)
+      video.addEventListener("ended", (event) => {poster.click()});
     })
   }
 }
