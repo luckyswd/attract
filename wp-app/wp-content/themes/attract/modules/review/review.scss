@@ -10,6 +10,8 @@
   .button-wrap {
     display: flex;
     gap: 5px;
+    position: relative;
+    z-index: 11;
     @include _480 {
       justify-content: center;
       width: 100%;
