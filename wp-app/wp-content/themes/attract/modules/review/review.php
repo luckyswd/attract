@@ -101,7 +101,7 @@ $headline = get_field('headline');
                                                 </div>
                                             <?php endif; ?>
         
-                                            <video data-src="<?= $video['url'] ?>" playsinline>
+                                            <video src="<?= $video['url'] ?>" preload="none" poster="<?= $preview_image['url'] ?? '' ?>" playsinline>
                                                 Ваш браузер не поддерживает видео.
                                             </video>
                                         </div>
