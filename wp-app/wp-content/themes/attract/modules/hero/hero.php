@@ -31,9 +31,7 @@ $video = get_field('video');
                             <p>
                                 <?php foreach ($tags as $key => $tag) : ?>
                                     <span class="marquee-tag"><?= mb_strtoupper($tag['name'] ?? '') ?></span>
-                                    <?php if($key + 1 < count($tags)): ?>
-                                        <span class="marquee-divider"></span>
-                                    <?php endif; ?>
+                                    <span class="marquee-divider"></span>
                                 <?php endforeach; ?>
                             </p>
                         </div>
