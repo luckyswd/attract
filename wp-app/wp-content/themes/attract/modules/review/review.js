@@ -98,7 +98,7 @@ class Review {
         }
       }
 
-      poster && poster.addEventListener('click', playVideo)
+      poster && poster.tagName != 'A' && poster.addEventListener('click', playVideo)
       video.addEventListener("ended", (event) => {poster.click()});
     })
   }

@@ -82,13 +82,25 @@ $headline = get_field('headline');
                                     ?>
                                     <div class="swiper-slide">
                                         <div class="video__container">
-                                            <div class="video__poster">
-                                                <svg class="video__play-icon" xmlns="http://www.w3.org/2000/svg" width="89" height="89" viewBox="0 0 89 89" fill="none">
-                                                    <circle cx="44.4447" cy="44.5442" r="43.9446" transform="rotate(180 44.4447 44.5442)" fill="white" />
-                                                    <path d="M62.1591 44.0433L35.7337 59.2999L35.7337 28.7866L62.1591 44.0433Z" fill="#1744D0" />
-                                                </svg>
-                                                <?= getPictureImage($preview_image, 562, 630) ?>
-                                            </div>
+                                            <?php $link = get_field('video_link', $review); ?>
+                                            <?php if(!empty($link['url'])): ?>
+                                                <a href="<?= $link['url'] ?? '' ?>" target="<?= $link['target'] ?? '' ?>" class="video__poster">
+                                                    <svg class="video__play-icon" xmlns="http://www.w3.org/2000/svg" width="89" height="89" viewBox="0 0 89 89" fill="none">
+                                                        <circle cx="44.4447" cy="44.5442" r="43.9446" transform="rotate(180 44.4447 44.5442)" fill="white" />
+                                                        <path d="M62.1591 44.0433L35.7337 59.2999L35.7337 28.7866L62.1591 44.0433Z" fill="#1744D0" />
+                                                    </svg>
+                                                    <?= getPictureImage($preview_image, 562, 630) ?>
+                                                </a>
+                                            <?php else: ?>
+                                                <div class="video__poster">
+                                                    <svg class="video__play-icon" xmlns="http://www.w3.org/2000/svg" width="89" height="89" viewBox="0 0 89 89" fill="none">
+                                                        <circle cx="44.4447" cy="44.5442" r="43.9446" transform="rotate(180 44.4447 44.5442)" fill="white" />
+                                                        <path d="M62.1591 44.0433L35.7337 59.2999L35.7337 28.7866L62.1591 44.0433Z" fill="#1744D0" />
+                                                    </svg>
+                                                    <?= getPictureImage($preview_image, 562, 630) ?>
+                                                </div>
+                                            <?php endif; ?>
+        
                                             <video data-src="<?= $video['url'] ?>" playsinline>
                                                 Ваш браузер не поддерживает видео.
                                             </video>
