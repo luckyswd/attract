@@ -80,6 +80,12 @@ $transition-btn: 300ms ease-in-out;
     }
 }
 
+@mixin _620 {
+    @media (max-width: 620px) {
+        @content;
+    }
+}
+
 @mixin _480 {
     @media (max-width: 480px) {
         @content;

@@ -248,4 +248,27 @@ section {
     &-blue {
         color: $c-blue;
     }
+    &-grey {
+        color: $c-gray;
+    }
+}
+
+.socials-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+    &__link {        
+        img {
+            display: block;
+            width: 28px;
+            height: auto;
+            filter: brightness(0);
+            transition: opacity 0.22s ease-out;
+        }
+        &:hover {
+            img {
+                opacity: 0.5;
+            }
+        }
+    }
 }
