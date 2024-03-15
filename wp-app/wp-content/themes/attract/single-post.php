@@ -146,6 +146,7 @@ $comments = get_comments($args);
             'post_type' => 'post',
             'posts_per_page' => 9,
             'cat' => $post_categories,
+            'post__not_in' => [ $post_id ],
             'orderby' => 'date',
             'order' => 'DESC'
         );
@@ -193,28 +194,26 @@ $comments = get_comments($args);
                     <div class="swiper swiper-recent-posts__wrap">
                         <div class="swiper-wrapper">
                             <?php while ($result->have_posts()) : $result->the_post(); ?>
-                                <?php if ($post_id !== get_the_id()) : ?>
-                                    <?php $image = get_the_post_thumbnail_url(get_the_id(), 'blog-post-thumbnail'); ?>
-                                    <div class="swiper-slide">
-                                        <div class="article-card">
-                                            <img src="<?= $image; ?> " alt="<?= get_the_title(); ?>" loading="lazy" />
-                                            <?= //get_the_post_thumbnail(); ?>
-                                            <div class="article-card-content">
-                                                <div>
-                                                    <p class="h6"><?= get_the_title(); ?></p>
-                                                    <p class="text-4 article-card-content-description"><?= get_the_excerpt(); ?></p>
-                                                </div>
-                                                <div class="article-card-content-bottom">
-                                                    <a href="<?= get_permalink(); ?>" class="btn blue">
-                                                        <span class="hover-animation">
-                                                            <span>Читать</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
+                                <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'blog-post-thumbnail'); ?>
+                                <div class="swiper-slide">
+                                    <div class="article-card">
+                                        <img src="<?= $image; ?> " alt="<?= get_the_title(); ?>" loading="lazy" />
+                                        <?= //get_the_post_thumbnail(); ?>
+                                        <div class="article-card-content">
+                                            <div>
+                                                <p class="h6"><?= get_the_title(); ?></p>
+                                                <p class="text-4 article-card-content-description"><?= get_the_excerpt(); ?></p>
+                                            </div>
+                                            <div class="article-card-content-bottom">
+                                                <a href="<?= get_permalink(); ?>" class="btn blue">
+                                                    <span class="hover-animation">
+                                                        <span>Читать</span>
+                                                    </span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                <?php endif; ?>
+                                </div>
                             <?php endwhile; ?>
                         </div>
                     </div>
