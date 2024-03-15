@@ -197,8 +197,7 @@ $comments = get_comments($args);
                                 <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'blog-post-thumbnail'); ?>
                                 <div class="swiper-slide">
                                     <div class="article-card">
-                                        <img src="<?= $image; ?> " alt="<?= get_the_title(); ?>" loading="lazy" />
-                                        <?= //get_the_post_thumbnail(); ?>
+                                        <img src="<?= $image; ?>" alt="<?= get_the_title(); ?>" loading="lazy" />
                                         <div class="article-card-content">
                                             <div>
                                                 <p class="h6"><?= get_the_title(); ?></p>
