@@ -1,0 +1,56 @@
+.case-design-assets {
+  &__block {
+    & + & {
+      margin-top: 38px;
+    }
+  }
+  &__title {
+    margin-bottom: 28px;
+  }
+  &__colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include _768 {
+      gap: 10px;
+    }
+  }
+  &__color {
+    position: relative;
+    flex-basis: calc(20% - 16px);
+    max-width: 240px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    @include _768 {
+      flex-basis: calc(33% - 6px);
+    }
+    @include _480 {
+      flex-basis: calc(50% - 5px);
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &_inverted {
+      color: $c-black;
+    }
+  }
+  &__font-img {
+    max-width: 220px;
+  }
+}
