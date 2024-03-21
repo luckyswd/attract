@@ -22,8 +22,8 @@ $year = get_field('year');
         <div class="hero-case-wrap" style="background-image: url(<?= $backgroundImage['url'] ?>)">
             <div class="case-info">
                 <div class="case-left-info">
-                    <h1 class="text-4"><?= $categoryName ? $categoryName : get_the_title() ?></h1>
-                    <p class="h3"><?= $shortDescription ?? '' ?></p>
+                    <p class="text-4"><?= $categoryName ? $categoryName : get_the_title() ?></p>
+                    <h1 class="h3"><?= $shortDescription ?? '' ?></h1>
                     <div class="wrap-bottom">
                         <div class="left">
                             <p class="text-2"><?= $subHeadline ?? '' ?></p>
