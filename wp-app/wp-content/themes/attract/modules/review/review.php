@@ -19,7 +19,7 @@ $headline = get_field('headline');
             <div class="container">
                 <div class="review-sides">
                     <div class="review-sides__left">
-                        <p class="h3 review-headline"><?= $headline ?? '' ?></p>
+                        <h2 class="h3 review-headline"><?= $headline ?? '' ?></h2>
                         <div class="button-wrap">
                             <div class="swiper-prev">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">

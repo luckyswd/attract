@@ -23,7 +23,7 @@ $background_image_tablet = get_field('background_image_tablet');
     <section class="why-us distance">
         <div class="block-anchor" id="why-us"></div>
         <div class="container">
-            <p class="h3"> <?= $headline ?? '' ?> </p>
+            <h2 class="h3"> <?= $headline ?? '' ?> </h2>
             <p class="text-1"> <?= $subheadline ?? '' ?> </p>
             <?php if (!empty($cards)) : ?>
                 <div class="why-us__cards">

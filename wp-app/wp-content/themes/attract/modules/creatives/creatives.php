@@ -18,7 +18,7 @@ $creatives_second_line = get_field('creatives_second_line');
         <div class="container">
             <div class="creatives-wrapper">
                 <div class="creatives-top">
-                    <div class="h3"><?= $headline ?? '' ?></div>
+                    <h2 class="h3"><?= $headline ?? '' ?></h2>
                 </div>
                 <div class="creatives-bottom">
                     <?php if (!empty($creatives_first_line)) : ?>

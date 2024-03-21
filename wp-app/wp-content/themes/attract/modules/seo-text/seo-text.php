@@ -18,7 +18,7 @@ $text = get_field('text');
         <div class="container">
             <div class="seo-text-wrapper">
                 <div class="seo-text-left">
-                    <div class="h3"><?= $headline ?? '' ?></div>
+                    <h2 class="h3"><?= $headline ?? '' ?></h2>
                     <div class="text-2"><?= $subheadline ?? '' ?></div>
                 </div>
                 <div class="seo-text-right">

@@ -16,7 +16,7 @@ $advantages_cards = get_field('advantages_cards');
     <section class="advantages distance">
         <div class="container">
             <div class="advantages-wrapper">
-                <div class="h3"><?= $headline ?? '' ?></div>
+                <h2 class="h3"><?= $headline ?? '' ?></h2>
                 <?php if (!empty($advantages_cards)) : ?>
                     <div class="advantages-cards">
                         <?php foreach ($advantages_cards as $card) : ?>

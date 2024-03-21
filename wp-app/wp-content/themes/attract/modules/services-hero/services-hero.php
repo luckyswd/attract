@@ -27,7 +27,7 @@ $contentOnLeft = get_field('content_on_left');
                     <img src="<?= $background_image_mobile['url'] ?>" alt="фон">
                 </picture>
                 <div class="content <?= $contentOnLeft ? 'left' : '' ?>">
-                    <p class="h2"><?= $headline ?? '' ?></p>
+                    <h1 class="h2"><?= $headline ?? '' ?></h1>
                     <div class="text-2"><?= $subheadline ?? '' ?></div>
                     <?php if (!empty($link)) : ?>
                         <a href="javascript:;" data-fancybox="" data-src="#modal-feedback-form" class="btn blue">

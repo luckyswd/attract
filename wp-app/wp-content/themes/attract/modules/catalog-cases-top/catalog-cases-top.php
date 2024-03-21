@@ -17,7 +17,7 @@ $background_image = get_field('background_image');
         <div class="container">
             <div class="catalog-top" style="background-image: url(<?= $background_image['url'] ?? '' ?>)">
                 <p class="text-1"><?= get_the_title() ?></p>
-                <p class="h2"><?= $headline ?? '' ?></p>
+                <h1 class="h2"><?= $headline ?? '' ?></h1>
             </div>
         </div>
     </section>

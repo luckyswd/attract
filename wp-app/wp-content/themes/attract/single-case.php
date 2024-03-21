@@ -22,7 +22,7 @@ $year = get_field('year');
         <div class="hero-case-wrap" style="background-image: url(<?= $backgroundImage['url'] ?>)">
             <div class="case-info">
                 <div class="case-left-info">
-                    <p class="text-4"><?= $categoryName ? $categoryName : get_the_title() ?></p>
+                    <h1 class="text-4"><?= $categoryName ? $categoryName : get_the_title() ?></h1>
                     <p class="h3"><?= $shortDescription ?? '' ?></p>
                     <div class="wrap-bottom">
                         <div class="left">
@@ -110,7 +110,7 @@ if(!!$projects):
 <?php endif; ?>
 
 <?php
-$next_case = get_adjacent_post( true, '', false, 'case-category' );
+$next_case = get_adjacent_post( true, '', true, 'case-category' );
 if(!!$next_case):
     $tags = get_field('tags', $next_case->ID);
     $img = get_field('preview_image', $next_case->ID);

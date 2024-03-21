@@ -66,7 +66,7 @@ $video = get_field('video');
                     </div>
                 </div>
                 <div class="hero__profit a-fall-in a-delay-700">
-                    <p class="hero__profit-title"><?= $headline_profit ?? '' ?></p>
+                    <h2 class="hero__profit-title"><?= $headline_profit ?? '' ?></h2>
                     <?php if (!empty($profit_cards)) : ?>
                         <div class="hero__profit-cards">
                             <?php foreach ($profit_cards as $card) : ?>

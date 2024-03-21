@@ -28,7 +28,7 @@ $services = get_posts([
         <div class="container">
             <div class="services-wrapper">
                 <div class="services-sticky">
-                    <p class="h3"><?= $headline ?? '' ?></p>
+                    <h2 class="h3"><?= $headline ?? '' ?></h2>
                     <p class="h3 mobile-headline">Услуги</p>
                     <?php if (!empty($categories)) : ?>
                         <div class="services-categories">

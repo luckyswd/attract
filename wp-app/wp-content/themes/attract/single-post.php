@@ -58,9 +58,9 @@ $comments = get_comments($args);
                         <div class="article-banner__category">
                             <?= $category_name; ?>
                         </div>
-                        <div class="h3 article-banner__title">
+                        <h1 class="h3 article-banner__title">
                             <?= $post_title; ?>
-                        </div>
+                        </h1>
                         <div class="article-banner__title text-2">
                             <?= $post_excerpt ?>
                         </div>

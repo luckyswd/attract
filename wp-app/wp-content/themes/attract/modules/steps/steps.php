@@ -36,7 +36,7 @@ $displayButton = get_field('display_button');
                             <p class="text-1"><?= $caption ?></p>
                         <?php endif; ?>
                         <?php if (!empty($headline)) : ?>
-                            <p class="h4"> <?= $headline ?> </p>
+                            <h2 class="h4"> <?= $headline ?> </h2>
                         <?php endif; ?>
                         <?php if (!empty($subheadline)) : ?>
                             <p class="text-2"><?= $subheadline ?></p>
