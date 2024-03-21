@@ -35,7 +35,9 @@ $categories = get_terms([
 ?>
 <section class="documents-rules-breadrumbs distance">
     <div class="container">
-        <?= do_shortcode('[wpseo_breadcrumb]'); ?>
+        <div class="site-breadcrumb">
+            <?= do_shortcode('[wpseo_breadcrumb]'); ?>
+        </div>
     </div>
 </section>
 <section class="documents-rules-header distance">
@@ -44,7 +46,7 @@ $categories = get_terms([
             <div class="documents-rules__about-company">
                 <div class="about-company__wrap">
                     <?php if ($first_title) : ?>
-                        <p class="h4"><?= $first_title; ?></p>
+                        <h2 class="h4"><?= $first_title; ?></h2>
                     <?php endif; ?>
                     <?php if ($first_text) : ?>
                         <p class="text-4"><?= $first_text; ?></p>
@@ -59,7 +61,7 @@ $categories = get_terms([
                 <img src="<?= $second_img; ?>" alt="about licence" />
                 <div class="about-licence__wrap">
                     <?php if ($second_title) : ?>
-                        <p class="h4"><?= $second_title; ?></p>
+                        <h2 class="h4"><?= $second_title; ?></h2>
                     <?php endif; ?>
                     <?php if ($second_text) : ?>
                         <p class="text-4"><?= $second_text; ?></p>
@@ -75,7 +77,7 @@ $categories = get_terms([
 <section class="documents-rules-tabs distance">
     <div class="container">
         <div class="tabs-title">
-            <p class="h4">LEGAL DOCUMENTS</p>
+            <h2 class="h4">LEGAL DOCUMENTS</h2>
         </div>
         <div class="documents-rules-wrapper">
             <div class="documents-rules-sticky">

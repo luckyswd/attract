@@ -18,7 +18,7 @@ $is_2_row_hide = !empty($videos_row_1) && count($videos_row_1);
     <section class="services-videos distance">
         <div class="container">
             <div class="services-videos__header">
-                <p class="h3"><?= $section_title ?? '' ?></p>
+                <h2 class="h3"><?= $section_title ?? '' ?></h2>
             </div>
             <div class="services-videos__content">
                 <?php if(!empty($videos_row_1) && count($videos_row_1)): ?>
