@@ -33,7 +33,9 @@ $team = get_posts([
         <div class="container">
             <div class="team-wrapper">
                 <div class="head-text__wrap">
-                    <h2 class="h3"><?= $headline ?? '' ?></h2>
+                    <?php if(!empty($headline)): ?>            
+                        <h2 class="h3"><?= $headline ?></h2>
+                    <?php endif; ?>
                     <p class="description_text"><?= $description_text; ?></p>
                 </div>
                 <?php if (!empty($team)) : ?>

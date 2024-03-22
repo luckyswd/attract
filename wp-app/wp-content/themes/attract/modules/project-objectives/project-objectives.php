@@ -16,7 +16,9 @@ $tasks = get_field('tasks');
 <?php if (!is_admin()) : ?>
     <section class="project-objectives distance">
         <div class="container">
-            <h2 class="h4"><?= $headline ?? '' ?></h2>
+            <?php if(!empty($headline)): ?>  
+                <h2 class="h4"><?= $headline ?></h2>
+            <?php endif; ?>
             <?php if (!empty($tasks)) : ?>
                 <div class="project-objectives">
                     <?php foreach ($tasks as $key => $task) : ?>

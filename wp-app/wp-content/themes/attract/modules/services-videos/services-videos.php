@@ -17,9 +17,11 @@ $is_2_row_hide = !empty($videos_row_1) && count($videos_row_1);
 <?php if (!is_admin()) : ?>
     <section class="services-videos distance">
         <div class="container">
+            <?php if(!empty($section_title)): ?>            
             <div class="services-videos__header">
-                <h2 class="h3"><?= $section_title ?? '' ?></h2>
+                <h2 class="h3"><?= $section_title ?></h2>
             </div>
+            <?php endif; ?>
             <div class="services-videos__content">
                 <?php if(!empty($videos_row_1) && count($videos_row_1)): ?>
                 <div class="services-videos__row services-videos__row_1">

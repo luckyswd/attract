@@ -17,9 +17,11 @@ $creatives_second_line = get_field('creatives_second_line');
     <section class="creatives distance">
         <div class="container">
             <div class="creatives-wrapper">
-                <div class="creatives-top">
-                    <h2 class="h3"><?= $headline ?? '' ?></h2>
-                </div>
+                <?php if(!empty($headline)): ?>  
+                    <div class="creatives-top">
+                        <h2 class="h3"><?= $headline ?? '' ?></h2>
+                    </div>
+                <?php endif; ?>
                 <div class="creatives-bottom">
                     <?php if (!empty($creatives_first_line)) : ?>
                         <div class="creatives-items first marquee3k" data-speed="1" data-pausable="true">

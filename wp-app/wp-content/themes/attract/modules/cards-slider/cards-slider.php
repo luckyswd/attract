@@ -15,7 +15,9 @@ $cards = get_field('cards');
         <section class="cards-slider distance">
             <div class="container">
                 <div class="cards-slider__header">
-                    <h2 class="h4 cards-slider__title"><?= $title ?></h2>
+                    <?php if(!empty($title)): ?>  
+                        <h2 class="h4 cards-slider__title"><?= $title ?></h2>
+                    <?php endif; ?>
                     <div class="cards-slider__arrows-wrap">
                         <div class="swiper-prev" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true">
                             <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none"><g clip-path="url(#a)"><circle cx="21.5" cy="21.5" r="21.5" transform="matrix(-1 0 0 1 43.5 .2)" fill="#fff"/><path stroke="#000618" stroke-width="2.241" d="M11.424 22.32h22.124M12.202 22.002l9.679-9.68M12.202 22.671l9.68 9.68"/></g><defs><clipPath id="a"><path fill="#fff" transform="matrix(0 1 1 0 .5 .2)" d="M0 0h43v43H0z"/></clipPath></defs></svg>

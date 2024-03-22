@@ -18,7 +18,9 @@ $cases = get_field('cases');
         <div class="block-anchor" id="cases"></div>
         <div class="container">
             <div class="cases-top">
-                <h2 class="h3"><?= $headline ?? '' ?></h2>
+                <?php if(!empty($headline)): ?>  
+                    <h2 class="h3"><?= $headline ?? '' ?></h2>
+                <?php endif; ?>
                 <a class="btn blue" href="<?= $button['url'] ?>">
                     <span class="hover-animation">
                         <span><?= $button['title'] ?? '' ?></span>

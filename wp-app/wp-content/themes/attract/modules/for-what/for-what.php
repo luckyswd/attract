@@ -18,7 +18,9 @@ $for_what_blocks = get_field('for_what_blocks');
         <div class="container">
             <div class="for-what-wrapper">
                 <div class="for-what-top">
-                    <h2 class="h2"><?= $headline ?? '' ?></h2>
+                    <?php if(!empty($headline)): ?>  
+                        <h2 class="h2"><?= $headline ?? '' ?></h2>
+                    <?php endif; ?>
                     <div class="text-2"><?= $text ?? '' ?></div>
                 </div>
                 <div class="for-what-bottom">
