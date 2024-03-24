@@ -40,7 +40,7 @@ $background_image_tablet = get_field('background_image_tablet');
                     <div class="solution-wrapper">
                         <p class="h5"> <?= $headline_solution ?? '' ?> </p>
                         <p class="text-3"> <?= $subheadline_solution ?? '' ?> </p>
-                        <a href="<?= $button['url'] ?? '' ?>" class="btn blue"><span><?= $button['title'] ?? '' ?></span></a>
+                        <a href="<?= $button['url'] ?? '' ?>" class="btn white"><span><?= $button['title'] ?? '' ?></span></a>
                         <div class="background-image-1">
                             <picture>
                                 <source media="(min-width: 1400px)" srcset="<?= $background_image['url'] ?>">

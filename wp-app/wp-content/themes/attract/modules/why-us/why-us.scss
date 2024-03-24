@@ -106,6 +106,9 @@
     .btn {
       z-index: 2;
       margin-top: auto;
+      &:hover {
+        border-color: $c-white;
+      }
     }
 
     .h5 {
