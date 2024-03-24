@@ -2,8 +2,8 @@ const swiper = new Swiper(".swiper-recent-posts__wrap", {
     spaceBetween: 20,
 
     navigation: {
-      nextEl: ".swiper-next",
-      prevEl: ".swiper-prev",
+      nextEl: ".recent-posts__container .swiper-next",
+      prevEl: ".recent-posts__container .swiper-prev",
     },
 
     breakpoints: {

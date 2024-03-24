@@ -35,8 +35,8 @@ class Review {
         clickable: true
       },
       navigation: {
-        nextEl: ".swiper-next",
-        prevEl: ".swiper-prev",
+        nextEl: ".review .swiper-next",
+        prevEl: ".review .swiper-prev",
       },
     });
     this.swiper2 = new Swiper(".review-sides__right-slider", {
@@ -47,8 +47,8 @@ class Review {
         pauseOnMouseEnter: true,
       },
       navigation: {
-        nextEl: ".swiper-next",
-        prevEl: ".swiper-prev",
+        nextEl: ".review .swiper-next",
+        prevEl: ".review .swiper-prev",
       },
       pagination: {
         el: ".pagination",
