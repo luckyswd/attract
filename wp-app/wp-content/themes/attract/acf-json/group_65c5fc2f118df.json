@@ -65,11 +65,33 @@
                     "collapsed": "",
                     "button_label": "Добавить",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_65c5fc2fa4e55",
                     "sub_fields": [
                         {
                             "key": "field_65c67486e1f01",
                             "label": "На полную ширину",
                             "name": "full-width",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "parent_repeater": "field_65c5fc75a4e56"
+                        },
+                        {
+                            "key": "field_65c7e2b2052f2",
+                            "label": "Выровнять по центру",
+                            "name": "align-center",
                             "aria-label": "",
                             "type": "true_false",
                             "instructions": "",
@@ -302,8 +324,7 @@
                             "button_label": "Добавить",
                             "parent_repeater": "field_65c5fc75a4e56"
                         }
-                    ],
-                    "parent_repeater": "field_65c5fc2fa4e55"
+                    ]
                 }
             ]
         }
@@ -314,6 +335,13 @@
                 "param": "block",
                 "operator": "==",
                 "value": "acf\/single-post-content"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "service-category"
             }
         ]
     ],
@@ -326,5 +354,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707505094
+    "modified": 1711375425
 }

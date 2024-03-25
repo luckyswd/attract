@@ -1,0 +1,85 @@
+.service-tax {
+    &-hero {
+        .wrap {
+            min-height: 320px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+            overflow: hidden;
+        }
+        picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__breadcrumb {
+            margin-top: 20px;
+        }
+    }
+    &-categories {
+        &__cards {
+            padding: 54px;
+            border-radius: 60px;
+            background: $c-white;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: max-content;
+            gap: 20px;
+            @include _1440 {
+                border-radius: 30px;
+                padding: 20px;
+                gap: 10px;
+            }
+        
+            @include _1024 {
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: center;
+            }
+        
+            @include _768 {
+                padding: 10px;
+            }
+        
+            @include _430 {
+                grid-template-columns: 1fr;
+            }
+        }
+        &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px 15px;
+            height: 100%;
+            min-height: 120px;
+            background: $c-light-white;
+            border-radius: 20px;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            text-align: center;
+            color: #000;
+            font-weight: 500;
+            transition: 0.22s ease-out;
+            @include _768 {
+                padding: 20px;
+                min-height: 80px;
+            }
+            &:hover,
+            &.active {
+                background-color: $c-blue;
+                color: $c-white;
+            }
+        }
+    }
+}
