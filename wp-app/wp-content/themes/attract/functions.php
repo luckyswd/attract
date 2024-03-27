@@ -160,3 +160,21 @@ function upload_posts()
 }
 add_action('wp_ajax_upload_posts', 'upload_posts');
 add_action('wp_ajax_nopriv_upload_posts', 'upload_posts');
+
+function nav_menu_item_change_submenu( $item_output, $item, $depth, $args ) {
+	if ( in_array( 'menu-item-has-children', $item->classes ) ) {
+		$item_output .= '<span class="parent-icon"></span>';
+	}
+
+	return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'nav_menu_item_change_submenu', 10, 4 );
+
+// Добавляем классы ссылкам
+add_filter( 'nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 4 );
+function filter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+
+    $atts['class'] = isset( $atts['class'] ) ? $atts['class'] . ' header__button' : 'header__button';
+
+	return $atts;
+}

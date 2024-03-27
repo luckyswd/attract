@@ -89,7 +89,13 @@
                         </svg>
                     </div>
                     <?php if (!empty($buttons)) : ?>
-                        <div class="header__buttons">
+                        <?php wp_nav_menu(
+                                array(
+                                    'menu' => 'Mobile menu',
+                                    'container_class' => 'header__buttons'
+                                )
+                            ); ?>
+                        <!-- <div class="header__buttons">
                             <?php foreach ($buttons as $button) : ?>
                                 <?php if (!empty($button)) : ?>
                                     <a href="<?= $button['button']['url'] ?? '#' ?>" class="header__button">
@@ -97,7 +103,7 @@
                                     </a>
                                 <?php endif; ?>
                             <?php endforeach; ?>
-                        </div>
+                        </div> -->
                         <a href="javascript:;" data-fancybox="" data-src="#modal-feedback-form" class="btn white">
                             <span>Оставить заявку</span>
                         </a>
