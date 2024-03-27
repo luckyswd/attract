@@ -90,11 +90,14 @@ header {
   .header__buttons {
     .menu {
       display: flex;
+      justify-content: center;
       position: relative;
-      .sub-menu {
-        display: none;
-      }
+      min-width: 600px;
       &-item-has-children {
+        position: relative;
+        &.mega-sub-menu {
+          position: initial;
+        }
         .parent-icon {
           margin-right: 15px;
         }
@@ -105,8 +108,21 @@ header {
             transform: rotate(0deg);
           }
         }
+        .sub-menu {
+          .menu-item {
+            a {
+              flex-grow: 1;
+              padding: 0;
+              text-align: left;
+            }
+            & + .menu-item {
+              margin-top: 14px;
+            }
+          }
+        }
       }
-      .submenu-wrapper {
+      .submenu-wrapper,
+      .menu-item-has-children>.sub-menu {
         display: none;
         position: absolute;
         top: 100%;
@@ -115,7 +131,7 @@ header {
         gap: 10px;
         margin-top: 15px;
         background: #ffffff;
-        padding: 40px 30px;
+        padding: 30px;
         border-radius: 20px;
         box-shadow: 0px 4px 20px -13px #ccc;
         &:before {
@@ -126,20 +142,8 @@ header {
           width: 100%;
           height: 16px;
         }
-        .menu-item {
-          a {
-            flex-grow: 1;
-            padding: 0;
-            text-align: left;
-          }
-          & + .menu-item {
-            margin-top: 14px;
-          }
-          &-has-children {
-
-          }
-        }
       }
+      
       .subsubmenu-wrapper {
         .sub-menu {
           display: block;
@@ -156,6 +160,9 @@ header {
             &>.sub-menu {
               display: block;
             }
+          }
+          &>.sub-menu {
+            display: block;
           }
         }
       }

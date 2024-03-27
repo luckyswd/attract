@@ -3,7 +3,7 @@
   const burger = header.querySelector('.header__burger');
 
   const desktopMenu = header.querySelector('.header__buttons');
-  const desktopSubMenus = desktopMenu.querySelectorAll('.menu>.menu-item-has-children>.sub-menu');
+  const desktopSubMenus = desktopMenu.querySelectorAll('.menu>.menu-item-has-children.mega-sub-menu>.sub-menu');
 
   const mobileSubMenuToggles = document.querySelectorAll('.header__buttons-mobile .parent-icon');
 
