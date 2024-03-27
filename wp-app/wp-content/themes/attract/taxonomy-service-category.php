@@ -2,6 +2,7 @@
 get_header();
 
 $tax = get_queried_object();
+$page_title = get_field('page_title', $tax);
 ?>
 <section class="service-tax-hero distance">
     <div class="container">
@@ -12,7 +13,7 @@ $tax = get_queried_object();
                 <img decoding="async" src="/wp-content/uploads/2023/08/mobile.svg" alt="фон">
             </picture>
             <div class="content ">
-                <h1 class="h2"><?= $tax->name ?></h1>
+                <h1 class="h2"><?= $page_title ?? $tax->name ?? '' ?></h1>
             </div>
         </div>
         <div class="service-tax-hero__breadcrumb site-breadcrumb">

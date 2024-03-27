@@ -2,7 +2,7 @@
 
 $tax = $args['tax'] ?? false;
 
-$blocks = get_field("content-blocks", $tax);
+$blocks = get_field("content-blocks", $tax) ?? array();
 ?>
 <?php foreach($blocks as $block): ?>
     <section class="content-block distance" >
