@@ -187,12 +187,11 @@ header {
     }
   }
 
-  .btn.white {
+  .header__call-feedback {
     width: max-content;
     min-width: 270px;
     font-size: 16px;
     line-height: 20.4px;
-    color: $c-black;
   }
 
   .header__burger {

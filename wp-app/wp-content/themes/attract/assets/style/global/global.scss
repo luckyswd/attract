@@ -81,6 +81,8 @@ section {
     &.red {
         position: relative;
         background: linear-gradient(178.73deg, #FF5064 0%, #DC0632 99.47%, #E10C36 99.47%);
+        color: #fff;
+        z-index: 1;
         &::before {
             content: '';
             position: absolute;
