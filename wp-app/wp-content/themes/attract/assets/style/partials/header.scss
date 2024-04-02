@@ -41,7 +41,7 @@ header {
       padding: 0 10px;
     }
 
-    .btn.white {
+    .header__call-feedback {
       @include _1280 {
         display: none;
       }
