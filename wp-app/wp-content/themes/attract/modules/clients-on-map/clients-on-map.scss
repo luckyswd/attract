@@ -1,10 +1,10 @@
 .clients-on-map {
   .section__header {
     margin-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
   &__content {
     display: flex;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
     @media screen and (max-width: 640px) {
       flex-direction: column;
     }
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     flex-basis: 939px;
-    align-items: center;
+    align-items: flex-start;
     border-left: 1px solid rgba(0, 0, 0, 0.2);
     @include _1024 {
       flex-basis: 637px;
