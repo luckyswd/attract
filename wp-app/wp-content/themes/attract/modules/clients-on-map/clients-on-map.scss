@@ -1,0 +1,91 @@
+.clients-on-map {
+  .section__header {
+    margin-bottom: 60px;
+  }
+  &__content {
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+    }
+  }
+  &__captions {
+    flex-grow: 1;
+    padding: 40px;
+    @media screen and (max-width: 640px) {
+      padding: 20px 10px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      @media screen and (max-width: 640px) {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  &__map {
+    display: flex;
+    justify-content: center;
+    flex-basis: 939px;
+    align-items: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    @include _1024 {
+      flex-basis: 637px;
+      .map-isolate {
+        width: 113%;
+        left: -6.5%;
+      }
+    }
+    @include _768 {
+      flex-basis: 564px;
+    }
+    @media screen and (max-width: 640px) {
+      flex-basis: auto;
+      border-left: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      .map-isolate {
+        width: 133%;
+        left: -16.5%;
+      }
+    }
+  }
+}
+
+.map-isolate {
+  position: relative;
+  width: 100%;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 52.8%;
+  }
+  &-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  &__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__point {
+    position: absolute;
+    width: 1.05%;
+    z-index: 1;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 100%;
+      border-radius: 50%;
+      background: $c-blue;
+    }
+  }
+}
