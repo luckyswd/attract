@@ -1,3 +1,5 @@
-<?php get_header();?>
-<?php the_content(); ?>
-<?php get_footer(); ?>
+<?php 
+get_header();
+the_content();
+the_pattern('clients-on-map');
+get_footer();

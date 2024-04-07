@@ -108,7 +108,7 @@ if(!!$projects):
         </section>
     <?php endif; ?>
 <?php endif; ?>
-
+<?php the_pattern('clients-on-map'); ?>
 <?php
 $next_case = get_adjacent_post( true, '', true, 'case-category' );
 if(!!$next_case):

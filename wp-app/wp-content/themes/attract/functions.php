@@ -178,3 +178,14 @@ function filter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 
 	return $atts;
 }
+
+
+function get_pattern($name) {
+    ob_start();
+    get_template_part("patterns/$name", null);
+    return apply_filters('the_content', ob_get_clean());
+}
+
+function the_pattern($name) {
+    echo get_pattern($name) ?? '';
+}

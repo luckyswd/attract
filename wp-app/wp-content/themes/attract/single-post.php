@@ -206,6 +206,7 @@ $comments = get_comments($args);
         <?php endif;?>
     </div>
 </div>
-
-<?php get_footer();
+<?php 
+the_pattern('clients-on-map');
+get_footer();
 

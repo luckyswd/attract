@@ -89,4 +89,5 @@ $socials = $contact_us_block['social_links'];
     </div>
 </section>
 <?php
+the_pattern('clients-on-map');
 get_footer();
