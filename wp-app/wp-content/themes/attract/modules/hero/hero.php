@@ -87,10 +87,7 @@ $video = get_field('video');
         </div>
         <div class="modal-form" id="hero-video">
             <div class="form-wrapper">
-                <video controls preload="none">
-                    <source src="<?= $video['url'] ?>" type="<?= $video['mime_type'] ?>">
-                    Ваш браузер не поддерживает видео.
-                </video>
+                <video controls preload="none" poster="./wp-content/themes/attract/modules/hero/poster.webp" src="<?= $video['url'] ?>"></video>
             </div>
         </div>
     </section>
