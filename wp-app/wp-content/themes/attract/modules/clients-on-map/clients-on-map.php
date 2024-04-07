@@ -31,7 +31,7 @@ $countries = get_field('countries');
                 <div class="clients-on-map__map">
                     <div class="map-isolate-wrapper">
                         <div class="map-isolate">
-                            <img class="map-isolate__map" src="/wp-content/themes/attract/modules/clients-on-map/map.svg" alt="">
+                            <img class="map-isolate__map" src="/wp-content/themes/attract/modules/clients-on-map/map@2x.webp" alt="">
                             <div class="map-isolate__points">
                                 <?php foreach ($countries as $country) : ?>
                                     <?php 
