@@ -105,7 +105,7 @@
                             <?php endforeach; ?>
                         </div> -->
                         <a href="javascript:;" data-fancybox="" data-src="#modal-feedback-form" class="header__call-feedback btn red">
-                            <span>Беслатная оценка</span>
+                            <span>Бесплатная оценка</span>
                         </a>
                     <?php endif; ?>
                 </div>
