@@ -164,6 +164,7 @@ add_filter( 'register_taxonomy_args', function($args, $taxonomy, $object_type){
     
     if($taxonomy === 'category') {
         $args['publicly_queryable'] = false;
+        $args['query_var'] = true;
     }
     
     return $args;
