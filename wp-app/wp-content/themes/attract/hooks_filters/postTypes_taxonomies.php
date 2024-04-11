@@ -95,7 +95,7 @@ function create_taxonomy()
         'show_admin_column' => false,
         'show_in_rest' => true,
         'show_ui' => true,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
     ]);
@@ -124,7 +124,7 @@ function create_taxonomy()
         'show_admin_column' => false,
         'show_in_rest' => true,
         'show_ui' => true,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
     ]);
@@ -159,6 +159,15 @@ function create_taxonomy()
     ]);
 }
 
+// Make category taxonony not publicly queryable
+add_filter( 'register_taxonomy_args', function($args, $taxonomy, $object_type){
+    
+    if($taxonomy === 'category') {
+        $args['publicly_queryable'] = false;
+    }
+    
+    return $args;
+}, 10, 3 );
 
 function custom_register_post_types()
 {
