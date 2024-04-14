@@ -180,19 +180,19 @@ section {
     display: flex;
 
     span {
-        transition: $transition;
+        transition: all .18s ease-out;;
     }
 }
 
 .js-animation-up {
     span {
-        transform: translateY(-50px);
+        transform: translateY(-105%);
     }
 }
 
 .js-animation-down {
     span {
-        transform: translateY(50px);
+        transform: translateY(105%);
     }
 }
 
