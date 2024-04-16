@@ -1,0 +1,145 @@
+.clients-grid-section {
+    .container {
+        @include _1024 {
+            padding: 0;
+        }
+    }
+}
+.clients-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    padding: 1px;
+    background-color: rgba(0, 6, 24, 0.15);
+    overflow: hidden;
+    @include _620 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__item {
+        position: relative;
+        height: 200px;
+        padding: 15px;
+        background-color: $c-white;
+        cursor: pointer;
+        @include _1024 {
+            height: 180px;
+        }
+        @include _768 {
+            height: 136px;
+        }
+        @include _430 {
+            height: 110px;
+            padding: 30px;
+        }
+        &-modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(200% + 1px);
+            height: calc(200% + 1px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 37px;
+            background: $c-white;
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition;
+            cursor: auto;
+            overflow: auto;
+            z-index: 2;
+            @include _430 {
+                padding: 20px;
+            }
+            &-content {
+                margin: auto 0 0 0;
+            }
+            &-logo {
+                img {
+                    display: block;
+                    width: 65%;
+                    @include _430 {
+                        width: 50%;
+                    }
+                }
+            }
+            &-name {
+                font-weight: 500;
+                color: $c-black;
+                margin-bottom: 14px;
+            }
+            &-desc {
+                color: $c-gray;
+            }
+            &-close {
+                position: absolute;
+                top: 37px;
+                right: 37px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                @include _430 {
+                    top: 20px;
+                    right: 20px;
+                }
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 26px;
+                    height: 1.5px;
+                    background-color: #000;
+                }
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+            &-activate {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+        &.active &-modal {
+            opacity: 1;
+            visibility: visible;
+        }
+        &.active.bottom &-modal {
+            top: initial;
+            bottom: 0;
+        }
+        &.active.right &-modal {
+            left: initial;
+            right: 0;
+        }
+        &-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            img {
+                display: block;
+                width: auto;
+                height: auto;
+                max-height: 100%;
+                max-width: 100%;
+                transition: $transition;
+            }
+        }
+        &:hover &-logo img {
+            transform: scale(1.1);
+        }
+    }
+}

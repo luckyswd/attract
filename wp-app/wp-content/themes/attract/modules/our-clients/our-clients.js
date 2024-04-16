@@ -1,0 +1,58 @@
+class OurClients {
+    grid = document.querySelector('[data-grid]');
+    gridSize = {
+        w: 0,
+        h: 0
+    }
+    constructor() {
+
+        const cards = document.querySelectorAll('[data-grid-card]');
+        for(let card of cards) {
+            this.init(card);
+        }
+
+        this.calcGridSize();
+
+        document.addEventListener('click', (e) => {
+            if(e.target.dataset.gridCardModalClose !== undefined) {
+                this.resetAllActiveCard()
+            }
+        })
+
+        window.addEventListener('resize', (e) => {
+            this.calcGridSize();
+        })
+    }
+
+    calcGridSize() {
+        this.gridSize.w = this.grid.offsetWidth;
+        this.gridSize.h = this.grid.offsetHeight;
+    }
+
+    resetAllActiveCard() {
+        const cards = document.querySelectorAll('[data-grid-card].active');
+        for(let card of cards) {
+            card.classList.remove('active', 'bottom', 'right')
+        }
+    }
+
+    init(card) {
+        const btnActivate = card.querySelector('[data-grid-card-modal-activate]');
+        btnActivate.addEventListener('click', () => {
+            
+            this.resetAllActiveCard();
+            card.classList.add('active');
+            console.log((this.gridSize.h - card.offsetTop - card.offsetHeight), card.offsetHeight);
+            if((this.gridSize.h - card.offsetTop - card.offsetHeight) < card.offsetHeight){
+                card.classList.add('bottom');
+            }
+
+            if((this.gridSize.w - card.offsetLeft - card.offsetWidth) < card.offsetWidth){
+                card.classList.add('right');
+            }
+            
+        })
+    }
+}
+
+new OurClients();
