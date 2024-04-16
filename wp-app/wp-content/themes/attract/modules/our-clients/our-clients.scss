@@ -115,11 +115,11 @@
             opacity: 1;
             visibility: visible;
         }
-        &.active.bottom &-modal {
+        &.bottom &-modal {
             top: initial;
             bottom: 0;
         }
-        &.active.right &-modal {
+        &.right &-modal {
             left: initial;
             right: 0;
         }
