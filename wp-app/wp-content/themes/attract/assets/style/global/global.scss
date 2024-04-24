@@ -267,6 +267,9 @@ section {
 }
 
 .cl {
+    &-black {
+        color: $c-black;
+    }
     &-blue {
         color: $c-blue;
     }
