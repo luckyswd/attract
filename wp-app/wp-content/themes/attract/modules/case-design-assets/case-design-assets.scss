@@ -17,7 +17,7 @@
   }
   &__color {
     position: relative;
-    flex-basis: calc(20% - 16px);
+    flex-basis: 95px;
     max-width: 240px;
     text-align: center;
     display: flex;
@@ -28,6 +28,9 @@
     line-height: 1em;
     letter-spacing: -0.01em;
     color: #ffffff;
+    @media screen and (min-width: 769px) {
+      flex-grow: 1;
+    }
     @include _768 {
       flex-basis: calc(33% - 6px);
     }
