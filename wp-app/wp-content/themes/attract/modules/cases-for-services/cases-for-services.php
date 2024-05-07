@@ -11,6 +11,28 @@ Mode: preview
 $headline = get_field('headline');
 $button = get_field('button');
 $cases = get_field('cases');
+$from_cat = get_field('from_cat');
+$cat_id = $from_cat['cat_id'] ?? '';
+$numberposts = $from_cat['numberposts'] ?? -1;
+
+if(!empty($cat_id)) {
+    $cases = get_posts(array(
+        'numberposts' => $numberposts,
+        'orderby'     => 'rand',
+        'tax_query'   => array(
+            array(
+                'taxonomy' => 'case-category',
+                'field'    => 'id',
+                'terms'    => $cat_id,
+            )
+        ),
+        'meta_key'    => '',
+        'meta_value'  =>'',
+        'post_type'   => 'case',
+        'suppress_filters' => true,
+    ));
+}
+
 ?>
 
 <?php if (!is_admin()) : ?>
