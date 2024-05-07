@@ -100,6 +100,35 @@ function create_taxonomy()
         'query_var' => true,
     ]);
 
+    register_taxonomy('case-tag', ['case'], [
+        'label' => __('case tag'),
+        'rewrite' => ['slug' => 'case-tag'],
+        'labels' => [
+            'name' => 'Теги кейсов',
+            'singular_name' => 'Теги кейсов',
+            'search_items' => 'Найти тег',
+            'all_items' => 'Все теги кейсов',
+            'view_item ' => 'Просмотреть теги кейсов',
+            'parent_item' => 'Родительский тег кейса',
+            'parent_item_colon' => 'Родительский тег кейса:',
+            'edit_item' => 'Редактировать тег кейса',
+            'update_item' => 'Обновить тег кейса',
+            'add_new_item' => 'Добавить новый тег кейса',
+            'new_item_name' => 'Новое название тега кейса',
+            'menu_name' => 'Теги кейсов',
+        ],
+        'public' => true,
+        'hierarchical' => false,
+        'capabilities' => [],
+        'meta_box_cb' => null,
+        'show_admin_column' => false,
+        'show_in_rest' => true,
+        'show_ui' => true,
+        'publicly_queryable' => false,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+    ]);
+
     register_taxonomy('case-project', ['case'], [
         'label' => __('case project'),
         'rewrite' => ['slug' => 'case-project'],

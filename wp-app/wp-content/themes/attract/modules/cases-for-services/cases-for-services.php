@@ -12,21 +12,28 @@ $headline = get_field('headline');
 $button = get_field('button');
 $cases = get_field('cases');
 
-$from_cat = get_field('from_cat');
-$cat_id = $from_cat['cat_id'] ?? '';
-$numberposts = $from_cat['numberposts'] ?? -1;
-$random = $from_cat['random'] ?? false;
+$from_tax = get_field('from_tax');
+$cat_ids = $from_tax['cat_ids'] ?? array();
+$tag_ids = $from_tax['tag_ids'] ?? array();
+$numberposts = $from_tax['numberposts'] ?? -1;
+$random = $from_tax['random'] ?? false;
 
-if(!empty($cat_id)) {
+if(!empty($cat_ids) || !empty($tag_ids)) {
     $cases = get_posts(array(
         'numberposts' => $numberposts,
         'orderby'     => $random ? 'rand' : 'date',
         'order'       => 'DESC',
         'tax_query'   => array(
+            'relation' => 'OR',
             array(
                 'taxonomy' => 'case-category',
                 'field'    => 'id',
-                'terms'    => $cat_id,
+                'terms'    => $cat_ids,
+            ),
+            array(
+                'taxonomy' => 'case-tag',
+                'field'    => 'id',
+                'terms'    => $tag_ids,
             )
         ),
         'meta_key'    => '',

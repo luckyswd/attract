@@ -63,8 +63,8 @@
         },
         {
             "key": "field_663a9a5b19aa0",
-            "label": "Кейсы из категории",
-            "name": "from_cat",
+            "label": "Кейсы из таксономий",
+            "name": "from_tax",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -80,7 +80,7 @@
                 {
                     "key": "field_663a984181079",
                     "label": "Категория кейсов",
-                    "name": "cat_id",
+                    "name": "cat_ids",
                     "aria-label": "",
                     "type": "taxonomy",
                     "instructions": "",
@@ -96,7 +96,30 @@
                     "save_terms": 0,
                     "load_terms": 0,
                     "return_format": "id",
-                    "field_type": "select",
+                    "field_type": "multi_select",
+                    "allow_null": 1,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_663aa19f1ef3d",
+                    "label": "Теги кейсов",
+                    "name": "tag_ids",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "case-tag",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "field_type": "multi_select",
                     "allow_null": 1,
                     "multiple": 0
                 },
@@ -163,5 +186,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715117390
+    "modified": 1715118554
 }
