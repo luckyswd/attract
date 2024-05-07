@@ -11,14 +11,17 @@ Mode: preview
 $headline = get_field('headline');
 $button = get_field('button');
 $cases = get_field('cases');
+
 $from_cat = get_field('from_cat');
 $cat_id = $from_cat['cat_id'] ?? '';
 $numberposts = $from_cat['numberposts'] ?? -1;
+$random = $from_cat['random'] ?? false;
 
 if(!empty($cat_id)) {
     $cases = get_posts(array(
         'numberposts' => $numberposts,
-        'orderby'     => 'rand',
+        'orderby'     => $random ? 'rand' : 'date',
+        'order'       => 'DESC',
         'tax_query'   => array(
             array(
                 'taxonomy' => 'case-category',
