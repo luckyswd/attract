@@ -1,7 +1,10 @@
 <?php
 // Filter organization schema
 add_filter('wpseo_schema_person_user_id', function($author_id){
-  return 2;
+  if(is_singular('post')){
+    return 2;
+  }
+  return $author_id;
 });
 
 add_action('wpseo_json_ld', 'insert_theme_json_ld');
