@@ -253,6 +253,18 @@ function custom_register_post_types()
             "supports" => ['title', 'editor'],
             "has_archive" => false,
         ],
+        [
+            "post_type_name" => "schemas",
+            "name" => "Микроразметки",
+            "name_plural" => "Микроразметки",
+            "name_lowercase" => "Микроразметки",
+            "name_lowercase_plural" => "Микроразметки",
+            'menu_icon' => 'dashicons-welcome-write-blog',
+            "supports" => ['title', 'editor'],
+            "has_archive" => false,
+            "public" => false,
+            "show_ui" => true
+        ],
     ];
 
     foreach ($post_types as $post_type) {
@@ -281,7 +293,8 @@ function custom_register_post_types()
                 'item_updated' => __($post_type["name"] . ' updated.'),
             ],
             'menu_icon' => $post_type['menu_icon'],
-            'public' => true,
+            'public' => $post_type['public'] ?? true,
+            'show_ui' => $post_type['show_ui'] ?? true,
             'has_archive' => $post_type["has_archive"],
             'menu_position' => 5,
             'show_in_rest' => true,

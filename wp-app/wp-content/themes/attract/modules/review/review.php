@@ -62,13 +62,17 @@ $headline = get_field('headline');
                                     $author_review = get_field('author_review', $review);
                                     $title = get_field('short_description', $review);
                                     ?>
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide" itemscope itemtype="http://schema.org/Review">
                                         <!-- <div class="nav-wrap">
                                             <div class="pagination mobile"></div>
                                         </div> -->
-                                        <p class="h5"> <?= $description ?? '' ?> </p>
-                                        <p class="author_review"><?= $author_review ?? '' ?></p>
+                                        <p class="h5" itemprop="reviewBody"> <?= $description ?? '' ?> </p>
+                                        <p class="author_review" itemprop="author"><?= $author_review ?? '' ?></p>
                                         <p class="title"> <?= $title ?? '' ?> </p>
+                                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization" hidden>
+                                            <meta itemprop="name" content="Attract company">
+                                            <meta itemprop="url" content="<?= get_site_url(); ?>">
+                                        </div>
                                     </div>
                                 <?php endforeach; ?>
                             </div>

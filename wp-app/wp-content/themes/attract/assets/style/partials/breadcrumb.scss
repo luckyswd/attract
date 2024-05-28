@@ -1,7 +1,17 @@
-.site-breadcrumb {
+.site-breadcrumb,
+.breadcrumb {
     display: flex;
     flex-wrap: wrap;
     column-gap: 8px;
+
+    li {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        &:nth-last-child(2) .separator:before {
+            background-color: $c-blue;
+        }
+    }
 
     .separator {
         font-size: 0px;
@@ -15,12 +25,10 @@
             background-color: $c-gray;
             vertical-align: middle;
         }
-        &:nth-last-child(2):before {
-            background-color: $c-blue;
-        }
     }
 
-    .breadcrumb_last {
+    .breadcrumb_last,
+    .active {
         color: $c-blue;
     }
 

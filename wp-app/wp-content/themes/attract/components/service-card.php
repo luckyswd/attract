@@ -21,14 +21,18 @@ $is_published = get_post_status($service->ID) === 'publish';
 
 ?>
 
-<div class="service-card <?php if (!empty($categories) && !in_array($categories[0]->term_id, $serviceCategories)) : ?> hidden <?php endif; ?>" data-id="<?= $service->ID ?>">
+<div itemtype="https://schema.org/Product" itemprop="itemListElement" itemscope="" class="service-card <?php if (!empty($categories) && !in_array($categories[0]->term_id, $serviceCategories)) : ?> hidden <?php endif; ?>" data-id="<?= $service->ID ?>">
     <?= getPictureImage(is_array($image) ? $image : null, 420, 146) ?>
     <div class="service-card-content">
         <?php if (!empty($price)) : ?>
-            <p class="text-4 service-card-content-price"><?= $price ?></p>
+            <p itemprop="offers" itemscope="" itemtype="https://schema.org/AggregateOffer" class="text-4 service-card-content-price">
+                <meta itemprop="lowPrice" content="<?= preg_replace("/[^0-9.]/", "", $price) ?>" />
+                <meta itemprop="priceCurrency" content="USD">
+                <?= $price ?>
+            </p>
         <?php endif; ?>
-        <p class="h6"><?= $service->post_title ?? '' ?></p>
-        <p class="text-4 service-card-content-description"><?= $description ?? '' ?></p>
+        <p itemprop="name" class="h6"><?= $service->post_title ?? '' ?></p>
+        <p itemprop="description" class="text-4 service-card-content-description"><?= $description ?? '' ?></p>
         <div class="service-card-content-bottom">
             <a href="#contact-form" class="btn blue">
                 <span class="hover-animation">

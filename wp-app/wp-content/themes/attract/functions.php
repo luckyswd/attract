@@ -4,6 +4,9 @@ include 'hooks_filters/postTypes_taxonomies.php';
 include 'hooks_filters/webp_upload.php';
 include 'hooks_filters/after_setup_theme.php';
 include 'hooks_filters/reset_default_css_js.php';
+include 'hooks_filters/theme_schemas.php';
+
+include 'theme_foos/breadcrumbs.php';
 
 require_once 'helpers/helpers.php';
 require_once 'ajax/Ajax.php';

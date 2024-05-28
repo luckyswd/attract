@@ -63,7 +63,7 @@ $services = get_posts([
                 </div>
 
                 <?php if (!empty($services)) : ?>
-                    <div class="services-cards">
+                    <div class="services-cards" itemtype="https://schema.org/ItemList" itemscope="">
                         <?php foreach ($services as $service) : ?>
                             <?php
                             $serviceCategories = get_the_terms($service, 'service-category');

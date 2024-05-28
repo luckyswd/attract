@@ -17,7 +17,7 @@ $page_title = get_field('page_title', $tax);
             </div>
         </div>
         <div class="service-tax-hero__breadcrumb site-breadcrumb">
-            <?= do_shortcode('[wpseo_breadcrumb]'); ?>
+            <?php do_action('pretty_breadcrumb'); ?>
         </div>
     </div>
 </section>
@@ -26,7 +26,7 @@ $page_title = get_field('page_title', $tax);
 <section class="service-tax-services services distance">
     <div class="container">
         <?php if ( have_posts() ) : ?>
-            <div class="services-cards">
+            <div class="services-cards" itemtype="https://schema.org/ItemList" itemscope="">
             <?php
             /* Start the Loop */
             while ( have_posts() ) :

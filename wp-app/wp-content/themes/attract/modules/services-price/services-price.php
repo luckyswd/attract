@@ -48,7 +48,7 @@ $end_text_price = get_field('end_text_price');
                                     $name = $service->post_title;
                                     $link = get_permalink($service->ID);
                                 ?>
-                                    <a href="<?= $link ?>" class="services-price-item"><?= $name ?></a>
+                                    <a itemprop="relatedLink" href="<?= $link ?>" class="services-price-item"><?= $name ?></a>
                                 <?php endforeach; ?>
                             </div>
                         <?php endif; ?>

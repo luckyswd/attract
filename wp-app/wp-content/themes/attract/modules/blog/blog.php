@@ -57,7 +57,7 @@ $categories = get_terms([
 
             <?php if ($articles->have_posts()) : ?>
                 
-                <div class="articles-cards">
+                <div class="articles-cards" itemscope itemtype="http://schema.org/Blog">
                     <?php while ($articles->have_posts()) : $articles->the_post(); ?>
                         <?php
                         $post_id = get_the_ID();
@@ -69,15 +69,15 @@ $categories = get_terms([
                         $article_excerpt = get_the_excerpt($post_id);
 
                         ?>
-                        <div class="article-card" data-id="<?= $post_id ?>">
-                            <img src="<?= $image; ?> " alt="<?= $post_id ?>" />
+                        <div itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="article-card" data-id="<?= $post_id ?>" >
+                            <img itemprop="image" src="<?= $image; ?> " alt="<?= $post_id ?>" />
                             <div class="article-card-content">
                                 <div>
-                                    <p class="h6"><?= $article_title ?? '' ?></p>
-                                    <p class="text-4 article-card-content-description"><?= $article_excerpt ?? '' ?></p>
+                                    <p itemprop="name" class="h6"><?= $article_title ?? '' ?></p>
+                                    <p itemprop="articleBody" class="text-4 article-card-content-description"><?= $article_excerpt ?? '' ?></p>
                                 </div>
                                 <div class="article-card-content-bottom">
-                                    <a href="<?= $page_permalink; ?>" class="btn blue">
+                                    <a itemprop="url" href="<?= $page_permalink; ?>" class="btn blue">
                                         <span class="hover-animation">
                                             <span>Читать</span>
                                         </span>

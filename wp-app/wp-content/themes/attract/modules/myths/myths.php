@@ -21,12 +21,12 @@ $questions = get_field('questions');
                     <p class="h5"><?= $headline ?? '' ?></p>
                 </div>
                 <?php if (!empty($questions)) : ?>
-                    <div class="myths-questions">
+                    <div class="myths-questions" itemscope itemtype="https://schema.org/FAQPage">
                         <?php foreach ($questions as $key => $question) : ?>
                             <?php if (!empty($question)) : ?>
-                                <div class="myths-question">
+                                <div class="myths-question" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                                     <div class="myths-question-top">
-                                        <p class="h6"> <?= $question['question'] ?> </p>
+                                        <p class="h6" itemprop="name"> <?= $question['question'] ?> </p>
                                         <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
                                             <rect x="20" width="1.2" height="20" transform="rotate(90 20 0)" fill="#1744D0"/>
                                         </svg>
@@ -34,7 +34,7 @@ $questions = get_field('questions');
                                             <rect x="20" width="1.2" height="20" transform="rotate(90 20 0)" fill="#1744D0"/>
                                         </svg>
                                     </div>
-                                    <div class="text-3"> <?= $question['answer'] ?? '' ?> </div>
+                                    <div class="text-3" itemprop="acceptedAnswer" itemscope="" itemtype="http://schema.org/Answer"> <span><?= $question['answer'] ?? '' ?></span> </div>
                                     <span class="line"></span>
                                 </div>
                             <?php endif; ?>

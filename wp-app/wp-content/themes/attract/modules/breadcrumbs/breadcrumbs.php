@@ -13,7 +13,7 @@ $page_title = get_field("title");
     <section class="breadcrumbs distance <?php if ($show_page_title) :  ?> breadcrumbs-with-title <?php endif; ?>">
         <div class="container">
             <div class="breadcrumbs-wrap site-breadcrumb">
-                <?= do_shortcode('[wpseo_breadcrumb]'); ?>
+                <?php do_action('pretty_breadcrumb'); ?>
             </div>
             <?php if ($show_page_title) : ?>
                 <div class="breadcrumbs-page-title">

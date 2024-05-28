@@ -80,7 +80,7 @@ $comments = get_comments($args);
         </div>
     </section>
     <div class="single-post__breadcrumb site-breadcrumb">
-        <?= do_shortcode('[wpseo_breadcrumb]'); ?>
+        <?php do_action('pretty_breadcrumb'); ?>
     </div>
     <div class="single-post__content">
         <?php the_content() ?>
@@ -191,7 +191,7 @@ $comments = get_comments($args);
                             </div>
                         </div>
                     </div>
-                    <div class="swiper swiper-recent-posts__wrap">
+                    <div class="swiper swiper-recent-posts__wrap" itemscope itemtype="https://schema.org/ItemList">
                         <div class="swiper-wrapper">
                             <?php while ($result->have_posts()) : $result->the_post(); ?>
                                 <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'blog-post-thumbnail'); ?>

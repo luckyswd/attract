@@ -1,5 +1,5 @@
 <picture>
-    <img loading="lazy"
+    <img itemprop="image" loading="lazy"
          src="<?= $image['url'] ?? '' ?>"
          alt="<?= $image['title'] ?? '' ?>"
         <?php if ($width) : ?>

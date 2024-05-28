@@ -36,7 +36,7 @@ $categories = get_terms([
 <section class="documents-rules-breadrumbs distance">
     <div class="container">
         <div class="site-breadcrumb">
-            <?= do_shortcode('[wpseo_breadcrumb]'); ?>
+            <?php do_action('pretty_breadcrumb'); ?>
         </div>
     </div>
 </section>
