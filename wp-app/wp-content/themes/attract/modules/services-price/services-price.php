@@ -43,7 +43,7 @@ $end_text_price = get_field('end_text_price');
                     <div class="services-price-right">
                         <p class="text-1"><?= $textRight ?? '' ?></p>
                         <?php if (!empty($services)) : ?>
-                            <div class="services-price-items">
+                            <div class="services-price-items" itemscope itemtype="http://schema.org/WebPage">
                                 <?php foreach ($services as $service) :
                                     $name = $service->post_title;
                                     $link = get_permalink($service->ID);
