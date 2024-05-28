@@ -34,7 +34,7 @@ $questions = get_field('questions');
                                             <rect x="20" width="1.2" height="20" transform="rotate(90 20 0)" fill="#1744D0"/>
                                         </svg>
                                     </div>
-                                    <div class="text-3" itemprop="acceptedAnswer" itemscope="" itemtype="http://schema.org/Answer"> <span><?= $question['answer'] ?? '' ?></span> </div>
+                                    <div class="text-3" itemprop="acceptedAnswer" itemscope="" itemtype="http://schema.org/Answer"> <span itemprop="text"><?= $question['answer'] ?? '' ?></span> </div>
                                     <span class="line"></span>
                                 </div>
                             <?php endif; ?>

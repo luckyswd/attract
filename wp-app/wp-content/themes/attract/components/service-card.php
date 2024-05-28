@@ -30,6 +30,11 @@ $is_published = get_post_status($service->ID) === 'publish';
                 <meta itemprop="priceCurrency" content="USD">
                 <?= $price ?>
             </p>
+        <?php else: ?>
+            <p itemprop="offers" itemscope="" itemtype="https://schema.org/AggregateOffer" class="text-4 service-card-content-price">
+                <meta itemprop="lowPrice" content="50" />
+                <meta itemprop="priceCurrency" content="USD">
+            </p>
         <?php endif; ?>
         <p itemprop="name" class="h6"><?= $service->post_title ?? '' ?></p>
         <p itemprop="description" class="text-4 service-card-content-description"><?= $description ?? '' ?></p>
