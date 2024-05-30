@@ -140,21 +140,24 @@ $footer_form = get_field('footer_form', 'option');
         }
     }
 
-    window.onload = function() {
-        const yCids = document.getElementsByClassName('yAnalytic');
-        const yandexCid = getYClientID();
+    window.addEventListener('load', function(){
+        setTimeout(() => {
+            const yCids = document.getElementsByClassName('yAnalytic');
+            const yandexCid = getYClientID();
 
-        const gCids = document.getElementsByClassName('gAnalytic');
-        const googleCid = getGoogleClientID();
+            const gCids = document.getElementsByClassName('gAnalytic');
+            const googleCid = getGoogleClientID();
 
-        for (let i = 0; i < yCids.length; i++) {
-            yCids[i].value = yandexCid;
-        }
+            for (let i = 0; i < yCids.length; i++) {
+                yCids[i].value = yandexCid;
+            }
 
-        for (let i = 0; i < gCids.length; i++) {
-            gCids[i].value = googleCid;
-        }
-    };
+            for (let i = 0; i < gCids.length; i++) {
+                gCids[i].value = googleCid;
+            }
+        }, 1000);
+    });
+    
 </script>
 </body>
 
