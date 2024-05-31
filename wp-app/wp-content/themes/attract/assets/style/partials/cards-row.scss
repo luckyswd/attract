@@ -27,30 +27,44 @@
     }
   
     &__card {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 30px;
-      height: 100%;
-      background: $c-light-white;
-      border-radius: 20px;
-      background-repeat: no-repeat;
-      background-position: bottom;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+        height: 100%;
+        background: $c-light-white;
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    
+        @include _768 {
+            padding: 20px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #F2F4FC;
+            opacity: 0.7;
+            z-index: -1;
+        }
   
-      @include _768 {
-        padding: 20px;
-      }
-  
-      &-number {
-        color: $c-blue;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-      }
-  
-      .text-3 {
-        font-weight: 500;
-      }
+        &-number {
+            color: $c-blue;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+        }
+    
+        .text-3 {
+            font-weight: 500;
+        }
     }
   }
