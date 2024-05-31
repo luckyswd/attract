@@ -10,6 +10,7 @@ Mode: preview
 <?php
 $headline = get_field('headline');
 $subheadline = get_field('subheadline');
+$text = get_field('text');
 $background_image = get_field('background_image');
 $icons = get_field('icons');
 $form_headline = get_field('form_headline');
@@ -27,6 +28,9 @@ $size_50_on_50 = get_field('size_50_50');
             <div class="form-wrapper <?= $size_50_on_50 ? 'half' : ''; ?>">
                 <div class="form-left">
                     <p class="h4"><?= $headline ?? '' ?></p>
+                    <?php if (!empty($text)) : ?>
+                        <p class="text-3" style="margin-top: 20px"> <?= $text ?? '' ?> </p>
+                    <?php endif; ?>
                     <div class="form-icon-wrap">
                         <?php if (!empty($icons)) : ?>
                             <div class="form-icons">

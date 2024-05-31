@@ -48,6 +48,26 @@
             "append": ""
         },
         {
+            "key": "field_66599e961c0ac",
+            "label": "Текст",
+            "name": "text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_64203992c9048",
             "label": "Иконки",
             "name": "icons",
@@ -257,5 +277,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697650392
+    "modified": 1717149359
 }

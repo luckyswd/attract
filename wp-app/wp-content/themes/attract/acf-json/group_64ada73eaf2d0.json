@@ -150,7 +150,7 @@
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
-                    "media_upload": 0,
+                    "media_upload": 1,
                     "delay": 0,
                     "parent_repeater": "field_64ada7670a20d"
                 }
@@ -195,5 +195,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697495379
+    "modified": 1717146402
 }

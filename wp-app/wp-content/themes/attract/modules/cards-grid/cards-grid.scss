@@ -1,0 +1,70 @@
+.cards-grid-section {
+  .section__title {
+    margin-bottom: 80px;
+    @include _768 {
+      margin-bottom: 40px;
+    }
+  }
+
+  .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    &__card {
+      flex-basis: calc(50% - 11px);
+      padding: 35px 50px 40px;
+      background-color: #fff;
+      border-radius: 20px;
+      @include _768 {
+        flex-basis: 100%;
+        padding: 35px 20px;
+      }
+      &_full-width {
+        flex-basis: 100%;
+      }
+      &-top {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 50px;
+        @include _768 {
+          margin-bottom: 30px;
+        }
+      }
+      &-icon {
+        max-width: 50px;
+        max-height: 38px;
+      }
+      &-subtitle {
+      }
+      &-title {
+        font-weight: 500;
+        margin-bottom: 40px;
+        @include _768 {
+          margin-bottom: 20px;
+        }
+      }
+      &-text {
+        line-height: 1.375em;
+      }
+      &-list {
+        .card-list__item {
+          flex-basis: calc(33% - 13px);
+          @include _620 {
+            flex-basis: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  &__item {
+    display: flex;
+    gap: 15px;
+  }
+}
