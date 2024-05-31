@@ -41,7 +41,7 @@ $size_50_on_50 = get_field('size_50_50');
                                 <?php endforeach; ?>
                             </div>
                         <?php endif; ?>
-                        <p class="text-1"> <?= $subheadline ?? '' ?> </p>
+                        <p class="text-2"> <?= $subheadline ?? '' ?> </p>
                     </div>
                     <div class="left-overlay">
                         <?= getPictureImage($background_image, 650, 650) ?>
