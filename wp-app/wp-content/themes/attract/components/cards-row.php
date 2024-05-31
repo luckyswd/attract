@@ -4,7 +4,7 @@ $cards = $args['cards'] ?? [];
 <?php if (!empty($cards)) : ?>
   <div class="cards-row">
       <?php foreach ($cards as $key => $card) : ?>
-          <div class="cards-row__card">
+          <div class="cards-row__card" style="background-image: url(<?= !empty($card['background_image']) ? $card['background_image']['url'] : ''; ?>);">
               <?php $number = !empty($card['number']) ? $card['number'] : '(' . str_pad(($key + 1), 2, "0", STR_PAD_LEFT) . ')'; ?>
               <p class="cards-row__card-number"><?= $number; ?></p>
               <p class="text-3"><?= $card['text'] ?></p>
