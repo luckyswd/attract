@@ -22,7 +22,7 @@ $cards = get_field('cards');
             <?php if (!empty($cards)) : ?>
                 <div class="cards-grid">
                     <?php foreach ($cards as $key => $card) : ?>
-                        <div class="cards-grid__card <?= $card['full-width'] ? 'cards-grid__card_full-width' : '' ?>">
+                        <div class="cards-grid__card <?= $card['full-width'] ? 'cards-grid__card_full-width' : '' ?>" style="background-image: url(<?= $card['bg'] ?>);">
                             <div class="cards-grid__card-top">
                                 <img class="cards-grid__card-icon" src="<?= $card['icon'] ?>" alt="">
                                 <div class="cards-grid__card-subtitle text-2 cl-blue"><?= $card['subtitle'] ?></div>
