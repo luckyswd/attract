@@ -31,6 +31,7 @@
         align-items: center;
         width: 100%;
         padding-top: 200px;
+        padding-bottom: 100px;
         z-index: 1;
 
         @include _1024 {
@@ -56,6 +57,9 @@
         
         .cards-row {
             margin-bottom: 40px;
+            background: transparent;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         &.left {
