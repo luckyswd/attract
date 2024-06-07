@@ -7,7 +7,7 @@ add_filter('wpseo_schema_person_user_id', function($author_id){
   return $author_id;
 });
 
-add_action('wpseo_json_ld', 'insert_theme_json_ld');
+add_action('wpseo_json_ld', 'insert_theme_json_ld', 3);
 
 function insert_theme_json_ld(){
 
@@ -29,7 +29,9 @@ function insert_theme_json_ld(){
   foreach( $my_posts as $post ){
     setup_postdata( $post );
 
-    the_content();
+    $output = \str_replace( "\n", \PHP_EOL . "\t", get_the_content() );
+
+    echo $output;
 
     // формат вывода the_title() ...
   }
