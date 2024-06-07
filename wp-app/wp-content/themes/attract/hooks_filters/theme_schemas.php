@@ -11,7 +11,7 @@ add_action('wpseo_json_ld', 'insert_theme_json_ld');
 
 function insert_theme_json_ld(){
 
-  if(is_admin()) return;
+  if(is_admin() || wp_doing_ajax()) return;
 
   $theme_schemas = get_field('schemas', 'option');
   $page_schemas = get_field('schemas') ?? array();
