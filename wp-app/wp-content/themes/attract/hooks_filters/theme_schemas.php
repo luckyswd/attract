@@ -14,7 +14,10 @@ function insert_theme_json_ld(){
   if(is_admin() || wp_doing_ajax()) return;
 
   $theme_schemas = get_field('schemas', 'option');
-  $page_schemas = get_field('schemas') ?? array();
+  $page_schemas = get_field('schemas');
+  if(empty($page_schemas)){
+    $page_schemas = array();
+  }
   $schemas = array_unique($theme_schemas + $page_schemas);
 
   // параметры по умолчанию
@@ -29,9 +32,7 @@ function insert_theme_json_ld(){
   foreach( $my_posts as $post ){
     setup_postdata( $post );
 
-    $output = \str_replace( "\n", \PHP_EOL . "\t", get_the_content() );
-
-    echo $output;
+    the_content()
 
     // формат вывода the_title() ...
   }
