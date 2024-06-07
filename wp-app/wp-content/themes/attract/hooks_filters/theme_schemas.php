@@ -32,7 +32,7 @@ function insert_theme_json_ld(){
   foreach( $my_posts as $post ){
     setup_postdata( $post );
 
-    the_content()
+    the_content();
 
     // формат вывода the_title() ...
   }
