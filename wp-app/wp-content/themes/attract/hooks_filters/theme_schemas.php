@@ -7,7 +7,7 @@ add_filter('wpseo_schema_person_user_id', function($author_id){
   return $author_id;
 });
 
-add_action('wpseo_json_ld', 'insert_theme_json_ld', 3);
+add_action('wp_head', 'insert_theme_json_ld', 3);
 
 function insert_theme_json_ld(){
 
