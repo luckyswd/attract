@@ -49,6 +49,37 @@
             webvisor: true
         });
     </script>
+    <?php if(!is_user_logged_in()): ?>
+    <script>
+        document.body.oncontextmenu = function (e) {return false;};
+        document.body.oncopy = function (e) {return false;};
+        document.body.oncut = function (e) {return false;};
+        document.onselectstart = function (e) {return false;};
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                return false;
+            }
+            if(e.altKey && e.metaKey && e.keyCode == 'I'.charCodeAt(0)){
+                return false;
+            }    
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                return false;
+            }
+            if(e.altKey && e.metaKey && e.keyCode == 'J'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                return false;
+            }
+            if(e.altKey && e.metaKey && e.keyCode == 'U'.charCodeAt(0)){
+                return false;
+            }
+        }
+    </script>
+    <?php endif; ?>
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/95119440" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
