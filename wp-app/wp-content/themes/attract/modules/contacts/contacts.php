@@ -10,6 +10,8 @@ Mode: preview
 <?php
 $title = get_field('title');
 $contacts = get_field('contacts');
+$contact_us_block = get_field('contact_us_block', 'options');
+$socials = $contact_us_block['social_links'];
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -23,7 +25,6 @@ $contacts = get_field('contacts');
                         <div class="contacts__card-text h6"><?= $contact['text'] ?></div>
                     </div>
                 <?php endforeach; ?>
-                <?php $socials = get_field('socials', 'option'); ?>
                 <?php if (!empty($socials)) : ?>
                 <div class="contacts__card">
                     <div class="contacts__card-caption text-4">Социальные сети</div>
