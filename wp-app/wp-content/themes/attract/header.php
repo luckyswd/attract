@@ -49,11 +49,15 @@
             webvisor: true
         });
     </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/95119440" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
     <?php if(!is_user_logged_in()): ?>
     <script>
-        document.body.oncontextmenu = function (e) {return false;};
-        document.body.oncopy = function (e) {return false;};
-        document.body.oncut = function (e) {return false;};
+        document.oncontextmenu = function (e) {return false;};
+        document.oncopy = function (e) {return false;};
+        document.oncut = function (e) {return false;};
         document.onselectstart = function (e) {return false;};
         document.onkeydown = function(e) {
             if(event.keyCode == 123) {
@@ -80,10 +84,6 @@
         }
     </script>
     <?php endif; ?>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/95119440" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
     <title><?php wp_title('«', true, 'right'); ?> | <?php bloginfo('name'); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <?php wp_head(); ?>
