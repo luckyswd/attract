@@ -2,8 +2,12 @@
 
 
 class Blog {
+
     constructor() {
-        this.init()
+        const container = document.querySelector('.articles');
+        if(!!container) {
+            this.init()
+        }
     }
 
     send(category = '', paged = 1) {
