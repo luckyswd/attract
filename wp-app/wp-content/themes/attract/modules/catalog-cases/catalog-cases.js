@@ -1,6 +1,6 @@
 class Cases {
     constructor() {
-        this.init();
+        !!document.querySelector('.catalog-cases') && this.init();
     }
 
     init() {
