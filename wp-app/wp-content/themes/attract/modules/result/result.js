@@ -1,6 +1,6 @@
 class Result {
   constructor() {
-    this.init();
+    document.querySelector('.result-bottom') && this.init();
   }
 
   init() {

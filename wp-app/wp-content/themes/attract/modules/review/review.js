@@ -1,9 +1,15 @@
 class Review {
   constructor() {
+
+    if(!document.querySelector('.review-sides')) return;
+
     this.swiper1 = null;
     this.swiper2 = null;
-    this.init();
-    this.handelVideo()
+
+    document.addEventListener('DOMContentLoaded', () => {
+      this.init();
+      this.handelVideo()
+    });
   }
 
   init() {
