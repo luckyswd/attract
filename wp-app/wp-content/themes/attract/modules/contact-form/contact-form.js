@@ -11,16 +11,18 @@ class ContactForm {
         }
     }
 
-    inputHandler = (e) => {
+    inputHandler(e) {
         const input = e.target;
-        input.tagName === 'INPUT' && this.switchFilled(input, input.parentElement.parentElement);
+        input.nodeName === 'INPUT' && this.switchFilled(input, input.parentElement.parentElement);
     }
 
     listeners() {
         const forms = document.querySelectorAll(".contact-form form");
 
         for(let form of forms) {
-            form.addEventListener('input', this.inputHandler)
+            form.addEventListener('input', (e) => {
+                this.inputHandler(e);
+            })
         }
     }
 

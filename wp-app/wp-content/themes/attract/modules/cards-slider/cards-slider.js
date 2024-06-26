@@ -1,8 +1,8 @@
 class CardsSlider {
 
-    selector = '.cards-slider__slider';
-
     constructor() {
+        this.selector = '.cards-slider__slider';
+        
         !!document.querySelector(this.selector) && this.init();
     }
 
