@@ -2,6 +2,8 @@ class OurClients {
     constructor() {
 
         this.grid = document.querySelector('[data-grid]');
+        if(!this.grid) return;
+
         this.gridSize = {
             w: 0,
             h: 0
@@ -61,14 +63,6 @@ class OurClients {
             
             this.resetAllActiveCard();
             card.classList.add('active');
-            // console.log((this.gridSize.h - card.offsetTop - card.offsetHeight), card.offsetHeight);
-            // if((this.gridSize.h - card.offsetTop - card.offsetHeight) < card.offsetHeight){
-            //     card.classList.add('bottom');
-            // }
-
-            // if((this.gridSize.w - card.offsetLeft - card.offsetWidth) < card.offsetWidth){
-            //     card.classList.add('right');
-            // }
             
         })
     }
