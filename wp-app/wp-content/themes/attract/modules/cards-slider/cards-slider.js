@@ -1,10 +1,13 @@
 class CardsSlider {
+
+    selector = '.cards-slider__slider';
+
     constructor() {
-        this.init();
+        !!document.querySelector(this.selector) && this.init();
     }
 
     init() {
-        const swiper = new Swiper(".cards-slider__slider", {
+        new Swiper(this.selector, {
             spaceBetween: 20,
             slidesPerView: 1,
             navigation: {

@@ -1,10 +1,7 @@
 class Blog {
 
     constructor() {
-        const container = document.querySelector('.articles');
-        if(!!container) {
-            this.init()
-        }
+        !!document.querySelector('.articles') && this.init();
     }
 
     send(category = '', paged = 1) {
