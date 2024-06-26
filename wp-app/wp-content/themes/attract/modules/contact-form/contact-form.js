@@ -1,29 +1,36 @@
 class ContactForm {
     constructor() {
-        this.init();
+        !!document.querySelector(".contact-form") && this.init();
+    }
+
+    switchFilled(field, fieldWrap) {
+        if (field.value.length > 0) {
+            fieldWrap.classList.add('filled');
+        } else {
+            fieldWrap.classList.remove('filled');
+        }
+    }
+
+    inputHandler = (e) => {
+        const input = e.target;
+        input.tagName === 'INPUT' && this.switchFilled(input, input.parentElement.parentElement);
+    }
+
+    listeners() {
+        const forms = document.querySelectorAll(".contact-form form");
+
+        for(let form of forms) {
+            form.addEventListener('input', this.inputHandler)
+        }
     }
 
     init() {
-
-        function switchFilled(field, fieldWrap) {
-            if (field.value.length > 0) {
-                fieldWrap.classList.add('filled');
-            } else {
-                fieldWrap.classList.remove('filled');
-            }
-        }
-
         const inputs = document.querySelectorAll(".contact-form input");
-
         inputs.forEach((input) => {
-            switchFilled(input, input.parentElement.parentElement);
-
-            input.addEventListener("input", function() {
-                switchFilled(input, input.parentElement.parentElement);
-            })
+            this.switchFilled(input, input.parentElement.parentElement);
         });
 
-
+        this.listeners();
     }
 }
 
