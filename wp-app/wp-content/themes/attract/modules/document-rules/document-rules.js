@@ -1,6 +1,6 @@
 class Rules {
   constructor() {
-    this.init();
+    !!document.querySelector('.documents-rules-tabs') && this.init();
   }
 
   init() {
