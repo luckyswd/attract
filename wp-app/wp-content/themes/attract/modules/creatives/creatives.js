@@ -1,1 +1,0 @@
-Marquee3k.init()
