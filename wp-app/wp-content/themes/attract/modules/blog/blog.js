@@ -1,6 +1,3 @@
-
-
-
 class Blog {
 
     constructor() {
@@ -79,5 +76,5 @@ class Blog {
         })
     }
 }
-    
+
 new Blog();
