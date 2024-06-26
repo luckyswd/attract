@@ -1,10 +1,14 @@
 class Team {
   constructor() {
-      this.init();
+      if(!document.querySelector('.swiper-team')) return;
+        
+      document.addEventListener('DOMContentLoaded', () => {
+          this.init();
+      });
   }
 
   init() {
-    const swiper = new Swiper(".swiper-team", {
+    new Swiper(".swiper-team", {
         loop: true,
         spaceBetween: 10,
 

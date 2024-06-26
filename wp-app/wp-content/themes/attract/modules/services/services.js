@@ -1,6 +1,6 @@
 class Services {
   constructor() {
-    this.init()
+    !!document.querySelector('.services') && this.init();
   }
 
   init() {

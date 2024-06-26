@@ -1,6 +1,10 @@
 class ServicesVideos {
     constructor() {
-      this.init();
+        if(!document.querySelector('.services-videos')) return;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            this.init();
+        });
     }
   
       init() {
