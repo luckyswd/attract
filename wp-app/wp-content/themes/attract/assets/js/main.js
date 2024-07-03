@@ -7,6 +7,7 @@
 
 
 /* PARTIALS */
+//=include partials/global.js
 //=include partials/header.js
 //=include partials/footer.js
 //=include partials/recent-posts.js
