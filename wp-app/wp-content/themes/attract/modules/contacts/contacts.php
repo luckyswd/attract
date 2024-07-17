@@ -32,7 +32,7 @@ $socials = $contact_us_block['social_links'];
                         <div class="socials-btns">
                             <?php foreach ($socials as $social) : ?>
                                 <?php if (!empty($social['icon'])) : ?>
-                                    <a href="<?= $social['link']['url'] ?? '' ?>" class="socials-btns__link">
+                                    <a href="<?= $social['link']['url'] ?? '' ?>" target="<?= $social['link']['target'] ?? '_self' ?>" class="socials-btns__link">
                                         <?= getPictureImage($social['icon'], 29, 29) ?>
                                     </a>
                                 <?php endif; ?>
