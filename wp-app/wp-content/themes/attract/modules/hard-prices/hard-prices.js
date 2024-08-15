@@ -42,11 +42,11 @@ class HardPrices {
     this.period = newPeriod;
   }
 
-  updateActivePeriodButton(newPeriod) {
+  updateActivePeriodButton() {
     [...this.sectionPeriod.querySelectorAll('button.active')].forEach((btn) => {
       btn.classList.remove('active')
     });
-    this.sectionPeriod.querySelector('[data-period="'+this.period+'"]')?.classList.add('active');
+    this.sectionPeriod.querySelector('[data-period="'+this.period+'"]').classList.add('active');
   }
 
   listeners() {
