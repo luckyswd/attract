@@ -41,7 +41,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class() ?>>
 
     <?php
     $logo = get_field('logo', 'option');

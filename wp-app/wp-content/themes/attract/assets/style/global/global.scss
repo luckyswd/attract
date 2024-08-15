@@ -79,6 +79,18 @@ section {
         &:hover {
             background: $c-blue;
             color: $c-white;
+            text-decoration: none;
+        }
+    }
+    &.transparent {
+        background: transparent;
+        color: $c-blue;
+        border: 1px solid $c-blue;
+
+        &:hover {
+            background: $c-blue;
+            color: $c-white;
+            text-decoration: none;
         }
     }
 

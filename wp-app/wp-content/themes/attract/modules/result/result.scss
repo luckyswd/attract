@@ -58,7 +58,7 @@
             }
         }
 
-        a {
+        a:not(.btn) {
             color: inherit;
             text-decoration: underline;
             &:hover {

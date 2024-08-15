@@ -46,6 +46,7 @@ $result_blocks = get_field('result_blocks');
                         </div>
                     <?php endif; ?>
                 </div>
+                <?php if(!empty($images)) : ?>
                 <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>">
                     <div class="swiper-wrapper">
                         <?php foreach($images as $image) : ?>
@@ -56,6 +57,7 @@ $result_blocks = get_field('result_blocks');
                     </div>
                     <div class="pagination"></div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>
