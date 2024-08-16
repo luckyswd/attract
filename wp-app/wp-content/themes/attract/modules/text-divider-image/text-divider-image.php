@@ -1,46 +1,42 @@
 <?php
 
 /*
-Title: Для чего нужна услуга модуль
+Title: Текст-разделитель-картинка
 Mode: preview
 */
 
 ?>
 
 <?php
-$headline = get_field('headline');
-$text = get_field('text');
-$for_what_blocks = get_field('for_what_blocks');
+$title = get_field('title');
+$text = get_field('description');
+$link = get_field('link');
+$image_id = get_field('image_id');
+$image_src = !empty($image_id) ? wp_get_attachment_image_url( $image_id, 'full' ) : '';
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="for-what distance">
+    <section class="text-divider-image-secton distance">
         <div class="container">
-            <div class="for-what-wrapper">
-                <div class="for-what-top">
-                    <?php if(!empty($headline)): ?>  
-                        <h2 class="h2"><?= $headline ?? '' ?></h2>
+            <div class="section__row">
+                <div class="section__col section__col_text">
+                    <h3 class="section__title h5"><?= $title; ?></h3>
+                    <div class="section__description text-3"><?= $text; ?></div>
+                    <?php if(!empty($link)): ?>
+                        <a href="<?= $link['url'] ?>" target="<?= $link['target'] ?>" class="section__link btn blue"><span class="hover-animation"><span><?= $link['title'] ?></span></span></a>
                     <?php endif; ?>
-                    <div class="text-2"><?= $text ?? '' ?></div>
                 </div>
-                <?php if (!empty($for_what_blocks)) : ?>
-                    <div class="for-what-bottom">
-                        <div class="for-what-blocks">
-                            <?php foreach ($for_what_blocks as $block) : ?>
-                                <div class="for-what-block">
-                                    <?php if($block['headline_svg']): ?>
-                                    <div class="headline-svg"><img src="<?= $block['headline_svg'] ?? '' ?>" alt="<?= $block['headline'] ?? '' ?>" /></div>
-                                    <?php endif; ?>
-                                    <div class="h5"><?= $block['headline'] ?? '' ?></div>
-                                    <div class="text-3"><?= $block['text'] ?? '' ?></div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                <div class="section__divider"></div>
+                <div class="section__col section__col_image">
+                    <?php if(!empty($image_src)): ?>
+                        <figure class="section__figure">
+                            <img src="<?= $image_src; ?>" alt="">
+                        </figure>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </section>
 <?php else : ?>
-    <h2 style="font-family: 'Mark', sans-serif;">Для чего нужна услуга модуль</h2>
+    <h2 style="font-family: 'Mark', sans-serif;">Текст-разделитель-картинка</h2>
 <?php endif; ?>

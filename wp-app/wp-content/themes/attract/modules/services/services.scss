@@ -64,6 +64,9 @@
 
     .single-service {
         cursor: pointer;
+        @include _1400 {
+            font-size: 16px;
+        }
 
         @include _768 {
             white-space: nowrap;
