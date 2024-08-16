@@ -38,12 +38,18 @@
     }
     .section__description {
         margin-top: 30px;
+        @include _768 {
+            margin-top: 15px;
+        }
     }
     .section__link {
         max-width: 328px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 44px;
+        @include _768 {
+            margin-top: 20px;
+        }
     }
     .section__divider {
         flex-shrink: 0;
