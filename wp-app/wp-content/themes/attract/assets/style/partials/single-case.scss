@@ -35,7 +35,7 @@
       grid-template-columns: 1fr 320px;
 
       @include _1440 {
-        grid-template-columns: max(620px);
+        grid-template-columns: 1fr;
         gap: 60px;
       }
 
