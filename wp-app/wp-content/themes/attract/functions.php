@@ -124,7 +124,7 @@ add_filter('wpseo_breadcrumb_links', function ($links)
     if (is_singular('case')) {
         $breadcrumb[] = array(
             'url' => site_url('/kejsy/'),
-            'text' => 'Все кейсы',
+            'text' => 'Наши кейсы',
         );
 
         array_splice($links, 1, -2, $breadcrumb);
