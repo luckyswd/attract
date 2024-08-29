@@ -82,6 +82,10 @@ header {
           bottom: 50%;
           transform: rotate(-45deg);
           transform-origin: right bottom;
+
+          @include _1280 {
+            bottom: 55%;
+          }
         }
       }
     }
@@ -147,6 +151,11 @@ header {
       .subsubmenu-wrapper {
         .sub-menu {
           display: block;
+        }
+
+        li a {
+          display: flex;
+          width: auto;
         }
       }
 
@@ -244,7 +253,10 @@ header {
 
   .header__buttons-mobile {
     padding: 50px 30px 0px;
-    max-width: 480px;
+    max-width: 100%;
+    @include _480 {
+        max-width: 480px;
+    }
     @media (max-height: 400px) and (orientation: landscape){
       padding-top: 15px;
     }
@@ -262,7 +274,7 @@ header {
         flex-wrap: wrap;
 
         a {
-          width: 192px;
+          width: calc(100% - 50px);
           color: #000;
           font-size: 24px;
           font-style: normal;
@@ -277,15 +289,21 @@ header {
           gap: 20px;
           width: 100%;
           margin-top: 20px;
+          padding-left: 10px;
           .menu-item a {
             color: #000;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
-            line-height: 100%; /* 18px */
+            line-height: 1.25em;
           }
           .sub-menu {
-            padding-left: 10px;
+            gap: 14px;
+            margin-top: 12px;
+            line-height: 1em;
+            a {
+              font-size: 16px;
+            }
           }
         }
 
@@ -303,6 +321,10 @@ header {
           &.active {
             &>.parent-icon {
               transform: rotate(-90deg);
+
+              @include _1280 {
+                transform: rotate(-90deg) translateY(1.5px);
+              }
             }
             &>.sub-menu {
               display: flex;

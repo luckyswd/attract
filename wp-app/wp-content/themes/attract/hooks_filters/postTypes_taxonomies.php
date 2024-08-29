@@ -15,7 +15,7 @@ function create_taxonomy()
 
     register_taxonomy('service-category', ['service'], [
         'label' => __('service category'),
-        'rewrite' => ['slug' => 'service-category'],
+        'rewrite' => ['slug' => 'uslugi/category', 'with_front' => false],
         'labels' => [
             'name' => 'Категория услуг',
             'singular_name' => 'Категории услуг',
