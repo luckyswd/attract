@@ -211,6 +211,7 @@ function custom_register_post_types()
             'menu_icon' => 'dashicons-sticky',
             "supports" => ['title', 'editor'],
             "has_archive" => false,
+            "rewrite" => ["with_front" => false, 'slug' => 'kejsy']
         ],
         [
             "post_type_name" => "review",

@@ -121,6 +121,15 @@ add_filter('wpseo_breadcrumb_links', function ($links)
         array_splice($links, 1, -2, $breadcrumb);
     }
 
+    if (is_singular('case')) {
+        $breadcrumb[] = array(
+            'url' => site_url('/kejsy/'),
+            'text' => 'Все кейсы',
+        );
+
+        array_splice($links, 1, -2, $breadcrumb);
+    }
+
     return $links;
 });
 

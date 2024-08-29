@@ -13,7 +13,7 @@ function insert_theme_json_ld(){
 
   if(is_admin() || wp_doing_ajax()) return;
 
-  $theme_schemas = get_field('schemas', 'option');
+  $theme_schemas = get_field('schemas', 'option') ?: array();
   $page_schemas = get_field('schemas');
   if(empty($page_schemas)){
     $page_schemas = array();
