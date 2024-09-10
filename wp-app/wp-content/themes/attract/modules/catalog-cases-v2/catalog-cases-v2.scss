@@ -1,4 +1,4 @@
-.catalog-cases {
+.catalog-cases-v2 {
     .cases-sticky {
         position: sticky;
         top: 69px;
@@ -34,15 +34,15 @@
     }
 
     .single-case {
+        color: $c-black;
         transition: all .3s;
-        cursor: pointer;
 
         @include _768 {
             white-space: nowrap;
         }
 
         &:hover,
-        &.js-active {
+        &.active {
             color: $c-blue;
         }
     }

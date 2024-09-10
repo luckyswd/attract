@@ -4,8 +4,8 @@ class Cases {
     }
 
     init() {
-        const caseCategories = document.querySelectorAll('.single-case');
-        const caseCards = document.querySelectorAll('.case-card');
+        const caseCategories = document.querySelectorAll('.catalog-cases .single-case');
+        const caseCards = document.querySelectorAll('.catalog-cases .case-card');
 
         caseCategories.forEach((category) => {
             category.addEventListener('click', () => {

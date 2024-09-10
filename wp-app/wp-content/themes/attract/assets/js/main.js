@@ -25,6 +25,7 @@
 //=include ../../modules/document-rules/document-rules.js
 //=include ../../modules/result/result.js
 //=include ../../modules/catalog-cases/catalog-cases.js
+//=include ../../modules/catalog-cases-v2/catalog-cases-v2.js
 //=include ../../modules/contact-form/contact-form.js
 //=include ../../modules/cards-slider/cards-slider.js
 //=include ../../modules/our-clients/our-clients.js
