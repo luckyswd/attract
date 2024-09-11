@@ -7,7 +7,7 @@ $page_title = get_field('page_title', $tax);
 ?>
 <section class="catalog-cases-top distance">
     <div class="container">
-        <div class="catalog-top" style="background-image: url('/wp-content/uploads/2024/09/item-1.svg')"> <!-- /wp-content/uploads/2023/10/item-1.svg -->
+        <div class="catalog-top" style="background-image: url('/wp-content/uploads/2023/10/item-1.svg')">
             <p class="text-1"><?= $tax->name ?></p>
             <h1 class="h2"><?= $page_title ?: $tax->name ?></h1>
         </div>
