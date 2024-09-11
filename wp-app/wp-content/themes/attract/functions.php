@@ -97,10 +97,19 @@ add_filter('wpseo_breadcrumb_links', 'modify_yoast_breadcrumb_links');
 function modify_yoast_breadcrumb_links($links)
 {
 
-    if (is_singular('service') || is_tax() || is_category() || is_tag()) {
+    if (is_singular('service') || is_tax('service-category') || is_category() || is_tag()) {
         $breadcrumb[] = array(
             'url' => site_url('/uslugi/'),
             'text' => 'Услуги',
+        );
+
+        array_splice($links, 1, -2, $breadcrumb);
+    }
+    
+    if (is_tax('case-category') || is_category() || is_tag()) {
+        $breadcrumb[] = array(
+            'url' => site_url('/kejsy/'),
+            'text' => 'Наши кейсы',
         );
 
         array_splice($links, 1, -2, $breadcrumb);

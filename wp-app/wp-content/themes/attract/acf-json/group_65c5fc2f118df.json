@@ -343,6 +343,13 @@
                 "operator": "==",
                 "value": "service-category"
             }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "case-category"
+            }
         ]
     ],
     "menu_order": 0,
@@ -354,5 +361,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711375425
+    "modified": 1726094349
 }

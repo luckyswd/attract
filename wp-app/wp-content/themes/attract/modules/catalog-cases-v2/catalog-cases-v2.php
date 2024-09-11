@@ -24,16 +24,6 @@ $casesArgs = array(
     'order' => 'DESC'
 );
 
-if ($pageSlug != 'kejsy') {
-    $casesArgs['tax_query'] = array(
-        array(
-            'taxonomy' => 'case-category',
-            'field'    => 'slug',
-            'terms'    => $pageSlug
-        )  
-    );
-}
-
 $cases = get_posts($casesArgs);
 
 ?>
@@ -43,10 +33,10 @@ $cases = get_posts($casesArgs);
         <div class="container">
             <?php if (!empty($categories)) : ?>
                 <div class="cases-sticky">
-                    <div class="cases-categories" data-active="<?= $pageSlug ?>">
-                        <a href="/kejsy/" class="text-4 single-case" data-slug="kejsy">Все</a>
+                    <div class="cases-categories">
+                        <a href="/kejsy/" class="text-4 single-case active" data-slug="kejsy">Все</a>
                         <?php foreach ($categories as $key => $category) : ?>
-                            <a href="/<?= $category->slug ?>/" class="text-4 single-case" data-slug="<?= $category->slug ?>"><?= $category->name ?></a>
+                            <a href="/kejsy/category/<?= $category->slug ?>/" class="text-4 single-case" data-slug="<?= $category->slug ?>"><?= $category->name ?></a>
                         <?php endforeach; ?>
                     </div>
                 </div>

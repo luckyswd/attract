@@ -1,13 +1,16 @@
 .catalog-cases-top {
   .catalog-top  {
-    min-height: 430px;
-    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 50px;
+    justify-content: center;
+    min-height: 430px;
+    height: 100%;
+    padding: 50px;
     border-radius: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @include _1024 {
         border-radius: 40px;
@@ -15,7 +18,7 @@
 
     @include _768 {
       min-height: 100%;
-      padding-top: 100px;
+      padding: 50px 20px;
     }
 
     .text-1 {

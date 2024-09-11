@@ -73,7 +73,7 @@ function create_taxonomy()
 
     register_taxonomy('case-category', ['case'], [
         'label' => __('case category'),
-        'rewrite' => ['slug' => 'case-category'],
+        'rewrite' => ['slug' => 'kejsy/category', 'with_front' => false],
         'labels' => [
             'name' => 'Категория кейсов',
             'singular_name' => 'Категории кейсов',
@@ -95,7 +95,7 @@ function create_taxonomy()
         'show_admin_column' => false,
         'show_in_rest' => true,
         'show_ui' => true,
-        'publicly_queryable' => false,
+        'publicly_queryable' => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
     ]);
