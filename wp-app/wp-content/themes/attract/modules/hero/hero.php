@@ -11,6 +11,7 @@ Mode: preview
 $headline = get_field('headline');
 $subheadline = get_field('subheadline');
 $image = get_field('image');
+$image_text = get_field('image_text');
 $btn_text = get_field('btn_text');
 $btn_name = get_field('btn_name');
 $headline_profit = get_field('headline_profit');
@@ -41,7 +42,7 @@ $video = get_field('video');
                     <div class="hero__main-text">
                         <h1 class="hero__main-title a-fall-in a-delay-100"><?= $headline ?? '' ?></h1>
                         <div class="hero__main-subheadline a-fall-in a-delay-300">
-                            <div class="hero__main-figure">
+                            <div class="hero__main-figure a-scale-in-out a-delay-700">
                                 <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-figure-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" class="hero__main-figure-play" fill="none">
                                         <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
@@ -56,13 +57,20 @@ $video = get_field('video');
                             <a href="#contact-form"><?= $btn_name ?? '' ?></a>
                         </div>
                     </div>
-                    <div class="hero__main-figure a-scale-in a-delay-200">
-                        <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-figure-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" class="hero__main-figure-play" fill="none">
-                                <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
-                            </svg>
-                            <?= getPictureImage($image, 420, 420) ?>
-                        </a>
+                    <div class="hero__main-figure-wrapper a-scale-in a-delay-200">
+                        <div class="hero__main-figure a-scale-in-out a-delay-500">
+                            <a href="javascript:;" data-fancybox="" data-src="#hero-video" class="hero__main-figure-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" class="hero__main-figure-play" fill="none">
+                                    <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
+                                </svg>
+                                <?= getPictureImage($image, 420, 420) ?>
+
+                                <?php if (!empty($image_text)) : ?>
+                                    <p class="hero__main-figure-text"><?= $image_text ?></p>
+                                <?php endif; ?>
+                                <p class="hero__main-figure-text"><?= 'Смотреть видео' ?></p>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="hero__profit a-fall-in a-delay-700">
