@@ -68,7 +68,6 @@ $video = get_field('video');
                                 <?php if (!empty($image_text)) : ?>
                                     <p class="hero__main-figure-text"><?= $image_text ?></p>
                                 <?php endif; ?>
-                                <p class="hero__main-figure-text"><?= 'Смотреть видео' ?></p>
                             </a>
                         </div>
                     </div>
