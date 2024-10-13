@@ -1,0 +1,96 @@
+.anchor-content-links {
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            display: inline-flex;
+            font-size: 20px;
+            line-height: 1.3em;
+
+            a {
+                color: inherit;
+                transition: 0.22s ease-in-out;
+            }
+
+            @include _1024 {
+                font-size: 18px;
+            }
+        }
+
+        li[data-level='1'] {
+            gap: 5px;
+            color: $c-blue;
+
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .number {
+                min-width: 19px;
+                text-align: right;
+            }
+        }
+
+        li[data-level='2'] {
+            gap: 20px;
+            color: $c-gray;
+            
+            a {
+                &:hover {
+                    color: $c-blue;
+                }
+            }
+
+            .line {
+                flex-grow: 1;
+                height: 1em;
+                min-width: 24px;
+                border-bottom: 1px solid $c-gray;
+            }
+            
+            .number {
+                min-width: 30px;
+                text-align: right;
+
+                @include _1024 {
+                    min-width: 27px;
+                }
+            }
+
+            @include _1024 {
+                gap: 12px;
+            }
+        }
+        
+        & > li + li,
+        & > ul + li {
+            margin-top: 30px;
+
+            @include _1024 {
+                margin-top: 24px;
+            }
+        }
+
+        & > li + ul {
+            margin-top: 14px;
+        }
+
+        & > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-left: 24px;
+
+            @include _1024 {
+                gap: 12px;
+            }
+        }
+
+    }
+}
