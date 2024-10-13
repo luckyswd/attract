@@ -173,6 +173,11 @@
                 max-width: 100%;
                 margin: 40px auto;
             }
+
+            &.full-width {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
         }
         a {
             color: inherit;
