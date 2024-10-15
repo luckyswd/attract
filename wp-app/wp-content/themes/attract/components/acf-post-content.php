@@ -9,6 +9,9 @@ $blocks = get_field("content-blocks", $tax) ?? array();
         <?php if(!empty($block['block_id'])): ?>
             <div class="block-anchor" id="<?= $block['block_id'] ?>"></div>
         <?php endif; ?>
+        <?php if(!empty($block['add_in_container'])): ?>
+            <div class="container">
+        <?php endif; ?>
         <div class="content-block__row">
             <?php foreach($block['block'] as $col): ?>
                 <div class="content-block__cl <?php echo !empty($col['align-center']) && !!$col['align-center'] ? 'content-block__cl_align-center' : '' ?> <?php echo !empty($col['full-width']) && !!$col['full-width'] ? 'content-block__cl_full-width' : '' ?>">
@@ -59,5 +62,8 @@ $blocks = get_field("content-blocks", $tax) ?? array();
                 </div>
             <?php endforeach; ?>
         </div>
+        <?php if(!empty($block['add_in_container'])): ?>
+            </div>
+        <?php endif; ?>
     </section>
 <?php endforeach; ?>
