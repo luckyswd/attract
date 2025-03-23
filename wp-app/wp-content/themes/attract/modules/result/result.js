@@ -12,15 +12,13 @@ class Result {
       new Swiper(swiperContainer, {
         loop: false,
         spaceBetween: 20,
-
         pagination: {
           el: '.pagination',
           clickable: true
         },
         navigation: false,
-
+        autoHeight: true,
         watchOverflow: true,
-
         breakpoints: {
           320: {
             slidesPerView: 1,
