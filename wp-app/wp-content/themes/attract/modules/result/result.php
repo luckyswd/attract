@@ -12,6 +12,7 @@ $images = get_field('image');
 $imagesCount = $images ? count($images) : 0;
 $columnsCount = get_field('columns_count');
 $objectFit = get_field('object_fit');
+$set_autoheight = get_field('set_autoheight');
 $caption = get_field('caption');
 $headline = get_field('headline');
 $text = get_field('text');
@@ -47,7 +48,7 @@ $result_blocks = get_field('result_blocks');
                     <?php endif; ?>
                 </div>
                 <?php if(!empty($images)) : ?>
-                <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>">
+                <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>" data-autoHeight="<?= $set_autoheight ?>">
                     <div class="swiper-wrapper">
                         <?php foreach($images as $image) : ?>
                             <div class="swiper-slide result-picture <?= $objectFit ?>">

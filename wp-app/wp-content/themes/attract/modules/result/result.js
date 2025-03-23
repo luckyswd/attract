@@ -8,6 +8,7 @@ class Result {
 
     resultsBottom && resultsBottom.forEach((swiperContainer) => {
       const columns = parseInt(swiperContainer.getAttribute('data-columns'));
+      const autoHeight = parseInt(swiperContainer.getAttribute('data-autoHeight'));
 
       new Swiper(swiperContainer, {
         loop: false,
@@ -17,7 +18,7 @@ class Result {
           clickable: true
         },
         navigation: false,
-        autoHeight: true,
+        autoHeight: !!autoHeight,
         watchOverflow: true,
         breakpoints: {
           320: {

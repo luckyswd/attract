@@ -158,6 +158,12 @@
             }
         }
 
+        &.swiper-autoheight {
+            .result-picture.contain {
+                height: auto;
+            }
+        }
+
         .full-width__img {
           width: 100%;
           height: auto;  
