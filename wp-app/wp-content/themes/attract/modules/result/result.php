@@ -23,30 +23,37 @@ $result_blocks = get_field('result_blocks');
     <section class="result">
         <div class="container">
             <div class="result-wrapper" <?php if ($imagesCount <= 0) : ?> style="gap: 0" <?php endif;?>>
-                <div class="result-top">
-                    <?php if (!empty($caption)) : ?>
-                        <p class="text-1"><?= $caption ?></p>
-                    <?php endif; ?>
+                <?php if(
+                    !empty($caption) || 
+                    !empty($headline) ||
+                    !empty($text) ||
+                    !empty($result_blocks)
+                ): ?>
+                    <div class="result-top">
+                        <?php if (!empty($caption)) : ?>
+                            <p class="text-1"><?= $caption ?></p>
+                        <?php endif; ?>
 
-                    <?php if (!empty($headline)) : ?>
-                        <p class="h5"><?= $headline ?></p>
-                    <?php endif; ?>
+                        <?php if (!empty($headline)) : ?>
+                            <p class="h5"><?= $headline ?></p>
+                        <?php endif; ?>
 
-                    <?php if (!empty($text)) : ?>
-                        <div class="text-2"><?= $text ?></div>
-                    <?php endif; ?>
+                        <?php if (!empty($text)) : ?>
+                            <div class="text-2"><?= $text ?></div>
+                        <?php endif; ?>
 
-                    <?php if (!empty($result_blocks)) : ?>
-                        <div class="result-blocks">
-                            <?php foreach ($result_blocks as $block) : ?>
-                                <div class="result-block">
-                                    <p class="h5"><?= $block['percent'] ?? '' ?></p>
-                                    <p class="text-2"><?= $block['text'] ?? '' ?></p>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
+                        <?php if (!empty($result_blocks)) : ?>
+                            <div class="result-blocks">
+                                <?php foreach ($result_blocks as $block) : ?>
+                                    <div class="result-block">
+                                        <p class="h5"><?= $block['percent'] ?? '' ?></p>
+                                        <p class="text-2"><?= $block['text'] ?? '' ?></p>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
                 <?php if(!empty($images)) : ?>
                 <div class="swiper result-bottom" data-columns="<?= $columnsCount ?>" data-autoHeight="<?= $set_autoheight ?>">
                     <div class="swiper-wrapper">
