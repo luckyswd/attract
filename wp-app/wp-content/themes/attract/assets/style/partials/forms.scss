@@ -43,8 +43,15 @@
   &.processing,
   &.submitting {
     &:after{
-      opacity: 0.6;
+      opacity: 0.4;
       visibility: visible;
+      animation: pulse 2s 0.3s ease-in-out infinite;
     }
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.8
   }
 }
