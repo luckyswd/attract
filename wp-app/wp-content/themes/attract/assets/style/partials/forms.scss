@@ -16,17 +16,17 @@
 
 .form-right {
   position: relative;
-  .wpcf7:before {
+  .wpcf7-form:after {
     border-radius: 60px;
   }
   &.modal-mode {
-    .wpcf7:before {
+    .wpcf7-form:after {
       border-radius: 30px;
     }
   }
 }
-.wpcf7 {
-  &:before {
+.wpcf7-form {
+  &:after {
     content: '';
     position: absolute;
     top: 0;
@@ -40,7 +40,7 @@
     transition: 0.25s ease-in-out;
     cursor: wait;
   }
-  &.processing {
+  &.processing:before{
     opacity: 0.6;
     visibility: visible;
   }
