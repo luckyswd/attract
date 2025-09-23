@@ -42,9 +42,9 @@
   }
   &.processing,
   &.submitting {
-    &:before{
-    opacity: 0.6;
-    visibility: visible;
-  }
+    &:after{
+      opacity: 0.6;
+      visibility: visible;
+    }
   }
 }
