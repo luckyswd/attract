@@ -40,8 +40,11 @@
     transition: 0.25s ease-in-out;
     cursor: wait;
   }
-  &.processing:before{
+  &.processing,
+  &.submitting {
+    &:before{
     opacity: 0.6;
     visibility: visible;
+  }
   }
 }
