@@ -11,6 +11,15 @@ Mode: preview
 $headline = get_field('headline');
 $button = get_field('button');
 $cases = get_field('cases');
+
+if(empty($cases)) {
+    $cases = get_posts(array(
+        'numberposts' => 6,
+        'order'       => 'DESC',
+        'post_type'   => 'case',
+        'suppress_filters' => true
+    ));
+}
 ?>
 
 <?php if (!is_admin()) : ?>
