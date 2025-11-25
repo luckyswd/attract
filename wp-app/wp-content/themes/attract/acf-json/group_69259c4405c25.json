@@ -16,7 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
+            "post_type": [
+                "review"
+            ],
             "taxonomy": "",
             "return_format": "id",
             "multiple": 1,

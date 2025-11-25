@@ -58,7 +58,7 @@ $projects = get_the_terms( $post, 'case-project' );
 
 if(!!$projects):
     $project = current($projects);
-    $reviews = get_field('reviews', $project->term_id);
+    $reviews = get_field('reviews', $project->taxonomy . '_' . $project->term_id);
     $other_cases_ids = get_posts( [
         'posts_per_page' => -1,
         'post_type' => 'case',
