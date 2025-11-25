@@ -55,8 +55,10 @@ the_content();
 ?>
 <?php 
 $projects = get_the_terms( $post, 'case-project' );
+
 if(!!$projects):
     $project = current($projects);
+    $reviews = get_field('reviews', $project->term_id);
     $other_cases_ids = get_posts( [
         'posts_per_page' => -1,
         'post_type' => 'case',
@@ -70,8 +72,12 @@ if(!!$projects):
             )
         )
     ] );
-?>
-    <?php if (!empty($other_cases_ids)) : ?>
+
+    if (!empty($reviews)){
+        get_template_part('components/reviews', null, array('headline' => "Отзыв клиента", 'reviews' => $reviews));
+    }
+    
+    if (!empty($other_cases_ids)) : ?>
         <section class="cards-slider distance">
             <div class="container">
                 <div class="cards-slider__header">
@@ -106,10 +112,11 @@ if(!!$projects):
                 </div>
             </div>
         </section>
-    <?php endif; ?>
-<?php endif; ?>
-<?php the_pattern('clients-on-map'); ?>
-<?php
+    <?php endif;
+endif; 
+
+the_pattern('clients-on-map'); 
+
 $next_case = get_adjacent_post( true, '', true, 'case-category' );
 if(!!$next_case):
     $tags = get_field('tags', $next_case->ID);

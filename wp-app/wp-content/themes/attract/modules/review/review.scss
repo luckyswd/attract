@@ -41,6 +41,15 @@
     }
   }
 
+  &:not(:has(.swiper-slide:nth-child(2))) {
+    .button-wrap, .pagination {
+      display: none !important;
+    }
+    .review-sides__left .h5 {
+      margin-top: 0;
+    }
+  }
+
   .swiper-next, .swiper-prev {
     cursor: pointer;
   }
