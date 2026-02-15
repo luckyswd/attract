@@ -3,6 +3,7 @@ get_header();
 
 $tax = get_queried_object();
 $page_title = get_field('page_title', $tax);
+$custom_post_content_id = get_field('custom_post_content', $tax);
 ?>
 <section class="service-tax-hero distance">
     <div class="container">
@@ -47,6 +48,10 @@ $page_title = get_field('page_title', $tax);
 </section>
 
 <div class="service-tax-content">
+    <?php if ($custom_post_content_id) : ?>
+        <?php $custom_post_content = get_post($custom_post_content_id); ?>
+        <?php echo apply_filters('the_content', $custom_post_content->post_content); ?>
+    <?php endif; ?>
     <div class="container">
         <?php get_template_part( 'components/acf-post-content', null, array('tax' => $tax) ); ?>
     </div>

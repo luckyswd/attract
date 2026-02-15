@@ -3,6 +3,26 @@
     "title": "Полное изображение модуль",
     "fields": [
         {
+            "key": "field_65c0b20153092",
+            "label": "Заголовок",
+            "name": "headline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64c66162302f4",
             "label": "Изображение",
             "name": "image",
@@ -46,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699474713
+    "modified": 1707127308
 }

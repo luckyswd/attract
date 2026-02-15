@@ -88,6 +88,26 @@
             "mime_types": ""
         },
         {
+            "key": "field_66fb052a1428c",
+            "label": "Текст под изображением",
+            "name": "image_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64a91d6af1c08",
             "label": "Текст рядом с кнопкой",
             "name": "btn_text",
@@ -303,5 +323,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1690914455
+    "modified": 1727726941
 }

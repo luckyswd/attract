@@ -201,6 +201,7 @@
                     "collapsed": "",
                     "button_label": "Добавить",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_665980c6a9407",
                     "sub_fields": [
                         {
                             "key": "field_66598157a940e",
@@ -223,8 +224,7 @@
                             "append": "",
                             "parent_repeater": "field_66598140a940d"
                         }
-                    ],
-                    "parent_repeater": "field_665980c6a9407"
+                    ]
                 }
             ]
         }
@@ -247,5 +247,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717143801
+    "modified": 1717149957
 }

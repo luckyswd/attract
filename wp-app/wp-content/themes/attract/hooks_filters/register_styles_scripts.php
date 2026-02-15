@@ -47,9 +47,28 @@ function register_styles_scripts(): void
             'nonce' => wp_create_nonce('myajax-nonce')
         ),
     );
+	wp_localize_script(
+        'pw-script',
+        'myajax',
+        array(
+            'url' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('myajax-nonce')
+        ),
+    );
 }
 
 add_action('wp_enqueue_scripts', 'register_styles_scripts', 10);
+
+add_action( 'wp_enqueue_scripts', function(){
+
+	wp_localize_script( 'haven-blank-theme-script', 'myajax',
+		array(
+			'url' => admin_url('admin-ajax.php'),
+			'nonce' => wp_create_nonce('myajax-nonce')
+		)
+	);
+
+}, 99 );
 
 function admin_register_styles_scripts()
 {

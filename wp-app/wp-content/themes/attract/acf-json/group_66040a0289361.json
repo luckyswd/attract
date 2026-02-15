@@ -1,6 +1,6 @@
 {
     "key": "group_66040a0289361",
-    "title": "Услуги: категория",
+    "title": "Услуги, кейсы: категория",
     "fields": [
         {
             "key": "field_66040a029998f",
@@ -21,6 +21,27 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_6991d949831fa",
+            "label": "Контент записи",
+            "name": "custom_post_content",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1
         }
     ],
     "location": [
@@ -48,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1726090480
+    "modified": 1771166065
 }
