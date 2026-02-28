@@ -4,6 +4,9 @@ access
 .idea
 info.txt
 
+.env
+
+node_modules
 !wp-app/
 wp-app/*
 !wp-app/wp-content/

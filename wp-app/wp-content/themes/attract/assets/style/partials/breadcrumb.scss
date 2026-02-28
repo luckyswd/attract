@@ -15,7 +15,7 @@
 
     .separator {
         font-size: 0px;
-        color: $c-gray;
+        color: $c-black;
         &:before {
             content: '';
             display: inline-block;
@@ -33,7 +33,7 @@
     }
 
     a {
-        color: $c-gray;
+        color: $c-black;
         transition: $transition;
 
         &:hover {

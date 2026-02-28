@@ -12,7 +12,7 @@
     &-left {
         .text-2 {
             margin-top: 24px;
-            color: $c-gray;
+            color: $c-black;
 
             @include _1400 {
                 margin-top: 10px;
@@ -52,7 +52,7 @@
         }
 
         .text-3 {
-            color: $c-gray;
+            color: $c-black;
 
             strong {
                 font-weight: 400;

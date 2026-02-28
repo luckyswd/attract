@@ -10,7 +10,7 @@
         padding: 32px;
         border-radius: 60px;
         background-color: #fff;
-        color: #747474;       
+        color: $c-black;       
         
         @include _768 {
             padding: 20px;

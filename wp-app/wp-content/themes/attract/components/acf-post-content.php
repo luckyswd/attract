@@ -42,18 +42,20 @@ $blocks = get_field("content-blocks", $tax) ?? array();
                                 break;
                             case 'text-block-wrapper':
                                 ?>
-                                <div class="content-block__texts-wrapper">
-                                    <?php $i = 1; ?>
-                                    <?php foreach($el['text-block'] as $text_block): ?>
-                                        <div class="content-block__text-wrapper">
-                                            <?php if(!empty($el['show-numbers']) && !!$el['show-numbers']): ?>
-                                                <div class="content-block__number">(<?php echo str_pad($i, 2, "0", STR_PAD_LEFT) ?>)</div>
-                                            <?php endif; ?>
-                                            <div class="content-block__text text-2"><?= $text_block['text']; ?></div>
-                                        </div>
-                                        <?php $i++; ?>
-                                    <?php endforeach; ?>
-                                </div>
+                                <?php if(!empty($el['text-block']) && is_array($el['text-block'])): ?>
+                                    <div class="content-block__texts-wrapper">
+                                        <?php $i = 1; ?>
+                                        <?php foreach($el['text-block'] as $text_block): ?>
+                                            <div class="content-block__text-wrapper">
+                                                <?php if(!empty($el['show-numbers']) && !!$el['show-numbers']): ?>
+                                                    <div class="content-block__number">(<?php echo str_pad($i, 2, "0", STR_PAD_LEFT) ?>)</div>
+                                                <?php endif; ?>
+                                                <div class="content-block__text text-2"><?= $text_block['text']; ?></div>
+                                            </div>
+                                            <?php $i++; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
                                 <?php
                                 break;
                         endswitch;
