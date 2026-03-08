@@ -49,9 +49,22 @@ $args = array(
 $comments = get_comments($args);
 
 ?>
+<?php
+$banner_image_url = get_the_post_thumbnail_url($post_id, 'full');
+?>
 <div class="container">
     <section class="article-banner">
-        <div class="article-banner__wrap" style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>)">
+        <div class="article-banner__wrap">
+            <?php if ($banner_image_url) : ?>
+                <img
+                    class="article-banner__img"
+                    src="<?php echo esc_url($banner_image_url); ?>"
+                    alt="<?php echo esc_attr(get_the_title()); ?>"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                >
+            <?php endif; ?>
             <div class="article-banner__content">
                 <div class="article-banner-desc__wrap">
                     <div class="article-banner__left-desc">

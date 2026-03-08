@@ -10,7 +10,10 @@ if (!empty($category)) {
 }
 
 $img = get_field('individual_image');
-$backgroundImage['url'] = is_array($img) ? $img['sizes']['case-hero'] : '';
+$hero_image_url = '';
+if (is_array($img)) {
+    $hero_image_url = $img['sizes']['case-hero'] ?? $img['url'] ?? '';
+}
 $shortDescription = get_field('shor_description');
 $subHeadline = get_field('sub_headline');
 $elapsedTime = get_field('elapsed_time');
@@ -19,7 +22,17 @@ $year = get_field('year');
 
 <section class="hero-case distance">
     <div class="container">
-        <div class="hero-case-wrap" style="background-image: url(<?= $backgroundImage['url'] ?>)">
+        <div class="hero-case-wrap">
+            <?php if ($hero_image_url) : ?>
+                <img
+                    class="hero-case-wrap__img"
+                    src="<?= esc_url($hero_image_url) ?>"
+                    alt="<?= esc_attr($shortDescription ?: get_the_title()) ?>"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                >
+            <?php endif; ?>
             <div class="case-info">
                 <div class="case-left-info">
                     <p class="text-4"><?= $categoryName ? $categoryName : get_the_title() ?></p>

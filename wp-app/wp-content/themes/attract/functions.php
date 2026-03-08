@@ -144,12 +144,30 @@ add_filter('wpseo_breadcrumb_links', function ($links)
 
 // Add custom class to parent header mobile
 
-add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
-function special_nav_class($classes, $item)
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 4);
+function special_nav_class($classes, $item, $args, $depth)
 {
     if ($item->menu_item_parent == 0) {
         $classes[] = 'parent-menu-item';
     }
+
+    // Add current-menu-item to submenu item when it matches the current page
+    if ($item->menu_item_parent != 0 && ! in_array('current-menu-item', $classes, true)) {
+        $queried_object_id = (int) get_queried_object_id();
+
+        if ('post_type' === $item->type && $queried_object_id && (int) $item->object_id === $queried_object_id) {
+            $classes[] = 'current-menu-item';
+        } elseif ('custom' === $item->type && ! empty($item->url)) {
+            $current_url = set_url_scheme('http://' . ($_SERVER['HTTP_HOST'] ?? '') . ($_SERVER['REQUEST_URI'] ?? ''));
+            $item_url = set_url_scheme(untrailingslashit($item->url));
+            $current_url_normalized = untrailingslashit($current_url);
+
+            if ($item_url === $current_url_normalized || $item_url === untrailingslashit(urldecode($current_url))) {
+                $classes[] = 'current-menu-item';
+            }
+        }
+    }
+
     return $classes;
 }
 
@@ -209,4 +227,145 @@ function get_pattern($name) {
 
 function the_pattern($name) {
     echo get_pattern($name) ?? '';
+}
+
+/**
+ * Preload LCP image for single posts and services-hero to improve Largest Contentful Paint.
+ * Uses imagesrcset for responsive preload when multiple sizes are available.
+ */
+add_action('wp_head', 'attract_preload_lcp_image', 1);
+function attract_preload_lcp_image(): void
+{
+    if (is_singular('post')) {
+        $post_id = get_queried_object_id();
+        $image_url = get_the_post_thumbnail_url($post_id, 'full');
+        if ($image_url) {
+            printf(
+                '<link rel="preload" as="image" href="%s" fetchpriority="high">',
+                esc_url($image_url)
+            );
+        }
+        return;
+    }
+
+    if (is_singular('case')) {
+        $image_url = attract_get_case_hero_lcp_image();
+        if ($image_url) {
+            printf(
+                '<link rel="preload" as="image" href="%s" fetchpriority="high">',
+                esc_url($image_url)
+            );
+        }
+        return;
+    }
+
+    if (is_singular()) {
+        $preload_data = attract_get_services_hero_preload_data();
+        if (!$preload_data) {
+            return;
+        }
+
+        $href = $preload_data['href'];
+        $imagesrcset = $preload_data['imagesrcset'] ?? null;
+        $imagesizes = $preload_data['imagesizes'] ?? null;
+
+        if ($imagesrcset && $imagesizes) {
+            printf(
+                '<link rel="preload" as="image" href="%s" imagesrcset="%s" imagesizes="%s" fetchpriority="high">',
+                esc_url($href),
+                esc_attr($imagesrcset),
+                esc_attr($imagesizes)
+            );
+        } else {
+            printf(
+                '<link rel="preload" as="image" href="%s" fetchpriority="high">',
+                esc_url($href)
+            );
+        }
+    }
+}
+
+/**
+ * Extract LCP image URL for single case hero.
+ */
+function attract_get_case_hero_lcp_image(): ?string
+{
+    $post_id = get_queried_object_id();
+    $img = get_field('individual_image', $post_id);
+
+    if (!is_array($img)) {
+        return null;
+    }
+
+    return $img['sizes']['case-hero'] ?? $img['url'] ?? null;
+}
+
+/**
+ * Extract preload data from services-hero ACF block (srcset for responsive preload).
+ *
+ * @return array{ href: string, imagesrcset?: string, imagesizes?: string }|null
+ */
+function attract_get_services_hero_preload_data(): ?array
+{
+    $post = get_post();
+    if (!$post || empty($post->post_content)) {
+        return null;
+    }
+
+    $blocks = parse_blocks($post->post_content);
+    $block = attract_find_block_recursive($blocks, 'acf/services-hero');
+
+    if (!$block || empty($block['attrs']['data'])) {
+        return null;
+    }
+
+    $data = $block['attrs']['data'];
+    $desktop = $data['background_image_desktop']['url'] ?? '';
+    $tablet = $data['background_image_tablet']['url'] ?? '';
+    $mobile = $data['background_image_mobile']['url'] ?? '';
+
+    $href = $desktop ?: $tablet ?: $mobile;
+    if (empty($href)) {
+        return null;
+    }
+
+    $srcset_parts = [];
+    if ($mobile) {
+        $srcset_parts[] = esc_url($mobile) . ' 480w';
+    }
+    if ($tablet) {
+        $srcset_parts[] = esc_url($tablet) . ' 1024w';
+    }
+    if ($desktop) {
+        $srcset_parts[] = esc_url($desktop) . ' 1920w';
+    }
+
+    $result = ['href' => $href];
+
+    if (count($srcset_parts) > 1) {
+        $result['imagesrcset'] = implode(', ', $srcset_parts);
+        $result['imagesizes'] = '(max-width: 480px) 100vw, (max-width: 1024px) 100vw, 100vw';
+    }
+
+    return $result;
+}
+
+/**
+ * Recursively find block by name in block tree.
+ */
+function attract_find_block_recursive(array $blocks, string $block_name): ?array
+{
+    foreach ($blocks as $block) {
+        if (($block['blockName'] ?? '') === $block_name) {
+            return $block;
+        }
+        if (!empty($block['innerBlocks'])) {
+            $found = attract_find_block_recursive($block['innerBlocks'], $block_name);
+            if ($found) {
+                return $found;
+            }
+        }
+    }
+
+    return null;
 }

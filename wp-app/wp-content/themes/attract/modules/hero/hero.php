@@ -63,7 +63,7 @@ $video = get_field('video');
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 35 40" class="hero__main-figure-play" fill="none">
                                     <path d="M35 20L0.500002 39.9186L0.500004 0.0814137L35 20Z" fill="white"/>
                                 </svg>
-                                <?= getPictureImage($image, 420, 420) ?>
+                                <?php getPictureImage($image, 420, 420, true) ?>
 
                                 <?php if (!empty($image_text)) : ?>
                                     <p class="hero__main-figure-text"><?= $image_text ?></p>
