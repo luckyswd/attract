@@ -19,7 +19,7 @@ $headline = get_field('headline');
                 <p class="h4"><?= $headline; ?></p>
             </div>
         <?php endif; ?>
-        <img src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
+        <img loading="lazy" decoding="async" src="<?= $image['url'] ?>" alt="<?= $image['alt']; ?>">
     </section>
 <?php else : ?>
     <h2 style="font-family: 'Mark', sans-serif;">Полное изображение модуль</h2>

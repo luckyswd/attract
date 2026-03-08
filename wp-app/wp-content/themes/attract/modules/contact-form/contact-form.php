@@ -36,7 +36,7 @@ $size_50_on_50 = get_field('size_50_50');
                             <div class="form-icons">
                                 <?php foreach ($icons as $icon): ?>
                                     <div class="form-icon">
-                                        <img src="<?= $icon['url']; ?>" alt="<?= $icon['alt']; ?>">
+                                        <img loading="lazy" decoding="async" src="<?= $icon['url']; ?>" alt="<?= $icon['alt']; ?>">
                                     </div>
                                 <?php endforeach; ?>
                             </div>
