@@ -38,7 +38,10 @@
     const init = () => {
       wrapSubMenus()
       listeners()
-      const li = submenu.querySelector('.menu-item-has-children');
+      let li = submenu.querySelector('.current-menu-parent');
+      if(!li) {
+        li = submenu.querySelector('.menu-item-has-children');
+      }
       li && li.dispatchEvent(new Event('mouseenter'));
     }
 
