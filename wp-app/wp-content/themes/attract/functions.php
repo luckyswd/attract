@@ -230,142 +230,126 @@ function the_pattern($name) {
 }
 
 /**
- * Preload LCP image for single posts and services-hero to improve Largest Contentful Paint.
- * Uses imagesrcset for responsive preload when multiple sizes are available.
+ * LCP image preload: find block with images → extract URLs → output preload.
  */
 add_action('wp_head', 'attract_preload_lcp_image', 1);
 function attract_preload_lcp_image(): void
 {
+    $data = attract_get_lcp_preload_data();
+    if (!$data) {
+        return;
+    }
+
+    if (!empty($data['imagesrcset'])) {
+        printf(
+            '<link rel="preload" as="image" href="%s" imagesrcset="%s" imagesizes="%s" fetchpriority="high">',
+            esc_url($data['href']),
+            esc_attr($data['imagesrcset']),
+            esc_attr($data['imagesizes'])
+        );
+    } else {
+        printf('<link rel="preload" as="image" href="%s" fetchpriority="high">', esc_url($data['href']));
+    }
+}
+
+function attract_get_lcp_preload_data(): ?array
+{
     if (is_singular('post')) {
-        $post_id = get_queried_object_id();
-        $image_url = get_the_post_thumbnail_url($post_id, 'full');
-        if ($image_url) {
-            printf(
-                '<link rel="preload" as="image" href="%s" fetchpriority="high">',
-                esc_url($image_url)
-            );
-        }
-        return;
+        $url = get_the_post_thumbnail_url(get_queried_object_id(), 'full');
+        return $url ? ['href' => $url] : null;
     }
-
     if (is_singular('case')) {
-        $image_url = attract_get_case_hero_lcp_image();
-        if ($image_url) {
-            printf(
-                '<link rel="preload" as="image" href="%s" fetchpriority="high">',
-                esc_url($image_url)
-            );
-        }
-        return;
+        $img = get_field('individual_image', get_queried_object_id());
+        $url = is_array($img) ? ($img['sizes']['case-hero'] ?? $img['url'] ?? null) : null;
+        return $url ? ['href' => $url] : null;
+    }
+    if (is_tax('service-category')) {
+        $base = content_url('uploads/2023/08/');
+        return [
+            'href' => $base . 'item-1.svg',
+            'imagesrcset' => $base . 'mobile.svg 480w, ' . $base . 'tablet.svg 1024w, ' . $base . 'item-1.svg 1920w',
+            'imagesizes' => '(max-width: 480px) 100vw, (max-width: 1024px) 100vw, 100vw',
+        ];
     }
 
-    if (is_singular()) {
-        $preload_data = attract_get_services_hero_preload_data();
-        if (!$preload_data) {
-            return;
-        }
-
-        $href = $preload_data['href'];
-        $imagesrcset = $preload_data['imagesrcset'] ?? null;
-        $imagesizes = $preload_data['imagesizes'] ?? null;
-
-        if ($imagesrcset && $imagesizes) {
-            printf(
-                '<link rel="preload" as="image" href="%s" imagesrcset="%s" imagesizes="%s" fetchpriority="high">',
-                esc_url($href),
-                esc_attr($imagesrcset),
-                esc_attr($imagesizes)
-            );
-        } else {
-            printf(
-                '<link rel="preload" as="image" href="%s" fetchpriority="high">',
-                esc_url($href)
-            );
-        }
-    }
+    return attract_find_block_lcp_preload();
 }
 
-/**
- * Extract LCP image URL for single case hero.
- */
-function attract_get_case_hero_lcp_image(): ?string
+function attract_find_block_lcp_preload(): ?array
 {
-    $post_id = get_queried_object_id();
-    $img = get_field('individual_image', $post_id);
-
-    if (!is_array($img)) {
-        return null;
+    $ids = [];
+    $obj = get_queried_object();
+    if ($obj instanceof WP_Post) {
+        $ids[] = $obj->ID;
     }
-
-    return $img['sizes']['case-hero'] ?? $img['url'] ?? null;
-}
-
-/**
- * Extract preload data from services-hero ACF block (srcset for responsive preload).
- *
- * @return array{ href: string, imagesrcset?: string, imagesizes?: string }|null
- */
-function attract_get_services_hero_preload_data(): ?array
-{
-    $post = get_post();
-    if (!$post || empty($post->post_content)) {
-        return null;
-    }
-
-    $blocks = parse_blocks($post->post_content);
-    $block = attract_find_block_recursive($blocks, 'acf/services-hero');
-
-    if (!$block || empty($block['attrs']['data'])) {
-        return null;
-    }
-
-    $data = $block['attrs']['data'];
-    $desktop = $data['background_image_desktop']['url'] ?? '';
-    $tablet = $data['background_image_tablet']['url'] ?? '';
-    $mobile = $data['background_image_mobile']['url'] ?? '';
-
-    $href = $desktop ?: $tablet ?: $mobile;
-    if (empty($href)) {
-        return null;
-    }
-
-    $srcset_parts = [];
-    if ($mobile) {
-        $srcset_parts[] = esc_url($mobile) . ' 480w';
-    }
-    if ($tablet) {
-        $srcset_parts[] = esc_url($tablet) . ' 1024w';
-    }
-    if ($desktop) {
-        $srcset_parts[] = esc_url($desktop) . ' 1920w';
-    }
-
-    $result = ['href' => $href];
-
-    if (count($srcset_parts) > 1) {
-        $result['imagesrcset'] = implode(', ', $srcset_parts);
-        $result['imagesizes'] = '(max-width: 480px) 100vw, (max-width: 1024px) 100vw, 100vw';
-    }
-
-    return $result;
-}
-
-/**
- * Recursively find block by name in block tree.
- */
-function attract_find_block_recursive(array $blocks, string $block_name): ?array
-{
-    foreach ($blocks as $block) {
-        if (($block['blockName'] ?? '') === $block_name) {
-            return $block;
+    if ($obj instanceof WP_Term && $obj->taxonomy === 'service-category') {
+        $c = get_field('custom_post_content', $obj);
+        if ($c) {
+            $ids[] = is_object($c) ? $c->ID : (int) $c;
         }
-        if (!empty($block['innerBlocks'])) {
-            $found = attract_find_block_recursive($block['innerBlocks'], $block_name);
-            if ($found) {
-                return $found;
+    }
+    if ($id = (int) get_option('page_on_front')) {
+        $ids[] = $id;
+    }
+    $ids = array_unique(array_filter($ids));
+    $block_config = attract_get_lcp_block_config();
+
+    foreach ($ids as $post_id) {
+        $post = get_post($post_id);
+        if (!$post || empty($post->post_content)) {
+            continue;
+        }
+
+        $blocks = parse_blocks($post->post_content);
+
+        foreach ($block_config as $block_name => $extractor) {
+            $block = attract_find_block($blocks, $block_name) ?: attract_find_block($blocks, str_replace('acf/', '', $block_name));
+            if ($block && ($data = $extractor($block['attrs']['data'] ?? []))) {
+                return $data;
             }
         }
     }
 
+    return null;
+}
+
+/** Block name => extractor(data) => {href, imagesrcset?, imagesizes?} */
+function attract_get_lcp_block_config(): array
+{
+    $img = fn ($d) => is_array($d) && !empty($d['url']) ? $d['url'] : (is_numeric($d) ? (wp_get_attachment_image_url((int) $d, 'full') ?: '') : '');
+
+    return [
+        'acf/services-hero' => function (array $d) use ($img) {
+            $desktop = $img($d['background_image_desktop'] ?? null);
+            $tablet = $img($d['background_image_tablet'] ?? null);
+            $mobile = $img($d['background_image_mobile'] ?? null);
+            $href = $desktop ?: $tablet ?: $mobile;
+            if (!$href) {
+                return null;
+            }
+            $parts = array_filter(array_map(fn ($u, $w) => $u ? esc_url($u) . " {$w}w" : '', [$mobile, $tablet, $desktop], [480, 1024, 1920]));
+            return [
+                'href' => $href,
+                'imagesrcset' => count($parts) > 1 ? implode(', ', $parts) : null,
+                'imagesizes' => count($parts) > 1 ? '(max-width: 480px) 100vw, (max-width: 1024px) 100vw, 100vw' : null,
+            ];
+        },
+        'acf/hero' => function (array $d) use ($img) {
+            $url = $img($d['image'] ?? null);
+            return $url ? ['href' => $url] : null;
+        },
+    ];
+}
+
+function attract_find_block(array $blocks, string $name): ?array
+{
+    foreach ($blocks as $block) {
+        if (($block['blockName'] ?? '') === $name) {
+            return $block;
+        }
+        if (!empty($block['innerBlocks']) && $found = attract_find_block($block['innerBlocks'], $name)) {
+            return $found;
+        }
+    }
     return null;
 }

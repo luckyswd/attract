@@ -4,15 +4,23 @@ get_header();
 $tax = get_queried_object();
 $page_title = get_field('page_title', $tax);
 $custom_post_content_id = get_field('custom_post_content', $tax);
+
+$hero_desktop = content_url('uploads/2023/08/item-1.svg');
+$hero_tablet = content_url('uploads/2023/08/tablet.svg');
+$hero_mobile = content_url('uploads/2023/08/mobile.svg');
 ?>
 <section class="service-tax-hero distance">
     <div class="container">
         <div class="wrap">
-            <picture>
-                <source media="(min-width: 1024px)" srcset="/wp-content/uploads/2023/08/item-1.svg">
-                <source media="(min-width: 480px)" srcset="/wp-content/uploads/2023/08/tablet.svg">
-                <img decoding="async" src="/wp-content/uploads/2023/08/mobile.svg" alt="фон">
-            </picture>
+            <img
+                src="<?= esc_url($hero_mobile) ?>"
+                srcset="<?= esc_url($hero_mobile) ?> 480w, <?= esc_url($hero_tablet) ?> 1024w, <?= esc_url($hero_desktop) ?> 1920w"
+                sizes="(max-width: 480px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                alt="<?= esc_attr($page_title ?: $tax->name ?? '') ?>"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+            >
             <div class="content ">
                 <h1 class="h2"><?= $page_title ?? $tax->name ?? '' ?></h1>
             </div>
