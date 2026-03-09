@@ -190,11 +190,6 @@ header {
         color: $c-blue;
       }
     }
-    .current-service-ancestor, .current-menu-item {
-      &>.header__button {
-        color: $c-blue;
-      }
-    }
 
     @include _1280 {
       display: none;
@@ -391,6 +386,12 @@ header {
             box-shadow: none;
           }
         }
+    }
+  }
+
+  .current-menu-ancestor, .current-menu-item {
+    &>.header__button {
+      color: $c-blue !important;
     }
   }
 }
