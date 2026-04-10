@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="facebook-domain-verification" content="7uzstvjd65ff4zqr7dx3011dwt6vrl" />
     <?php if(!is_user_logged_in()): ?>
-    <script>
+    <!-- <script>
         document.oncontextmenu = function (e) {return false;};
         document.oncopy = function (e) {return false;};
         document.oncut = function (e) {return false;};
@@ -34,7 +34,7 @@
                 return false;
             }
         }
-    </script>
+    </script> -->
     <?php endif; ?>
     <title><?php wp_title('«', true, 'right'); ?> | <?php bloginfo('name'); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
