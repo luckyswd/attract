@@ -49,11 +49,11 @@
       @include _768 {
         grid-template-columns: auto;
 
-        .case-left-info {
-          position: absolute;
-          top: 24px;
-          padding-right: 24px;
-        }
+        // .case-left-info {
+        //   position: absolute;
+        //   top: 24px;
+        //   padding-right: 24px;
+        // }
       }
     }
   }
@@ -102,6 +102,10 @@
       position: relative;
       display: flex;
       gap: 20px;
+
+      @include _1400 {
+        align-items: flex-start;
+      }
 
 
       .h6 {
