@@ -11,6 +11,8 @@ Mode: preview
 $headline = get_field('headline');
 $subheadline = get_field('subheadline');
 $link = get_field('link');
+$link_2 = get_field('link_2');
+$link_3 = get_field('link_3');
 $background_image_desktop = get_field('background_image_desktop');
 $background_image_tablet = get_field('background_image_tablet');
 $background_image_mobile = get_field('background_image_mobile');
@@ -76,14 +78,14 @@ $cards = get_field('cards');
                                 <?php endif; ?>   
                             <?php endif; ?>
                             <?php if (!empty($link_2)) : ?>
-                                <a href="<?= $link_2['url'] ?>" class="btn blue">
+                                <a href="<?= $link_2['url'] ?>" class="btn blue" target="<?= $link_2['target'] ?? '' ?>" title="<?= $link_2['title'] ?? '' ?>">
                                     <span class="hover-animation">
                                         <span><?= $link_2['title'] ?? '' ?></span>
                                     </span>
                                 </a>
                             <?php endif; ?>
                             <?php if (!empty($link_3)) : ?>
-                                <a href="<?= $link_3['url'] ?>" class="btn blue">
+                                <a href="<?= $link_3['url'] ?>" class="btn blue" target="<?= $link_3['target'] ?? '' ?>" title="<?= $link_3['title'] ?? '' ?>">
                                     <span class="hover-animation">
                                         <span><?= $link_3['title'] ?? '' ?></span>
                                     </span>
