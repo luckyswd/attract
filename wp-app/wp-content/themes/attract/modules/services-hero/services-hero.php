@@ -58,20 +58,38 @@ $cards = get_field('cards');
                     <h1 class="h2"><?= $headline ?? '' ?></h1>
                     <div class="text-2"><?= $subheadline ?? '' ?></div>
                     <?php get_template_part('components/cards-row', '', array('cards' => $cards)) ?>
-                    <?php if (!empty($link)) : ?>
-                        <?php if($link['url'] !== '#contact-form'): ?>
-                            <a href="<?= $link['url'] ?>"class="btn blue">
-                                <span class="hover-animation">
-                                    <span><?= $link['title'] ?? '' ?></span>
-                                </span>
-                            </a>
-                        <?php else: ?> 
-                            <a href="javascript:;" data-fancybox="" data-src="#modal-feedback-form" class="btn blue">
-                                <span class="hover-animation">
-                                    <span><?= $link['title'] ?? '' ?></span>
-                                </span>
-                            </a>
-                        <?php endif; ?>   
+                    <?php if (!empty($link) || !empty($link_2) || !empty($link_3)) : ?>
+                        <div class="buttons-row">
+                            <?php if (!empty($link)) : ?>
+                                <?php if($link['url'] !== '#contact-form'): ?>
+                                    <a href="<?= $link['url'] ?>"class="btn blue">
+                                        <span class="hover-animation">
+                                            <span><?= $link['title'] ?? '' ?></span>
+                                        </span>
+                                    </a>
+                                <?php else: ?> 
+                                    <a href="javascript:;" data-fancybox="" data-src="#modal-feedback-form" class="btn blue">
+                                        <span class="hover-animation">
+                                            <span><?= $link['title'] ?? '' ?></span>
+                                        </span>
+                                    </a>
+                                <?php endif; ?>   
+                            <?php endif; ?>
+                            <?php if (!empty($link_2)) : ?>
+                                <a href="<?= $link_2['url'] ?>" class="btn blue">
+                                    <span class="hover-animation">
+                                        <span><?= $link_2['title'] ?? '' ?></span>
+                                    </span>
+                                </a>
+                            <?php endif; ?>
+                            <?php if (!empty($link_3)) : ?>
+                                <a href="<?= $link_3['url'] ?>" class="btn blue">
+                                    <span class="hover-animation">
+                                        <span><?= $link_3['title'] ?? '' ?></span>
+                                    </span>
+                                </a>
+                            <?php endif; ?>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>
